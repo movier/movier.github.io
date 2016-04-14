@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <!-- Use OpenSSL Heartbleed 漏洞深入分析 for dynamic title -->
+ <title>Oliver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- Twitter bootstrap (via cdn) -->
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- <div class='container'> -->
+    <ul class="main-navigation">
+  <li><a href="/"><u>首页</u></a></li>
+  <li><a href="/blog"><u>博客</u></a></li>
+  <li><a><u>项目</u></a></li>
+  <li><a><u>关于</u></a></li>
+</ul>
+
+<div class="container">
+<div class="post-detail">
+<div class='entry'>
+  <div class='entry-header'>
+    <h1 class="title">OpenSSL Heartbleed 漏洞深入分析</h1>
+    <footer class="entry-meta">发布于 2014-04-11。属于
+      技术
+      分类，被贴了
+      Bug
+      标签。</footer>
+  </div>
+  <p>自从进入了新的阶段以来，我越来越关注互联网的<strong>安全性</strong>。这不，OpenSSL前几天又爆出了惊天大漏洞<a href="http://heartbleed.com/" target="_blank" rel="external"><strong>Heartbleed</strong></a>，就把它作为我学习互联网安全的第一个实例吧！</p>
+<p><img src="/images/heartbleed.png" alt="Heartbleed Bug"></p>
+<p><strong>以下是一些关于HeartBleed漏洞的资讯：</strong></p>
+<ul>
+<li><a href="http://www.36kr.com/p/211028.html" target="_blank" rel="external">“Heartbleed”漏洞恐令数十万服务器泄密</a></li>
+<li><a href="http://www.36kr.com/p/211033.html" target="_blank" rel="external">OpenSSL “Heartbleed” 漏洞意味着什么？要如何应对？</a></li>
+<li><a href="http://www.freebuf.com/vuls/31339.html" target="_blank" rel="external">[附POC]OpenSSL曝严重安全漏洞，国内大量网站中招</a></li>
+</ul>
+<p><strong>以下是一些关于Heartbleed漏洞分析的文章：</strong></p>
+<ul>
+<li><a href="http://netsecurity.51cto.com/art/201404/435222.htm" target="_blank" rel="external">Heartbleed: OpenSSL密码与加密密钥泄露漏洞剖析</a></li>
+<li><a href="http://blog.wangzhan.360.cn/" target="_blank" rel="external">比想象中更恐怖！OpenSSL“心血”漏洞深入分析</a></li>
+<li><a href="http://drops.wooyun.org/papers/1381" target="_blank" rel="external">关于OpenSSL“心脏出血”漏洞的分析</a></li>
+</ul>
+<p><strong>以下是一些针对Heartbleed漏洞的测试脚本：</strong></p>
+<ul>
+<li><a href="https://gist.github.com/RixTox/10222402" target="_blank" rel="external">python版</a></li>
+<li><a href="https://github.com/emboss/heartbeat" target="_blank" rel="external">ruby版</a></li>
+</ul>
+<p>看了OpenSSL官方为该漏洞打的<a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=96db902" target="_blank" rel="external">补丁</a>，只是简单地增加了一些if的判断语句，从中可以看出这个漏洞本质上就是边界检查问题，归根结底还是代码质量的问题——代码的严谨性不够，测试工作不到位导致了这样一个非常低级但是危害却十分严重的漏洞。</p>
+<p>TO BE UPDATED…</p>
+
+</div>
+</div>
+</div>
+<div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+
+
+    <!-- <div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+ -->
+  <!-- </div> -->
+</body>
+</html>

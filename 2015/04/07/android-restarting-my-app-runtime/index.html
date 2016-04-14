@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <!-- Use 应用在运行时自动重启 for dynamic title -->
+ <title>Oliver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- Twitter bootstrap (via cdn) -->
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- <div class='container'> -->
+    <ul class="main-navigation">
+  <li><a href="/"><u>首页</u></a></li>
+  <li><a href="/blog"><u>博客</u></a></li>
+  <li><a><u>项目</u></a></li>
+  <li><a><u>关于</u></a></li>
+</ul>
+
+<div class="container">
+<div class="post-detail">
+<div class='entry'>
+  <div class='entry-header'>
+    <h1 class="title">应用在运行时自动重启</h1>
+    <footer class="entry-meta">发布于 2015-04-07。属于
+      技术
+      分类，被贴了
+      Android
+      标签。</footer>
+  </div>
+  <p>这两天在为公司的项目调试一个bug，这个bug十分诡异，很显然是重启导致这个bug。但是重启的原因，让我定位了好长时间，因为并非是由于应用内部错误引起的崩溃而导致的重启，于是我网上一番google，终于找到了相关线索。</p>
+<p>这是<a href="http://developer.android.com/guide/topics/resources/runtime-changes.html" target="_blank" rel="external">Android相关开发文档</a>中的描述：Some device configurations can change during runtime (such as screen orientation, keyboard availability, and language). When such a change occurs, Android restarts the running Activity (onDestroy() is called, followed by onCreate()). The restart behavior is designed to help your application adapt to new configurations by automatically reloading your application with alternative resources that match the new device configuration.</p>
+<p>翻译成中文的意思是：一些设备的配置比如屏幕方向，键盘可得性以及语言，在运行时会发生变化。当这种变化发生时，Android会重启运行中的Activity（先调用onDestroy，然后调用onCreate）。这样设计的目的是希望通过载入相关新的资源来适应这种新的配置。</p>
+<p>冥冥之中，我已经预感到这就是导致应用重启继而造成这个bug的原因。于是，我在相关的Activity里设置了<a href="http://developer.android.com/guide/topics/manifest/activity-element.html#config" target="_blank" rel="external">android:configChanges</a> 属性:</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">android:</span>configChanges=<span class="string">"mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"</span></span><br></pre></td></tr></table></figure>
+<p>将所有可能引起的变化都忽略掉，这样一来就保证了不会受到配置变化的影响，马上测试了一下，果然应用不再重启，bug不再复现，真是喜大普奔啊！</p>
+<p>继续定位具体发生变化的配置，最后发现是mcc发生了变化。mcc全称mobile country code，我理解的意思是mcc代表了运营商所在国家的编号，这个值发生变化实在手机重启之后，由0变为了相关国家的编号。我认为0是没有任何意义的，进一步加上了判断条件，算是修复了这个bug。</p>
+
+</div>
+</div>
+</div>
+<div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+
+
+    <!-- <div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+ -->
+  <!-- </div> -->
+</body>
+</html>

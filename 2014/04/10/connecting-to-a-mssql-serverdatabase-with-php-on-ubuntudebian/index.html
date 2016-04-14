@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <!-- Use 在Ubuntu下使用PHP连接SQL Server for dynamic title -->
+ <title>Oliver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- Twitter bootstrap (via cdn) -->
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- <div class='container'> -->
+    <ul class="main-navigation">
+  <li><a href="/"><u>首页</u></a></li>
+  <li><a href="/blog"><u>博客</u></a></li>
+  <li><a><u>项目</u></a></li>
+  <li><a><u>关于</u></a></li>
+</ul>
+
+<div class="container">
+<div class="post-detail">
+<div class='entry'>
+  <div class='entry-header'>
+    <h1 class="title">在Ubuntu下使用PHP连接SQL Server</h1>
+    <footer class="entry-meta">发布于 2014-04-10。属于
+      技术
+      分类，被贴了
+      Ubuntu、PHP、SQL Server
+      标签。</footer>
+  </div>
+  <p>最近我需要实现在Ubuntu系统下使用PHP连接SQL Server数据库。查看了PHP的官方文档并google了关键字之后，找到了一些相关资料，最终实现了目标！</p>
+<hr>
+<p><strong>系统配置：</strong></p>
+<ul>
+<li>Ubuntu 13.10</li>
+<li>Microsoft SQL Server 2008 R2</li>
+</ul>
+<hr>
+<p><strong>实现过程：</strong><br><strong>第一步、安装Apache和PHP</strong><br>在终端下分别使用命令<code>sudo apt-get install apache2</code>和<code>sudo apt-get install php5</code>安装Apache和PHP，使用<code>phpinfo()</code>检查是否安装成功。</p>
+<p><strong>第二步、安装FreeTDS及相关组件</strong><br>使用以下命令安装FreeTDS及相关组件<code>sudo apt-get install freetds-common freetds-bin unixodbc php5-sybase</code>，安装成功之后，使用命令<code>sudo service apache2 restart</code>重启Apache。</p>
+<p>现在你可以使用tsql命令测试连接SQL Server数据库了，在终端下输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsql -H &lt;hostname/ip_address&gt; -p &lt;port&gt; -U &lt;username&gt; -P &lt;password&gt; -D &lt;chosen_database&gt;</span><br></pre></td></tr></table></figure>
+<p>你应该会得下类似下面的信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">locale is <span class="string">"en_US.UTF-8"</span></span><br><span class="line">locale charset is <span class="string">"UTF-8"</span></span><br><span class="line">using default charset <span class="string">"UTF-8"</span></span><br><span class="line">Default database being <span class="built_in">set</span> to &lt;chosen_database&gt;</span><br><span class="line">1&gt; quit</span><br></pre></td></tr></table></figure>
+<p>如果你看到了类似上面的东西，那就说明连接成功了。接下去该修改<code>/etc/freetds/freetds.conf</code>文件了，这是FreeTDS的配置文件，使用编辑器打开这个文件，你会看到一些默认的内容，在文件末尾加上类似下面的内容：</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="type">YOUR_SERVER_FRIENDLY_NAME</span>]</span><br><span class="line">	host = &lt;hostname/ip_address&gt;</span><br><span class="line">	<span class="keyword">port</span> = &lt;<span class="keyword">port</span>&gt;</span><br><span class="line">	tds version = <span class="number">8.0</span></span><br></pre></td></tr></table></figure>
+<p>现在你应该无需提供主机名和端口号就可以连接了，使用下面的命令测试：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsql -S <span class="tag">&lt;<span class="name">YOUR_SERVER_FRIENDLY_NAME</span>&gt;</span> -U <span class="tag">&lt;<span class="name">username</span>&gt;</span> -P <span class="tag">&lt;<span class="name">password</span>&gt;</span> -D <span class="tag">&lt;<span class="name">chosen_database</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>应该会得到类似下面的信息：</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">locale is <span class="string">"en_US.UTF-8"</span></span><br><span class="line">locale charset is <span class="string">"UTF-8"</span></span><br><span class="line">using default charset <span class="string">"UTF-8"</span></span><br><span class="line">Default database being set to &lt;chosen_database&gt;</span><br><span class="line"><span class="meta">1&gt; </span>quit</span><br></pre></td></tr></table></figure>
+<p>如果你得到了上面的信息，说明成功了，开始准备编写PHP代码吧！可以参考以下代码进行测试：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$connection = mssql_connect(<span class="string">'&lt;YOUR_SERVER_FRIENDLY_NAME&gt;'</span>, <span class="string">'&lt;username&gt;'</span>, <span class="string">'&lt;password&gt;'</span>);</span><br><span class="line"><span class="keyword">if</span> (!$connection) &#123;</span><br><span class="line"> 	<span class="keyword">die</span>(<span class="string">'Unable to connect!'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (!mssql_select_db(<span class="string">'&lt;chosen_database&gt;'</span>, $connection)) &#123;</span><br><span class="line"> 	<span class="keyword">die</span>(<span class="string">'Unable to select database!'</span>);</span><br><span class="line">&#125;</span><br><span class="line">$result = mssql_query(<span class="string">'SELECT * FROM &lt;some_table&gt;'</span>);</span><br><span class="line"><span class="keyword">while</span> ($row = mssql_fetch_array($result)) &#123;</span><br><span class="line"> 	var_dump($row);</span><br><span class="line">&#125;</span><br><span class="line">mssql_free_result($result);</span><br></pre></td></tr></table></figure>
+<p>在浏览器中运行这些代码后，应该会打印出<code>some_table</code>表中的全部数据。</p>
+<hr>
+<p>希望这对你有帮助！ :)</p>
+
+</div>
+</div>
+</div>
+<div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+
+
+    <!-- <div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+ -->
+  <!-- </div> -->
+</body>
+</html>
