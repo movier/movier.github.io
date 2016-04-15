@@ -17,6 +17,11 @@ a {
 u {
   color: inherit;
 }
+code {
+  background: rgba(0,0,0,0.08);
+  padding: 0 4px;
+  border-radius: 2px;
+}
 h1.title {
   font-family: "Hiragino Sans GB", sans-serif;
   margin-top: 0;
@@ -38,7 +43,6 @@ body {
 .entry {
   box-sizing: border-box;
   padding-top: 1.5rem;
-  font-size: 0.9375rem;
 }
 .entry ul {
   -webkit-padding-start: 40px;

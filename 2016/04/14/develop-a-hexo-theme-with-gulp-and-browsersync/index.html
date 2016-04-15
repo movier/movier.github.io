@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <!-- Use Develop a Hexo Theme with Gulp and Browsersync for dynamic title -->
+ <title>Oliver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- Twitter bootstrap (via cdn) -->
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- <div class='container'> -->
+    <ul class="main-navigation">
+  <li><a href="/"><u>首页</u></a></li>
+  <li><a href="/blog"><u>博客</u></a></li>
+  <li><a><u>项目</u></a></li>
+  <li><a><u>关于</u></a></li>
+</ul>
+
+<div class="container">
+<div class="post-detail">
+<div class='entry'>
+  <div class='entry-header'>
+    <h1 class="title">Develop a Hexo Theme with Gulp and Browsersync</h1>
+    <footer class="entry-meta">发布于 2016-04-14。属于
+      技术
+      分类，被贴了
+      Hexo、Gulp、Browsersync
+      标签。</footer>
+  </div>
+  <p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="最终效果图"></p>
+<p><a href="https://hexo.io" target="_blank" rel="external">Hexo</a> is a fast, simple&amp;powerful blog framework. I have use Hexo for my personal blog for some time and recently I decide to <a href="/2016/03/28/some-little-things-recently/" title="develop a theme for Hexo">develop a theme for Hexo</a>.</p>
+<p><a href="https://www.browsersync.io" target="_blank" rel="external">Browsersync</a> is a awesome testing tool for front-end developer. It will synchronize all your behavior on different browsers or devices and save us a lot of time. There is no doubt that I will use Browsersync for all front-end develop work. This time no except.</p>
+<p>The basic of developing a Hexo theme is to create some ejs templates and stylus files. Hexo will generate the content dynamically convert ejs templates to html and stylus to css. You need to modify stylus files and open browser to see the style. The question is that Browsersync need static html and css files. Yes, Hexo has a command called <code>hexo generate</code> which could generate static html and css files to <code>public</code> directory. We don’t want to call <code>hexo generate</code> every time we modify the stylus files because the process will waste a lot of time. At the same time we don’t want to modify the static css file in <code>public</code> directory directly because we will lose the modification afte <code>hexo generate</code> is called again. What we really want is after we modify stylus files Browsersync just works.</p>
+<p>How to realize that? The answer is <a href="http://gulpjs.com" target="_blank" rel="external">Gulp</a>. Gulp is a front-end build system and Browsersync integrated with Gulp very well. The trick here is to use Gulp to generate and override the static css file every time we modify the stylus files. Talk is cheap. Let me show you the code.</p>
+<p>Firstly install the dependencies:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install browser-sync gulp gulp-stylus --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>Secondly create a file called <code>gulpfile.js</code> and add content below:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp        = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</span><br><span class="line">    browserSync = <span class="built_in">require</span>(<span class="string">'browser-sync'</span>).create(),</span><br><span class="line">    stylus      = <span class="built_in">require</span>(<span class="string">'gulp-stylus'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'serve'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// tell Browsersync serve the static directory</span></span><br><span class="line">    browserSync.init(&#123;</span><br><span class="line">        server: &#123;</span><br><span class="line">            baseDir: <span class="string">"../../public"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// once stylus file is modified perform `stylus` task</span></span><br><span class="line">    gulp.watch(<span class="string">"./source/css/**/*.styl"</span>, [<span class="string">'stylus'</span>]);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'stylus'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'./source/css/style.styl'</span>) <span class="comment">// tell gulp the source stylus file</span></span><br><span class="line">    .pipe(stylus()) <span class="comment">// compile stylus to css</span></span><br><span class="line">    .pipe(gulp.dest(<span class="string">'../../public/css'</span>)) <span class="comment">// output new css file to override</span></span><br><span class="line">    .pipe(browserSync.stream()); <span class="comment">// inject new css file</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'serve'</span>]);</span><br></pre></td></tr></table></figure></p>
+<p>Last preform <code>gulp</code> directly under your theme’s directory. The magic thus happened. Browsersync will open a new tab in the default browser for you. Once you modify the stylus file and save the change Browsersync will reload automatically on all devices connected to the url. By the way don’t forget to perform <code>hexo generate</code> to generate static files in <code>public</code> directory before perform <code>gulp</code>.</p>
+<p>Happy coding!</p>
+
+</div>
+</div>
+</div>
+<div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+
+
+    <!-- <div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 movier.me</p>
+  <div style="clear: both;"></div>
+</div>
+ -->
+  <!-- </div> -->
+</body>
+</html>
