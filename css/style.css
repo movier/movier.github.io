@@ -78,11 +78,12 @@ article.list-view:nth-child(odd) {
   position: relative;
 }
 .post-title-container {
-  max-width: 80%;
+  max-width: 70%;
   float: left;
   line-height: 1.4em;
 }
 .post-date-container {
+  max-width: 30%;
   position: absolute;
   top: 50%;
   right: 0;
@@ -183,6 +184,7 @@ footer.entry-meta {
   margin-right: 0;
 }
 ul.main-navigation {
+  box-sizing: border-box;
   padding-right: 40px;
   max-width: 960px;
   margin: auto;
@@ -391,5 +393,8 @@ header.site-header {
   }
   .entry {
     padding-top: 0;
+  }
+  .site-wrapper {
+    display: block;
   }
 }
