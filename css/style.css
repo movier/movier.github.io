@@ -32,13 +32,12 @@ body {
   height: 100%;
 }
 body {
-  background-color: #f9f9f9;
+  background-color: #fff;
   margin: 0;
   font: 16px sans-serif;
   -webkit-text-size-adjust: 100%;
-  color: #444;
+  color: #000;
   -webkit-overflow-scrolling: touch;
-  -webkit-font-smoothing: antialiased;
 }
 .entry {
   box-sizing: border-box;
