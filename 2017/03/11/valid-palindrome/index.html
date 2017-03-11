@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <!-- Use Valid Palindrome for dynamic title -->
+ <title>OLIVER</title>
+
+ 
+   <link rel="icon" href="/images/favicon.png">
+ 
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- Twitter bootstrap (via cdn) -->
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- <div class='container'> -->
+    <ul class="main-navigation">
+  
+    
+      <li><a href="/"><u>Home</u></a></li>
+    
+  
+    
+      <li><a href="/blog"><u>Blog</u></a></li>
+    
+  
+    
+  
+    
+  
+</ul>
+
+<div class="container">
+<div class="post-detail">
+<div class='entry'>
+  <div class='entry-header'>
+    <h1 class="title">Valid Palindrome</h1>
+    <footer class="entry-meta">发布于 2017-03-11。属于
+      技术
+      分类，被贴了
+      Java、Code
+      标签。</footer>
+  </div>
+  <p>Once during a technical interview, I was asked to validate whether a sentence is a palindrome or not. But what’s a palindrome? A <a href="https://en.wikipedia.org/wiki/Palindrome" target="_blank" rel="external">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as “A man, a plan, a canal, Panama!”, “Was it a car or a cat I saw?” or “No ‘x’ in Nixon”.</p>
+<h2 id="My-Solution"><a href="#My-Solution" class="headerlink" title="My Solution"></a>My Solution</h2><p>During the interview I just reverse the sentence and compare with the original sentence. Even ignore case and punctuation it’s still wrong. How could “Was I tac a ro rac a ti saw?” be the same with “Was it a car or a cat I saw?”. Obviously the problem is space. What if I even ignore space?</p>
+<blockquote>
+<p>“Talk is cheap. Show me the code.”</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrone</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    String pattern = <span class="string">"\\w"</span>;</span><br><span class="line">    Pattern r = Pattern.compile(pattern);</span><br><span class="line">    Matcher m = r.matcher(s);</span><br><span class="line"></span><br><span class="line">    StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(m.find()) &#123;</span><br><span class="line">        sb.append(m.group(<span class="number">0</span>));</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    String oldString = sb.toString();</span><br><span class="line">    String reversedString = sb.reverse().toString();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (!oldString.equalsIgnoreCase(reversedString)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Another-Solution"><a href="#Another-Solution" class="headerlink" title="Another Solution"></a>Another Solution</h2><p>You can also find the problem on <a href="https://leetcode.com/problems/valid-palindrome" target="_blank" rel="external">LeetCode</a>. I find a more elegant sultion <a href="https://discuss.leetcode.com/topic/8282/accepted-pretty-java-solution-271ms" target="_blank" rel="external">there</a>. Here is the codes.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s.isEmpty()) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> head = <span class="number">0</span>, tail = s.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">char</span> cHead, cTail;</span><br><span class="line">    <span class="keyword">while</span>(head &lt;= tail) &#123;</span><br><span class="line">        cHead = s.charAt(head);</span><br><span class="line">        cTail = s.charAt(tail);</span><br><span class="line">        <span class="keyword">if</span> (!Character.isLetterOrDigit(cHead)) &#123;</span><br><span class="line">            head++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(!Character.isLetterOrDigit(cTail)) &#123;</span><br><span class="line">            tail--;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (Character.toLowerCase(cHead) != Character.toLowerCase(cTail)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            head++;</span><br><span class="line">            tail--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>All point here is that the first letter or digit character must be the same with the last letter or digit character and the second must be the same with the reciprocal second and so on.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>The two solutions represent two totally different ways of thinking the problem. My solution is from Macro and the other one is from Micro. In my opinion solving this kind of problem from Micro is more difficult and thus more elegant.</p>
+<p>BTW you can find a lot of Palindromic Sentences from <a href="https://www2.cs.arizona.edu/icon/oddsends/palinsen.htm" target="_blank" rel="external">here</a> and you can do some test.</p>
+
+</div>
+</div>
+</div>
+<div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 MOVIER.ME - All Rights Reserved.</p>
+  <div style="clear: both;"></div>
+</div>
+
+
+    <!-- <div class="footer">
+  <p class="align-left"><i>Powered by <a href="https://hexo.io"><u>Hexo</u></a> Theme by <a href="https://github.com/movier/hexo-theme-alpha"><u>Alpha</u></a></i></p>
+  <p class="align-right">Copyright © 2016 MOVIER.ME - All Rights Reserved.</p>
+  <div style="clear: both;"></div>
+</div>
+ -->
+  <!-- </div> -->
+</body>
+</html>
