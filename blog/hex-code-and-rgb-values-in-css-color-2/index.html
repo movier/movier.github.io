@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oliver Young</title>
+  <style>
+    .copyright {
+      text-align: center;
+      font-size: 12px;
+      color: #C8C8C8;
+    }
+  </style>
+<style type="text/css">
+#app {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#nav {
+}
+#social-media {
+  margin: 6px;
+  float: right;
+}
+#logo {
+  
+  height: 42px;
+}
+#header {
+  margin: 80px auto;
+  text-align: center;
+  font-family: -apple-system, 'Helvetica Neue';
+}
+#header h1 {
+  font-size: 38px;
+  color: #333333;
+}
+#header p {
+  font-size: 22px;
+  color: #A9A9A9;
+  -webkit-font-smoothing: antialiased;
+}
+.divider {
+  height: 1px;
+  background-color: #E6E6E6;
+}
+#post-list {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+}
+#post-list li {
+  list-style: none;
+}
+</style><style type="text/css">
+.post-list {
+  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
+}
+.post-list h1 {
+  font-size: 20px;
+}
+.post-list a {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
+}
+</style><style type="text/css">
+.content {
+  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
+  line-height: 1.75em;
+  max-width: 700px;
+  margin: 60px auto;
+}
+.entry-meta {
+  font-size: 14px;
+  color: #9E9E9E;
+}
+.content img {
+  max-width: 100%;
+}
+pre {
+  padding: 10px;
+  overflow: auto;
+  border: #E3EDF3 1px solid;
+  background: #F7FAFB;
+}
+</style><style type="text/css">
+#social-media a {
+  font-family: -apple-system;
+  color: #8B572A;
+}
+#social-media a:hover {
+  color: #733F10;
+}
+</style><style type="text/css">
+textarea {
+  width: 100%;
+  height: 400px;
+}
+.h1 {
+  font-size: 24px;
+}
+</style><style type="text/css">
+#app {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#nav {
+}
+#social-media {
+  margin: 6px;
+  float: right;
+}
+#logo {
+  
+  height: 42px;
+}
+#header {
+  margin: 80px auto;
+  text-align: center;
+  font-family: -apple-system, 'Helvetica Neue';
+}
+#header h1 {
+  font-size: 38px;
+  color: #333333;
+}
+#header p {
+  font-size: 22px;
+  color: #A9A9A9;
+  -webkit-font-smoothing: antialiased;
+}
+.divider {
+  height: 1px;
+  background-color: #E6E6E6;
+}
+#post-list {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+}
+#post-list li {
+  list-style: none;
+}
+.write-button-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: right;
+}
+.button {
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, .25);
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .25);
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.button:hover {
+  border: 1px solid rgba(0, 0, 0, .45);
+  color: rgba(0, 0, 0, .45);
+}
+</style><style type="text/css">
+input, textarea {
+  border: none;
+}
+textarea {
+  height: 50px;
+}
+.post-list {
+  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
+}
+.operation {
+  cursor: pointer;
+}
+</style></head>
+<body>
+    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="#">Twitter</a> / <a href="#">Instagram</a></p></div> <div class="content view"><footer class="entry-meta">发布于 2017年10月26日。属于 技术 分类，被贴了 CSS、Python 标签。</footer> <div><h1 id="hex-code-and-rgb-values-in-css-color">Hex Code and RGB values in CSS Color</h1>
+<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
+<p>For example when it comes to magenta, we can either use <code>#FF00FF</code> in hex code  or <code>rgb(255, 0, 255)</code> in RGB values. Use RGB values for color is easy to understand. But what the hell is hex code? How could it represent for the same color as RGB values do. It turns out that hex code is just another format of RGB values. </p>
+<p>Let’s see a picture.</p>
+<p><img src="/images/2017-09-19.jpg" alt="2017-09-19.jpg"></p>
+<p>Through the picture we can easily find that hex code could be divided into three parts and each part is just hexadecimal format of its related color value. Specifically the two character on the left is hexadecimal format of red value, the two character on the middle is hexadecimal format of green value and the two character on the right is hexadecimal format of blue value.</p>
+<p>Now we know the structure of hex code. It's time to write some Python codes to convert between them. </p>
+<h2 id="convert-hex-to-rgb">Convert Hex to RGB</h2>
+<p>At first we need to define a function to convert hex to decimal.</p>
+<pre><code class="lang-python">hexToDecimalDict = { 
+    "0": 0, 
+    "1": 1, 
+    "2": 2, 
+    "3": 3, 
+    "4": 4, 
+    "5": 5, 
+    "6": 6, 
+    "7": 7, 
+    "8": 8, 
+    "9": 9, 
+    "A": 10, 
+    "B": 11, 
+    "C": 12, 
+    "D": 13, 
+    "E": 14, 
+    "F": 15, 
+    "a": 10,
+    "b": 11,
+    "c": 12,
+    "d": 13,
+    "e": 14,
+    "f": 15
+}
+def hexToDecimal(hexCode):
+    length = len(hexCode)
+    return reduce(
+        lambda x, y: x + y, 
+        [hexToDecimalDict[hexCode[i]]*16**(length - i - 1) for i in range(0, length)]
+    )
+
+print hexToDecimal("FF") # output 255
+</code></pre>
+<p>With the help of function <code>hexToDecimal()</code>, it's so easy to convert hex color to its GRB mode.</p>
+<pre><code class="lang-python">def hexToRGB(hexColor):
+    n = 2
+    return "rgb(%s)" % ", ".join([str(hexToDecimal(hexColor[i:i+n])) for i in range(1, len(hexColor), n)])
+print hexToRGB("#10458F") # output 'rgb(16, 69, 143)'
+</code></pre>
+<p>Alternatively we can use a build-in function <code>int()</code> to convert hex to decinal. Try to replace <code>hexToDecimal(hexColor[i:i+n])</code> with <code>int(hexColor[i:i+n], 16)</code> you will get the same answer.</p>
+<h2 id="convert-rgb-to-hex">Convert RGB to Hex</h2>
+<p>Just as above we need to define a function to convert decimal to hex.</p>
+<pre><code class="lang-python">decimalToHexArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+def decimalToHex(decimalValue, hexCode=""):
+    if decimalValue &lt; 16:
+        return "0x" + decimalToHexArr[decimalValue] + hexCode
+    quotient = decimalValue / 16
+    remainder = decimalValue % 16
+    return decimalToHex(quotient, decimalToHexArr[remainder] + hexCode)
+decimalToHex(143) # output '0x8F'
+</code></pre>
+<p>It's also very easy to convert RGB color to its hex format.</p>
+<pre><code class="lang-python">import re
+def RGBToHex(RGBColor):
+    return "#%s" % "".join([
+        decimalToHex(int(x.strip()))[2:] for x in re.search("\((.*)\)", RGBColor).group(1).split(",")
+    ])
+RGBToHex("rgb(16, 69, 143)") # output '#10458F'
+</code></pre>
+<p>There is also a build-in function <code>hex()</code> which can realize the same function as <code>decimalToHex()</code> do.</p>
+<p>After learn how to convert RGB color to its hex format and vice versa, I'm also curious about two more questions about CSS color.</p>
+<h2 id="why-there-is-a-symbol-in-the-hex-code-">Why there is a symbol ‘#’ in the hex code?</h2>
+<p>It turns out that the symbol is just a <a href="https://en.wikipedia.org/wiki/Hexadecimal#Representation">representation</a> of hexadecimal. Nothing more.</p>
+<h2 id="why-rgb-value-is-between-0-to-255-">Why RGB value is between 0 to 255?</h2>
+<p>There are totally 256 possibilities from 0 to 255. 256 is exactly 2 to the 8th power which is 8 bits. 8 bits is exactly 1 byte. What a coincidence! It turns out that the range of RGB value is exactly designed for 1 byte. If you are wondering why 1 byte is equal to 8 bits, the <a href="https://www.quora.com/Why-it-is-that-1-Byte-is-equal-to-8-Bits/answer/Amogh-Talpallikar">answer</a> from Quora is really helpful.</p>
+</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
+  
+
+
+</body></html>
