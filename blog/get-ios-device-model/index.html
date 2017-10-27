@@ -210,7 +210,7 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="#">Twitter</a> / <a href="#">Instagram</a></p></div> <div class="content view"><footer class="entry-meta">发布于 2017年10月26日。属于 技术 分类，被贴了 iOS、Objective-C 标签。</footer> <div><h1 id="-ios-">获取iOS设备具体型号</h1>
+    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="#">Twitter</a> / <a href="#">Instagram</a></p></div> <div class="content view"><footer class="entry-meta">发布于 2017年10月27日。属于 技术 分类，被贴了 iOS、Objective-C 标签。</footer> <div><h1 id="-ios-">获取iOS设备具体型号</h1>
 <p>如果我想知道用户使用的具体是哪一款iOS设备，应该怎么做呢？由于<code>UIDevice</code>类中并未提供相关方法直接获取设备具体型号，因此需要我们自己写方法。</p>
 <p>我们打算使用Objective-C中的<a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/Category.html">Category</a>语言特性为UIDevice添加一个新的方法，用于获取设备的具体型号。</p>
 <p>使用Category时像创建一个普通类一样新建.h和.m文件，类的名字使用“ClassName+CategoryName”的形式。我们这里就用<code>UIDevice+DetailModel</code>作为类名。</p>
