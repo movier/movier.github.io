@@ -1,7 +1,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
-<title>Oliver Young</title>
+<title>
+  <![CDATA[ Oliver Young ]]>
+</title>
 <subtitle>
-Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.
+<![CDATA[ Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby. ]]>
 </subtitle>
 <link href="http://movier.me/feed.xml" rel="self"/>
 <link href="http://movier.me/"/>
