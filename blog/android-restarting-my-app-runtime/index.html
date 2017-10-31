@@ -210,7 +210,7 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="#">Twitter</a> / <a href="#">Instagram</a></p></div> <div class="content view"><footer class="entry-meta">发布于 2017年10月30日。属于 技术 分类，被贴了 Android 标签。</footer> <div><h1 id="-">应用在运行时自动重启</h1>
+    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="content view"><footer class="entry-meta">发布于 2017年10月31日。属于 技术 分类，被贴了 Android 标签。</footer> <div><h1 id="-">应用在运行时自动重启</h1>
 <p>这两天在为公司的项目调试一个bug，这个bug十分诡异，很显然是重启导致这个bug。但是重启的原因，让我定位了好长时间，因为并非是由于应用内部错误引起的崩溃而导致的重启，于是我网上一番google，终于找到了相关线索。</p>
 <p>这是<a href="http://developer.android.com/guide/topics/resources/runtime-changes.html">Android相关开发文档</a>中的描述：Some device configurations can change during runtime (such as screen orientation, keyboard availability, and language). When such a change occurs, Android restarts the running Activity (onDestroy() is called, followed by onCreate()). The restart behavior is designed to help your application adapt to new configurations by automatically reloading your application with alternative resources that match the new device configuration.</p>
 <p>翻译成中文的意思是：一些设备的配置比如屏幕方向，键盘可得性以及语言，在运行时会发生变化。当这种变化发生时，Android会重启运行中的Activity（先调用onDestroy，然后调用onCreate）。这样设计的目的是希望通过载入相关新的资源来适应这种新的配置。</p>
