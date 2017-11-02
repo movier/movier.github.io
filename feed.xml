@@ -4,19 +4,135 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2017-10-31T14:44:33Z</updated>
+  <updated>2017-11-02T07:38:52Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ IIFE Immediately Invoked Function Expression ]]></title>
+    <link href="http://movier.me/blog/iife-immediately-invoked-function-expression/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2017-11-02T07:31:06Z</updated>
+    <published>2017-11-02T07:31:29Z</published>
+    <id>http://movier.me/blog/iife-immediately-invoked-function-expression/</id>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p>
+<p>Let&#39;s see an example:</p>
+<pre><code class="lang-javascript">(function demo() {
+  console.log(&#39;This is a IIFE&#39;);
+})();
+</code></pre>
+<p>If you run the codes above you will see the output immediately. This is a typical IIFE. But it could be completely replaced by single line code <code>console.log(&#39;This is a IIFE&#39;);</code>. Then why do we need IIFE? </p>
+<h2 id="iife-helps-to-write-elegant-codes">IIFE helps to write elegant codes</h2>
+<p>Sometimes we have to define a function. For example <code>await</code> has to be used in an async function and recursion is generally connected with a function. </p>
+<p>If the function is called only once IIFE will help to write elegant codes.</p>
+<p>Let&#39;s see some example:</p>
+<p><strong>async function</strong></p>
+<p>Without IIFE we need to define an async function and call it:</p>
+<pre><code class="lang-javascript">function resolveAfterSeconds(x) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+        console.log(&#39;Hello&#39;);
+      resolve();
+    }, x);
+  });
+}
+async function demo() {
+  await resolveAfterSeconds(2000);
+  console.log(&#39;IIFE&#39;);
+}
+demo();
+</code></pre>
+<p>With IIFE you can simply run the async function directly:</p>
+<pre><code class="lang-javascript">function resolveAfterSeconds(x) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+        console.log(&#39;Hello&#39;);
+      resolve();
+    }, x);
+  });
+}
+(async function demo() {
+  await resolveAfterSeconds(2000);
+  console.log(&#39;IIFE&#39;);
+})();
+</code></pre>
+<p>You even don&#39;t need to give a name to the async function:</p>
+<pre><code class="lang-javascript">function resolveAfterSeconds(x) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+        console.log(&#39;Hello&#39;);
+      resolve();
+    }, x);
+  });
+}
+(async () =&gt; {
+  await resolveAfterSeconds(2000);
+  console.log(&#39;IIFE&#39;);
+})();
+</code></pre>
+<p><strong>recursive function</strong></p>
+<p>Recursive function is the same as async function. Let&#39;s take factorial for example.</p>
+<p>Without IIFE:</p>
+<pre><code class="lang-javascript">function factorial(number) {
+  if (number &lt;=0) {
+    return 1;
+  } else {
+    return number * factorial(number - 1);
+  }
+}
+factorial(8);
+</code></pre>
+<p>With IIFE:</p>
+<pre><code class="lang-javascript">(function factorial(number) {
+  if (number &lt;=0) {
+    return 1;
+  } else {
+    return number * factorial(number - 1);
+  }
+}(8));
+</code></pre>
+<h2 id="iife-allows-to-create-a-new-block-scope">IIFE allows to create a new block scope</h2>
+<p>What does it mean by create a new block scope? If you try to run the codes below:</p>
+<pre><code class="lang-javascript">for (var i = 0; i &lt; 5; i++) {
+  setTimeout(function () {
+    console.log(&#39;index: &#39; + i);
+  }, 1000);
+}
+</code></pre>
+<p>You will be surprised at the result:</p>
+<pre><code>index: 5
+index: 5
+index: 5
+index: 5
+index: 5
+</code></pre><p>But if you run with IIFE:</p>
+<pre><code class="lang-javascript">for (var i = 0; i &lt; 5; i++) {
+  (function logIndex(index) {
+    setTimeout(function () {
+      console.log(&#39;index: &#39; + index);
+    }, 1000);
+  })(i)
+}
+</code></pre>
+<p> You will get exactly what you want:</p>
+<pre><code>index: 0
+index: 1
+index: 2
+index: 3
+index: 4
+</code></pre><p>You will learn more about the example above from IIFE section in <a href="https://developer.telerik.com/topics/web-development/understanding-scope-in-javascript/amp/">Understanding Scope in JavaScript</a>.</p>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Git Reflog ]]></title>
     <link href="http://movier.me/blog/git-reflog/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:45:38Z</updated>
+    <updated>2017-11-02T07:26:08Z</updated>
     <published>2017-10-27T15:21:02Z</published>
     <id>http://movier.me/blog/git-reflog/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="git-reflog">Git Reflog</h1>
-<p>It was a ordinary day. I modified codes and did commits as usual. Later I found last commit was not necessary any more. So I decided to reset it. The change was still useful so I want to keep it.</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>It was a ordinary day. I modified codes and did commits as usual. Later I found last commit was not necessary any more. So I decided to reset it. The change was still useful so I want to keep it.</p>
 <p>I knew related command was <code>git reset</code> but I was not sure which mode to use. At this circumstance I didn&#39;t go to look up the manual but use <code>git reset --hard</code> casually. How ridiculous I was! The result proved that. I lost all my changes.</p>
 <p>Though I felt depressed at that moment I still believed that Git had the ability to restore the changes. So I began to search on Internet. Finally I found the answer which is <code>git reflog</code>.</p>
 <p>So what is <code>git reflog</code>?</p>
@@ -39,11 +155,10 @@ b0cd221 HEAD@{2}: commit: Ready to write recursive function
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:46:07Z</updated>
+    <updated>2017-11-02T07:26:02Z</updated>
     <published>2017-10-24T05:18:12Z</published>
     <id>http://movier.me/blog/git-svn/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="git-svn">Git Svn</h1>
-<p>Back to March this year when I come to the company I&#39;m working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don&#39;t want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Back to March this year when I come to the company I&#39;m working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don&#39;t want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
 <hr>
 <p>The main command to realize this is <code>git svn</code>.</p>
 <p><strong>1. Clone</strong></p>
@@ -66,11 +181,10 @@ b0cd221 HEAD@{2}: commit: Ready to write recursive function
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:46:18Z</updated>
+    <updated>2017-11-02T07:25:50Z</updated>
     <published>2017-10-23T08:24:58Z</published>
     <id>http://movier.me/blog/wrap-your-commands-into-a-shell-script/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="wrap-your-commands-into-a-shell-script">Wrap your Commands into a Shell Script</h1>
-<p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
 <pre><code>docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup:/backup mongo mongodump --host mongo --db olivia-server --out /backup
 </code></pre><p>Wouldn&#39;t it be great if you don&#39;t need to remember or look up the command when use! Fortunatelty you can! All you need to do is wrap your long commands into a shell script.</p>
 <hr>
@@ -97,11 +211,10 @@ docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:46:14Z</updated>
+    <updated>2017-11-02T07:25:56Z</updated>
     <published>2017-10-20T06:09:22Z</published>
     <id>http://movier.me/blog/timezone-matters/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="timezone-matters">Timezone Matters</h1>
-<p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date(&#39;2017-09-04T09:52:15&#39;)</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date(&#39;2017-09-04T09:52:15&#39;)</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
 <p>The reason is obvious if you compare the result carefully. Since I lose my timezone information in the date string, the two browsers react differently to this situation. Chrome will take your computer&#39;s timezone as default timezone when parsing the date string. Meanwhile safari will take the string as UTC time.</p>
 <p>If we could add timezone information to the date string, there won&#39;t be such problem. The question is how we add timezone to the date string. Fortunately there is something called <strong>ISO date format</strong>. The format is as follows:</p>
 <pre><code>YYYY-MM-DDTHH:mm:ss.sssZ
@@ -186,11 +299,10 @@ print(str)
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:46:37Z</updated>
+    <updated>2017-11-02T07:25:45Z</updated>
     <published>2017-09-19T13:55:00Z</published>
     <id>http://movier.me/blog/hex-code-and-rgb-values-in-css-color-2/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="hex-code-and-rgb-values-in-css-color">Hex Code and RGB values in CSS Color</h1>
-<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
 <p>For example when it comes to magenta, we can either use <code>#FF00FF</code> in hex code  or <code>rgb(255, 0, 255)</code> in RGB values. Use RGB values for color is easy to understand. But what the hell is hex code? How could it represent for the same color as RGB values do. It turns out that hex code is just another format of RGB values. </p>
 <p>Let’s see a picture.</p>
 <p><img src="/images/2017-09-19.jpg" alt="2017-09-19.jpg"></p>
@@ -271,11 +383,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:46:45Z</updated>
+    <updated>2017-11-02T07:24:33Z</updated>
     <published>2017-03-11T21:02:15Z</published>
     <id>http://movier.me/blog/valid-palindrome/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="valid-palindrome">Valid Palindrome</h1>
-<p>Once during a technical interview, I was asked to validate whether a sentence is a palindrome or not. But what’s a palindrome? A <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as &quot;A man, a plan, a canal, Panama!&quot;, &quot;Was it a car or a cat I saw?&quot; or &quot;No &#39;x&#39; in Nixon&quot;.</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Once during a technical interview, I was asked to validate whether a sentence is a palindrome or not. But what’s a palindrome? A <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as &quot;A man, a plan, a canal, Panama!&quot;, &quot;Was it a car or a cat I saw?&quot; or &quot;No &#39;x&#39; in Nixon&quot;.</p>
 <h2 id="my-solution">My Solution</h2>
 <p>During the interview I just reverse the sentence and compare with the original sentence. Even ignore case and punctuation it’s still wrong. How could “Was I tac a ro rac a ti saw?” be the same with &quot;Was it a car or a cat I saw?”. Obviously the problem is space. What if I even ignore space?</p>
 <blockquote>
@@ -340,11 +451,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-02-21T20:57:19Z</updated>
+    <updated>2017-11-02T06:52:40Z</updated>
     <published>2017-02-21T20:57:19Z</published>
     <id>http://movier.me/blog/newborn-common-problems-and-coping-methods/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">新生儿常见问题及应对方法</h1>
-<p>宝宝的出生总会让新手父母们措手不及，总会有这样那样的问题困扰着我们，如果能提前了解这些可能面对的问题，那么我们也许能从容一些。以下是小星星出生时遇到的一些问题：</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>宝宝的出生总会让新手父母们措手不及，总会有这样那样的问题困扰着我们，如果能提前了解这些可能面对的问题，那么我们也许能从容一些。以下是小星星出生时遇到的一些问题：</p>
 <h2 id="-">黄疸</h2>
 <p>黄疸是新生儿中非常常见的一个问题，我们小星星也不可避免地发生了这个问题。小星星刚出生的时候是白白的，从出生后第三天开始，她的肤色就开始一点一点变黄，整个过程当中又夹杂着新生儿痤疮和湿疹这些皮肤问题，以至于黄疸到底什么时候好的都不太清楚，反正42天回医院复查的时候黄疸指数还没有恢复正常，但是已经很接近正常值了。</p>
 <p>在宝宝出生后，医生一般每天都会来为宝宝测一次黄疸指数，只要没有超过危险数值，医生一般不会采取什么特殊的措施。也就是说，就算有黄疸，如果医生允许宝宝回家的话，说明宝宝的黄疸并不是非常严重，回家晒晒太阳，慢慢会好的。小星星回家后，我们有机会就给她晒晒太阳，黄疸在不知不觉中就好了。</p>
@@ -370,11 +480,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-02-11T20:02:28Z</updated>
+    <updated>2017-11-02T06:52:48Z</updated>
     <published>2017-02-11T20:02:28Z</published>
     <id>http://movier.me/blog/to-prepare-for-something-before-giving-birth-to-a-child/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">生孩子前需要准备的东西</h1>
-<p>最近，有老同学在微信公众号上开了一个育儿专栏，我受益颇深。本着分享精神，我打算总结一下生孩子前需要准备的物品，这些物品都是为打算顺产并且母乳喂养的妈妈和宝宝准备的，不一定适用于有其他打算的妈妈和宝宝。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>最近，有老同学在微信公众号上开了一个育儿专栏，我受益颇深。本着分享精神，我打算总结一下生孩子前需要准备的物品，这些物品都是为打算顺产并且母乳喂养的妈妈和宝宝准备的，不一定适用于有其他打算的妈妈和宝宝。</p>
 <h2 id="for-baby">For Baby</h2>
 <h3 id="-">纸尿裤</h3>
 <p>老婆说宝宝生出来之后每天长一两，NB 一会儿就穿不下了，所以我们只准备了一袋 NB 装。事实证明，一袋 NB 根本就不够。我们小星星出生时七斤三两，马子算大的了吧，就算这样，面对每天消耗数十张纸尿裤，一袋 NB 一会儿就见底了，这时候 S 号对她来说还太大，于是，我们不得不在京东上买了一袋 moony 的 NB 装来应急。</p>
@@ -432,11 +541,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T02:58:08Z</updated>
+    <updated>2017-11-02T06:51:16Z</updated>
     <published>2016-12-31T22:40:35Z</published>
     <id>http://movier.me/blog/bye-2016-hi-2017/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-2016-2017">再见2016，你好2017</h1>
-<p>这一年，我成为了一名父亲。她是一个女孩，我们叫她“小星星”。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>这一年，我成为了一名父亲。她是一个女孩，我们叫她“小星星”。</p>
 <h2 id="2016">2016</h2>
 <p>去年的创业项目在年初被我和合伙人宣判了死刑，于是我不得不开始找工作。3月份的时候在一家移动互联网创业型公司工作了3个星期，后来由于无法接受一周工作6天的安排，便提出了离职。</p>
 <p>期间得知了老婆怀孕的消息，离职后也就没有继续去找工作，而是留在家中照顾处于妊娠反应中的老婆。直到老婆熬过最艰难的孕初期，我才又开始出去找工作。</p>
@@ -488,11 +596,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2016-10-19T17:03:35Z</updated>
+    <updated>2017-11-02T06:52:56Z</updated>
     <published>2016-10-19T17:03:35Z</published>
     <id>http://movier.me/blog/waiting/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">等待</h1>
-<p>几天以来一直想写篇文章，写写最近发生的一些事、遇到的一些人，但是苦于想不出一个比较合适的标题，迟迟没有动笔。刚才灵机一动，想到了“等待”这个标题，于是马上动起笔来。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>几天以来一直想写篇文章，写写最近发生的一些事、遇到的一些人，但是苦于想不出一个比较合适的标题，迟迟没有动笔。刚才灵机一动，想到了“等待”这个标题，于是马上动起笔来。</p>
 <hr>
 <p>人的一生有许多重要的时刻需要等待。对我来说，以往的任何等待都没有现在来得重要，因为现在我正等待着成为一名父亲。老婆怀孕38周了，在上周就已经足月了，这也就意味着，小家伙随时都有可能出生。在写{% post_link some-little-things-recently 近期两三事 %}那篇文章的时候，老婆怀孕才没多久，我说对于要当爸爸一事，我还没什么感觉，但是当我第一次感受到胎动的时候，我真的激动了，那是一种生命的律动，我感受到了生命的顽强，这条生命在未来将和我息息相关。</p>
 <p>除了孩子即将出生之外，我再一次“失业”了。一年之内连续两次“失业”，看来我的职业生涯不太顺利。在{% post_link some-little-things-recently 近期两三事 %}那篇文章中，我说过“珍惜生命，远离创业、外包公司”，这次找工作我马上违反了这条准则，选择了一家创业公司，事实证明我立下的这条准则是十分准确的，千万不要轻易打破。</p>
@@ -513,11 +620,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2016-07-13T14:52:04Z</updated>
+    <updated>2017-11-02T06:53:03Z</updated>
     <published>2016-07-13T14:52:04Z</published>
     <id>http://movier.me/blog/after-watching-euro2016/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="2016-">2016年法国欧洲杯观后感</h1>
-<p>2016年法国欧洲杯在北京时间前天凌晨落下了帷幕，最终葡萄牙战胜了东道主法国夺得了冠军。对于葡萄牙最终夺冠，我是万万没想到的。小组赛三场平局的葡萄牙表现平平，由于本届欧洲杯扩容，葡萄牙以小组第三的成绩照样晋级淘汰赛。幸运的是他们在淘汰赛阶段被分到了强队较少的上半区，尽管如此，葡萄牙在淘汰赛前两轮还是没能在90分钟常规比赛时间内战胜对手，分别通过加时赛和点球大战才淘汰了对手。直到半决赛与威尔士一役，葡萄牙才迎来了第一场常规比赛时间内的胜利，那也是在威尔士的中场核心拉姆塞停赛的前提下，不然的话我估计葡萄牙要晋级又要靠点球了。与法国的决赛，葡萄牙又踢出了功利足球，最终在加时赛绝杀了对手，夺得了冠军。这场决赛我估计背后有赌球公司的暗箱操作，事实是怎样我不知道，总之，我并不欣赏这届欧洲冠军葡萄牙。论实力，葡萄牙还差得远，又没有自己的技战术，踢着毫无欣赏价值的功利足球，葡萄牙最终能夺冠靠得是非凡的运气或者是背后有高人相助。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>2016年法国欧洲杯在北京时间前天凌晨落下了帷幕，最终葡萄牙战胜了东道主法国夺得了冠军。对于葡萄牙最终夺冠，我是万万没想到的。小组赛三场平局的葡萄牙表现平平，由于本届欧洲杯扩容，葡萄牙以小组第三的成绩照样晋级淘汰赛。幸运的是他们在淘汰赛阶段被分到了强队较少的上半区，尽管如此，葡萄牙在淘汰赛前两轮还是没能在90分钟常规比赛时间内战胜对手，分别通过加时赛和点球大战才淘汰了对手。直到半决赛与威尔士一役，葡萄牙才迎来了第一场常规比赛时间内的胜利，那也是在威尔士的中场核心拉姆塞停赛的前提下，不然的话我估计葡萄牙要晋级又要靠点球了。与法国的决赛，葡萄牙又踢出了功利足球，最终在加时赛绝杀了对手，夺得了冠军。这场决赛我估计背后有赌球公司的暗箱操作，事实是怎样我不知道，总之，我并不欣赏这届欧洲冠军葡萄牙。论实力，葡萄牙还差得远，又没有自己的技战术，踢着毫无欣赏价值的功利足球，葡萄牙最终能夺冠靠得是非凡的运气或者是背后有高人相助。</p>
 <p>说完了葡萄牙，我想说说其他的。本届欧洲杯一共51场比赛，我看了近20场的直播，其中不乏一些令人感动的场面，令人印象深刻的球队，令人拍案叫绝的进球。我想这些才是构成这届欧洲杯的重要组成部分，这些才是足球真正的魅力，吸引着我和全世界数以亿计的球迷。</p>
 <p>爱尔兰队在八分之一决赛中输给了东道主法国队。比赛结束后，没有一位爱尔兰球迷离开球场，爱尔兰球员来到他们的球迷面前，爱尔兰球迷则唱起歌鼓励着球员。就这样，球员和球迷，你望着我，我望着你，在里昂的夜晚上演了一幕深厚的鱼水情。看到这一幕，我被深深地打动了，第一次为球员和球迷之间的感情落下泪水。</p>
 <p>不得不提的还有冰岛队，他们第一次进入欧洲杯决赛圈，就以黑马的姿态闯入了八强，创造了历史。要知道冰岛的全国人口只有三十几万，能够取得这样的成绩实属不易。冰岛球员在赛场上顽强表现，冰岛球迷则以他们独有的“维京战吼”鼓舞着他们的战士。当比赛结束，球员和球迷一起做着这一令人震撼的仪式时，场面令人肃然起敬。冰岛在本届欧洲杯中能够取得这样的成绩绝非偶然，他们已经为这一刻默默耕耘了十几年甚至几十年，我想用“全民足球”这四个字最能体现冰岛这些年在足球上的投入，他们的努力最终获得了回报并且将一直持续下去，相信冰岛会在2018年俄罗斯世界杯上再次刮起那股令人震感的蓝色旋风，在我心中，蓝色只属于冰岛，我爱冰岛蓝。</p>
@@ -532,11 +638,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2016-05-23T10:43:57Z</updated>
+    <updated>2017-11-02T06:53:11Z</updated>
     <published>2016-05-23T10:43:57Z</published>
     <id>http://movier.me/blog/after-watching-google-io-2016/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="google-i-o-2016-">Google I/O 2016 观后感</h1>
-<p><a href="https://events.google.com/io2016/">Google I/O 2016</a> 在上周刚刚落下帷幕。我在第一时间花了四天时间把所有的 125 场 Session 都过了一遍，有的全部看完了，有的看了一部分，还有一些大致了解了一下内容。接下去谈谈我的感想。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p><a href="https://events.google.com/io2016/">Google I/O 2016</a> 在上周刚刚落下帷幕。我在第一时间花了四天时间把所有的 125 场 Session 都过了一遍，有的全部看完了，有的看了一部分，还有一些大致了解了一下内容。接下去谈谈我的感想。</p>
 <h2 id="basic">Basic</h2>
 <p>其实，Keynote看不看真的无所谓，过一遍十几分钟的 <a href="https://www.youtube.com/watch?v=f7_4QoZwH54">highlight</a> 就够了。Allo 和 Duo 这两款通讯类 App 看上去还不错，具体要等正式发布了才知道。况且到时候找不找得到人和我一起体验都是个问题，就像 Telegram 一样，我都注册一年多了，都没一个正式的联系人，真是悲哀！Google Home 为我们描绘了一个美好的<a href="https://www.youtube.com/watch?v=5bYSX2C4aWc">未来生活</a>。The Google Assistant 就像我们的私人助理一般，能够为我们处理琐碎的日常事务。<a href="https://developer.android.com/preview/index.html">Android N</a> 早在年初的时候就已经放出了开发者预览版，因此在本届大会上显得没那么耀眼。反倒是 <a href="https://developer.android.com/wear/preview/index.html">Android Wear</a> 即将迎来有史以来最大的版本更新——2.0版，App 终于能够脱离手机独立运行在手表之上了。对我来说，如果手表能够完全取代手机，即能够拨听电话，收发短信，那才算得上真正的独立，到时候也许会考虑入手一款。Android 方面最吸引我的新特性莫过于 <a href="https://developer.android.com/topic/instant-apps/index.html">Android Instant Apps</a>，它能够让用户在没有安装 App 的情况下体验并使用这款 App，这一新特性无论对用户，还是对开发者来说都非常具有吸引力。<a href="https://firebase.google.com">Firebase</a> 在被 Google 收购之后似乎收到了极大的重视，虽然在 Keynote 中的篇幅并不是很大，但是有非常多的 Session 都与 Firebase 有关，可见 Google 对其寄予厚望。</p>
 <h2 id="vr">VR</h2>
@@ -561,11 +666,10 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2016-04-14T20:48:09Z</updated>
+    <updated>2017-11-02T06:53:18Z</updated>
     <published>2016-04-14T20:48:09Z</published>
     <id>http://movier.me/blog/develop-a-hexo-theme-with-gulp-and-browsersync/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="develop-a-hexo-theme-with-gulp-and-browsersync">Develop a Hexo Theme with Gulp and Browsersync</h1>
-<p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="最终效果图"></p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="最终效果图"></p>
 <p><a href="https://hexo.io">Hexo</a> is a fast, simple&amp;powerful blog framework. I have use Hexo for my personal blog for some time and recently I decide to {% post_link some-little-things-recently develop a theme for Hexo %}.</p>
 <p><a href="https://www.browsersync.io">Browsersync</a> is a awesome testing tool for front-end developer. It will synchronize all your behavior on different browsers or devices and save us a lot of time. There is no doubt that I will use Browsersync for all front-end develop work. This time no except.</p>
 <p>The basic of developing a Hexo theme is to create some ejs templates and stylus files. Hexo will generate the content dynamically convert ejs templates to html and stylus to css. You need to modify stylus files and open browser to see the style. The question is that Browsersync need static html and css files. Yes, Hexo has a command called <code>hexo generate</code> which could generate static html and css files to <code>public</code> directory. We don&#39;t want to call <code>hexo generate</code> every time we modify the stylus files because the process will waste a lot of time. At the same time we don&#39;t want to modify the static css file in <code>public</code> directory directly because we will lose the modification afte <code>hexo generate</code> is called again. What we really want is after we modify stylus files Browsersync just works.</p>
@@ -608,11 +712,10 @@ gulp.task(&#39;default&#39;, [&#39;serve&#39;]);
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T02:58:34Z</updated>
+    <updated>2017-11-02T06:51:04Z</updated>
     <published>2016-03-28T20:38:07Z</published>
     <id>http://movier.me/blog/some-little-things-recently/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">近期两三事</h1>
-<p>最近一下子发生了太多事，值得我记录一下。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>最近一下子发生了太多事，值得我记录一下。</p>
 <h2 id="-">求职</h2>
 <p>自从{% post_link my-first-venture-failed 创业失败 %}之后，便开始找工作。目标职位也非常明确，那就是iOS开发工程师。投了几天简历之后，便收到了第一个面试邀请，我也欣欣然地去参加了面试。这是一个创业公司，和创始人聊了一会儿，他表示非常欣赏我自学技术、自主创业的个人发展经历。之后和他们的技术主管聊了会儿技术的事儿，当时我以为他应该精通iOS，然而事实上他对iOS一窍不通，是PHP开发出生的技术leader。和他们两位聊完之后，面试就算结束了，结果自然是回去等通知。回去等通知一般意味着失败，我对此也没放在心上。没想到的是到家没多久便接到了电话通知“被录取了”，对于这一结果，我意外之余有些沾沾自喜，因此我毅然决定加入这家创业公司。</p>
 <!--more-->
@@ -649,11 +752,10 @@ gulp.task(&#39;default&#39;, [&#39;serve&#39;]);
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2016-03-21T20:55:22Z</updated>
+    <updated>2017-11-02T06:53:24Z</updated>
     <published>2016-03-21T20:55:22Z</published>
     <id>http://movier.me/blog/a-letter-for-xixiquan-user/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">给嘻嘻圈用户的一封信</h1>
-<p>嘻嘻圈的用户们，你们好。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>嘻嘻圈的用户们，你们好。</p>
 <p>经过半年左右的运营，我们发现《嘻嘻圈》还是无法如预期的一样为用户提供价值，一款无法创造价值的产品没有生存下去的理由，因此我们决定停止嘻嘻圈所有相关业务。从现在起我们不再接受新用户的注册，而整个线上服务将于2016年4月1日停止，届时《嘻嘻圈》App将无法正常运行，请用户们自行删除。</p>
 <!--more-->
 <p>最初我们将嘻嘻圈定位于连接婚庆行业从业人员与普通用户的桥梁，将服务直接销售给终端用户，这样不仅可以为婚庆行业从业人员开拓业务，同时可以为终端用户摆脱婚庆公司这样一个“大中介”，享受价廉物美的服务。然而，理想是丰满的，现实是骨感的。的确有不少婚庆行业从业人员来注册《嘻嘻圈》，希望能在《嘻嘻圈》这个平台上开拓自己的业务，但是，《嘻嘻圈》迟迟未能获得终端用户的关注。这样一边倒的局面无疑让《嘻嘻圈》陷入窘境之中，我们做了很多努力，希望改变这种局面，然而事与愿违，我们没有更多的精力继续花费在这样一个没有价值的产品之中。因此我们决定放弃《嘻嘻圈》，由此给您带来的不便，我们深表歉意。</p>
@@ -666,11 +768,10 @@ gulp.task(&#39;default&#39;, [&#39;serve&#39;]);
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T03:00:27Z</updated>
+    <updated>2017-11-02T06:50:53Z</updated>
     <published>2016-02-07T14:41:54Z</published>
     <id>http://movier.me/blog/my-first-venture-failed/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">第一次创业失败了</h1>
-<p>前天下午，和合伙人见了次面，顺便探望了他刚出生的儿子，祝福他们一家。合伙人告诉我他决定放弃目前的项目，其实我早就从心底放弃这个项目了，这标志着我的第一次创业正式以失败告终。这次创业的起因我已经在《再见2015，你好2016》一文中提过，至于创业项目则是在决定创业之后才定的。现在看来，这也许就是本次创业失败最大的原因。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>前天下午，和合伙人见了次面，顺便探望了他刚出生的儿子，祝福他们一家。合伙人告诉我他决定放弃目前的项目，其实我早就从心底放弃这个项目了，这标志着我的第一次创业正式以失败告终。这次创业的起因我已经在《再见2015，你好2016》一文中提过，至于创业项目则是在决定创业之后才定的。现在看来，这也许就是本次创业失败最大的原因。</p>
 <!--more-->
 <h3 id="-">经历</h3>
 <p>决定创业之后，我们开始思考创业项目。一开始决定做一款洗车类App，还召集了小伙伴开会洗脑，结果没有一个小伙伴被我们说动，最后还是就我们两个自己开始创业。考虑到竞争优势等问题，这个洗车类App最后还是流产了。事到如今想想这个问题不应该成为立项的依据，因为无论做什么，我们都没有任何竞争优势。之后有一次，我提到要不做一款婚庆类App，这是缘于我自身非常不爽的婚庆经历，于是我想要是能直接把四大金刚的服务卖给新人，这样就脱离的婚庆公司的束缚，同时达到直销的效果，岂不是一举两得。这个想法得到了合伙人的肯定，于是我们开始立项，产品设计，UI设计，功能开发。一切都很顺利地进行着，整套功能实现后，我们便开始向四大金刚推广，用户数量也稳步增长。但是我们App上的订单几乎没有，因此我们打算去上海婚博会推广我们的产品。我们打算采用最传统的发传单方式进行宣传，结果却是传单发了没几张就灰溜溜地回来了。</p>
@@ -689,11 +790,10 @@ gulp.task(&#39;default&#39;, [&#39;serve&#39;]);
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2016-02-03T16:39:50Z</updated>
+    <updated>2017-11-02T06:53:30Z</updated>
     <published>2016-02-03T16:39:50Z</published>
     <id>http://movier.me/blog/web-service-api-sdk-with-blocks/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-blocks-web-service-api">使用Blocks封装Web Service API</h1>
-<p>《嘻嘻圈》作为一款互联网应用，涉及到许多网络操作。在开发初期，为了追求进度，简单粗暴的在需要的时候发起连接请求。这样一来，造成了很多重复代码。这个问题在我开始写相关代码的时候就意识到了。我之所以迟迟没有优化是因为网络操作都是异步的，需要等待处理结果，然后根据结果写相关代码。重复或者说需要优化的代码在外部，自定义代码在回调结果里，使用一般的代码优化办法不可行。当时我就在想我的自定义代码如果可以作为一个函数的参数就好了，这样就可以成功地优化代码了。那时候我还不知道怎么办，直到最近几天读到objective-c中block的相关内容时，我才恍然大悟，block不就是我期盼的东西吗!</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>《嘻嘻圈》作为一款互联网应用，涉及到许多网络操作。在开发初期，为了追求进度，简单粗暴的在需要的时候发起连接请求。这样一来，造成了很多重复代码。这个问题在我开始写相关代码的时候就意识到了。我之所以迟迟没有优化是因为网络操作都是异步的，需要等待处理结果，然后根据结果写相关代码。重复或者说需要优化的代码在外部，自定义代码在回调结果里，使用一般的代码优化办法不可行。当时我就在想我的自定义代码如果可以作为一个函数的参数就好了，这样就可以成功地优化代码了。那时候我还不知道怎么办，直到最近几天读到objective-c中block的相关内容时，我才恍然大悟，block不就是我期盼的东西吗!</p>
 <!--more-->
 <p>举个例子，我可能需要像下面这样使用<code>NSURLSession</code>发起多个Get请求，我之前的做法是在每个需要发起Get请求的地方都复制一份以下的代码，只不过将url和completionHandler的实现替换成实际的需求。</p>
 <pre><code class="lang-objc">NSURL *URL = [NSURL URLWithString:@&quot;http://movier.me&quot;]; //重复代码，只不过url不同
@@ -769,11 +869,10 @@ NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:r
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T02:57:44Z</updated>
+    <updated>2017-11-02T06:51:29Z</updated>
     <published>2015-12-30T16:04:48Z</published>
     <id>http://movier.me/blog/bye-2015-hi-2016/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-2015-2016">再见2015，你好2016</h1>
-<p>2015年，这是我进入技术行业的第四年。这一年对来说，可以简单地划分为上半年和下半年。上半年在去年年底入职的公司做Android开发，下半年离职和同学一起创业。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>2015年，这是我进入技术行业的第四年。这一年对来说，可以简单地划分为上半年和下半年。上半年在去年年底入职的公司做Android开发，下半年离职和同学一起创业。</p>
 <p><strong>关于工作</strong></p>
 <p>一直以来，在原来公司中呆得就不是特别开心。项目的历史包袱沉重，代码耦合非常严重，搞得我整天在一堆丑得要死的代码中跳来跳去，再好的心情也被糟蹋得不行了。一晃就到六月份了，这时候，我同学找到我说他有一个idea，准备离职创业，问我有没有兴趣加入。这敢情好啊！创业一直以来都是心里想做而没做的事情，现在正好机会来了，举双手赞成。我们找了其他小伙伴，想拉他们一起来创业，结果没有一个小伙伴愿意。没关系，两个人，一个技术，一个市场，够了。就这样开启了我们的创业之路，一直持续到现在。</p>
 <p><strong>关于旅行</strong></p>
@@ -798,11 +897,10 @@ NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:r
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2015-12-11T20:30:12Z</updated>
+    <updated>2017-11-02T06:53:36Z</updated>
     <published>2015-12-11T20:30:12Z</published>
     <id>http://movier.me/blog/the-book-i-read-in-2015/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="2015-">2015年我读过的那些书</h1>
-<p>就在昨天，<a href="http://blog.zhowkev.in/2015/12/10/2015-nian-wo-du-guo-de-hao-shu/">Kevin</a>和<a href="https://luolei.org/what-i-read-in-2015/">罗磊</a>不约而同地写了一篇读书总结的文章，勾起了我写一篇类似文章的欲望。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>就在昨天，<a href="http://blog.zhowkev.in/2015/12/10/2015-nian-wo-du-guo-de-hao-shu/">Kevin</a>和<a href="https://luolei.org/what-i-read-in-2015/">罗磊</a>不约而同地写了一篇读书总结的文章，勾起了我写一篇类似文章的欲望。</p>
 <p>先晒一下我的书单：</p>
 <ol>
 <li><a href="http://book.douban.com/subject/25861795/">重来2 : 更为简单高效的远程工作方式</a></li>
@@ -827,11 +925,10 @@ NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:r
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-30T06:45:59Z</updated>
+    <updated>2017-11-02T06:50:32Z</updated>
     <published>2015-11-11T19:05:39Z</published>
     <id>http://movier.me/blog/get-ios-device-model/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-ios-">获取iOS设备具体型号</h1>
-<p>如果我想知道用户使用的具体是哪一款iOS设备，应该怎么做呢？由于<code>UIDevice</code>类中并未提供相关方法直接获取设备具体型号，因此需要我们自己写方法。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>如果我想知道用户使用的具体是哪一款iOS设备，应该怎么做呢？由于<code>UIDevice</code>类中并未提供相关方法直接获取设备具体型号，因此需要我们自己写方法。</p>
 <p>我们打算使用Objective-C中的<a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/Category.html">Category</a>语言特性为UIDevice添加一个新的方法，用于获取设备的具体型号。</p>
 <p>使用Category时像创建一个普通类一样新建.h和.m文件，类的名字使用“ClassName+CategoryName”的形式。我们这里就用<code>UIDevice+DetailModel</code>作为类名。</p>
 <p>在<code>UIDevice+DetailModel.h</code>文件中：</p>
@@ -894,11 +991,10 @@ NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:r
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2015-11-04T00:40:29Z</updated>
+    <updated>2017-11-02T06:53:44Z</updated>
     <published>2015-11-04T00:40:29Z</published>
     <id>http://movier.me/blog/realize-viewpager-and-viewflipper-with-uiscrollview-in-ios/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="ios-uiscrollview-">iOS中使用UIScrollView实现图片滑动切页和轮播</h1>
-<p>半夜被老婆“揍了一顿”，“揍”得我咳嗽得厉害，一点儿都睡不着，干脆起来写篇文章吧！又是好久好久没更新博客了，之前刚用Ghost时的激动兴奋之情早已烟消云散，在Ghost平台下总共才写下了屈指可数的几篇文章，有的还不是原创，真是悲哀啊！</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>半夜被老婆“揍了一顿”，“揍”得我咳嗽得厉害，一点儿都睡不着，干脆起来写篇文章吧！又是好久好久没更新博客了，之前刚用Ghost时的激动兴奋之情早已烟消云散，在Ghost平台下总共才写下了屈指可数的几篇文章，有的还不是原创，真是悲哀啊！</p>
 <p>现在我正在用Atom写这篇文章，开启了Markdown实时预览，写作体验不比Ghost差。Atom开启Markdown实时预览时会碰到<a href="http://atom-china.org/t/soft-wrap/207">中文自动断行问题(Soft Wrap)</a>，可以使用AtomicChar插件解决。至于博客平台我也打算从Ghost迁移到Hexo，感觉Hexo还是挺炫酷的，最重要的是方便，无论是部署还是维护。</p>
 <p>这是我在Hexo平台发布的第一篇文章。</p>
 <hr>
@@ -1007,11 +1103,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2015-04-07T09:23:00Z</updated>
+    <updated>2017-11-02T06:53:51Z</updated>
     <published>2015-04-07T09:23:00Z</published>
     <id>http://movier.me/blog/android-restarting-my-app-runtime/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">应用在运行时自动重启</h1>
-<p>这两天在为公司的项目调试一个bug，这个bug十分诡异，很显然是重启导致这个bug。但是重启的原因，让我定位了好长时间，因为并非是由于应用内部错误引起的崩溃而导致的重启，于是我网上一番google，终于找到了相关线索。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>这两天在为公司的项目调试一个bug，这个bug十分诡异，很显然是重启导致这个bug。但是重启的原因，让我定位了好长时间，因为并非是由于应用内部错误引起的崩溃而导致的重启，于是我网上一番google，终于找到了相关线索。</p>
 <p>这是<a href="http://developer.android.com/guide/topics/resources/runtime-changes.html">Android相关开发文档</a>中的描述：Some device configurations can change during runtime (such as screen orientation, keyboard availability, and language). When such a change occurs, Android restarts the running Activity (onDestroy() is called, followed by onCreate()). The restart behavior is designed to help your application adapt to new configurations by automatically reloading your application with alternative resources that match the new device configuration.</p>
 <p>翻译成中文的意思是：一些设备的配置比如屏幕方向，键盘可得性以及语言，在运行时会发生变化。当这种变化发生时，Android会重启运行中的Activity（先调用onDestroy，然后调用onCreate）。这样设计的目的是希望通过载入相关新的资源来适应这种新的配置。</p>
 <p>冥冥之中，我已经预感到这就是导致应用重启继而造成这个bug的原因。于是，我在相关的Activity里设置了<a href="http://developer.android.com/guide/topics/manifest/activity-element.html#config">android:configChanges</a> 属性:</p>
@@ -1026,11 +1121,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-10T06:13:00Z</updated>
+    <updated>2017-11-02T06:52:33Z</updated>
     <published>2015-02-02T13:24:00Z</published>
     <id>http://movier.me/blog/my-driving-experience/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">我的驾驶之路</h1>
-<p>自从2012年拥有了人生中第一辆小轿车以来，我的驾龄也有两年多了。然而促使我写下这篇文章的原因是今天早上上班路上发生的一起事故，引起了我的反思，当头棒喝，直接在我脑门上敲响了警钟。但是让我先回顾一下这两年多来发生在我身上的事故，再回过头来看今天这起事故，可能更加有感触。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>自从2012年拥有了人生中第一辆小轿车以来，我的驾龄也有两年多了。然而促使我写下这篇文章的原因是今天早上上班路上发生的一起事故，引起了我的反思，当头棒喝，直接在我脑门上敲响了警钟。但是让我先回顾一下这两年多来发生在我身上的事故，再回过头来看今天这起事故，可能更加有感触。</p>
 <p>第一起事故发生在提车后不久 ，地点是在老婆家门口，由于那儿在修路，有很多路障，我从老婆家门口出去转弯时，车身侧面擦到了路障，就把爱车刮花了。当时还特意在<a href="http://blog.sina.com.cn/s/blog_4da3c7bc0101611i.html">新浪博客</a>上写了几句话纪念这次事故。这起单车事故的原因很简单，新手上路，技术不行却又盲目自信。</p>
 <p>第二起事故发生在2013年下半年，具体时间记不得了，在南北高架上，由于正值高峰期，汽车们犹如蜗牛般缓慢的向前爬行，突然，“砰”一声，我被追尾了，右后侧有车辆想塞车，车是塞进来了，可是刹车没踩住。毫无疑问，对方全责。</p>
 <p>第三起事故发生在2014年6月1日，我记得非常清楚，那天是我们搬家的日子。我正开车前往饭店庆祝乔迁之喜，我被红灯停在一个路口，不一会儿红灯就转绿灯了，我踩下油门准备起步，突然，一辆左后方来车窜到我的面前，就这样发生了碰撞，这辆车是要小转弯的，可是由于红灯且只有一根道，它不想等就逆行到路口小转，没想到这时绿灯亮起，我也迅速踩下油门起步，就这样碰了。这也毫无疑问，对方全责。</p>
@@ -1049,11 +1143,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-15T15:49:39Z</updated>
+    <updated>2017-11-02T06:52:24Z</updated>
     <published>2014-12-31T23:59:00Z</published>
     <id>http://movier.me/blog/goodbye-2014/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="2014-">2014这一年</h1>
-<p>2014年对我来说注定是不平凡的一年，因为我在这一年中完成了一件人生大事，结婚。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>2014年对我来说注定是不平凡的一年，因为我在这一年中完成了一件人生大事，结婚。</p>
 <p>10月18日，我和恋爱四年多的小懒猪结婚了，虽然我们还是常常会吵架，就像现在她还在因为我这么晚不睡觉而不开心，好像还哭了，但是我还是要写完这篇日志。我们的生活才刚刚开始，2014年是我们婚姻的元年，等到2024年，2034年，2044年，2054年甚至2064年的时候，我们还会像现在这样在一起，加倍我们的快乐，减半我们的悲伤，生活哪有一帆风顺，只有在一起才最重要。</p>
 <p>这一年，我们去了许多地方，2月份我们去了香港，说是为结婚作准备，其实只是找个借口出去玩而已啦～4月底5月初，公司组织大家去黄山旅游，我带着小懒猪一起参加。她还和我们一起登顶了黄山最陡的天都峰，我真为你感到自豪。还有就是11月份的台湾蜜月旅行，从台北开始到花莲、垦丁、高雄、阿里山、日月潭最后回到台北，整整十三天的旅行，让我们对台湾留下了深刻的印象，说好以后还会再去。台湾回来之后，我们马不停蹄地自驾游了西塘、乌镇和杭州，杭州参天的梧桐树给我留下了美好的印象。</p>
 <p>还有一件不算大事儿的事，我从原来公司离职了并且进入了一家新的公司。这是我当码农的第三年，说好要当一辈子码农，写一辈子代码，这样看来现在还算是职业生涯的初期。并不仅仅只是换家公司这么简单，我的技术道路也改变了，从原来的WEB开发到现在的Android开发，当然这是我自己的选择，目前我是公司里最弱的，但是我很快乐，因为每天都会有进步。最近在看一本书叫做<a href="http://book.douban.com/subject/4923179/">《我编程，我快乐》</a>，里面叫我们做团队中最差的，因为这样才会有进步。我相信自己在不久之后，就会成为团队中值得信赖的一员。</p>
@@ -1069,11 +1162,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T02:57:27Z</updated>
+    <updated>2017-11-02T06:51:45Z</updated>
     <published>2014-09-09T20:00:00Z</published>
     <id>http://movier.me/blog/so-young-3/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">致我们终将逝去的青春（下）</h1>
-<h4 id="-">束河古镇</h4>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h4 id="-">束河古镇</h4>
 <p>前往束河古镇的路上没有遇到什么人，进到束河古镇后，才发现那儿也是熙熙攘攘，并不比丽江古城清静多少。暂时管不了那么多了，找到今晚的落脚点才是我的当务之急。我边走边观察，一路上也向路人打听着附近是否有缝纫的地方，因为我的背包在昆明的时候就开了一个口子，随着旅程的不断深入，那口子也越开越大，再不补的话早晚得掉东西。四处打听之后，终于找到一个能补的地方，那是一个小摊头，老板娘一开始还不愿意帮我补，我好说歹说她才终于答应帮我试着补一下这个口子。</p>
 <p>正当她补着的时候，青年旅舍四个字出现在我的视线范围内，我二话没说直接进到店内询问。原来这并不是一家真正意义上的青年旅舍，只是老板给它取了一个青年旅舍的名字而已。因此，这里并没有我需要的床位，但是巧的是原来两个伙计一起住的那个双床房，现在由于其中一个伙计的女友来了他要搬出去，于是就空了一个床位出来，这样一来我就成功地入住了这家旅舍。</p>
 <p>解决了住宿问题，回到缝纫摊头那儿发现我的背包也补好了。突然发现今天一切都很顺利，与小伙伴分离的失落感瞬间一扫而光，心情逐渐晴朗了起来。</p>
@@ -1103,11 +1195,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T02:56:10Z</updated>
+    <updated>2017-11-02T06:52:10Z</updated>
     <published>2014-08-08T20:00:00Z</published>
     <id>http://movier.me/blog/so-young-2/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">致我们终将逝去的青春（中）</h1>
-<p>下午三四点的时候我来到集结地点——昆明春城之星拿铁店。店里有几个背着大包小包行李的青年人，我预感到他们极有可能就是我未来几天的小伙伴，果然不出所料，在报完稻草人的名字之后发现他们同样是稻草人的队员，我暗自窃喜。没想到的是酒店以一种特殊的方式迎接我们——故障的电梯，意味着我们必须扛着自己的行李爬楼梯到十几楼的房间。由于我随身只有一个大背包，身轻如燕地就跑到了十二楼的房间。看到那些还在苦苦挣扎的小伙伴，我又发扬了助人为乐的精神，下楼帮着其他两个女生把行李搬到了各自的房间，搬完行李后我也有点累了，躺在房间的床上，心里想着这注定是一段不平凡的旅程。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>下午三四点的时候我来到集结地点——昆明春城之星拿铁店。店里有几个背着大包小包行李的青年人，我预感到他们极有可能就是我未来几天的小伙伴，果然不出所料，在报完稻草人的名字之后发现他们同样是稻草人的队员，我暗自窃喜。没想到的是酒店以一种特殊的方式迎接我们——故障的电梯，意味着我们必须扛着自己的行李爬楼梯到十几楼的房间。由于我随身只有一个大背包，身轻如燕地就跑到了十二楼的房间。看到那些还在苦苦挣扎的小伙伴，我又发扬了助人为乐的精神，下楼帮着其他两个女生把行李搬到了各自的房间，搬完行李后我也有点累了，躺在房间的床上，心里想着这注定是一段不平凡的旅程。</p>
 <p>到了该吃晚饭的时间，我也得为接下去的旅行准备一些粮食。于是我从十二楼爬楼梯到了一楼，在附近逛了一圈，到超市买了些面包，在一家兰州拉面馆坐下，点了碗面。正当我吃着不怎么好吃的面时，有一对母女出现在我的视线范围内，女孩穿着一件绿色的连衣裙和小披肩，头上戴着一顶很潮的帽子，她妈妈打扮的也十分时髦。她们在面馆门口向里张望了一会儿，最终还是犹犹豫豫地进来了。我吃完面回到酒店，又爬了十二楼回到自己的房间，洗完澡后躺在床上看电视，就等着晚上八点的集结会议了。</p>
 <p>八点还没到，我就来到领队吵吵的房间等着开会了，队员们也都陆陆续续地来了。这时有一对母女进来了，没错，正是我在兰州拉面看到的那对母女，我暗自感慨世界真的好小！不一会儿所有的队员都到齐了，大家把吵吵的床坐满了，沙发也坐满了，十几平米的房间装了十七个人，好不热闹。虽然大家是第一次正式见面，相互之间可能连姓名都不知道，但是丝毫没有拘谨，你一句我一句地像多年不见的好友。吵吵介绍了行程安排，与稻草人签订了旅行协议之后，见面会算是结束了，大家各自回到房间休息，准备第二天一早出发前往大理。</p>
 <h4 id="-">大理</h4>
@@ -1163,11 +1254,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-10-25T02:56:34Z</updated>
+    <updated>2017-11-02T06:51:56Z</updated>
     <published>2014-07-16T20:10:00Z</published>
     <id>http://movier.me/blog/so-young-1/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">致我们终将逝去的青春（上）</h1>
-<p>今天是2014年7月16日，去年的今天，我踏上了开往昆明的火车，开始了1个多月的重走青春之路。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>今天是2014年7月16日，去年的今天，我踏上了开往昆明的火车，开始了1个多月的重走青春之路。</p>
 <p>上海——昆明——大理——苍山——双廊——沙溪——虎跳峡——拉市海——丽江——束河——白沙——泸沽湖——丽江——昆明——南宁——厦门——上海</p>
 <p>谨以此文纪念我终将逝去的青春。</p>
 <hr>
@@ -1193,11 +1283,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-05-26T11:42:00Z</updated>
+    <updated>2017-11-02T06:53:58Z</updated>
     <published>2014-05-26T11:42:00Z</published>
     <id>http://movier.me/blog/miwifi/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">小米路由器</h1>
-<p>写这篇文章的时候，我已经忘记了我是怎么知道<a href="http://www.mi.com/miwifi">小米路由器</a>的。那并不重要的，重要的是小米路由器深深地吸引了我。1TB硬盘、家庭服务器、智能家居，其中每一项都值得我为他买单，更何况全部集成在一台路由器上。毫不犹豫地我就投入了预约购买小米路由器的大军之中。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>写这篇文章的时候，我已经忘记了我是怎么知道<a href="http://www.mi.com/miwifi">小米路由器</a>的。那并不重要的，重要的是小米路由器深深地吸引了我。1TB硬盘、家庭服务器、智能家居，其中每一项都值得我为他买单，更何况全部集成在一台路由器上。毫不犹豫地我就投入了预约购买小米路由器的大军之中。</p>
 <hr>
 <p>以下是我的购买小米路由器的心路历程，大可以跳过。</p>
 <p>都说小米的产品难抢，之前我还不以为然，等到这次抢小米路由器时，我才真正感受到了米粉们的疯狂。首轮开放购买是在某个星期二（其实每轮购买日都在星期二，不知道为什么），那天由于要陪我的夫人去参加面试，我正好在家，面试时间是在上午，中午12点准时开始抢购。等到11点了面试还没结束，我心里有些焦急，没想到过了一会儿，夫人出来了，她对我说没面完就走了，我问她为什么，她说还要笔试，太烦了，我擦...她说你不是还要回去抢小米路由器了吗，我一想是啊！赶紧的，开着我的小红就飞奔回去。总算12点之前赶到了家，就等正点开抢了。12点一到，我马上点击立即购买，结果立即跳出页面提示人数太多正在排队，很明显这是个js事件，我已经感觉不妙了，果然过了一会儿提示已售罄。我擦...第一次抢购就这么夭折了。</p>
@@ -1226,11 +1315,10 @@ self.pageControl.enabled = NO;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-05-14T10:17:00Z</updated>
+    <updated>2017-11-02T06:54:04Z</updated>
     <published>2014-05-14T10:17:00Z</published>
     <id>http://movier.me/blog/samaung-galaxy-s5/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="samsung-galaxy-s5">Samsung GALAXY S5</h1>
-<p>也许是由于从事了IT这一行的缘故，我对最新数码产品的关注度也越来越高，这不三星不久前发布的S5，我已经收入囊中了。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>也许是由于从事了IT这一行的缘故，我对最新数码产品的关注度也越来越高，这不三星不久前发布的S5，我已经收入囊中了。</p>
 <p>我是一个相信缘分的人，原本并没有换手机的计划，无意间看到一个从事电信行业的好友在朋友圈中分享了电信的最新活动——以389元两年期的合约价格购买S5或者5S送百兆宽带。当时就吸引了我的眼球，最主要的原因是家中正需要安装宽带，其次这一套餐优惠力度确实很大，于是向我的好友三番四次咨询之后，最终确定下这个套餐。在这里，我要非常感谢他<a href="http://weibo.com/u/2284613142">@妞妞DE榴榴</a>。</p>
 <p>当被问及是要S5还是5S的时候，我毫不犹豫选择了S5，一方面对苹果的界面产生了审美疲劳，另一方面主要想深入体验一下Android系统，为我以后成为Google的开发者做准备。我的目标是用Apple的产品开发Google的应用。</p>
 <p>废话不多说，马上开启S5的体验之旅：</p>
@@ -1254,11 +1342,10 @@ TO BE CONTINUED...</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-04-22T15:48:00Z</updated>
+    <updated>2017-11-02T06:54:11Z</updated>
     <published>2014-04-22T15:48:00Z</published>
     <id>http://movier.me/blog/how-to-begin-your-soho-life/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-soho-">如何开始你的SOHO之旅</h1>
-<p>感谢<a href="http://terrytai.com/">Terry Tai</a>将自己宝贵的SOHO经验分享给大家:</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>感谢<a href="http://terrytai.com/">Terry Tai</a>将自己宝贵的SOHO经验分享给大家:</p>
 <ul>
 <li><a href="http://terrytai.com/how-to-begin-soho-1/">如何开始你的 SOHO 之旅 (1)</a></li>
 <li><a href="http://terrytai.com/how-to-begin-soho-2/">如何开始你的 SOHO 之旅 (2)</a></li>
@@ -1432,11 +1519,10 @@ TO BE CONTINUED...</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-04-11T17:45:00Z</updated>
+    <updated>2017-11-02T06:54:20Z</updated>
     <published>2014-04-11T17:45:00Z</published>
     <id>http://movier.me/blog/openssl-heartbleed-analysis/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="openssl-heartbleed-">OpenSSL Heartbleed 漏洞深入分析</h1>
-<p>自从进入了新的阶段以来，我越来越关注互联网的<strong>安全性</strong>。这不，OpenSSL前几天又爆出了惊天大漏洞<a href="http://heartbleed.com/"><strong>Heartbleed</strong></a>，就把它作为我学习互联网安全的第一个实例吧！</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>自从进入了新的阶段以来，我越来越关注互联网的<strong>安全性</strong>。这不，OpenSSL前几天又爆出了惊天大漏洞<a href="http://heartbleed.com/"><strong>Heartbleed</strong></a>，就把它作为我学习互联网安全的第一个实例吧！</p>
 <p><img src="/images/heartbleed.png" alt="Heartbleed Bug"></p>
 <p><strong>以下是一些关于HeartBleed漏洞的资讯：</strong></p>
 <ul>
@@ -1465,11 +1551,10 @@ TO BE CONTINUED...</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-04-10T16:24:00Z</updated>
+    <updated>2017-11-02T06:54:26Z</updated>
     <published>2014-04-10T16:24:00Z</published>
     <id>http://movier.me/blog/connecting-to-a-mssql-serverdatabase-with-php-on-ubuntudebian/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-ubuntu-php-sql-server">在Ubuntu下使用PHP连接SQL Server</h1>
-<p>最近我需要实现在Ubuntu系统下使用PHP连接SQL Server数据库。查看了PHP的官方文档并google了关键字之后，找到了一些相关资料，最终实现了目标！</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>最近我需要实现在Ubuntu系统下使用PHP连接SQL Server数据库。查看了PHP的官方文档并google了关键字之后，找到了一些相关资料，最终实现了目标！</p>
 <hr>
 <p><strong>系统配置：</strong></p>
 <ul>
@@ -1530,11 +1615,10 @@ TO BE CONTINUED...</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-04-08T16:01:00Z</updated>
+    <updated>2017-11-02T06:54:32Z</updated>
     <published>2014-04-08T16:01:00Z</published>
     <id>http://movier.me/blog/wo-men-zai-jie-zi-pai-she-liao-hun-sha-zhao/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">我们在桔子拍摄了婚纱照</h1>
-<p>前天，我和小懒猪在<a href="http://www.juzisy.com/"><em>桔子</em></a>拍摄了婚纱照。早上7点出门，晚上回到家已经12点了，忙碌了整整一天时间，但是我并不感到十分疲惫，小懒猪是真的累了，回家的路上就睡着了。总的来说，桔子的服务还是可以的，无论是化妆师、摄影师还是助理小弟态度都非常好。尽管没体验过其他一些婚纱摄影公司，但是我仍然感觉自己的选择没有错。这些其实都是次要的，拍摄出来的照片才是关键，我对我们的照片还是比较满意的。
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>前天，我和小懒猪在<a href="http://www.juzisy.com/"><em>桔子</em></a>拍摄了婚纱照。早上7点出门，晚上回到家已经12点了，忙碌了整整一天时间，但是我并不感到十分疲惫，小懒猪是真的累了，回家的路上就睡着了。总的来说，桔子的服务还是可以的，无论是化妆师、摄影师还是助理小弟态度都非常好。尽管没体验过其他一些婚纱摄影公司，但是我仍然感觉自己的选择没有错。这些其实都是次要的，拍摄出来的照片才是关键，我对我们的照片还是比较满意的。
 <img src="/images/hunsha.png" alt="优雅"></p>
 ]]></content>
   </entry>
@@ -1544,11 +1628,10 @@ TO BE CONTINUED...</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-04-01T13:27:00Z</updated>
+    <updated>2017-11-02T06:54:39Z</updated>
     <published>2014-04-01T13:27:00Z</published>
     <id>http://movier.me/blog/wei-kai-yuan-shi-ye-zuo-de-di-ge-gong-xian/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">为开源事业做的第一个贡献</h1>
-<p>今天早上，我像平常一样地打开我的Github，看到有未读地Notification，自然而然地就点了进去。令我十分惊喜地是，我为Ghost文档的中文翻译做的一些工作得到了Ghost项目带头人的肯定并将我的pull request合并了进去，点击以下链接查看这个pull:</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>今天早上，我像平常一样地打开我的Github，看到有未读地Notification，自然而然地就点了进去。令我十分惊喜地是，我为Ghost文档的中文翻译做的一些工作得到了Ghost项目带头人的肯定并将我的pull request合并了进去，点击以下链接查看这个pull:</p>
 <p><a href="https://github.com/TryGhost/Ghost/pull/2445">https://github.com/TryGhost/Ghost/pull/2445</a></p>
 <p>其实很早以前我就完成了这些工作并且提交了pull request，等了很久，一直没有回音，就在我逐渐失去信心的时候，我的pull request终于被采纳了。我实在是难以抑制内心的激动与喜悦，Ghost上终于有了我的脚印，<a href="http://docs.ghost.org/zh/themes/">http://docs.ghost.org/zh/themes/</a> 上大部分的内容就是这次的成果。有了这次地成功经验，我会继续努力的为开源事业作出自己的贡献！</p>
 ]]></content>
@@ -1559,11 +1642,10 @@ TO BE CONTINUED...</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-03-20T13:24:00Z</updated>
+    <updated>2017-11-02T06:54:45Z</updated>
     <published>2014-03-20T13:24:00Z</published>
     <id>http://movier.me/blog/something-about-drupal7-template/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-drupal7-">关于Drupal7模板的那些事儿</h1>
-<p>这篇文章最初发布于2013年4月20日。由于一些原因，图片和代码部分存在缺失，请谅解！待博客平台稳定后会逐步添加进去。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>这篇文章最初发布于2013年4月20日。由于一些原因，图片和代码部分存在缺失，请谅解！待博客平台稳定后会逐步添加进去。</p>
 <hr>
 <p>最早接触drupal是在2012年的8月份。那时候，我刚从创恩IT教育毕业，没过多久我就以php软件工程师的身份进入博科资讯股份有限公司，面对的就是基于drupal7的主题开发。不知不觉接触drupal已经快一年了，我实在非常热爱drupal，所以想把自己对drupal开发的一些心得拿出来与大家分享。</p>
 <p>###一、一个小例子
@@ -1628,11 +1710,10 @@ html.tpl.php</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-03-19T18:09:00Z</updated>
+    <updated>2017-11-02T06:54:51Z</updated>
     <published>2014-03-19T18:09:00Z</published>
     <id>http://movier.me/blog/new-blog-new-start/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">全新的博客——全新的开始</h1>
-<p>在为我的一个项目寻找主机的过程中，无意间进入了BAE(Baidu App Engine)即百度网络应用开发平台。在浏览BAE的文档时，<a href="https://ghost.org">Ghost</a>出现在了我的眼前。大致了解了这个项目后，我就被她深深地吸引了，她开源、小巧、专注、漂亮，这不正是我所追求的吗?</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>在为我的一个项目寻找主机的过程中，无意间进入了BAE(Baidu App Engine)即百度网络应用开发平台。在浏览BAE的文档时，<a href="https://ghost.org">Ghost</a>出现在了我的眼前。大致了解了这个项目后，我就被她深深地吸引了，她开源、小巧、专注、漂亮，这不正是我所追求的吗?</p>
 <p>和我原来使用的WordPress相比，Ghost无疑更符合我的审美，还有一点非常吸引我的是Ghost更年轻。自然而然的，我就决定将我的个人博客平台从WordPress迁移到Ghost。在过去的一年里我曾在WordPress平台下写过26篇文章，我会在这其中挑选出自认为有一定价值的文章迁移到Ghost平台。</p>
 <p>除了博客平台之外，还有一些也将迎来全新的改变。</p>
 <p>其中一点就是主机供应商，原来的WordPress平台构建于阿里云服务器。虽然是入门级的云服务器，但是和现在Ghost所架构于的BAE相比，实在是耗费了我太多的精力及财力。在此，我要向<a href="http://developer.baidu.com/bae/">BAE</a>表示由衷的感谢，是BAE让我的博客有了家，谢谢你们！</p>
@@ -1647,11 +1728,10 @@ html.tpl.php</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2014-03-19T18:09:00Z</updated>
+    <updated>2017-11-02T07:25:09Z</updated>
     <published>2014-03-19T18:09:00Z</published>
     <id>http://movier.me/blog/several-interesting-sites/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">之前发现的一些有意思的站点儿</h1>
-<p>这篇文章是我原来WordPress博客平台中所有关于站点推荐的文章的集合。其中关于gravatar的部分最初发布于2013年3月20日，关于simplytest.me的部分最初发布于2013年4月18日，关于msdn的部分最初发布于2014年1月14日，关于webcamtoy的部分最初发布于2014年1月17日。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>这篇文章是我原来WordPress博客平台中所有关于站点推荐的文章的集合。其中关于gravatar的部分最初发布于2013年3月20日，关于simplytest.me的部分最初发布于2013年4月18日，关于msdn的部分最初发布于2014年1月14日，关于webcamtoy的部分最初发布于2014年1月17日。</p>
 <h3 id="1-gravatar">1.全球通用头像Gravatar</h3>
 <p>感谢WordPress，让我接触到<a href="https://cn.gravatar.com/">Gravatar</a>这么好的一项服务。只要在Gravatar上注册过的用户，邮箱会和头像进行绑定，在任何支持Gravatar的网站上，用户无需再次上传头像，可以直接使用Gravatar上的头像，是一款非常棒的产品，笔者个人非常喜欢！</p>
 <p>还没有Gravatar吗？OUT啦！赶紧去体验一下它的神奇吧！</p>
@@ -1671,11 +1751,10 @@ html.tpl.php</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2006-07-27T20:30:12Z</updated>
+    <updated>2017-11-02T07:25:01Z</updated>
     <published>2006-07-27T20:30:12Z</published>
     <id>http://movier.me/blog/is-god-fair/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">上天真的是公平的吗？</h1>
-<p>一直以来，我总觉得上天是公平的。他给了你这样就不会给你那样，他真的是严格遵守了“按劳分配”的原则，值得提倡。但最近我发现他变了，变的不再那么公平，变的有点像足球场上的黑哨了，让我厌恶，不让我喜欢。</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>一直以来，我总觉得上天是公平的。他给了你这样就不会给你那样，他真的是严格遵守了“按劳分配”的原则，值得提倡。但最近我发现他变了，变的不再那么公平，变的有点像足球场上的黑哨了，让我厌恶，不让我喜欢。</p>
 <p>In my opinion,上天的难能可贵正在于雪中送炭，并非锦上添花。有那么一个人，她刚开始像常人一样拥有一切常人有的东西，虽然日子很是艰苦，生活的压力就如巨浪一般不时的拍打着她，但她仍感到欣慰，毕竟上天没剥夺她的行动自由，言论自由。渐渐的日子好转了，她的孩子也长大成人了，开始工作了。对她而言，幸福快乐的日子正要开始，就在这时候，一样陌生的东西降临到了她身上，她万万也没想到自己会遇到它，它的名字叫肿瘤。一开始，它就像一个陌生人来到她身边，没人知道它的来意，后来经过测定，证实这是恶性肿瘤，也就是癌症。从此，生活对她来说发生了翻天覆地的变化，频繁的去医院检查复诊搞的她心烦意乱，心力交瘁，她开始变的沉默了，整日不说话。后来她的丈夫做出了决定，决定把她推上手术台，接受命运的考验。倾尽家中所有的积蓄以及亲戚们的慷慨解囊，终于凑齐了手术费 ……</p>
 <p>在六个多小时的手术时间后，她出来了，还在沉睡着。急切的丈夫赶忙上去问医生手术情况，医生告诉他手术还算成功，他这才放下心来……手术后已经一年了，正当每个人都认为病情稳定的时候，那可怕的东西又回来了，它似乎特别眷恋她。病情的再次恶化使得家里的人手足无措，他们唯一能做的就是守候在她的身旁，希望她不感到孤单。日子还是一天天的过，它并不会为谁而停止，而她的病情也一天比一天严重，这时候死亡对她来说是如此接近而又如此遥远。一方面是病痛的折磨，另一方面是家人无限的关怀，现在唯一支撑着她的也许就是后者了。她已不能说话了，更不能走路了，但她还有思维，她清楚的知道你在说什么，而表达她的感情的就只剩下她的双手，当她紧紧的用她的手握住你的手时，语言在这一刻变得不再重要了，流淌在两人之间的是眼神的交流，是心灵的慰问，更是无尽的期待……</p>
 <p>在这里，我想说的还有两个人，一个是丈夫，另一个则是她的母亲。她的丈夫是个普通的工人，话虽不多，但从他的神情言语之间，我可以感受到他的担心焦虑。在妻子患病的这段日子里，他放下了手上的工作，天天陪在妻子的身旁。在这物欲横流的社会里，我不知道还有多少人能像他这么做，对自己的妻子始终不离不齐。我不相信轰轰烈烈的爱情，不相信海誓山盟的蜜语，更不相信爱的死去活来，我相信的只是像他们那样平平淡淡，却能够长长久久。</p>
@@ -1689,11 +1768,10 @@ html.tpl.php</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2006-07-25T20:30:12Z</updated>
+    <updated>2017-11-02T06:55:10Z</updated>
     <published>2006-07-25T20:30:12Z</published>
     <id>http://movier.me/blog/soccer-and-life/</id>
-    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<h1 id="-">足球与人生</h1>
-<p>（一直就想写一篇有关足球与人生的文章，但从未付诸行动，今天终于定下心来，开始我的随想。）</p>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>（一直就想写一篇有关足球与人生的文章，但从未付诸行动，今天终于定下心来，开始我的随想。）</p>
 <p><img src="/images/soccer-and-life-image-1.jpeg" alt=""></p>
 <p>There is no doubt that foot足球与人生ball is the most popular thing all over the world this year，原因众所周知。本人也许算不上是一个真正的球迷，at best只算个“伪球迷”。但看了今年的世界杯后，感想也颇多。</p>
 <p>世界杯的舞台从未缺乏过英雄，然而英雄往往有失意的时候。纵使内德维德如铁人一般满场飞奔，捷克也难逃被淘汰的命运；小贝哭了，在数以亿计热爱他的球迷面前流下了泪水，但他的泪水换来的却是英格兰的失利；西班牙输了，劳尔走了，真不知等待他的将会是什么；被视为马拉多纳接班人的里克儿梅最终还是没能带领阿根廷杀入四强，他的十号也由此引起了质疑；最令我惋惜的还是罗纳尔迪尼奥，本被寄予厚望的他在本届世界杯中一粒球也没打进，唯一得到的只是球迷的冷嘲热讽。“想当年，金戈铁马，气吞万里如虎”也许是这些球星们最好的写照。当然，俗语有云：“有人欢喜有人愁。”本届世界杯既然创造了这么多悲情人物，必然也会有英雄出现。毫无疑问，菲戈算一个，在他的带领下，葡萄牙打进了四强；无独有偶，和他年龄想仿的齐丹在本届世界杯中也有出彩的表演，他的出色状态也使法国杀入决赛，齐本人也获得了新一代“king of football”美称。</p>
