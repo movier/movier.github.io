@@ -245,23 +245,73 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="view"><div class="entry-meta">Dec 12, 2015 #读书 #总结</div> <h1 class="entry-title">2015年我读过的那些书</h1> <div class="content"><p>就在昨天，<a href="http://blog.zhowkev.in/2015/12/10/2015-nian-wo-du-guo-de-hao-shu/">Kevin</a>和<a href="https://luolei.org/what-i-read-in-2015/">罗磊</a>不约而同地写了一篇读书总结的文章，勾起了我写一篇类似文章的欲望。</p>
-<p>先晒一下我的书单：</p>
-<ol>
-<li><a href="http://book.douban.com/subject/25861795/">重来2 : 更为简单高效的远程工作方式</a></li>
-<li><a href="http://book.douban.com/subject/26280672/">只要在路上，全世界都会帮你</a></li>
-<li><a href="http://book.douban.com/subject/5320866/">重来 : 更为简单有效的商业思维</a></li>
-<li><a href="http://book.douban.com/subject/25930025/">只是为了好玩 : Linux之父林纳斯自传</a></li>
-<li><a href="http://book.douban.com/subject/2130054/">我是沃兹 : 一段硅谷和苹果的悲情罗曼史</a></li>
-<li><a href="http://book.douban.com/subject/11614288/">我们为什么旅行</a></li>
-<li><a href="http://book.douban.com/subject/25942191/">第一行代码 : Android</a></li>
-<li><a href="http://book.douban.com/subject/26314527/">若为自由故 : 自由软件之父理查德·斯托曼传</a></li>
-<li><a href="http://book.douban.com/subject/26384542/">坦桑尼亚，那片蓝得要碎掉的天</a></li>
-</ol>
-<p>这些书大多是在年初的三、四月份读的，其他时间并没有怎么好好读过书。这其实不太科学，科学的读法应该是保持一定的频率不断地读书。这也是我明年读书的目标，读书应该成为一种习惯，毕竟这是一件非常享受的事情。从我读的这些书的内容来看，三本旅行类书籍、三本自传类书籍、两本商业类书籍、一本技术书籍，涉猎的范围还是有些窄，希望在新的一年里能够多读一些其他领域的书籍。</p>
-<p>今年一共买了三次书，年初的时候在当当上<a href="https://www.instagram.com/p/0e_5NKleFX/">买了一次书</a>，年末用爸爸的IC卡去上海书城<a href="https://www.instagram.com/p/977-eGFeE0/">买了一次书</a>，看完《侣行》冲动地在京东上<a href="https://www.instagram.com/p/_J0ilQleKM/">买了一次书</a>。还有很多书没读过，只能等到明年了。</p>
-<p>总的来说，我是一个喜欢读书的人——从高中开始，就买一些书来读，那时候读一些散文集、诗集，到了大学，疯狂地迷恋上了哲学，读了西方哲学史等一系列哲学著作，还有一些心理鸡汤类的书籍，这些书对我的三观产生了深远的影响，工作之后，书读得少了，直到走上了技术道路，接触了一些技术类书籍，这才又开始读起书来。这一次，希望读到永远～</p>
-<p>阅读是人生的一大享受，开始读书吧！</p>
+    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="view"><div class="entry-meta">Nov 10, 2017 #html #css</div> <h1 class="entry-title">Realize Half Pixel Border in Chrome</h1> <div class="content"><p>Sometimes we need to realize half pixel border for beautiful UI and it's not as simple as you think.</p>
+<h2 id="problem">Problem</h2>
+<p><code>border-width: 0.5px</code> works in Safari. But it doesn't work in Chrome. </p>
+<p><strong>HTML</strong></p>
+<pre><code class="lang-html">&lt;div class="content"&gt;Content&lt;/div&gt;
+</code></pre>
+<p><strong>CSS</strong></p>
+<pre><code class="lang-css">.content {
+  border-bottom: 0.5px solid lightGray
+}
+</code></pre>
+<p><strong>Result in Chrome</strong></p>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+
+<h2 id="solution">Solution</h2>
+<p>We need to do something special.</p>
+<p><strong>HTML</strong></p>
+<pre><code class="lang-html">&lt;div class="container"&gt;
+    &lt;div&gt;Content&lt;/div&gt;
+    &lt;div class="border"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>CSS</strong></p>
+<pre><code class="lang-css">.container {
+    position: relative;
+}
+.border{
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 1px solid #333;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+</code></pre>
+<p><strong>Result</strong></p>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+
+<p>Let's analysis the CSS codes. At first we make the border <code>div</code> absolute and twice as big as the content <code>div</code>. Then we set 1px border for the border <code>div</code>. At last we scale the border <code>div</code> to half. The border is scaled at the same time. So its width will be 0.5px. </p>
+<p>Actually the result we see is composed of two parts: content from content <code>div</code> and border from border <code>div</code>. They together produce  an illusion that the content has a 0.5px border.</p>
+<p>Cheer! We realize our goal.</p>
+<p>If you want to learn more about the problem please refer <a href="http://www.zhangyunling.com/543.html">this post</a>. BTW it's Chinese.</p>
 </div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
   
 

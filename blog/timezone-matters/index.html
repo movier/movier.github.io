@@ -4,11 +4,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Oliver Young</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
   <style>
     .copyright {
       text-align: center;
       font-size: 12px;
       color: #C8C8C8;
+    }
+    body {
+      font: 400 16px/1.42 -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+      color: rgba(7, 5, 5, 0.86);
     }
   </style>
 <style type="text/css">
@@ -53,9 +58,25 @@
   list-style: none;
 }
 </style><style type="text/css">
-.post-list {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .post-list {
   font-family: -apple-system, "Hiragino Sans GB", sans-serif;
-}
+} */
 .post-list h1 {
   font-size: 20px;
 }
@@ -80,13 +101,30 @@
     margin: 30px auto;
 }
 </style><style type="text/css">
+.entry-title, .entry-meta, .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.entry-title {
+  -webkit-font-smoothing: antialiased;
+  font-size: 2.2em;
+  font-weight: 900;
+  margin-top: .42em;
+  margin-bottom: .1em;
+  letter-spacing: .02em;
+  line-height: 1.1;
+}
 .content {
-  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
-  line-height: 1.75em;
-  max-width: 700px;
-  margin: 60px auto;
+  font-family: Droid Serif, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+  line-height: 1.62;
+  /* max-width: 700px; */
+  /* margin: 60px auto; */
 }
 .entry-meta {
+  margin-top: 60px;
   font-size: 14px;
   color: #9E9E9E;
 }
@@ -182,9 +220,6 @@ input, textarea {
 textarea {
   height: 50px;
 }
-.post-list {
-  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
-}
 .title {
   font-size: 20px;
   font-weight: bold;
@@ -210,7 +245,7 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="content view"><h1>Timezone Matters</h1> <footer class="entry-meta">发布于 2017年11月2日。属于 技术 分类，被贴了 javascript、java、swift 标签。</footer> <div><p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date('2017-09-04T09:52:15')</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
+    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="view"><div class="entry-meta">Oct 20, 2017 #javascript #java #swift</div> <h1 class="entry-title">Timezone Matters</h1> <div class="content"><p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date('2017-09-04T09:52:15')</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
 <p>The reason is obvious if you compare the result carefully. Since I lose my timezone information in the date string, the two browsers react differently to this situation. Chrome will take your computer's timezone as default timezone when parsing the date string. Meanwhile safari will take the string as UTC time.</p>
 <p>If we could add timezone information to the date string, there won't be such problem. The question is how we add timezone to the date string. Fortunately there is something called <strong>ISO date format</strong>. The format is as follows:</p>
 <pre><code>YYYY-MM-DDTHH:mm:ss.sssZ

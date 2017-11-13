@@ -4,11 +4,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Oliver Young</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
   <style>
     .copyright {
       text-align: center;
       font-size: 12px;
       color: #C8C8C8;
+    }
+    body {
+      font: 400 16px/1.42 -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+      color: rgba(7, 5, 5, 0.86);
     }
   </style>
 <style type="text/css">
@@ -53,9 +58,25 @@
   list-style: none;
 }
 </style><style type="text/css">
-.post-list {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .post-list {
   font-family: -apple-system, "Hiragino Sans GB", sans-serif;
-}
+} */
 .post-list h1 {
   font-size: 20px;
 }
@@ -80,13 +101,30 @@
     margin: 30px auto;
 }
 </style><style type="text/css">
+.entry-title, .entry-meta, .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.entry-title {
+  -webkit-font-smoothing: antialiased;
+  font-size: 2.2em;
+  font-weight: 900;
+  margin-top: .42em;
+  margin-bottom: .1em;
+  letter-spacing: .02em;
+  line-height: 1.1;
+}
 .content {
-  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
-  line-height: 1.75em;
-  max-width: 700px;
-  margin: 60px auto;
+  font-family: Droid Serif, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+  line-height: 1.62;
+  /* max-width: 700px; */
+  /* margin: 60px auto; */
 }
 .entry-meta {
+  margin-top: 60px;
   font-size: 14px;
   color: #9E9E9E;
 }
@@ -182,9 +220,6 @@ input, textarea {
 textarea {
   height: 50px;
 }
-.post-list {
-  font-family: -apple-system, "Hiragino Sans GB", sans-serif;
-}
 .title {
   font-size: 20px;
   font-weight: bold;
@@ -210,7 +245,7 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="content view"><h1>Hex Code and RGB values in CSS Color</h1> <footer class="entry-meta">发布于 2017年11月2日。属于 技术 分类，被贴了 CSS、Python 标签。</footer> <div><p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
+    <div id="app"><div id="nav"><a href="/" class="router-link-active"><img id="logo" src="/logo.svg"></a> <p id="social-media"><a href="https://twitter.com/olimovier">Twitter</a> / <a href="https://www.instagram.com/olimovier/">Instagram</a> / <a href="/feed.xml">RSS</a></p></div> <div class="view"><div class="entry-meta">Sep 19, 2017 #CSS #Python</div> <h1 class="entry-title">Hex Code and RGB values in CSS Color</h1> <div class="content"><p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
 <p>For example when it comes to magenta, we can either use <code>#FF00FF</code> in hex code  or <code>rgb(255, 0, 255)</code> in RGB values. Use RGB values for color is easy to understand. But what the hell is hex code? How could it represent for the same color as RGB values do. It turns out that hex code is just another format of RGB values. </p>
 <p>Let’s see a picture.</p>
 <p><img src="/images/2017-09-19.jpg" alt="2017-09-19.jpg"></p>

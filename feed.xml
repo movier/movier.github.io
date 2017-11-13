@@ -4,15 +4,93 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2017-11-02T07:38:52Z</updated>
+  <updated>2017-11-13T15:58:22Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Realize Half Pixel Border in Chrome ]]></title>
+    <link href="http://movier.me/blog/realize-half-pixel-border-in-chrome/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2017-11-13T15:54:50Z</updated>
+    <published>2017-11-10T01:51:46Z</published>
+    <id>http://movier.me/blog/realize-half-pixel-border-in-chrome/</id>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to realize half pixel border for beautiful UI and it&#39;s not as simple as you think.</p>
+<h2 id="problem">Problem</h2>
+<p><code>border-width: 0.5px</code> works in Safari. But it doesn&#39;t work in Chrome. </p>
+<p><strong>HTML</strong></p>
+<pre><code class="lang-html">&lt;div class=&quot;content&quot;&gt;Content&lt;/div&gt;
+</code></pre>
+<p><strong>CSS</strong></p>
+<pre><code class="lang-css">.content {
+  border-bottom: 0.5px solid lightGray
+}
+</code></pre>
+<p><strong>Result in Chrome</strong></p>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+<div style="border-bottom: 1px solid lightGray">Content</div>
+
+<h2 id="solution">Solution</h2>
+<p>We need to do something special.</p>
+<p><strong>HTML</strong></p>
+<pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;Content&lt;/div&gt;
+    &lt;div class=&quot;border&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>CSS</strong></p>
+<pre><code class="lang-css">.container {
+    position: relative;
+}
+.border{
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 1px solid #333;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+</code></pre>
+<p><strong>Result</strong></p>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+<div style="position: relative">
+    <div>Content</div>
+    <div style="-webkit-transform: scale(0.5);transform: scale(0.5);position: absolute;border-bottom: 1px solid lightGray;top: -50%;right: -50%;bottom: -50%;left: -50%;"></div>
+</div>
+
+<p>Let&#39;s analysis the CSS codes. At first we make the border <code>div</code> absolute and twice as big as the content <code>div</code>. Then we set 1px border for the border <code>div</code>. At last we scale the border <code>div</code> to half. The border is scaled at the same time. So its width will be 0.5px. </p>
+<p>Actually the result we see is composed of two parts: content from content <code>div</code> and border from border <code>div</code>. They together produce  an illusion that the content has a 0.5px border.</p>
+<p>Cheer! We realize our goal.</p>
+<p>If you want to learn more about the problem please refer <a href="http://www.zhangyunling.com/543.html">this post</a>. BTW it&#39;s Chinese.</p>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ IIFE Immediately Invoked Function Expression ]]></title>
     <link href="http://movier.me/blog/iife-immediately-invoked-function-expression/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:31:06Z</updated>
+    <updated>2017-11-10T01:56:31Z</updated>
     <published>2017-11-02T07:31:29Z</published>
     <id>http://movier.me/blog/iife-immediately-invoked-function-expression/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p>
@@ -129,7 +207,7 @@ index: 4
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:26:08Z</updated>
+    <updated>2017-11-13T15:34:33Z</updated>
     <published>2017-10-27T15:21:02Z</published>
     <id>http://movier.me/blog/git-reflog/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>It was a ordinary day. I modified codes and did commits as usual. Later I found last commit was not necessary any more. So I decided to reset it. The change was still useful so I want to keep it.</p>
@@ -211,7 +289,7 @@ docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:25:56Z</updated>
+    <updated>2017-11-13T15:39:57Z</updated>
     <published>2017-10-20T06:09:22Z</published>
     <id>http://movier.me/blog/timezone-matters/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date(&#39;2017-09-04T09:52:15&#39;)</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
