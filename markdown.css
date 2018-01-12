@@ -1,0 +1,46 @@
+.copyright {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 12px;
+    color: #C8C8C8;
+  }
+body {
+    font: 400 16px/1.42 -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+    color: rgba(7, 5, 5, 0.86);
+}
+p {
+    margin: 10px 0;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+a {
+    color: inherit;
+}
+strong, b {
+    font-family: sans-serif;
+}
+.cm-s-default .cm-header, h1, h2, h3 {
+    font: 400 18px/1.42 -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+    color: rgba(0, 0, 0, .86);
+    font-size: 2em;
+    letter-spacing: .02em;
+    margin-top: 20px;
+}
+.cm-s-default .cm-header-1, h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+.cm-s-default .cm-header-2, h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+.cm-s-default .cm-header-3, h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.CodeMirror pre, .content {
+    line-height: 1.62;
+    font-family: Droid Serif, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
+    color: rgba(0, 0, 0, .86);
+}

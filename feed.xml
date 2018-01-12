@@ -4,15 +4,39 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2017-11-13T15:58:22Z</updated>
+  <updated>2018-01-12T15:51:40Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Bye 2017 Hi 2018 ]]></title>
+    <link href="http://movier.me/blog/bye-2017-hi-2018/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2018-01-12T04:50:37Z</updated>
+    <published>2018-01-11T16:33:53Z</published>
+    <id>http://movier.me/blog/bye-2017-hi-2018/</id>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>One word to summarize 2017 is Ollie which is the nickname of my baby. Except working I spent almost all my time with her and she made me the happiest person in the world.</p>
+<h2 id="review-of-2017">Review of 2017</h2>
+<p>As planned I should have been studying computer science in US. Unfortunately it didn&#39;t come true. So I had to find a job. On Mar 1st I began to work as a front-end developer for Investarget which is a investment bank based at Shanghai. I joined a fantastic team and learned a lot every day.</p>
+<p>As Ollie grows up we began to travel with her. So far we have been to Wuxi and Taicang. Each journey left us precious memory.</p>
+<p>The only thing I feel regret in 2017 is about football. I enjoy playing football so much. But it has been more than eight months since last time I play football. What a shame!</p>
+<h3 id="reading">Reading</h3>
+<p>Thanks to Kindle Paperwhite I have read several books this years. Actually majority of them are from two writers: <strong>Ken Follett</strong> and <strong>Dan Brown</strong>. </p>
+<p>Their novels are so attractive that I don&#39;t want to miss any one. Recently I&#39;m reading <em>A Column of Fire</em> from Ken and Later I will read <em>Origin</em> from Dan.</p>
+<h3 id="shopping">Shopping</h3>
+<p>This year I bought only one device which is Zhiyun Smooth Q. It&#39;s a 3-axis gimbal stabilizer. With Zhiyun Smooth Q I can shot videos more easily and professionally. I have already published several videos shot with Zhiyun Smooth Q on <a href="https://www.youtube.com/channel/UCbzIryTWI4Ljy1z0j1kfhlw/videos">YouTube</a>. Of course they are all about Ollie.</p>
+<h2 id="prospect-of-2018">Prospect of 2018</h2>
+<p>For a lot of reasons I&#39;m not satisfied with my current life. I&#39;m determined to make some change. So In July I applied for a work and holiday visa of Australia. My plan in the new year is to find a job in Australia and settle down there. It&#39;s not an easy thing I know. But I will try my best.</p>
+<p>Hope me good luck!</p>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Realize Half Pixel Border in Chrome ]]></title>
     <link href="http://movier.me/blog/realize-half-pixel-border-in-chrome/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-13T15:54:50Z</updated>
+    <updated>2017-12-12T05:06:28Z</updated>
     <published>2017-11-10T01:51:46Z</published>
     <id>http://movier.me/blog/realize-half-pixel-border-in-chrome/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to realize half pixel border for beautiful UI and it&#39;s not as simple as you think.</p>
@@ -289,7 +313,7 @@ docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-13T15:39:57Z</updated>
+    <updated>2017-11-17T04:03:57Z</updated>
     <published>2017-10-20T06:09:22Z</published>
     <id>http://movier.me/blog/timezone-matters/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date(&#39;2017-09-04T09:52:15&#39;)</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
@@ -377,7 +401,7 @@ print(str)
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:25:45Z</updated>
+    <updated>2017-11-29T01:52:10Z</updated>
     <published>2017-09-19T13:55:00Z</published>
     <id>http://movier.me/blog/hex-code-and-rgb-values-in-css-color-2/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
@@ -461,7 +485,7 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:24:33Z</updated>
+    <updated>2017-11-16T02:18:55Z</updated>
     <published>2017-03-11T21:02:15Z</published>
     <id>http://movier.me/blog/valid-palindrome/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Once during a technical interview, I was asked to validate whether a sentence is a palindrome or not. But what’s a palindrome? A <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as &quot;A man, a plan, a canal, Panama!&quot;, &quot;Was it a car or a cat I saw?&quot; or &quot;No &#39;x&#39; in Nixon&quot;.</p>
@@ -1829,7 +1853,7 @@ html.tpl.php</p>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:25:01Z</updated>
+    <updated>2017-11-29T01:52:19Z</updated>
     <published>2006-07-27T20:30:12Z</published>
     <id>http://movier.me/blog/is-god-fair/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>一直以来，我总觉得上天是公平的。他给了你这样就不会给你那样，他真的是严格遵守了“按劳分配”的原则，值得提倡。但最近我发现他变了，变的不再那么公平，变的有点像足球场上的黑哨了，让我厌恶，不让我喜欢。</p>
