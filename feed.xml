@@ -4,8 +4,142 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-01-15T14:58:48Z</updated>
+  <updated>2018-02-05T16:24:16Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Bitwise Operators ]]></title>
+    <link href="http://movier.me/blog/bitwise-operators/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2018-02-05T16:20:30Z</updated>
+    <published>2018-02-01T16:40:21Z</published>
+    <id>http://movier.me/blog/bitwise-operators/</id>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across a question from Interview Cake and it could be solved gracefully by bitwise operator XOR which arouse my interest. I will show you the question and the answer at the end of the post. Now let&#39;s learn some basic knowledge of bitwise operators.</p>
+<p>When you saw symbols like &amp;, |, ^, ~, &gt;&gt; or &lt;&lt; they represent bitwise operators.</p>
+<blockquote>
+<p>They operate on numbers (normally), but instead of treating that number as if it were a single value, they treat it as if it were a string of bits, written in twos-complement binary.</p>
+</blockquote>
+<p>But wait! What&#39;s two&#39;s complement binary?</p>
+<h2 id="two-s-complement-binary">Two&#39;s complement binary</h2>
+<blockquote>
+<p>A two&#39;s complement binary is same as the classical binary representation for positve integers but is slightly different for negative numbers. Negative numbers are represented by performing the two&#39;s complement operation on their absolute value. </p>
+<p>Negative numbers are written with a leading one instead of a leading zero. So if you are using only 8 bits for your twos-complement numbers, then you treat patterns from &quot;00000000&quot; to &quot;01111111&quot; as the whole numbers from 0 to 127, and reserve &quot;1xxxxxxx&quot; for writing negative numbers.</p>
+</blockquote>
+<p>Let&#39;s assume there are totally 8 bits and there is a positive number 118. How can we get two&#39;s complement binary of -118?</p>
+<ol>
+<li>Make the positive number minus one: <code>118 - 1 // 117</code></li>
+<li>Convert the result to its binary format using JavaScript: <code>117..toString(2) // 01110101</code></li>
+<li>Perform complement (switched from 1 to 0 or 0 to 1, actually it&#39;s a Bitwise NOT operation): <code>01110101 =&gt; 10001010</code></li>
+</ol>
+<p>On the contrary if we got a two&#39;s complement binary 10001010 how can we calculate its positive number?</p>
+<ol>
+<li>Perform complement (Bitwise NOT): <code>10001010 =&gt; 01110101</code></li>
+<li>Plus one: <code>01110101 + 1 = 01110110</code></li>
+<li>Convert to decimal using JavaScript: <code>parseInt(&#39;01110110&#39;, 2) // output 118</code></li>
+</ol>
+<h3 id="a-question-about-two-s-complement">A question about two&#39;s complement</h3>
+<p>In two&#39;s complement positive and negative depend on the leading bit. It seems we must have limited bits otherwise we don&#39;t know which bit is the leftmost symbol bit. Some languages use this solution like JavaScript. In JavaScript only 32 bits will be preserved to guarantee bitwise operations.</p>
+<p>It turns out that there is another sulution and it&#39;s totally oppsite direction. In Python there is no limit number of bits but an INFINITE number of bits. So -5 will be implemented as <code>...11111111111111011</code>. To be honest I favor this one.</p>
+<h2 id="the-operators">The operators</h2>
+<p>With two&#39;s complement in head the operators are quite easy. </p>
+<h3 id="logical-operators">Logical operators</h3>
+<p>Let&#39;s see three of the operators first: &amp; (Bitwise AND), | (Bitwise OR) and ^ (Bitwise XOR).</p>
+<table style="width:400px;max-width:100%;margin: auto;text-align:center">
+  <thead>
+    <tr style="background-color:lightGray">
+      <th style="width:20%">a</th>
+      <th style="width:20%">b</th>
+      <th style="width:20%">a &amp; b</th>
+      <th style="width:20%">a | b</th>
+      <th style="width:20%">a ^ b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#f6f5f8">
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr style="background-color:#eae9eb">
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr style="background-color:#f6f5f8">
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr style="background-color:#eae9eb">
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>And the operator ~ (Bitwise NOT):</p>
+<table style="width:400px;max-width:100%;margin: auto;text-align:center">
+  <thead>
+    <tr style="background-color:lightGray">
+      <th style="width:50%">a</th>
+      <th>~ a</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color:#f6f5f8">
+      <td>0</td>
+      <td>1</td>
+    </tr>
+        <tr style="background-color:#eae9eb">
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="shift-operators">Shift operators</h3>
+<p>&lt;&lt; and &gt;&gt; are the two symbols used to shift bits on a two&#39;s complement binary.</p>
+<ul>
+<li>a &lt;&lt; b means shift a&#39;s bits to the left by b places. New bits on the right will be 0. </li>
+<li>a &gt;&gt; b means shift a&#39;s bits to the right by b places. New bits on the left will be the same as original leftmost bit. </li>
+</ul>
+<h3 id="some-formulas">Some formulas</h3>
+<pre><code>a &amp; 0 = 0
+a &amp; -1 = -1
+a | 0 = a
+a | -1 = -1
+a ^ 0 = a
+a ^ -1 = ~a
+-a = ~(a - 1) = ~a + 1 =&gt; ~a = -(a + 1)
+a &lt;&lt; b = a * 2 ** b
+a &gt;&gt; b = a / 2 ** b
+</code></pre><h2 id="the-question">The question</h2>
+<p>There is an array composed of number pair except one which is isolate. Number pair means two numbers with same value. The question is how can you find the isolate number in a most efficient way. You should consider both time complexity and space complexity.</p>
+<p>With Bitwise XOR we can solve this problem gracefully.</p>
+<pre><code class="lang-javascript">const a = [23, 34, 53, 64, 64, 34, 53];
+let isolate = 0;
+for (let i = 0; i &lt; a.length; i++) {
+  isolate ^= a[i];
+}
+</code></pre>
+<p>Time complexity is O(n) and thanks to Bitwise XOR space complexity is just O(1).</p>
+<h2 id="reference-">Reference:</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Bitwise operators - Javascript | MDN</a></li>
+<li><a href="https://wiki.python.org/moin/BitwiseOperators">BitwiseOperators - Python Wiki</a></li>
+</ul>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Prepare for Finding a job in Australia ]]></title>
     <link href="http://movier.me/blog/prepare-for-finding-a-job-in-australia/"></link>
@@ -36,7 +170,7 @@
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-01-15T10:45:13Z</updated>
+    <updated>2018-02-01T15:30:29Z</updated>
     <published>2018-01-11T16:33:53Z</published>
     <id>http://movier.me/blog/bye-2017-hi-2018/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>One word to summarize 2017 is Ollie which is the nickname of my baby. Except working I spent almost all my time with her and she made me the happiest person in the world.</p>
@@ -60,7 +194,7 @@
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-12-12T05:06:28Z</updated>
+    <updated>2018-02-01T17:17:39Z</updated>
     <published>2017-11-10T01:51:46Z</published>
     <id>http://movier.me/blog/realize-half-pixel-border-in-chrome/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to realize half pixel border for beautiful UI and it&#39;s not as simple as you think.</p>

@@ -20,6 +20,11 @@ a {
 strong, b {
     font-family: sans-serif;
 }
+blockquote {
+    margin: 0;
+    padding-left: 20px;
+    border-left: 10px solid lightgray;
+}
 .cm-s-default .cm-header, h1, h2, h3 {
     font: 400 18px/1.42 -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei, sans-serif;
     color: rgba(0, 0, 0, .86);
