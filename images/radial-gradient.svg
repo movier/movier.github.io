@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="200px" viewBox="0 0 300 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 2 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="42.0733601%" cy="39.8404285%" fx="42.0733601%" fy="39.8404285%" r="83.614743%" gradientTransform="translate(0.420734,0.398404),scale(0.666667,1.000000),rotate(90.000000),scale(1.000000,1.440453),translate(-0.420734,-0.398404)" id="radialGradient-1">
+            <stop stop-color="#E66465" offset="0%"></stop>
+            <stop stop-color="#9198E5" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="2018" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-2-Copy" fill="url(#radialGradient-1)" x="0" y="0" width="300" height="200"></rect>
+    </g>
+</svg>

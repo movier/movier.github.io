@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="400px" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="336.756609 58.7559347 340.756609 58.7559347 340.756609 62.7559347 336.78157 62.6594372"></polygon>
+        <polygon id="path-2" points="162.911921 336.179856 167.09345 336.075818 167.088074 340.355615 163.024788 340.740894"></polygon>
+    </defs>
+    <g id="2018" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="Group" transform="translate(100.000000, 100.000000)">
+                <rect id="Rectangle-2" stroke="#D8D8D8" fill="#D8D8D8" x="0" y="0" width="300" height="200"></rect>
+                <path d="M0,0 L300,200" id="Line" stroke="#979797" stroke-linecap="square" stroke-dasharray="2"></path>
+                <path d="M0,200 L300,0" id="Line" stroke="#979797" stroke-linecap="square" stroke-dasharray="2"></path>
+            </g>
+            <g id="Group-2" transform="translate(35.000000, 40.000000)">
+                <text id="Origin" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="221.460938" y="219">Origin</tspan>
+                </text>
+                <path d="M0,160 L430,160" id="Line" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <path id="Line-decoration-1" d="M430,160 L419.2,157 L419.2,163 L430,160 Z" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <path d="M215,320 L215,0" id="Line" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <path id="Line-decoration-1" d="M215,0 L212,10.8 L218,10.8 L215,0 Z" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <text id="x-axis" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="398" y="148">x-axis</tspan>
+                </text>
+                <text id="y-axis" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="224" y="11">y-axis</tspan>
+                </text>
+                <path d="M239.5,198.5 L218.5,167.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                <path id="Line-decoration-1" d="M227.040916,174.758977 L218.5,167.5 L222.073404,178.124066" stroke="#4A4A4A" stroke-linecap="square"></path>
+            </g>
+            <text id="(0,-0)" font-family="AlTarikh, Al Tarikh" font-size="14" font-weight="normal" fill="#4A4A4A">
+                <tspan x="258.153809" y="241">(0</tspan>
+                <tspan x="268.694824" y="241" font-family="LucidaGrande, Lucida Grande">,</tspan>
+                <tspan x="273.124512" y="241"> 0)</tspan>
+            </text>
+            <text id="Gradient-Line" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="363.176758" y="37">Gradient Line</tspan>
+            </text>
+            <g id="Rectangle" transform="translate(338.756609, 60.755935) rotate(33.000000) translate(-338.756609, -60.755935) ">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <path stroke="#000000" stroke-width="1" d="M337.259817,59.2559347 L340.256609,59.2559347 L340.256609,62.2436495 L337.278459,62.1713523 L337.259817,59.2559347 Z"></path>
+            </g>
+            <g id="Rectangle-Copy" transform="translate(165.002685, 338.408356) rotate(33.000000) translate(-165.002685, -338.408356) ">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <path stroke="#000000" stroke-width="1" d="M163.424136,336.667267 L166.592805,336.588429 L166.588645,339.900728 L163.511371,340.192514 L163.424136,336.667267 Z"></path>
+            </g>
+            <path d="M143.5,369.5 L355.5,31.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+            <path d="M399.5,99.5 L258.5,13.5" id="Line-Copy" stroke="#E55465" stroke-linecap="square"></path>
+            <path d="M399.5,173.5 L280.5,99.5" id="Line-Copy-3" stroke="#FA8E9B" stroke-linecap="square"></path>
+            <path d="M399.5,192.5 L251.5,99.5" id="Line-Copy-4" stroke="#F9A6B0" stroke-linecap="square"></path>
+            <path d="M229.5,299.5 L100.5,221.5" id="Line-Copy-5" stroke="#D0A6F9" stroke-linecap="square"></path>
+            <path d="M223.5,376.5 L100.5,300.5" id="Line-Copy-2" stroke="#9198E5" stroke-linecap="square"></path>
+            <text id="Starting-Point" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="411.436523" y="88">Starting Point</tspan>
+            </text>
+            <text id="Ending-Point" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="35.0166016" y="319">Ending Point</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

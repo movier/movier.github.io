@@ -4,15 +4,67 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-03-09T08:53:21Z</updated>
+  <updated>2018-03-17T15:15:37Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Draw CSS Gradients ]]></title>
+    <link href="http://movier.me/blog/draw-css-gradients/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2018-03-17T14:35:18Z</updated>
+    <published>2018-03-17T14:24:56Z</published>
+    <id>http://movier.me/blog/draw-css-gradients/</id>
+    <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently I found myself extremely interested in computer graphics. Meanwhile it&#39;s time to redesign my portfolio and I decide to make it colorful. Gradient is no doubt the easiest starting point.</p>
+<p>Currently there are two types of gradients supported in CSS: linear gradient  </p>
+<p><img src="/images/gradient6.svg" alt="Linear Gradient"></p>
+<p>and radial gradient.</p>
+<p><img src="/images/radial-gradient.svg" alt="Radial Gradient"></p>
+<p>Comparing two pictures above you can easily distinguish which is which once you learn the concept of each gradient.</p>
+<h2 id="linear-gradient">Linear gradient</h2>
+<p>Suppose there is a rectangle. Let&#39;s try to draw a linear gradient step by step. </p>
+<p>Let&#39;s start from the center of the rectangle which is also the intersection of diagonal. Make it origin and build a coordinate system.
+<img src="/images/gradient1.svg" alt="">
+Casually draw a line passing from the origin and we call it gradient line.
+<img src="/images/gradient2.svg" alt="">
+Find two vertices in the same quadrants of the gradient line and passing from them draw two perpendiculars of the gradient line. Call the perpendicular passing from vertex in Quadrant I or II starting point and the other perpendicular ending point.
+<img src="/images/gradient3.svg" alt="">
+Till now everything is ready to draw the gradient. From starting point to ending point we draw a series of lines with color linear changing by their position. 
+<img src="/images/gradient4.svg" alt="">
+Suppose color of starting point is rgba(r1, g1, b1, a1) and color of ending point is rgba(r2, g2, b2, a2). The distance between starting point and ending point is E and the line we will draw has moved F away from starting point. I guess color of the line will be:</p>
+<p>rgba(r1 + (r2-r1)<em>F/E, g1 + (g2-g1)</em>F/E, b1 + (b2-b1)<em>F/E, a1 + (a2-a1)</em>F/E)</p>
+<p>Finally we have drawn our linear gradient.
+<img src="/images/gradient5.svg" alt=""></p>
+<h2 id="radial-gradient">Radial gradient</h2>
+<p>Radial gradient is more complicated than linear gradient because it has more parameters. Don&#39;t worry we will try to draw it from scratch.</p>
+<p>Again let&#39;s start with a rectangle in a coordinate system.
+<img src="/images/Radial-Gradient1.svg" alt="">
+Next we need to choose a shape from ellipse and circle. Circle is just a special kind of ellipse. To make it more common let&#39;s choose ellipse. BTW the default value is also ellipse. The shape of our ellipse is always the same with the biggest ellipse inside the rectangle. Then we need to choose a position which will be starting point and the center of our ellipse.
+<img src="/images/Radial-Gradient2.svg" alt="">
+After that we need to decide how far our ellipse ends from center.
+<img src="/images/Radial-Gradient3.svg" alt="">
+Now from the starting point we draw a series of ellipse towards ending position. The color of each ellipse is determined by how far it has moved, the same with linear gradient.
+<img src="/images/Radial-Gradient4.svg" alt="">
+Finally we&#39;ll get result.
+<img src="/images/Radial-Gradient5.svg" alt=""></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is just the very first step of my exploring of computer graphics. In the future I will learn more and share with you guys. Stay tuned.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://css-tricks.com/css3-gradients/">CSS Gradients</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using CSS gradients</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient">linear-gradient()</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient">radial-gradient()</a></li>
+</ul>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Train My First Machine Learning Model ]]></title>
     <link href="http://movier.me/blog/train-my-first-machine-learning-model/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-09T08:41:44Z</updated>
+    <updated>2018-03-16T01:46:52Z</updated>
     <published>2018-03-09T08:41:57Z</published>
     <id>http://movier.me/blog/train-my-first-machine-learning-model/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>I&#39;m always interested in machine learning since I learned the concept last year. After watching a lot of videos and reading a bunch of posts, I trained my first machine learning model a few days ago. It&#39;s so exciting that I can&#39;t wait to share my experience. </p>
@@ -47,7 +99,7 @@
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-02-23T10:54:35Z</updated>
+    <updated>2018-03-15T10:18:07Z</updated>
     <published>2018-02-01T16:40:21Z</published>
     <id>http://movier.me/blog/bitwise-operators/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across a question from Interview Cake and it could be solved gracefully by bitwise operator XOR which arouse my interest. I will show you the question and the answer at the end of the post. Now let&#39;s learn some basic knowledge of bitwise operators.</p>
@@ -181,7 +233,7 @@ for (let i = 0; i &lt; a.length; i++) {
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-01-15T10:45:54Z</updated>
+    <updated>2018-03-16T02:25:26Z</updated>
     <published>2018-01-15T10:46:02Z</published>
     <id>http://movier.me/blog/prepare-for-finding-a-job-in-australia/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>In July 2017 I applied a work and holiday visa of Australia. It will be expired after Sep 08 2018 which means I must land Australia before that day. So I plan to quit my job at the end of August and go to Australia in early September. Thus from now on I have about eight months to do preparations. </p>
@@ -205,7 +257,7 @@ for (let i = 0; i &lt; a.length; i++) {
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-02-01T15:30:29Z</updated>
+    <updated>2018-03-16T02:27:55Z</updated>
     <published>2018-01-11T16:33:53Z</published>
     <id>http://movier.me/blog/bye-2017-hi-2018/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>One word to summarize 2017 is Ollie which is the nickname of my baby. Except working I spent almost all my time with her and she made me the happiest person in the world.</p>
@@ -450,7 +502,7 @@ b0cd221 HEAD@{2}: commit: Ready to write recursive function
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2017-11-02T07:26:02Z</updated>
+    <updated>2018-03-16T14:51:09Z</updated>
     <published>2017-10-24T05:18:12Z</published>
     <id>http://movier.me/blog/git-svn/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>Back to March this year when I come to the company I&#39;m working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don&#39;t want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
@@ -594,7 +646,7 @@ print(str)
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-09T08:37:52Z</updated>
+    <updated>2018-03-16T02:43:24Z</updated>
     <published>2017-09-19T13:55:00Z</published>
     <id>http://movier.me/blog/hex-code-and-rgb-values-in-css-color-2/</id>
     <content type="html" xml:base="https://movier.me/" xml:lang="en"><![CDATA[<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>

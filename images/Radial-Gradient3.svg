@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="517px" height="400px" viewBox="0 0 517 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Radial-Gradient</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2018" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Radial-Gradient">
+            <g id="Group" transform="translate(117.000000, 100.000000)" fill="#D8D8D8">
+                <rect id="Rectangle-2" x="0" y="0" width="300" height="200"></rect>
+            </g>
+            <g id="Group-2" transform="translate(52.000000, 40.000000)">
+                <text id="Origin" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="221.460938" y="219">Origin</tspan>
+                </text>
+                <path d="M0,160 L430,160" id="Line" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <path id="Line-decoration-1" d="M430,160 L419.2,157 L419.2,163 L430,160 Z" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <path d="M215,320 L215,0" id="Line" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <path id="Line-decoration-1" d="M215,0 L212,10.8 L218,10.8 L215,0 Z" stroke="#9B9B9B" stroke-linecap="square"></path>
+                <text id="x-axis" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="398" y="148">x-axis</tspan>
+                </text>
+                <text id="y-axis" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="224" y="11">y-axis</tspan>
+                </text>
+                <path d="M239.5,198.5 L218.5,167.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                <path id="Line-decoration-1" d="M227.040916,174.758977 L218.5,167.5 L222.073404,178.124066" stroke="#4A4A4A" stroke-linecap="square"></path>
+                <text id="(0,-0)" font-family="AlTarikh, Al Tarikh" font-size="14" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="223.153809" y="201">(0</tspan>
+                    <tspan x="233.694824" y="201" font-family="LucidaGrande, Lucida Grande">,</tspan>
+                    <tspan x="238.124512" y="201"> 0)</tspan>
+                </text>
+            </g>
+            <text id="Starting-Point" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="207.436523" y="167">Starting Point</tspan>
+            </text>
+            <ellipse id="Oval-2-Copy" stroke="#9198E5" stroke-width="1.2" cx="251" cy="184.5" rx="238" ry="158.5"></ellipse>
+            <circle id="Oval" fill="#E66465" cx="244.5" cy="181.5" r="2.5"></circle>
+            <text id="Ending-Position" font-family="Georgia" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="414.431641" y="323">Ending Position</tspan>
+            </text>
+            <circle id="Oval-3" fill="#9198E5" cx="417" cy="298" r="2"></circle>
+        </g>
+    </g>
+</svg>

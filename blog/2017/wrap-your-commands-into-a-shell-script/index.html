@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oliver Young</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="/markdown.css">
+<style type="text/css">
+body {
+  margin: 0;
+}
+#app {
+  margin: 0 auto;
+}
+#social-media {
+  margin: 6px;
+  float: right;
+}
+#header {
+  margin: 80px auto;
+  text-align: center;
+  font-family: -apple-system, 'Helvetica Neue';
+}
+#header h1 {
+  font-size: 38px;
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+#header p {
+  font-size: 22px;
+  color: #A9A9A9;
+  -webkit-font-smoothing: antialiased;
+}
+.divider {
+  height: 1px;
+  background-color: #E6E6E6;
+}
+#post-list {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+}
+#post-list li {
+  list-style: none;
+}
+</style><style type="text/css">
+.post-list h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 0;
+}
+.post-list a {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
+}
+</style><style type="text/css">
+.entry-title, .entry-meta, .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.content {
+  margin-top: 60px;
+}
+.entry-title {
+  -webkit-font-smoothing: antialiased;
+  margin-top: .42em;
+  margin-bottom: .7em;
+  letter-spacing: .02em;
+  line-height: 1.1;
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+}
+.entry-meta {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .5);
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: 500;
+}
+.content img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+pre {
+  padding: 10px;
+  overflow: auto;
+  border: #E3EDF3 1px solid;
+  background: #F7FAFB;
+}
+.banner {
+  padding: 160px;
+  text-align: center;
+  background: linear-gradient(to top left, #f9d423, #f83600);
+}
+.content > p:first-child::first-letter {
+    float:  left;
+    font-size: 56px;
+    line-height:  .83;
+    padding-top: 3px;
+    padding-right: 6px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+</style><style type="text/css">
+#nav a {
+  text-decoration: none;
+}
+#nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 55px;
+  margin: 0 28px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .48);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+#nav::after {
+  height: 1px;
+  color: rgba(0, 0, 0, .05);
+}
+.nav-left, .nav-right {
+  flex: 1;
+  display: flex;
+}
+.nav-right {
+  justify-content: flex-end;
+}
+.nav-left > .nav-item {
+  padding-right: 12px;
+}
+.nav-right > .nav-item {
+  padding-left: 12px;
+}
+#social-media a {
+  font-family: -apple-system;
+  color: #8B572A;
+}
+#social-media a:hover {
+  color: #733F10;
+}
+</style><style type="text/css">
+textarea {
+  width: 100%;
+  height: 400px;
+}
+.h1 {
+  font-size: 24px;
+}
+</style><style type="text/css">
+#app {
+  /* max-width: 1080px; */
+  margin: 0 auto;
+}
+#social-media {
+  margin: 6px;
+  float: right;
+}
+#header {
+  margin: 80px auto;
+  text-align: center;
+  font-family: -apple-system, 'Helvetica Neue';
+}
+#header h1 {
+  font-size: 38px;
+  color: #333333;
+}
+#header p {
+  font-size: 22px;
+  color: #A9A9A9;
+  -webkit-font-smoothing: antialiased;
+}
+.divider {
+  height: 1px;
+  background-color: #E6E6E6;
+}
+#post-list {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+}
+#post-list li {
+  list-style: none;
+}
+.write-button-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: right;
+}
+.button {
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, .25);
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .25);
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.button:hover {
+  border: 1px solid rgba(0, 0, 0, .45);
+  color: rgba(0, 0, 0, .45);
+}
+</style><style type="text/css">
+input, textarea {
+  border: none;
+}
+textarea {
+  height: 50px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
+}
+.operation {
+  cursor: pointer;
+}
+</style></head>
+<body>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/" class="router-link-active">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/" class="router-link-active">ABOUT</a></div> <div class="nav-item"><a href="/" class="router-link-active">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">Wrap your Commands into a Shell Script</h1> <div class="entry-meta">Oct 23, 2017 #shell #bash #sh</div></div> <div class="content"><p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
+<pre><code>docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup:/backup mongo mongodump --host mongo --db olivia-server --out /backup
+</code></pre><p>Wouldn't it be great if you don't need to remember or look up the command when use! Fortunatelty you can! All you need to do is wrap your long commands into a shell script.</p>
+<hr>
+<p>Let me show you how to realize this:</p>
+<p><strong>1. Create a file called <code>mongodump</code> under the <code>~/bin</code> directory:</strong></p>
+<pre><code>mkdir ~/bin &amp;&amp; touch ~/bin/mongodump
+</code></pre><p><strong>2. Edit the file and add your command:</strong></p>
+<pre><code class="lang-sh">#!/bin/sh
+docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup:/backup mongo mongodump --host mongo --db olivia-server --out /backup
+</code></pre>
+<p><strong>3. Modify the permission of your script file:</strong></p>
+<pre><code class="lang-sh">chmod 755 mongodump
+</code></pre>
+<p><strong>4. Add <code>~/bin</code> to your system path:</strong></p>
+<p>If you are using bash edit <code>~/.bash_profile</code> or if you are using zsh edit <code>~/.zshrc</code> add following line:</p>
+<pre><code class="lang-sh">export PATH="$HOME/bin:$PATH"
+</code></pre>
+<p>Save and restart your shell. Now you can just type <code>dockerdump</code> to run the shell.</p>
+</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
+  
+
+
+</body></html>

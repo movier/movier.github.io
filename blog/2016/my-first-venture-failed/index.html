@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oliver Young</title>
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="/markdown.css">
+<style type="text/css">
+body {
+  margin: 0;
+}
+#app {
+  margin: 0 auto;
+}
+#social-media {
+  margin: 6px;
+  float: right;
+}
+#header {
+  margin: 80px auto;
+  text-align: center;
+  font-family: -apple-system, 'Helvetica Neue';
+}
+#header h1 {
+  font-size: 38px;
+  color: #333333;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+#header p {
+  font-size: 22px;
+  color: #A9A9A9;
+  -webkit-font-smoothing: antialiased;
+}
+.divider {
+  height: 1px;
+  background-color: #E6E6E6;
+}
+#post-list {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+}
+#post-list li {
+  list-style: none;
+}
+</style><style type="text/css">
+.post-list h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 0;
+}
+.post-list a {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
+}
+</style><style type="text/css">
+.entry-title, .entry-meta, .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.content {
+  margin-top: 60px;
+}
+.entry-title {
+  -webkit-font-smoothing: antialiased;
+  margin-top: .42em;
+  margin-bottom: .7em;
+  letter-spacing: .02em;
+  line-height: 1.1;
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+}
+.entry-meta {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .5);
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: 500;
+}
+.content img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+pre {
+  padding: 10px;
+  overflow: auto;
+  border: #E3EDF3 1px solid;
+  background: #F7FAFB;
+}
+.banner {
+  padding: 160px;
+  text-align: center;
+  background: linear-gradient(to top left, #f9d423, #f83600);
+}
+.content > p:first-child::first-letter {
+    float:  left;
+    font-size: 56px;
+    line-height:  .83;
+    padding-top: 3px;
+    padding-right: 6px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+</style><style type="text/css">
+#nav a {
+  text-decoration: none;
+}
+#nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 55px;
+  margin: 0 28px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .48);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+#nav::after {
+  height: 1px;
+  color: rgba(0, 0, 0, .05);
+}
+.nav-left, .nav-right {
+  flex: 1;
+  display: flex;
+}
+.nav-right {
+  justify-content: flex-end;
+}
+.nav-left > .nav-item {
+  padding-right: 12px;
+}
+.nav-right > .nav-item {
+  padding-left: 12px;
+}
+#social-media a {
+  font-family: -apple-system;
+  color: #8B572A;
+}
+#social-media a:hover {
+  color: #733F10;
+}
+</style><style type="text/css">
+textarea {
+  width: 100%;
+  height: 400px;
+}
+.h1 {
+  font-size: 24px;
+}
+</style><style type="text/css">
+#app {
+  /* max-width: 1080px; */
+  margin: 0 auto;
+}
+#social-media {
+  margin: 6px;
+  float: right;
+}
+#header {
+  margin: 80px auto;
+  text-align: center;
+  font-family: -apple-system, 'Helvetica Neue';
+}
+#header h1 {
+  font-size: 38px;
+  color: #333333;
+}
+#header p {
+  font-size: 22px;
+  color: #A9A9A9;
+  -webkit-font-smoothing: antialiased;
+}
+.divider {
+  height: 1px;
+  background-color: #E6E6E6;
+}
+#post-list {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+}
+#post-list li {
+  list-style: none;
+}
+.write-button-container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: right;
+}
+.button {
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, .25);
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .25);
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.button:hover {
+  border: 1px solid rgba(0, 0, 0, .45);
+  color: rgba(0, 0, 0, .45);
+}
+</style><style type="text/css">
+input, textarea {
+  border: none;
+}
+textarea {
+  height: 50px;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
+}
+.operation {
+  cursor: pointer;
+}
+</style></head>
+<body>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/" class="router-link-active">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/" class="router-link-active">ABOUT</a></div> <div class="nav-item"><a href="/" class="router-link-active">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">第一次创业失败了</h1> <div class="entry-meta">Feb 07, 2016 #创业</div></div> <div class="content"><p>前天下午，和合伙人见了次面，顺便探望了他刚出生的儿子，祝福他们一家。合伙人告诉我他决定放弃目前的项目，其实我早就从心底放弃这个项目了，这标志着我的第一次创业正式以失败告终。这次创业的起因我已经在《再见2015，你好2016》一文中提过，至于创业项目则是在决定创业之后才定的。现在看来，这也许就是本次创业失败最大的原因。</p>
+<!--more-->
+<h3 id="-">经历</h3>
+<p>决定创业之后，我们开始思考创业项目。一开始决定做一款洗车类App，还召集了小伙伴开会洗脑，结果没有一个小伙伴被我们说动，最后还是就我们两个自己开始创业。考虑到竞争优势等问题，这个洗车类App最后还是流产了。事到如今想想这个问题不应该成为立项的依据，因为无论做什么，我们都没有任何竞争优势。之后有一次，我提到要不做一款婚庆类App，这是缘于我自身非常不爽的婚庆经历，于是我想要是能直接把四大金刚的服务卖给新人，这样就脱离的婚庆公司的束缚，同时达到直销的效果，岂不是一举两得。这个想法得到了合伙人的肯定，于是我们开始立项，产品设计，UI设计，功能开发。一切都很顺利地进行着，整套功能实现后，我们便开始向四大金刚推广，用户数量也稳步增长。但是我们App上的订单几乎没有，因此我们打算去上海婚博会推广我们的产品。我们打算采用最传统的发传单方式进行宣传，结果却是传单发了没几张就灰溜溜地回来了。</p>
+<p>这时候，我们便发现将四大金刚直接推到新人面前面前似乎不可行，而且就算四大金刚有了，一场婚庆所需的其它人员物品如何解决，这又是一个很大的问题。因此，我们开始重新思考产品，这条路既然走不通，我们想不如我们把四大金刚推到婚庆公司吧！我们又想，还是以婚庆公司为主，将目前的App打造成婚庆公司的工具吧！我们还想，既然有相似产品在做电商，不如我们也做婚庆类电商吧！最后，我们想既然做电商，为什么不做其他类电商，毕竟婚庆行业我们一点儿也不熟悉。做其他类电商不就是从头来过么，就这样我们放弃了这个项目，我的第一个创业经历以失败告终。</p>
+<h3 id="-">反思</h3>
+<p>创业，创造的应该是一种价值，这种价值应该深深地刻在创始人的脑中。创业的过程应该围绕着这种价值展开。</p>
+<p>什么是价值？我目前能想到的通俗易懂的解释就是对人有用的东西。为避免创造出对人没用的东西，我觉得最起码创始人必须觉得自己创造的产品对自己有用，也就是说<strong>创始人应该是创业产品的忠实用户。</strong>这应该是创业的出发点，这同时会带来另外的好处，既然创始人对自己的产品抱有极大的热情，他自然会十分关心这个产品，不会产生消极怠工的情况。拿这次的创业项目嘻嘻圈来说，它本身是针对婚庆行业从业人员的，跟我自己没办毛钱关系，也就是说对我自己没丝毫价值。因此，我经常出现消极怠工的情况，我干嘛为了一个对我自己没用的东西劳心劳力，同时又没有任何好处，关键是可能带来的好处遥遥无期。这种情况下是最容易产生消极情绪的。相反，如果自己是忠实用户，就算没有收入，我也会想尽办法优化产品，因为产品的质量与自己息息相关。</p>
+<p>如何衡量价值？参考创造价值部分的数据。现在App的功能大多比较丰富，社交，IM，电商功能聚集在一款App上的情况十分常见。什么才是你的核心价值？拿嘻嘻圈来说，它的核心价值应该体现在订单数量上，尽管用户数在稳步增长，但是订单量维持不变的话，这个App还是没有创造任何价值。金刚们可能听说了在嘻嘻圈上能接单，因此他们带着美好的憧憬来注册，但注册之后嘻嘻圈并没有给他们带来任何一笔订单，你说嘻嘻圈有用吗？当然，创业者在资源有限的情况下，一般都会先开发提供核心价值的功能。<strong>创始人得密切关注提供价值功能的数据。</strong>用户数量的增长并不代表你的App 有价值，提供核心价值功能数据的增长才表示他人对你的认同。</p>
+<p>应该怎么做？如果再给我一次机会的话，我肯定不会如此盲目地创业。盲目体现在创什么业都不知道，创造什么价值更不清楚。理想中应该是这样，一切都缘于一个个人项目，你为这个项目带给你的价值自豪，你更乐于不断的完善这个项目，使之趋向于你心目中的完美。你感觉差不多了，是时候向人们介绍你的项目以及他所带来的价值了，你默默地通过自己的社交网络推广着自己的项目。渐渐的，一传十，十传百，你的项目得到越来越多的关注，甚至有点儿轰动了。这时候，开始创业吧！</p>
+<p>理想是美好的，现实是残酷的。这时的我躲在被窝里憧憬着理想，面对着现实，无比无奈。今天是年三十，准确地说现在已经是年初一了，可是爆竹声，鞭炮声寥寥无几，果然越来越没年味儿了。</p>
+</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
+  
+
+
+</body></html>
