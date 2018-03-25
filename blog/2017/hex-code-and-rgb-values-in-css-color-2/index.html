@@ -113,7 +113,7 @@ pre {
 .banner {
   padding: 160px;
   text-align: center;
-  background: linear-gradient(to top left, #f9d423, #f83600);
+  background: linear-gradient(to bottom, #545454, #bdbdbd);
 }
 .content > p:first-child::first-letter {
     float:  left;
@@ -259,9 +259,19 @@ textarea {
 .operation {
   cursor: pointer;
 }
+</style><style type="text/css">
+.coming-soon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+}
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/" class="router-link-active">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/" class="router-link-active">ABOUT</a></div> <div class="nav-item"><a href="/" class="router-link-active">HIRE ME</a></div></div></div> <div class="view"><div class="banner" style="background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);"><h1 class="entry-title">Hex Code and RGB values in CSS Color</h1> <div class="entry-meta">Sep 19, 2017 #CSS #Python</div></div> <div class="content"><p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view"><div class="banner" style="background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);"><h1 class="entry-title">Hex Code and RGB values in CSS Color</h1> <div class="entry-meta">Sep 19, 2017 #CSS #Python</div></div> <div class="content"><p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
 <p>For example when it comes to magenta, we can either use <code>#FF00FF</code> in hex code  or <code>rgb(255, 0, 255)</code> in RGB values. Use RGB values for color is easy to understand. But what the hell is hex code? How could it represent for the same color as RGB values do. It turns out that hex code is just another format of RGB values. </p>
 <p>Let’s see a picture.</p>
 <p><img src="/images/2017-09-19.jpg" alt="2017-09-19.jpg"></p>

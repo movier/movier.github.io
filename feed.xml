@@ -4,15 +4,54 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-03-18T14:37:06Z</updated>
+  <updated>2018-03-25T15:07:15Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Crontab ]]></title>
+    <link href="http://movier.me/blog/2018/crontab/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2018-03-23T09:23:15Z</updated>
+    <published>2018-03-23T09:17:17Z</published>
+    <id>http://movier.me/blog/crontab/</id>
+    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Crontab could help you run a task at fixed intervals. It&#39;s so easy to use crontab because it has only three main commands: <code>crontab -l</code>, <code>crontab -r</code> and <code>crontab -e</code>.</p>
+<p><code>crontab -l</code> will list all your tasks. <code>crontab -r</code> will delete all your tasks. Please be especially careful when using it. The most important command is <code>crontab -e</code> which allows you to edit your tasks.</p>
+<h2 id="select-an-editor">Select an editor</h2>
+<p>What <code>crontab -e</code> actually does is to open your crontab file which contains all your scheduled tasks. So for the first time you run <code>crontab -e</code> it will ask you to select an editor:</p>
+<pre><code class="lang-shell">Select an editor.  To change later, run &#39;select-editor&#39;.
+  1. /bin/nano        &lt;---- easiest
+  2. /usr/bin/sensible-editor
+  3. /usr/bin/vim.basic
+  4. /usr/bin/vim.tiny
+
+Choose 1-4 [1]: 3
+</code></pre>
+<p>Just select an editor you like. If you select a wrong editor like I do don&#39;t worry. Just run <code>select-editor</code> to select again. You can also delete the file <code>~/.selected_editor</code> then for the next time you run <code>crontab -e</code> you will be asked to select an editor again.</p>
+<h2 id="set-time">Set time</h2>
+<p>Each line in the crontab file is a scheduled task. The comment content below is intuitive enough to explain how to set time.</p>
+<pre><code class="lang-bash"># ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                       7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *  command to execute
+</code></pre>
+<p>Leave it with <code>*</code> just means every time the symbol represents. For example <code>* * * * *</code> means every minute of every hour of every day of month of every month of every day of week. </p>
+<p>Use <code>,</code> to indicate multiple time of the unit. For example <code>2,3 * * * *</code> means the second and third minutes of every hour of every...</p>
+<p>One import thing to guarantee crontab works is that <strong>using absolute path</strong>.</p>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Draw CSS Gradients ]]></title>
     <link href="http://movier.me/blog/2018/draw-css-gradients/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-17T14:35:18Z</updated>
+    <updated>2018-03-19T03:40:23Z</updated>
     <published>2018-03-17T14:24:56Z</published>
     <id>http://movier.me/blog/draw-css-gradients/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently I found myself extremely interested in computer graphics. Meanwhile it&#39;s time to redesign my portfolio and I decide to make it colorful. Gradient is no doubt the easiest starting point.</p>
@@ -233,7 +272,7 @@ for (let i = 0; i &lt; a.length; i++) {
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-16T02:25:26Z</updated>
+    <updated>2018-03-19T04:01:51Z</updated>
     <published>2018-01-15T10:46:02Z</published>
     <id>http://movier.me/blog/prepare-for-finding-a-job-in-australia/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>In July 2017 I applied a work and holiday visa of Australia. It will be expired after Sep 08 2018 which means I must land Australia before that day. So I plan to quit my job at the end of August and go to Australia in early September. Thus from now on I have about eight months to do preparations. </p>

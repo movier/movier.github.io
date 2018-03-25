@@ -113,7 +113,7 @@ pre {
 .banner {
   padding: 160px;
   text-align: center;
-  background: linear-gradient(to top left, #f9d423, #f83600);
+  background: linear-gradient(to bottom, #545454, #bdbdbd);
 }
 .content > p:first-child::first-letter {
     float:  left;
@@ -259,9 +259,19 @@ textarea {
 .operation {
   cursor: pointer;
 }
+</style><style type="text/css">
+.coming-soon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+}
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/" class="router-link-active">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/" class="router-link-active">ABOUT</a></div> <div class="nav-item"><a href="/" class="router-link-active">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">关于Drupal7模板的那些事儿</h1> <div class="entry-meta">Mar 20, 2014 #Drupal</div></div> <div class="content"><p>这篇文章最初发布于2013年4月20日。由于一些原因，图片和代码部分存在缺失，请谅解！待博客平台稳定后会逐步添加进去。</p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">关于Drupal7模板的那些事儿</h1> <div class="entry-meta">Mar 20, 2014 #Drupal</div></div> <div class="content"><p>这篇文章最初发布于2013年4月20日。由于一些原因，图片和代码部分存在缺失，请谅解！待博客平台稳定后会逐步添加进去。</p>
 <hr>
 <p>最早接触drupal是在2012年的8月份。那时候，我刚从创恩IT教育毕业，没过多久我就以php软件工程师的身份进入博科资讯股份有限公司，面对的就是基于drupal7的主题开发。不知不觉接触drupal已经快一年了，我实在非常热爱drupal，所以想把自己对drupal开发的一些心得拿出来与大家分享。</p>
 <p>###一、一个小例子

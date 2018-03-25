@@ -113,7 +113,7 @@ pre {
 .banner {
   padding: 160px;
   text-align: center;
-  background: linear-gradient(to top left, #f9d423, #f83600);
+  background: linear-gradient(to bottom, #545454, #bdbdbd);
 }
 .content > p:first-child::first-letter {
     float:  left;
@@ -259,9 +259,19 @@ textarea {
 .operation {
   cursor: pointer;
 }
+</style><style type="text/css">
+.coming-soon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+}
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/" class="router-link-active">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/" class="router-link-active">ABOUT</a></div> <div class="nav-item"><a href="/" class="router-link-active">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">Timezone Matters</h1> <div class="entry-meta">Oct 20, 2017 #javascript #java #swift</div></div> <div class="content"><p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date('2017-09-04T09:52:15')</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">Timezone Matters</h1> <div class="entry-meta">Oct 20, 2017 #javascript #java #swift</div></div> <div class="content"><p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date('2017-09-04T09:52:15')</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
 <p>The reason is obvious if you compare the result carefully. Since I lose my timezone information in the date string, the two browsers react differently to this situation. Chrome will take your computer's timezone as default timezone when parsing the date string. Meanwhile safari will take the string as UTC time.</p>
 <p>If we could add timezone information to the date string, there won't be such problem. The question is how we add timezone to the date string. Fortunately there is something called <strong>ISO date format</strong>. The format is as follows:</p>
 <pre><code>YYYY-MM-DDTHH:mm:ss.sssZ
