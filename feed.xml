@@ -4,17 +4,42 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-03-25T15:07:15Z</updated>
+  <updated>2018-04-06T16:02:42Z</updated>
   <id>http://movier.me/</id>
   <entry>
-    <title><![CDATA[ Crontab ]]></title>
-    <link href="http://movier.me/blog/2018/crontab/"></link>
+    <title><![CDATA[ Linux Screen ]]></title>
+    <link href="http://movier.me/blog/2018/linux-screen/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-23T09:23:15Z</updated>
+    <updated>2018-04-06T15:57:53Z</updated>
+    <published>2018-04-06T15:57:56Z</published>
+    <id>http://movier.me/blog/linux-screen/</id>
+    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
+<h2 id="create-a-new-screen">Create a new screen</h2>
+<p>Just type <code>screen</code> to create a new screen. It will prompt up with some words. Ignore it. Just type space or enter to continue. After that you are in a new screen where you can  run time-consuming task. </p>
+<p>Once the task is running and you want to leave it running there comes the most magic part of screen. Type <code>ctrl a + d</code> to detach from current screen. After that you will be in main screen and your task will keep running in the background.</p>
+<h2 id="list-all-screens">List all screens</h2>
+<p><code>screen -list</code> will list all your screens. The output will be something like this: </p>
+<pre><code class="lang-bash">There are screens on:
+    26243.pts-0.ip-172-31-22-134    (04/06/2018 03:39:26 PM)    (Detached)
+    25118.pts-0.ip-172-31-22-134    (03/14/2018 10:34:28 AM)    (Detached)
+2 Sockets in /var/run/screen/S-ubuntu.
+</code></pre>
+<p>At the beginning of each line there is a series of number like <code>26243</code> and <code>25118</code> above. These numbers are the process ids of each screen which could be used to reattach the screen.</p>
+<h2 id="reattach-a-screen">Reattach a screen</h2>
+<p><code>screen -r [session]</code> will help you reattach a screen from main screen. The parameter session is the process id of the screen you want to reattach. If there is only one screen the parameter could be omitted. After a screen is reattached and the task is finished you can run <code>exit</code> to exit the current screen.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[ Linux Crontab ]]></title>
+    <link href="http://movier.me/blog/2018/linux-crontab/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2018-03-30T14:25:25Z</updated>
     <published>2018-03-23T09:17:17Z</published>
-    <id>http://movier.me/blog/crontab/</id>
+    <id>http://movier.me/blog/linux-crontab/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Crontab could help you run a task at fixed intervals. It&#39;s so easy to use crontab because it has only three main commands: <code>crontab -l</code>, <code>crontab -r</code> and <code>crontab -e</code>.</p>
 <p><code>crontab -l</code> will list all your tasks. <code>crontab -r</code> will delete all your tasks. Please be especially careful when using it. The most important command is <code>crontab -e</code> which allows you to edit your tasks.</p>
 <h2 id="select-an-editor">Select an editor</h2>
@@ -272,7 +297,7 @@ for (let i = 0; i &lt; a.length; i++) {
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-19T04:01:51Z</updated>
+    <updated>2018-03-30T07:30:43Z</updated>
     <published>2018-01-15T10:46:02Z</published>
     <id>http://movier.me/blog/prepare-for-finding-a-job-in-australia/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>In July 2017 I applied a work and holiday visa of Australia. It will be expired after Sep 08 2018 which means I must land Australia before that day. So I plan to quit my job at the end of August and go to Australia in early September. Thus from now on I have about eight months to do preparations. </p>

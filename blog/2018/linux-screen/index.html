@@ -271,21 +271,20 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view"><div class="banner"><h1 class="entry-title">Git Reflog</h1> <div class="entry-meta">Oct 27, 2017 #git</div></div> <div class="content"><p>It was a ordinary day. I modified codes and did commits as usual. Later I found last commit was not necessary any more. So I decided to reset it. The change was still useful so I want to keep it.</p>
-<p>I knew related command was <code>git reset</code> but I was not sure which mode to use. At this circumstance I didn't go to look up the manual but use <code>git reset --hard</code> casually. How ridiculous I was! The result proved that. I lost all my changes.</p>
-<p>Though I felt depressed at that moment I still believed that Git had the ability to restore the changes. So I began to search on Internet. Finally I found the answer which is <code>git reflog</code>.</p>
-<p>So what is <code>git reflog</code>?</p>
-<p>I prefer the explanation from Atlassian Git Tutorial:</p>
-<blockquote>
-<p>The reflog is Git’s safety net. It records almost every change you make in your repository, regardless of whether you committed a snapshot or not. You can think of it is a chronological history of everything you’ve done in your local repo.</p>
-</blockquote>
-<p>If I ran <code>git reflog</code> I would see something like this:</p>
-<pre><code>b0cd221 (HEAD -&gt; master) HEAD@{0}: reset: moving to b0cd221
-23b4878 HEAD@{1}: commit: Recursive function works
-b0cd221 HEAD@{2}: commit: Ready to write recursive function
-...
-</code></pre><p>The first line is exactly my stupid behavior. The second line is the commit I lose. So I could easily restore it by running <code>git reset --hard 23b4878</code>. Thanks to Git I was rescued.</p>
-<p>If you want to learn more about <code>git reflog</code> and its usage. I recommend two posts from Atlassian Git Tutorial: <a href="https://www.atlassian.com/git/tutorials/rewriting-history">Rewriting history</a> and <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog">git reflog</a>. Among them <em>The safety net: git reflog</em> part from Rewriting history describes the same situation I face here and <em>Recovering lost commits</em> part from git reflog is also worth reading.</p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view"><div class="banner" style="background: linear-gradient(to right bottom, rgb(84, 84, 84), rgb(189, 189, 189));"><h1 class="entry-title">Linux Screen</h1> <div class="entry-meta">Apr 06, 2018 #Linux</div></div> <div class="content"><p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
+<h2 id="create-a-new-screen">Create a new screen</h2>
+<p>Just type <code>screen</code> to create a new screen. It will prompt up with some words. Ignore it. Just type space or enter to continue. After that you are in a new screen where you can  run time-consuming task. </p>
+<p>Once the task is running and you want to leave it running there comes the most magic part of screen. Type <code>ctrl a + d</code> to detach from current screen. After that you will be in main screen and your task will keep running in the background.</p>
+<h2 id="list-all-screens">List all screens</h2>
+<p><code>screen -list</code> will list all your screens. The output will be something like this: </p>
+<pre><code class="lang-bash">There are screens on:
+    26243.pts-0.ip-172-31-22-134    (04/06/2018 03:39:26 PM)    (Detached)
+    25118.pts-0.ip-172-31-22-134    (03/14/2018 10:34:28 AM)    (Detached)
+2 Sockets in /var/run/screen/S-ubuntu.
+</code></pre>
+<p>At the beginning of each line there is a series of number like <code>26243</code> and <code>25118</code> above. These numbers are the process ids of each screen which could be used to reattach the screen.</p>
+<h2 id="reattach-a-screen">Reattach a screen</h2>
+<p><code>screen -r [session]</code> will help you reattach a screen from main screen. The parameter session is the process id of the screen you want to reattach. If there is only one screen the parameter could be omitted. After a screen is reattached and the task is finished you can run <code>exit</code> to exit the current screen.</p>
 </div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
   
 
