@@ -271,20 +271,33 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view fade-enter fade-enter-active"><div class="banner" style="background: linear-gradient(to right bottom, rgb(84, 84, 84), rgb(189, 189, 189));"><h1 class="entry-title">Linux Screen</h1> <div class="entry-meta">Apr 06, 2018 #Linux</div></div> <div class="content"><p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
-<h2 id="create-a-new-screen">Create a new screen</h2>
-<p>Just type <code>screen</code> to create a new screen. It will prompt up with some words. Ignore it. Just type space or enter to continue. After that you are in a new screen where you can  run time-consuming task. </p>
-<p>Once the task is running and you want to leave it running there comes the most magic part of screen. Type <code>ctrl a + d</code> to detach from current screen. After that you will be in main screen and your task will keep running in the background.</p>
-<h2 id="list-all-screens">List all screens</h2>
-<p><code>screen -list</code> will list all your screens. The output will be something like this: </p>
-<pre><code class="lang-bash">There are screens on:
-    26243.pts-0.ip-172-31-22-134    (04/06/2018 03:39:26 PM)    (Detached)
-    25118.pts-0.ip-172-31-22-134    (03/14/2018 10:34:28 AM)    (Detached)
-2 Sockets in /var/run/screen/S-ubuntu.
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view fade-enter fade-enter-active"><div class="banner"><h1 class="entry-title">Implement HTTP Basic Authentication in a Modern Web App</h1> <div class="entry-meta">Apr 23, 2018 #Web</div></div> <div class="content"><p>User authentication could be complicated but sometimes we just need a simple solution. Then HTTP basic authentication will be a good choice.</p>
+<p><img src="/images/http-basic-authentication-password-prompt.jpg" alt="HTTP basic authentication password prompt in Chrome"></p>
+<p>If a user visit a protected page HTTP basic authentication will present a password prompt like the one above. Only those with correct username and password have access to that page.</p>
+<p>Next let's try to implement HTTP basic authentication in a modern web app.</p>
+<h2 id="client">Client</h2>
+<p>In HTTP basic authentication browsers need to send credentials. Though </p>
+<blockquote>
+<p> By default, in cross-site XMLHttpRequest or Fetch invocations, browsers will not send credentials.</p>
+</blockquote>
+<p>We could set a special flag on the request in order to realize our goal. How to set the flag depends on your method of async request. If you are using <code>Fetch</code> </p>
+<pre><code class="lang-javascript">fetch(url, {
+  credentials: 'include'
+})
 </code></pre>
-<p>At the beginning of each line there is a series of number like <code>26243</code> and <code>25118</code> above. These numbers are the process ids of each screen which could be used to reattach the screen.</p>
-<h2 id="reattach-a-screen">Reattach a screen</h2>
-<p><code>screen -r [session]</code> will help you reattach a screen from main screen. The parameter session is the process id of the screen you want to reattach. If there is only one screen the parameter could be omitted. After a screen is reattached and the task is finished you can run <code>exit</code> to exit the current screen.</p>
+<p>If you use other library please refer to the document on how to set credentials.</p>
+<h2 id="server">Server</h2>
+<p>If you enable CORS you may set header <code>Access-Control-Allow-Origin</code> as <em> to allow requests from any origin. If you want to use HTTP basic authentication you need to modify the value from </em> to the domain of your client. Another response header <code>Access-Control-Allow-Credentials</code> must be set as true.</p>
+<pre><code>Access-Control-Allow-Origin: http://example.com
+Access-Control-Allow-Credentials: true
+</code></pre><p>All the things above are prerequisites for HTTP basic authentication. Its workflow looks like this: </p>
+<p><img src="/images/http-basic-authentication-workflow.jpg" alt="HTTP basic authentication workflow"></p>
+<p>Detail explaination could be found on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#The_general_HTTP_authentication_framework">MDN</a>.</p>
+<p>From the workflow we can find that after user enter a username and password a header called <code>Authorization</code> will be added to the new request automatically and its value is base64 encoded value of username and password.</p>
+<p>After server receive the new request with <code>Authorization</code> header response could be determined by easily decoded username and password. If the username and password are wrong I will still make server reply with 401 Unauthorized so that the password prompt still present.</p>
+<h2 id="last-but-not-least">Last but not least</h2>
+<p>The method above works in Chrome but it doesn't work in Safari. Even in Chrome it seems HTTP basic authentication is getting less and less support beacuse in previous version after user is authorized the page will keep going but in the latest version user will be left in the async request after authorized.</p>
+<p>Sooner or later HTTP basic authentication support will be removed completely from Chrome. At that time is there any simple solution of user authentication left for us?</p>
 </div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
   
 
