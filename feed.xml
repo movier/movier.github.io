@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-04-24T09:19:54Z</updated>
+  <updated>2018-04-24T09:33:34Z</updated>
   <id>http://movier.me/</id>
   <entry>
     <title><![CDATA[ Implement HTTP Basic Authentication in a Modern Web App ]]></title>
@@ -12,11 +12,11 @@
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-04-24T09:13:38Z</updated>
+    <updated>2018-04-24T09:26:14Z</updated>
     <published>2018-04-24T09:13:56Z</published>
     <id>http://movier.me/blog/2018/implement-http-basic-authentication-in-a-modern-web-app/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>User authentication could be complicated but sometimes we just need a simple solution. Then HTTP basic authentication will be a good choice.</p>
-<p><img src="http://13.114.211.2/images/http-basic-authentication-password-prompt.jpg" alt="HTTP basic authentication password prompt in Chrome"></p>
+<p><img src="/images/http-basic-authentication-password-prompt.jpg" alt="HTTP basic authentication password prompt in Chrome"></p>
 <p>If a user visit a protected page HTTP basic authentication will present a password prompt like the one above. Only those with correct username and password have access to that page.</p>
 <p>Next let&#39;s try to implement HTTP basic authentication in a modern web app.</p>
 <h2 id="client">Client</h2>
@@ -35,7 +35,7 @@
 <pre><code>Access-Control-Allow-Origin: http://example.com
 Access-Control-Allow-Credentials: true
 </code></pre><p>All the things above are prerequisites for HTTP basic authentication. Its workflow looks like this: </p>
-<p><img src="http://13.114.211.2/images/http-basic-authentication-workflow.jpg" alt="HTTP basic authentication workflow"></p>
+<p><img src="/images/http-basic-authentication-workflow.jpg" alt="HTTP basic authentication workflow"></p>
 <p>Detail explaination could be found on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#The_general_HTTP_authentication_framework">MDN</a>.</p>
 <p>From the workflow we can find that after user enter a username and password a header called <code>Authorization</code> will be added to the new request automatically and its value is base64 encoded value of username and password.</p>
 <p>After server receive the new request with <code>Authorization</code> header response could be determined by easily decoded username and password. If the username and password are wrong I will still make server reply with 401 Unauthorized so that the password prompt still present.</p>
