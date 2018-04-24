@@ -271,8 +271,8 @@ textarea {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view fade-enter fade-enter-active"><div class="banner"><h1 class="entry-title">Implement HTTP Basic Authentication in a Modern Web App</h1> <div class="entry-meta">Apr 23, 2018 #Web</div></div> <div class="content"><p>User authentication could be complicated but sometimes we just need a simple solution. Then HTTP basic authentication will be a good choice.</p>
-<p><img src="/images/http-basic-authentication-password-prompt.jpg" alt="HTTP basic authentication password prompt in Chrome"></p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view fade-enter fade-enter-active"><div class="banner" style="background: linear-gradient(to right bottom, rgb(84, 84, 84), rgb(189, 189, 189));"><h1 class="entry-title">Implement HTTP Basic Authentication in a Modern Web App</h1> <div class="entry-meta">Apr 24, 2018 #Web</div></div> <div class="content"><p>User authentication could be complicated but sometimes we just need a simple solution. Then HTTP basic authentication will be a good choice.</p>
+<p><img src="http://13.114.211.2/images/http-basic-authentication-password-prompt.jpg" alt="HTTP basic authentication password prompt in Chrome"></p>
 <p>If a user visit a protected page HTTP basic authentication will present a password prompt like the one above. Only those with correct username and password have access to that page.</p>
 <p>Next let's try to implement HTTP basic authentication in a modern web app.</p>
 <h2 id="client">Client</h2>
@@ -287,11 +287,11 @@ textarea {
 </code></pre>
 <p>If you use other library please refer to the document on how to set credentials.</p>
 <h2 id="server">Server</h2>
-<p>If you enable CORS you may set header <code>Access-Control-Allow-Origin</code> as <em> to allow requests from any origin. If you want to use HTTP basic authentication you need to modify the value from </em> to the domain of your client. Another response header <code>Access-Control-Allow-Credentials</code> must be set as true.</p>
+<p>If you enable CORS you may set header <code>Access-Control-Allow-Origin</code> as <code>*</code> to allow requests from any origin. If you want to use HTTP basic authentication you need to modify the value from <code>*</code> to the domain of your client. Another response header <code>Access-Control-Allow-Credentials</code> must be set as true.</p>
 <pre><code>Access-Control-Allow-Origin: http://example.com
 Access-Control-Allow-Credentials: true
 </code></pre><p>All the things above are prerequisites for HTTP basic authentication. Its workflow looks like this: </p>
-<p><img src="/images/http-basic-authentication-workflow.jpg" alt="HTTP basic authentication workflow"></p>
+<p><img src="http://13.114.211.2/images/http-basic-authentication-workflow.jpg" alt="HTTP basic authentication workflow"></p>
 <p>Detail explaination could be found on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#The_general_HTTP_authentication_framework">MDN</a>.</p>
 <p>From the workflow we can find that after user enter a username and password a header called <code>Authorization</code> will be added to the new request automatically and its value is base64 encoded value of username and password.</p>
 <p>After server receive the new request with <code>Authorization</code> header response could be determined by easily decoded username and password. If the username and password are wrong I will still make server reply with 401 Unauthorized so that the password prompt still present.</p>
