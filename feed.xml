@@ -4,53 +4,15 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-04-24T09:33:34Z</updated>
+  <updated>2018-08-22T11:46:00Z</updated>
   <id>http://movier.me/</id>
-  <entry>
-    <title><![CDATA[ Implement HTTP Basic Authentication in a Modern Web App ]]></title>
-    <link href="http://movier.me/blog/2018/implement-http-basic-authentication-in-a-modern-web-app/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2018-04-24T09:26:14Z</updated>
-    <published>2018-04-24T09:13:56Z</published>
-    <id>http://movier.me/blog/2018/implement-http-basic-authentication-in-a-modern-web-app/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>User authentication could be complicated but sometimes we just need a simple solution. Then HTTP basic authentication will be a good choice.</p>
-<p><img src="/images/http-basic-authentication-password-prompt.jpg" alt="HTTP basic authentication password prompt in Chrome"></p>
-<p>If a user visit a protected page HTTP basic authentication will present a password prompt like the one above. Only those with correct username and password have access to that page.</p>
-<p>Next let&#39;s try to implement HTTP basic authentication in a modern web app.</p>
-<h2 id="client">Client</h2>
-<p>In HTTP basic authentication browsers need to send credentials. Though </p>
-<blockquote>
-<p> By default, in cross-site XMLHttpRequest or Fetch invocations, browsers will not send credentials.</p>
-</blockquote>
-<p>We could set a special flag on the request in order to realize our goal. How to set the flag depends on your method of async request. If you are using <code>Fetch</code> </p>
-<pre><code class="lang-javascript">fetch(url, {
-  credentials: &#39;include&#39;
-})
-</code></pre>
-<p>If you use other library please refer to the document on how to set credentials.</p>
-<h2 id="server">Server</h2>
-<p>If you enable CORS you may set header <code>Access-Control-Allow-Origin</code> as <code>*</code> to allow requests from any origin. If you want to use HTTP basic authentication you need to modify the value from <code>*</code> to the domain of your client. Another response header <code>Access-Control-Allow-Credentials</code> must be set as true.</p>
-<pre><code>Access-Control-Allow-Origin: http://example.com
-Access-Control-Allow-Credentials: true
-</code></pre><p>All the things above are prerequisites for HTTP basic authentication. Its workflow looks like this: </p>
-<p><img src="/images/http-basic-authentication-workflow.jpg" alt="HTTP basic authentication workflow"></p>
-<p>Detail explaination could be found on <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#The_general_HTTP_authentication_framework">MDN</a>.</p>
-<p>From the workflow we can find that after user enter a username and password a header called <code>Authorization</code> will be added to the new request automatically and its value is base64 encoded value of username and password.</p>
-<p>After server receive the new request with <code>Authorization</code> header response could be determined by easily decoded username and password. If the username and password are wrong I will still make server reply with 401 Unauthorized so that the password prompt still present.</p>
-<h2 id="last-but-not-least">Last but not least</h2>
-<p>The method above works in Chrome but it doesn&#39;t work in Safari. Even in Chrome it seems HTTP basic authentication is getting less and less support beacuse in previous version after user is authorized the page will keep going but in the latest version user will be left in the async request after authorized.</p>
-<p>Sooner or later HTTP basic authentication support will be removed completely from Chrome. At that time is there any simple solution of user authentication left for us?</p>
-]]></content>
-  </entry>
   <entry>
     <title><![CDATA[ Linux Screen ]]></title>
     <link href="http://movier.me/blog/2018/linux-screen/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-04-11T02:45:24Z</updated>
+    <updated>2018-06-29T10:39:14Z</updated>
     <published>2018-04-06T15:57:56Z</published>
     <id>http://movier.me/blog/2018/linux-screen/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
@@ -213,8 +175,6 @@ Finally we&#39;ll get result.
 <h2 id="two-s-complement-binary">Two&#39;s complement binary</h2>
 <blockquote>
 <p>A two&#39;s complement binary is same as the classical binary representation for positve integers but is slightly different for negative numbers. Negative numbers are represented by performing the two&#39;s complement operation on their absolute value. </p>
-</blockquote>
-<blockquote>
 <p>Negative numbers are written with a leading one instead of a leading zero. So if you are using only 8 bits for your twos-complement numbers, then you treat patterns from &quot;00000000&quot; to &quot;01111111&quot; as the whole numbers from 0 to 127, and reserve &quot;1xxxxxxx&quot; for writing negative numbers.</p>
 </blockquote>
 <p>Let&#39;s assume there are totally 8 bits and there is a positive number 118. How can we get two&#39;s complement binary of -118?</p>
@@ -710,7 +670,7 @@ dateFormatter.string(from: date) // &quot;9/4/17, 5:52 PM&quot;
 <h2 id="convert-local-date-to-iso-date-format">Convert Local Date to ISO Date Format</h2>
 <p>I got the date string without timezone information from server. So it&#39;s reasonable to blame the back-end developer. But when client submit date to server timezone information should also be included. </p>
 <p>JavaScript</p>
-<pre><code class="lang-javascript">new Date(2017, 09, 04, 17, 30, 30).toISOString(); // &quot;2017-09-29T15:46:22.164Z&quot; 
+<pre><code class="lang-javascript">new Date(2017, 09, 04, 17, 30, 30).toISOString(); // &quot;2017-09-29T15:46:22.164Z&quot;
 </code></pre>
 <p>Java</p>
 <pre><code class="lang-java">import java.util.Date;
@@ -1264,8 +1224,6 @@ NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:r
 <p><strong>What&#39;s Blocks?</strong></p>
 <blockquote>
 <p>Blocks are a language-level feature added to C, Objective-C and C++, which allow you to create distinct segments of code that can be passed around to methods or functions as if they were values.</p>
-</blockquote>
-<blockquote>
 <p>Blocks是加入到C、Objective-C和C++语言层面的特点，它允许你创建不同的代码片段，而这些代码片段可以作为参数传递给方法或者函数就好像他们是数值一样。</p>
 </blockquote>
 <p><strong>使用Blocks解决上述问题</strong></p>
@@ -1824,11 +1782,7 @@ TO BE CONTINUED...</p>
 <h4 id="-freelancer-">做一名 Freelancer, 自己接项目</h4>
 <blockquote>
 <p>Freelance这个词最早出现时是用来指称“中世纪的雇佣军骑士”，即“free-lance”; 随着时间推移，它慢慢被用于指称自由撰稿人(应该算自由职业中非常流行的行当，特别是在西方国家)，进而扩大至指称所有自由职业者们。</p>
-</blockquote>
-<blockquote>
 <p>因为自由职业者们通常是脑力劳动者或服务提供者，并且大多是自己所在领域的专家或资历丰富者，加上又不要求签订长期的工作协议或合同，许多企业或个人愿意将自己的项目外包(Outsourcing)给他们。</p>
-</blockquote>
-<blockquote>
 <p>-- Freelancer专属™ 博客</p>
 </blockquote>
 <p>做 Freelancer 最需要解决的是项目来源问题，而项目来源最主要的途径通常是有四种：</p>

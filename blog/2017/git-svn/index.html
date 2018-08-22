@@ -18,7 +18,10 @@ body {
   float: right;
 }
 #header {
-  margin: 80px auto;
+  max-width: 1080px;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 80px;
   text-align: center;
   font-family: -apple-system, 'Helvetica Neue';
 }
@@ -73,6 +76,10 @@ body {
     margin: 30px auto;
 }
 </style><style type="text/css">
+.post-container {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
 .entry-title, .entry-meta, .content {
     margin-left: auto;
     margin-right: auto;
@@ -80,24 +87,20 @@ body {
     padding-left: 18px;
     padding-right: 18px;
 }
-.content {
-  margin-top: 60px;
+.entry-title, .entry-meta {
+  text-align: center;
 }
 .entry-title {
   -webkit-font-smoothing: antialiased;
-  margin-top: .42em;
-  margin-bottom: .7em;
+  margin-top: 0;
   letter-spacing: .02em;
-  line-height: 1.1;
-  color: white;
-  font-size: 40px;
-  font-weight: 800;
 }
 .entry-meta {
   font-size: 14px;
-  color: rgba(0, 0, 0, .5);
-  font-family: Helvetica Neue, sans-serif;
-  font-weight: 500;
+  color: #9e9e9e;
+}
+.content {
+  margin-top: 30px;
 }
 .content img {
   max-width: 100%;
@@ -115,14 +118,32 @@ pre {
   text-align: center;
   background: linear-gradient(to bottom, #545454, #bdbdbd);
 }
-.content > p:first-child::first-letter {
-    float:  left;
-    font-size: 56px;
-    line-height:  .83;
-    padding-top: 3px;
-    padding-right: 6px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
+</style><style type="text/css">
+.post-list h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 0;
+}
+.post-list a {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
 }
 </style><style type="text/css">
 #nav a {
@@ -184,11 +205,12 @@ textarea {
   margin: 6px;
   float: right;
 }
-#header {
+
+/* #header {
   margin: 80px auto;
   text-align: center;
   font-family: -apple-system, 'Helvetica Neue';
-}
+} */
 #header h1 {
   font-size: 38px;
   color: #333333;
@@ -269,9 +291,93 @@ textarea {
     font-size: 44px;
     font-weight: bold;
 }
+</style><style type="text/css">
+body[data-v-563b4dc5] {
+  margin: 0;
+}
+a[data-v-563b4dc5] {
+  text-decoration: none;
+}
+.container[data-v-563b4dc5] {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.item-1[data-v-563b4dc5] {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+.item-2[data-v-563b4dc5] {
+  grid-column-start: 7;
+  grid-column-end: 10;
+}
+.item-3[data-v-563b4dc5] {
+  grid-column-start: 10;
+  grid-column-end: 13;
+}
+.item-4[data-v-563b4dc5] {
+  grid-column-start: 7;
+  grid-column-end: 10;
+}
+.item-5[data-v-563b4dc5] {
+  grid-column-start: 10;
+  grid-column-end: 13;
+}
+.item-6[data-v-563b4dc5] {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.item-7[data-v-563b4dc5] {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+.item-8[data-v-563b4dc5] {
+  grid-column-start: 9;
+  grid-column-end: 13;
+}
+</style><style type="text/css">
+a[data-v-46f8c785] {
+  display: block;
+  width: 100%;
+}
+.post-list[data-v-46f8c785] {
+  background: linear-gradient(to bottom right, #545454, #bdbdbd);
+  height: 100%;
+}
+.post-list h1[data-v-46f8c785] {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 0;
+  color: white;
+}
+.post-list a[data-v-46f8c785] {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a[data-v-46f8c785]:hover {
+  text-decoration: underline;
+}
+.post-list .date[data-v-46f8c785], .post-list .category-and-tags[data-v-46f8c785] {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .abstract[data-v-46f8c785] {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  overflow-wrap: break-word;
+}
+.post-list-divider[data-v-46f8c785] {
+  margin: 30px auto;
+}
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view fade-enter fade-enter-active"><div class="banner" style="background: linear-gradient(to right bottom, rgb(247, 80, 51), rgb(245, 151, 80));"><h1 class="entry-title">Git Svn</h1> <div class="entry-meta">Oct 24, 2017 #git #svn</div></div> <div class="content"><p>Back to March this year when I come to the company I'm working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don't want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="post-container view"><h1 class="entry-title">Git Svn</h1> <div class="entry-meta">Oct 24, 2017 #git #svn</div> <div class="content"><p>Back to March this year when I come to the company I'm working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don't want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
 <hr>
 <p>The main command to realize this is <code>git svn</code>.</p>
 <p><strong>1. Clone</strong></p>

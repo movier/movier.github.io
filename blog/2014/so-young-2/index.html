@@ -18,7 +18,10 @@ body {
   float: right;
 }
 #header {
-  margin: 80px auto;
+  max-width: 1080px;
+  margin: auto;
+  margin-top: 140px;
+  margin-bottom: 80px;
   text-align: center;
   font-family: -apple-system, 'Helvetica Neue';
 }
@@ -73,6 +76,10 @@ body {
     margin: 30px auto;
 }
 </style><style type="text/css">
+.post-container {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
 .entry-title, .entry-meta, .content {
     margin-left: auto;
     margin-right: auto;
@@ -80,24 +87,20 @@ body {
     padding-left: 18px;
     padding-right: 18px;
 }
-.content {
-  margin-top: 60px;
+.entry-title, .entry-meta {
+  text-align: center;
 }
 .entry-title {
   -webkit-font-smoothing: antialiased;
-  margin-top: .42em;
-  margin-bottom: .7em;
+  margin-top: 0;
   letter-spacing: .02em;
-  line-height: 1.1;
-  color: white;
-  font-size: 40px;
-  font-weight: 800;
 }
 .entry-meta {
   font-size: 14px;
-  color: rgba(0, 0, 0, .5);
-  font-family: Helvetica Neue, sans-serif;
-  font-weight: 500;
+  color: #9e9e9e;
+}
+.content {
+  margin-top: 30px;
 }
 .content img {
   max-width: 100%;
@@ -115,14 +118,32 @@ pre {
   text-align: center;
   background: linear-gradient(to bottom, #545454, #bdbdbd);
 }
-.content > p:first-child::first-letter {
-    float:  left;
-    font-size: 56px;
-    line-height:  .83;
-    padding-top: 3px;
-    padding-right: 6px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
+</style><style type="text/css">
+.post-list h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 0;
+}
+.post-list a {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a:hover {
+  text-decoration: underline;
+}
+.post-list .date, .post-list .category-and-tags {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .summary {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;   
+  overflow-wrap: break-word;
+}
+.post-list-divider {
+    margin: 30px auto;
 }
 </style><style type="text/css">
 #nav a {
@@ -184,11 +205,12 @@ textarea {
   margin: 6px;
   float: right;
 }
-#header {
+
+/* #header {
   margin: 80px auto;
   text-align: center;
   font-family: -apple-system, 'Helvetica Neue';
-}
+} */
 #header h1 {
   font-size: 38px;
   color: #333333;
@@ -269,9 +291,93 @@ textarea {
     font-size: 44px;
     font-weight: bold;
 }
+</style><style type="text/css">
+body[data-v-563b4dc5] {
+  margin: 0;
+}
+a[data-v-563b4dc5] {
+  text-decoration: none;
+}
+.container[data-v-563b4dc5] {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.item-1[data-v-563b4dc5] {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+.item-2[data-v-563b4dc5] {
+  grid-column-start: 7;
+  grid-column-end: 10;
+}
+.item-3[data-v-563b4dc5] {
+  grid-column-start: 10;
+  grid-column-end: 13;
+}
+.item-4[data-v-563b4dc5] {
+  grid-column-start: 7;
+  grid-column-end: 10;
+}
+.item-5[data-v-563b4dc5] {
+  grid-column-start: 10;
+  grid-column-end: 13;
+}
+.item-6[data-v-563b4dc5] {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.item-7[data-v-563b4dc5] {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+.item-8[data-v-563b4dc5] {
+  grid-column-start: 9;
+  grid-column-end: 13;
+}
+</style><style type="text/css">
+a[data-v-46f8c785] {
+  display: block;
+  width: 100%;
+}
+.post-list[data-v-46f8c785] {
+  background: linear-gradient(to bottom right, #545454, #bdbdbd);
+  height: 100%;
+}
+.post-list h1[data-v-46f8c785] {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 0;
+  color: white;
+}
+.post-list a[data-v-46f8c785] {
+  color: #333;
+  text-decoration: none;
+}
+.post-list a[data-v-46f8c785]:hover {
+  text-decoration: underline;
+}
+.post-list .date[data-v-46f8c785], .post-list .category-and-tags[data-v-46f8c785] {
+  font-size: 12px;
+  color: #9E9E9E;
+}
+.post-list .abstract[data-v-46f8c785] {
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  overflow-wrap: break-word;
+}
+.post-list-divider[data-v-46f8c785] {
+  margin: 30px auto;
+}
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="view fade-enter fade-enter-active"><div class="banner"><h1 class="entry-title">致我们终将逝去的青春（中）</h1> <div class="entry-meta">Aug 09, 2014 #青春 #自由</div></div> <div class="content"><p>下午三四点的时候我来到集结地点——昆明春城之星拿铁店。店里有几个背着大包小包行李的青年人，我预感到他们极有可能就是我未来几天的小伙伴，果然不出所料，在报完稻草人的名字之后发现他们同样是稻草人的队员，我暗自窃喜。没想到的是酒店以一种特殊的方式迎接我们——故障的电梯，意味着我们必须扛着自己的行李爬楼梯到十几楼的房间。由于我随身只有一个大背包，身轻如燕地就跑到了十二楼的房间。看到那些还在苦苦挣扎的小伙伴，我又发扬了助人为乐的精神，下楼帮着其他两个女生把行李搬到了各自的房间，搬完行李后我也有点累了，躺在房间的床上，心里想着这注定是一段不平凡的旅程。</p>
+    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="post-container view"><h1 class="entry-title">致我们终将逝去的青春（中）</h1> <div class="entry-meta">Aug 09, 2014 #青春 #自由</div> <div class="content"><p>下午三四点的时候我来到集结地点——昆明春城之星拿铁店。店里有几个背着大包小包行李的青年人，我预感到他们极有可能就是我未来几天的小伙伴，果然不出所料，在报完稻草人的名字之后发现他们同样是稻草人的队员，我暗自窃喜。没想到的是酒店以一种特殊的方式迎接我们——故障的电梯，意味着我们必须扛着自己的行李爬楼梯到十几楼的房间。由于我随身只有一个大背包，身轻如燕地就跑到了十二楼的房间。看到那些还在苦苦挣扎的小伙伴，我又发扬了助人为乐的精神，下楼帮着其他两个女生把行李搬到了各自的房间，搬完行李后我也有点累了，躺在房间的床上，心里想着这注定是一段不平凡的旅程。</p>
 <p>到了该吃晚饭的时间，我也得为接下去的旅行准备一些粮食。于是我从十二楼爬楼梯到了一楼，在附近逛了一圈，到超市买了些面包，在一家兰州拉面馆坐下，点了碗面。正当我吃着不怎么好吃的面时，有一对母女出现在我的视线范围内，女孩穿着一件绿色的连衣裙和小披肩，头上戴着一顶很潮的帽子，她妈妈打扮的也十分时髦。她们在面馆门口向里张望了一会儿，最终还是犹犹豫豫地进来了。我吃完面回到酒店，又爬了十二楼回到自己的房间，洗完澡后躺在床上看电视，就等着晚上八点的集结会议了。</p>
 <p>八点还没到，我就来到领队吵吵的房间等着开会了，队员们也都陆陆续续地来了。这时有一对母女进来了，没错，正是我在兰州拉面看到的那对母女，我暗自感慨世界真的好小！不一会儿所有的队员都到齐了，大家把吵吵的床坐满了，沙发也坐满了，十几平米的房间装了十七个人，好不热闹。虽然大家是第一次正式见面，相互之间可能连姓名都不知道，但是丝毫没有拘谨，你一句我一句地像多年不见的好友。吵吵介绍了行程安排，与稻草人签订了旅行协议之后，见面会算是结束了，大家各自回到房间休息，准备第二天一早出发前往大理。</p>
 <h4 id="-">大理</h4>
