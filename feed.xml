@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-08-22T11:46:00Z</updated>
+  <updated>2018-09-11T06:18:45Z</updated>
   <id>http://movier.me/</id>
   <entry>
     <title><![CDATA[ Linux Screen ]]></title>
@@ -12,7 +12,7 @@
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-06-29T10:39:14Z</updated>
+    <updated>2018-04-11T02:45:24Z</updated>
     <published>2018-04-06T15:57:56Z</published>
     <id>http://movier.me/blog/2018/linux-screen/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>

@@ -377,7 +377,7 @@ a[data-v-46f8c785] {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div class="nav-left"><div class="nav-item"><a href="/blog" class="router-link-active">BLOG</a></div> <div class="nav-item"><a href="/projects" class="">PROJECTS</a></div></div> <div><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div> <div class="nav-right"><div class="nav-item"><a href="/about" class="">ABOUT</a></div> <div class="nav-item"><a href="/hire-me" class="">HIRE ME</a></div></div></div> <div class="post-container view"><h1 class="entry-title">Wrap your Commands into a Shell Script</h1> <div class="entry-meta">Oct 23, 2017 #shell #bash #sh</div> <div class="content"><p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
+    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div></div> <div class="post-container view"><h1 class="entry-title">Wrap your Commands into a Shell Script</h1> <div class="entry-meta">Oct 23, 2017 #shell #bash #sh</div> <div class="content"><p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
 <pre><code>docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup:/backup mongo mongodump --host mongo --db olivia-server --out /backup
 </code></pre><p>Wouldn't it be great if you don't need to remember or look up the command when use! Fortunatelty you can! All you need to do is wrap your long commands into a shell script.</p>
 <hr>
