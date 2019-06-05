@@ -235,7 +235,7 @@ textarea {
 .write-button-container {
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 80px;
   text-align: right;
 }
 .button {
@@ -292,13 +292,13 @@ textarea {
     font-weight: bold;
 }
 </style><style type="text/css">
-body[data-v-563b4dc5] {
+body[data-v-712cc44a] {
   margin: 0;
 }
-a[data-v-563b4dc5] {
+a[data-v-712cc44a] {
   text-decoration: none;
 }
-.container[data-v-563b4dc5] {
+.container[data-v-712cc44a] {
   max-width: 700px;
   margin: 80px auto;
   padding: 0;
@@ -307,77 +307,77 @@ a[data-v-563b4dc5] {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
-.item-1[data-v-563b4dc5] {
+.item-1[data-v-712cc44a] {
   grid-column-start: 1;
   grid-column-end: 7;
 }
-.item-2[data-v-563b4dc5] {
+.item-2[data-v-712cc44a] {
   grid-column-start: 7;
   grid-column-end: 10;
 }
-.item-3[data-v-563b4dc5] {
+.item-3[data-v-712cc44a] {
   grid-column-start: 10;
   grid-column-end: 13;
 }
-.item-4[data-v-563b4dc5] {
+.item-4[data-v-712cc44a] {
   grid-column-start: 7;
   grid-column-end: 10;
 }
-.item-5[data-v-563b4dc5] {
+.item-5[data-v-712cc44a] {
   grid-column-start: 10;
   grid-column-end: 13;
 }
-.item-6[data-v-563b4dc5] {
+.item-6[data-v-712cc44a] {
   grid-column-start: 1;
   grid-column-end: 5;
 }
-.item-7[data-v-563b4dc5] {
+.item-7[data-v-712cc44a] {
   grid-column-start: 5;
   grid-column-end: 9;
 }
-.item-8[data-v-563b4dc5] {
+.item-8[data-v-712cc44a] {
   grid-column-start: 9;
   grid-column-end: 13;
 }
 </style><style type="text/css">
-a[data-v-46f8c785] {
+a[data-v-8fb1d0ca] {
   display: block;
   width: 100%;
 }
-.post-list[data-v-46f8c785] {
+.post-list[data-v-8fb1d0ca] {
   background: linear-gradient(to bottom right, #545454, #bdbdbd);
   height: 100%;
 }
-.post-list h1[data-v-46f8c785] {
+.post-list h1[data-v-8fb1d0ca] {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: normal;
   margin: 0;
   color: white;
 }
-.post-list a[data-v-46f8c785] {
+.post-list a[data-v-8fb1d0ca] {
   color: #333;
   text-decoration: none;
 }
-.post-list a[data-v-46f8c785]:hover {
+.post-list a[data-v-8fb1d0ca]:hover {
   text-decoration: underline;
 }
-.post-list .date[data-v-46f8c785], .post-list .category-and-tags[data-v-46f8c785] {
+.post-list .date[data-v-8fb1d0ca], .post-list .category-and-tags[data-v-8fb1d0ca] {
   font-size: 12px;
   color: #9E9E9E;
 }
-.post-list .abstract[data-v-46f8c785] {
+.post-list .abstract[data-v-8fb1d0ca] {
   font-size: 14px;
   line-height: 24px;
   color: white;
   overflow-wrap: break-word;
 }
-.post-list-divider[data-v-46f8c785] {
+.post-list-divider[data-v-8fb1d0ca] {
   margin: 30px auto;
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div></div> <div class="post-container view"><h1 class="entry-title">Develop a Hexo Theme with Gulp and Browsersync</h1> <div class="entry-meta">Apr 15, 2016 #Hexo #Gulp #Browsersync</div> <div class="content"><p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="最终效果图"></p>
+    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div></div> <div class="post-container view fade-enter fade-enter-active"><h1 class="entry-title">Develop a Hexo Theme with Gulp and Browsersync</h1> <div class="entry-meta">Apr 15, 2016 #Hexo #Gulp #Browsersync</div> <div class="content"><p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="最终效果图"></p>
 <p><a href="https://hexo.io">Hexo</a> is a fast, simple&amp;powerful blog framework. I have use Hexo for my personal blog for some time and recently I decide to {% post_link some-little-things-recently develop a theme for Hexo %}.</p>
 <p><a href="https://www.browsersync.io">Browsersync</a> is a awesome testing tool for front-end developer. It will synchronize all your behavior on different browsers or devices and save us a lot of time. There is no doubt that I will use Browsersync for all front-end develop work. This time no except.</p>
 <p>The basic of developing a Hexo theme is to create some ejs templates and stylus files. Hexo will generate the content dynamically convert ejs templates to html and stylus to css. You need to modify stylus files and open browser to see the style. The question is that Browsersync need static html and css files. Yes, Hexo has a command called <code>hexo generate</code> which could generate static html and css files to <code>public</code> directory. We don't want to call <code>hexo generate</code> every time we modify the stylus files because the process will waste a lot of time. At the same time we don't want to modify the static css file in <code>public</code> directory directly because we will lose the modification afte <code>hexo generate</code> is called again. What we really want is after we modify stylus files Browsersync just works.</p>

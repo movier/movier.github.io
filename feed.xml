@@ -4,15 +4,90 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2018-09-11T06:18:45Z</updated>
+  <updated>2019-06-05T07:04:50Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Install SS on My Xiaomi MiWiFi X-R1D with Tomato Firmware ]]></title>
+    <link href="http://movier.me/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2019-06-05T06:30:27Z</updated>
+    <published>2019-06-05T05:28:27Z</published>
+    <id>http://movier.me/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/</id>
+    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<h2 id="preparation">Preparation</h2>
+<p>1.create a directory</p>
+<pre><code>mkdir -p /tmp/mnt/sda4/jffs/opt
+</code></pre><p>2.mount the directory to <code>/opt</code></p>
+<pre><code>mount -o bind /tmp/mnt/sda4/jffs/opt /opt
+</code></pre><h2 id="install-entware-opkg">Install Entware/opkg</h2>
+<p>1.install it by the command below</p>
+<pre><code>wget -O - http://pkg.entware.net/binaries/armv7/installer/entware_install.sh | sh
+</code></pre><p>2.The installation process may take a while. Please be patient until it&#39;s finished. Then confirm opkg has been installed correctly.</p>
+<pre><code>opkg --version
+</code></pre><h2 id="install-and-configure-ss">Install and configure SS</h2>
+<p>1.install SS</p>
+<pre><code>opkg install shadowsocks-libev-ss-redir
+</code></pre><p>2.edit configuration file of SS</p>
+<pre><code>vi /opt/etc/shadowsocks.json
+</code></pre><p>3.put content below to the file and replace the value of server and password</p>
+<pre><code>{
+&quot;server&quot; : &quot;1.1.1.1&quot;,
+&quot;server_port&quot; : &quot;443&quot;,
+&quot;local_address&quot; : &quot;0.0.0.0&quot;,
+&quot;local_port&quot; : &quot;1080&quot;,
+&quot;password&quot;:&quot;password&quot;,
+&quot;timeout&quot;:600,
+&quot;method&quot;:&quot;aes-256-cfb&quot;
+}
+</code></pre><p>4.start SS</p>
+<pre><code>ss-redir -c /opt/etc/shadowsocks.json
+</code></pre><h2 id="configure-admin-panel-of-the-router">Configure admin panel of the router</h2>
+<p>1.put the content below to <code>Administration &gt;&gt; Scripts &gt;&gt; init</code></p>
+<pre><code>mount -o bind /tmp/mnt/sda4/jffs/opt /opt
+/opt/etc/init.d/S22shadowsocks start
+</code></pre><p>2.put the content below to <code>Advanced &gt;&gt; DHCP/DNS &gt;&gt; DHCP / DNS Server (LAN) &gt;&gt; Dnsmasq
+Custom configuration</code></p>
+<pre><code>conf-dir=/tmp/mnt/sda4/jffs/dnsmasq.d
+</code></pre><p>3.create and edit <code>/tmp/mnt/sda4/jffs/dnsmasq.d</code> file and sample file could be found <a href="https://github.com/Alex1989Wang/Dotfiles/blob/master/gfwlist2dnsmasq/dnsmasq.conf">here</a>.</p>
+<pre><code>server=/google.com/208.67.222.222#443
+ipset=/google.com/gfwlist
+</code></pre><p>4.put the content below to <code>Administration &gt;&gt; Scripts &gt;&gt; firewall</code></p>
+<pre><code>#!/bin/sh
+
+insmod ip_set
+insmod ip_set_bitmap_ip
+insmod ip_set_bitmap_ipmac
+insmod ip_set_bitmap_port
+insmod ip_set_hash_ip
+insmod ip_set_hash_ipport
+insmod ip_set_hash_ipportip
+insmod ip_set_hash_ipportnet
+insmod ip_set_hash_net
+insmod ip_set_hash_netport
+insmod ip_set_list_set
+insmod xt_set
+
+ipset -N gfwlist iphash
+iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1080
+iptables -t nat -A OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1080
+</code></pre><p>5.Restart your router and test SS.</p>
+<p><strong>Reference</strong></p>
+<ul>
+<li><a href="https://www.awsomejiang.com/2018/08/10/Tomato-with-shadowsocks-libev-Automatic-proxy-for-your-router/">Tomato固件 + shadowsocks-libev - 实现对你路由的自动代理</a></li>
+<li><a href="https://nap6.com/thread-275-1-1.html">Tomato部署ShadowSocks科学上网（只有被墙才会走VPN代理线路）</a></li>
+<li><a href="https://ilmvfx.wordpress.com/2015/09/25/temporary-gfw-fuck-tutorial-put-shadowsocks-server-on-tomato-router/">临时回国的翻墙教程 （把shadowsocks服务端放在国外住处的tomato路由器上）– 简洁整理版</a></li>
+<li><a href="https://zzz.buzz/zh/gfw/2016/02/16/deploy-shadowsocks-on-routers/">在路由器上部署 shadowsocks</a></li>
+</ul>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Linux Screen ]]></title>
     <link href="http://movier.me/blog/2018/linux-screen/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-04-11T02:45:24Z</updated>
+    <updated>2019-06-05T05:07:32Z</updated>
     <published>2018-04-06T15:57:56Z</published>
     <id>http://movier.me/blog/2018/linux-screen/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
@@ -175,6 +250,8 @@ Finally we&#39;ll get result.
 <h2 id="two-s-complement-binary">Two&#39;s complement binary</h2>
 <blockquote>
 <p>A two&#39;s complement binary is same as the classical binary representation for positve integers but is slightly different for negative numbers. Negative numbers are represented by performing the two&#39;s complement operation on their absolute value. </p>
+</blockquote>
+<blockquote>
 <p>Negative numbers are written with a leading one instead of a leading zero. So if you are using only 8 bits for your twos-complement numbers, then you treat patterns from &quot;00000000&quot; to &quot;01111111&quot; as the whole numbers from 0 to 127, and reserve &quot;1xxxxxxx&quot; for writing negative numbers.</p>
 </blockquote>
 <p>Let&#39;s assume there are totally 8 bits and there is a positive number 118. How can we get two&#39;s complement binary of -118?</p>
@@ -670,7 +747,7 @@ dateFormatter.string(from: date) // &quot;9/4/17, 5:52 PM&quot;
 <h2 id="convert-local-date-to-iso-date-format">Convert Local Date to ISO Date Format</h2>
 <p>I got the date string without timezone information from server. So it&#39;s reasonable to blame the back-end developer. But when client submit date to server timezone information should also be included. </p>
 <p>JavaScript</p>
-<pre><code class="lang-javascript">new Date(2017, 09, 04, 17, 30, 30).toISOString(); // &quot;2017-09-29T15:46:22.164Z&quot;
+<pre><code class="lang-javascript">new Date(2017, 09, 04, 17, 30, 30).toISOString(); // &quot;2017-09-29T15:46:22.164Z&quot; 
 </code></pre>
 <p>Java</p>
 <pre><code class="lang-java">import java.util.Date;
@@ -1224,6 +1301,8 @@ NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:r
 <p><strong>What&#39;s Blocks?</strong></p>
 <blockquote>
 <p>Blocks are a language-level feature added to C, Objective-C and C++, which allow you to create distinct segments of code that can be passed around to methods or functions as if they were values.</p>
+</blockquote>
+<blockquote>
 <p>Blocks是加入到C、Objective-C和C++语言层面的特点，它允许你创建不同的代码片段，而这些代码片段可以作为参数传递给方法或者函数就好像他们是数值一样。</p>
 </blockquote>
 <p><strong>使用Blocks解决上述问题</strong></p>
@@ -1782,7 +1861,11 @@ TO BE CONTINUED...</p>
 <h4 id="-freelancer-">做一名 Freelancer, 自己接项目</h4>
 <blockquote>
 <p>Freelance这个词最早出现时是用来指称“中世纪的雇佣军骑士”，即“free-lance”; 随着时间推移，它慢慢被用于指称自由撰稿人(应该算自由职业中非常流行的行当，特别是在西方国家)，进而扩大至指称所有自由职业者们。</p>
+</blockquote>
+<blockquote>
 <p>因为自由职业者们通常是脑力劳动者或服务提供者，并且大多是自己所在领域的专家或资历丰富者，加上又不要求签订长期的工作协议或合同，许多企业或个人愿意将自己的项目外包(Outsourcing)给他们。</p>
+</blockquote>
+<blockquote>
 <p>-- Freelancer专属™ 博客</p>
 </blockquote>
 <p>做 Freelancer 最需要解决的是项目来源问题，而项目来源最主要的途径通常是有四种：</p>
