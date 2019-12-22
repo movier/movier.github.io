@@ -4,15 +4,52 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2019-06-05T07:04:50Z</updated>
+  <updated>2019-12-22T14:41:01Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Watch Netflix in China ]]></title>
+    <link href="http://movier.me/blog/2019/watch-netflix-in-china/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2019-12-22T14:33:01Z</updated>
+    <published>2019-12-22T11:15:05Z</published>
+    <id>http://movier.me/blog/2019/watch-netflix-in-china/</id>
+    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>For a long time, Netflix has always been my pain point. I could cross the GFW to visit most of the blocked websites, but not Netflix, because Netflix will detect your IP address, and if they think you are using a proxy, you will be blocked when you are trying to watch the video (Netflix won&#39;t block you if you just want to broswer their website).</p>
+<p>Thanks to <a href="https://www.expressvpn.com/">ExpressVPN</a>, people who use their service won&#39;t be blocked by Netflix, but does it mean everyone can easily watch videos on Netflix just by using the VPN. Maybe it is true to the rest of the world, but not China. Most of the time it will be a failure when you try to connect to ExpressVPN directly in China. Even if you are lucky enough to make it, the speed is very limited. I almost gave up, but later I thought maybe I could use ExpressVPN based on SS. Since I already <a href="/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/">set up SS in my router</a>, I could forward all the requests to SS. I just need to change my iptables configurations.</p>
+<pre><code class="lang-bash">#!/bin/sh
+
+iptables -t nat -N SHADOWSOCKS
+
+iptables -t nat -A SHADOWSOCKS -d 121.42.213.83 -j RETURN
+
+iptables -t nat -A SHADOWSOCKS -d 192.168.0.0/16 -j RETURN
+
+iptables -t nat -A SHADOWSOCKS -p tcp -j REDIRECT --to-ports 1080
+
+iptables -t nat -A PREROUTING -p tcp -j SHADOWSOCKS
+iptables -t nat -A OUTPUT -p tcp -j SHADOWSOCKS
+</code></pre>
+<p>It turns out to be a good idea. The speed is super fast. I&#39;m completely free when browsering the internet, but there are still some problems to improve or figure out.</p>
+<ol>
+<li>When connecting to the router (with configuration above) directly without VPN, without SS, I cannot watch YouTube. The video couldn&#39;t be loaded even though everything else works well.</li>
+<li>I learnt from this <a href="https://twitter.com/abskoop/status/1207604085727195136?s=12">tweet</a> that we could unlock Netflix through DNS. Compared to ExpressVPN, it&#39;s much cheaper. Maybe I should give it a try later.</li>
+<li>The iptables configurations could be improved. At least all the requests to Chinese servers shouldn&#39;t go through the VPN.</li>
+</ol>
+<p>Anyway let&#39;s enjoy Netflix first.</p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://zzz.buzz/zh/gfw/2016/02/16/deploy-shadowsocks-on-routers/">在路由器上部署 shadowsocks</a></li>
+</ul>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Install SS on My Xiaomi MiWiFi X-R1D with Tomato Firmware ]]></title>
     <link href="http://movier.me/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2019-06-05T06:30:27Z</updated>
+    <updated>2019-12-22T10:53:09Z</updated>
     <published>2019-06-05T05:28:27Z</published>
     <id>http://movier.me/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<h2 id="preparation">Preparation</h2>
@@ -87,7 +124,7 @@ iptables -t nat -A OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2019-06-05T05:07:32Z</updated>
+    <updated>2019-12-22T06:05:17Z</updated>
     <published>2018-04-06T15:57:56Z</published>
     <id>http://movier.me/blog/2018/linux-screen/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
