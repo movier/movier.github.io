@@ -4,15 +4,104 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2019-12-22T14:41:01Z</updated>
+  <updated>2021-01-17T05:13:51Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Make Arduino a Smart Infrared Remote Control ]]></title>
+    <link href="http://movier.me/blog/2021/make-arduino-a-smart-infrared-remote-control/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2021-01-17T05:03:46Z</updated>
+    <published>2021-01-17T05:02:20Z</published>
+    <id>http://movier.me/blog/2021/make-arduino-a-smart-infrared-remote-control/</id>
+    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<h2 id="background">Background</h2>
+<p>I have a heater and I hope it could be closed late in the night (after I fall asleep) and be opened early in the morning (before I get up).</p>
+<p>The heater has a IR remote control. So I&#39;m thinking if I could simulate the IR signal using Arduino. It turns out to be easy. There are only two steps involved. First is to record the IR signal and second is to send it.</p>
+<h2 id="preparation">Preparation</h2>
+<h3 id="hardware">Hardware</h3>
+<p><img src="/images/hardwares.jpg" alt="Hardwares"></p>
+<ul>
+<li>Arduino UNO</li>
+<li>IR Receiver module</li>
+<li>IR Transmitter module</li>
+<li>Others: batteries and jumper wires</li>
+</ul>
+<h3 id="software">Software</h3>
+<p>You need to install a library called <code>IRremote</code> with specific version <strong>2.2.3</strong>. If you install the wrong version, the error below may be thrown when the codes are being compiled.</p>
+<pre><code>usecpertick was not declared in this scope
+</code></pre><h2 id="record-ir-signal">Record IR Signal</h2>
+<p>Connect pin DATA/OUT from IR receiver module to pin 11 on Arduino UNO, VCC to 5V and GND to GND.</p>
+<p>Try the codes below:</p>
+<pre><code class="lang-C++">#include &lt;IRremote.h&gt;
+
+int RECV_PIN = 11;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+
+void setup() {
+  Serial.begin(9600);
+  irrecv.enableIRIn();
+}
+
+void loop() {
+  if (irrecv.decode(&amp;results)) {
+    dump(&amp;results);
+    irrecv.resume();
+  }
+}
+
+void dump(decode_results *results) {
+  int count = results-&gt;rawlen;
+  Serial.print(&quot;Raw (&quot;);
+  Serial.print(count);
+  Serial.print(&quot;): &quot;);
+  for (int i = 0; i &lt; count; i++) {
+    Serial.print(results-&gt;rawbuf[i]*USECPERTICK);
+    Serial.print(&quot;,&quot;);
+  }
+  Serial.println();
+}
+</code></pre>
+<p>Open the serial monitor. Point the remote control to the receive module and press one button. If everything goes well, you should see one line of numbers.</p>
+<pre><code>Raw (72): 14358,4450,4450,450,1550,400,1550,450,1550,450,1500,450,1500,450,1500,500,2450,450,1500,450,2450,450,1550,450,2450,450,1500,450,1500,450,1550,450,2450,400,1550,450,1550,4400,4450,500,1500,450,1550,400,1550,400,1550,450,1550,450,1500,450,2450,450,1550,400,2500,400,1550,450,2450,450,1550,400,1550,400,1550,450,2450,450,1550,450,
+</code></pre><p>If you press the same button again, you will see another similar line of numbers. You can choose either line of numbers. Remove <code>Raw (72):</code> and the first big number <code>14358</code>. Copy the remaining numbers. That&#39;s the data we need to send in the transmitting process.</p>
+<h2 id="send-ir-signal">Send IR Signal</h2>
+<p>Connect the pin DAT on the IR transmitter module to Arduino&#39;s pin 3, VCC to 5V, GND to GND.</p>
+<p>The codes are super easy.</p>
+<pre><code class="lang-C++">#include &lt;IRremote.h&gt;
+
+IRsend irsend;
+unsigned int key_name[71]={4450,4450,450,1550,400,1550,450,1550,450,1500,450,1500,450,1500,500,2450,450,1500,450,2450,450,1550,450,2450,450,1500,450,1500,450,1550,450,2450,400,1550,450,1550,4400,4450,500,1500,450,1550,400,1550,400,1550,450,1550,450,1500,450,2450,450,1550,400,2500,400,1550,450,2450,450,1550,400,1550,400,1550,450,2450,450,1550,450}; // Numbers we got from last step, here 71 is the length of all the numbers
+
+void setup() {}
+
+void loop() {
+  irsend.sendRaw(key_name, 71, 38); // Change 71 to the length of all the numbers and keep 38 unchanged
+  delay(5000);
+}
+</code></pre>
+<p>Point the transmitter module to your device and make sure they are close enough. If you are lucky enough, the device should receive the IR signal and work as it should be. The only difference is the signal is not sent by the orginal remote control but by our Arduino UNO.</p>
+<p><img src="/images/final_result.jpg" alt="Final result"></p>
+<h2 id="add-on">Add-on</h2>
+<p>Now we are already able to send IR signal using Arduino, but there is still one more question. How can I control when to send it? </p>
+<p>Actually this question cost me more time than sending the signal using Arduino itself. If Arduino has something like <code>cron</code> in Linux, that would be great. Luckily, with the help of two libraries, we can acheive that in Arduino.</p>
+<p>The two libraries are <a href="https://github.com/PaulStoffregen/Time">Time</a> and <a href="https://github.com/PaulStoffregen/TimeAlarms">TimeAlarms</a>. They are from the same author which means they work well with each other.</p>
+<p>The complete sketch could be found <a href="https://gist.github.com/movier/d29c33307ea4878ef2f19a1b26b9d022">here</a>.</p>
+<hr>
+<p><em>Reference</em></p>
+<ul>
+<li><a href="http://ultirobot.com/2018/04/07/ircontroler/">基于Arduino的解码红外遥控器控制家电（红外接收、红外发射）</a></li>
+</ul>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Watch Netflix in China ]]></title>
     <link href="http://movier.me/blog/2019/watch-netflix-in-china/"></link>
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2019-12-22T14:33:01Z</updated>
+    <updated>2020-12-27T07:11:31Z</updated>
     <published>2019-12-22T11:15:05Z</published>
     <id>http://movier.me/blog/2019/watch-netflix-in-china/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>For a long time, Netflix has always been my pain point. I could cross the GFW to visit most of the blocked websites, but not Netflix, because Netflix will detect your IP address, and if they think you are using a proxy, you will be blocked when you are trying to watch the video (Netflix won&#39;t block you if you just want to broswer their website).</p>
@@ -188,7 +277,7 @@ Choose 1-4 [1]: 3
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2018-03-19T03:40:23Z</updated>
+    <updated>2021-01-17T04:56:40Z</updated>
     <published>2018-03-17T14:24:56Z</published>
     <id>http://movier.me/blog/2018/draw-css-gradients/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently I found myself extremely interested in computer graphics. Meanwhile it&#39;s time to redesign my portfolio and I decide to make it colorful. Gradient is no doubt the easiest starting point.</p>
