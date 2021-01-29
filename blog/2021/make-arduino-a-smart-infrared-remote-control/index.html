@@ -387,7 +387,7 @@ a[data-v-8fb1d0ca] {
 <li>Arduino UNO</li>
 <li>IR Receiver module</li>
 <li>IR Transmitter module</li>
-<li>Others: batteries and jumper wires</li>
+<li>Others: charger, USB cable and jumper wires</li>
 </ul>
 <h3 id="software">Software</h3>
 <p>You need to install a library called <code>IRremote</code> with specific version <strong>2.2.3</strong>. If you install the wrong version, the error below may be thrown when the codes are being compiled.</p>
@@ -444,9 +444,10 @@ void loop() {
 }
 </code></pre>
 <p>Point the transmitter module to your device and make sure they are close enough. If you are lucky enough, the device should receive the IR signal and work as it should be. The only difference is the signal is not sent by the orginal remote control but by our Arduino UNO.</p>
+<p>Here is the picture of the final result. The power supply used to be two batteries, but I found they can only work for about two days. So I replace them with a charger.</p>
 <p><img src="/images/final_result.jpg" alt="Final result"></p>
 <h2 id="add-on">Add-on</h2>
-<p>Now we are already able to send IR signal using Arduino, but there is still one more question. How can I control when to send it? </p>
+<p>Now we are able to send IR signal using Arduino, but there is still one more question. How can I control when to send it? </p>
 <p>Actually this question cost me more time than sending the signal using Arduino itself. If Arduino has something like <code>cron</code> in Linux, that would be great. Luckily, with the help of two libraries, we can acheive that in Arduino.</p>
 <p>The two libraries are <a href="https://github.com/PaulStoffregen/Time">Time</a> and <a href="https://github.com/PaulStoffregen/TimeAlarms">TimeAlarms</a>. They are from the same author which means they work well with each other.</p>
 <p>The complete sketch could be found <a href="https://gist.github.com/movier/d29c33307ea4878ef2f19a1b26b9d022">here</a>.</p>
