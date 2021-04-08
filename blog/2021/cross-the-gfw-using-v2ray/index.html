@@ -382,7 +382,7 @@ a[data-v-8fb1d0ca] {
 <p>Most importantly you need a VPS abroad and mine is from Linode JP. I also have a NAT from CloudIPLC, which is optional. I will talk more about it in later post. Now let's focus on the fundamentals. Both servers have x86-64 architecture and Ubuntu 18.04 as OS.</p>
 <p>Although V2Ray doesn't distinguish between server and client like Shadowsocks does, it still needs consistency. You'd better use the same version for them. Here I'm using version <strong>4.27.0</strong>.</p>
 <h2 id="set-up-v2ray-on-the-vps-abroad">Set up V2Ray on the VPS abroad</h2>
-<p>The first thing is to install V2Ray on the server. You need two files to do so. One is <code>install-release.sh</code> and the other is <code>v2ray-linux-64.zip</code>. After that run the command below to install V2Ray. Don't forget to add execute permission to the script file.</p>
+<p>The first thing is to install V2Ray on the server. You need two files to do so. One is <a href="/files/install-release.sh"><code>install-release.sh</code></a> and the other is <a href="https://github.com/v2ray/v2ray-core/releases/download/v4.27.0/v2ray-linux-64.zip"><code>v2ray-linux-64.zip</code></a>. After that run the command below to install V2Ray. Don't forget to add execute permission to the script file.</p>
 <pre><code>./install-release.sh -l v2ray-linux-64.zip
 </code></pre><p>After that, according to the instructions, you may need to run the commands below.</p>
 <pre><code>systemctl enable v2ray
@@ -414,7 +414,7 @@ systemctl start v2ray
 <p>Finally V2Ray needs to be restarted to make the configurations work.</p>
 <pre><code>service v2ray restart
 </code></pre><h2 id="set-up-v2ray-on-mac">Set up V2Ray on Mac</h2>
-<p>After setting up the server, we need a client to test it. Here I'm using Mac. It's super simple to set up V2Ray on Mac. You just need Mac version for V2Ray which is <code>v2ray-macos-64.zip</code> in my case. Unzip is and edit the configuration file <code>config.json</code> in the directory.</p>
+<p>After setting up the server, we need a client to test it. Here I'm using Mac. It's super simple to set up V2Ray on Mac. You just need Mac version for V2Ray which is <a href="https://github.com/v2ray/v2ray-core/releases/download/v4.27.0/v2ray-macos-64.zip"><code>v2ray-macos-64.zip</code></a> in my case. Unzip is and edit the configuration file <code>config.json</code> in the directory.</p>
 <pre><code class="lang-json">{
   "inbounds": [
     {

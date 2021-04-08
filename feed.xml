@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2021-04-08T03:10:08Z</updated>
+  <updated>2021-04-08T03:47:42Z</updated>
   <id>http://movier.me/</id>
   <entry>
     <title><![CDATA[ Cross the GFW Using V2Ray ]]></title>
@@ -12,7 +12,7 @@
     <author>
       <name>Oliver Young</name>
     </author>
-    <updated>2021-04-08T03:07:02Z</updated>
+    <updated>2021-04-08T03:32:03Z</updated>
     <published>2021-04-08T02:56:47Z</published>
     <id>http://movier.me/blog/2021/cross-the-gfw-using-v2ray/</id>
     <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>After Shadowsocks died, I&#39;d been using Astrill VPN for some time. But it&#39;s not so ideal. The speed cannot be guaranteed and I always needed to try different servers to find one with fast speed. So again I decided to set up my own server to cross the GFW.</p>
@@ -20,7 +20,7 @@
 <p>Most importantly you need a VPS abroad and mine is from Linode JP. I also have a NAT from CloudIPLC, which is optional. I will talk more about it in later post. Now let&#39;s focus on the fundamentals. Both servers have x86-64 architecture and Ubuntu 18.04 as OS.</p>
 <p>Although V2Ray doesn&#39;t distinguish between server and client like Shadowsocks does, it still needs consistency. You&#39;d better use the same version for them. Here I&#39;m using version <strong>4.27.0</strong>.</p>
 <h2 id="set-up-v2ray-on-the-vps-abroad">Set up V2Ray on the VPS abroad</h2>
-<p>The first thing is to install V2Ray on the server. You need two files to do so. One is <code>install-release.sh</code> and the other is <code>v2ray-linux-64.zip</code>. After that run the command below to install V2Ray. Don&#39;t forget to add execute permission to the script file.</p>
+<p>The first thing is to install V2Ray on the server. You need two files to do so. One is <a href="/files/install-release.sh"><code>install-release.sh</code></a> and the other is <a href="https://github.com/v2ray/v2ray-core/releases/download/v4.27.0/v2ray-linux-64.zip"><code>v2ray-linux-64.zip</code></a>. After that run the command below to install V2Ray. Don&#39;t forget to add execute permission to the script file.</p>
 <pre><code>./install-release.sh -l v2ray-linux-64.zip
 </code></pre><p>After that, according to the instructions, you may need to run the commands below.</p>
 <pre><code>systemctl enable v2ray
@@ -52,7 +52,7 @@ systemctl start v2ray
 <p>Finally V2Ray needs to be restarted to make the configurations work.</p>
 <pre><code>service v2ray restart
 </code></pre><h2 id="set-up-v2ray-on-mac">Set up V2Ray on Mac</h2>
-<p>After setting up the server, we need a client to test it. Here I&#39;m using Mac. It&#39;s super simple to set up V2Ray on Mac. You just need Mac version for V2Ray which is <code>v2ray-macos-64.zip</code> in my case. Unzip is and edit the configuration file <code>config.json</code> in the directory.</p>
+<p>After setting up the server, we need a client to test it. Here I&#39;m using Mac. It&#39;s super simple to set up V2Ray on Mac. You just need Mac version for V2Ray which is <a href="https://github.com/v2ray/v2ray-core/releases/download/v4.27.0/v2ray-macos-64.zip"><code>v2ray-macos-64.zip</code></a> in my case. Unzip is and edit the configuration file <code>config.json</code> in the directory.</p>
 <pre><code class="lang-json">{
   &quot;inbounds&quot;: [
     {
