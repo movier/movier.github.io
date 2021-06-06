@@ -4,8 +4,77 @@
   <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
   <link href="http://movier.me/feed.xml" rel="self"></link>
   <link href="http://movier.me/"></link>
-  <updated>2021-06-03T02:46:03Z</updated>
+  <updated>2021-06-06T20:49:02Z</updated>
   <id>http://movier.me/</id>
+  <entry>
+    <title><![CDATA[ Set up a Second Server for V2Ray ]]></title>
+    <link href="http://movier.me/blog/2021/set-up-a-second-server-for-v2ray/"></link>
+    <author>
+      <name>Oliver Young</name>
+    </author>
+    <updated>2021-06-06T20:44:41Z</updated>
+    <published>2021-06-06T20:35:05Z</published>
+    <id>http://movier.me/blog/2021/set-up-a-second-server-for-v2ray/</id>
+    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Even you set up the V2Ray correctly and cross GFW successfully, you will probably suffer low speed and high legacy. If you try to <code>ping</code> your server abroad, you will find the packet loss rate is high.</p>
+<p>In order to explain the reason for that, I need to clarify one thing which is about network bandwidth in China. Let&#39;s say the bandwidth at your home is 1Gbps which seems super fast, but it&#39;s domestic only. All the data crossing the GFW uses the international bandwidth which is very limited in China. So 1Gbps domestic bandwidth doesn&#39;t mean anything to your experience of crossing the GFW. What we really need is a reliable network connection between your ISP and server abroad.</p>
+<p>Here I choose the NAT from <a href="https://www.cloudiplc.com/">CloudIPLC</a>. To be specific, the network it uses connects directly from Shanghai with Japan, and my server abroad is exactly in Japan. That&#39;s exactly what I need. Although the price is not cheap, but in order to get the reliable network connection, I think it&#39;s worth the price.</p>
+<p>The process of setting up V2Ray on the NAT server is almost the same as that on the server abroad. You just need to modify the configuration file. Here is the configuration file I use on the NAT server.</p>
+<pre><code class="lang-json">{
+    &quot;log&quot;: {
+        &quot;access&quot;: &quot;/var/log/v2ray/access.log&quot;,
+        &quot;error&quot;: &quot;/var/log/v2ray/error.log&quot;,
+        &quot;loglevel&quot;: &quot;warning&quot;
+    },
+    &quot;inbounds&quot;: [
+        {
+            &quot;port&quot;: 13228,
+            &quot;protocol&quot;: &quot;vmess&quot;,
+            &quot;settings&quot;: {
+                &quot;clients&quot;: [
+                    {
+                        &quot;id&quot;: &quot;738b9584-82cd-40a6-810d-25b3c2133961&quot;,
+                        &quot;level&quot;: 1,
+                        &quot;alterId&quot;: 32
+                    }
+                ]
+            }
+        }
+    ],
+    &quot;outbounds&quot;: [
+        {
+            &quot;protocol&quot;: &quot;vmess&quot;,
+            &quot;settings&quot;: {
+                &quot;vnext&quot;: [
+                    {
+                        &quot;address&quot;: &quot;8.8.8.8&quot;,
+                        &quot;port&quot;: 10086,
+                        &quot;users&quot;: [
+                            {
+                                &quot;id&quot;: &quot;738b9584-82cd-40a6-810d-25b3c2133961&quot;
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            &quot;protocol&quot;: &quot;blackhole&quot;,
+            &quot;settings&quot;: {},
+            &quot;tag&quot;: &quot;block&quot;
+        },
+        {
+            &quot;protocol&quot;: &quot;freedom&quot;,
+            &quot;tag&quot;: &quot;direct&quot;,
+            &quot;settings&quot;: {}
+        }
+    ]
+}
+</code></pre>
+<p>Replace the value of port and client id in inbounds (will be used by client devices), address, port and client id in outbounds (from your server abroad). That&#39;s all. Restart V2Ray to make the new configuration file work.</p>
+<p>In terms of configuration of client devices, just replace the value of address, port and client id with the value from inbounds above.</p>
+<p>Detailed information could be found on <a href="https://gist.github.com/movier/b702f598dc52fce7dfc93d39d5fd0191">my gist</a>. Hopefull it will improve your experience of crossing GFW.</p>
+]]></content>
+  </entry>
   <entry>
     <title><![CDATA[ Turn Any Phone into a IC Card ]]></title>
     <link href="http://movier.me/blog/2021/turn-any-phone-into-a-ic-card/"></link>
