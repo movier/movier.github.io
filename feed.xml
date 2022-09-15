@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Oliver Young]]></title>
-  <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and lifeing here. Sometimes I also write about my cute baby.]]></subtitle>
-  <link href="http://movier.me/feed.xml" rel="self"></link>
-  <link href="http://movier.me/"></link>
-  <updated>2021-06-06T20:49:02Z</updated>
-  <id>http://movier.me/</id>
+  <title><![CDATA[Oli Movie R]]></title>
+  <subtitle><![CDATA[Hi, I’m Oliver and welcome to my personal website. I write about programming, travelling and life here.]]></subtitle>
+  <link href="https://olimovier.com/feed.xml" rel="self"></link>
+  <link href="https://olimovier.com/"></link>
+  <updated>2022-09-15T05:01:56Z</updated>
+  <id>https://olimovier.com/</id>
   <entry>
     <title><![CDATA[ Set up a Second Server for V2Ray ]]></title>
-    <link href="http://movier.me/blog/2021/set-up-a-second-server-for-v2ray/"></link>
+    <link href="https://olimovier.com/blog/2021/set-up-a-second-server-for-v2ray/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2021-06-06T20:44:41Z</updated>
     <published>2021-06-06T20:35:05Z</published>
-    <id>http://movier.me/blog/2021/set-up-a-second-server-for-v2ray/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Even you set up the V2Ray correctly and cross GFW successfully, you will probably suffer low speed and high legacy. If you try to <code>ping</code> your server abroad, you will find the packet loss rate is high.</p>
+    <id>https://olimovier.com/blog/2021/set-up-a-second-server-for-v2ray/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Even you set up the V2Ray correctly and cross GFW successfully, you will probably suffer low speed and high legacy. If you try to <code>ping</code> your server abroad, you will find the packet loss rate is high.</p>
 <p>In order to explain the reason for that, I need to clarify one thing which is about network bandwidth in China. Let&#39;s say the bandwidth at your home is 1Gbps which seems super fast, but it&#39;s domestic only. All the data crossing the GFW uses the international bandwidth which is very limited in China. So 1Gbps domestic bandwidth doesn&#39;t mean anything to your experience of crossing the GFW. What we really need is a reliable network connection between your ISP and server abroad.</p>
 <p>Here I choose the NAT from <a href="https://www.cloudiplc.com/">CloudIPLC</a>. To be specific, the network it uses connects directly from Shanghai with Japan, and my server abroad is exactly in Japan. That&#39;s exactly what I need. Although the price is not cheap, but in order to get the reliable network connection, I think it&#39;s worth the price.</p>
 <p>The process of setting up V2Ray on the NAT server is almost the same as that on the server abroad. You just need to modify the configuration file. Here is the configuration file I use on the NAT server.</p>
@@ -77,14 +77,14 @@
   </entry>
   <entry>
     <title><![CDATA[ Turn Any Phone into a IC Card ]]></title>
-    <link href="http://movier.me/blog/2021/turn-any-phone-into-a-ic-card/"></link>
+    <link href="https://olimovier.com/blog/2021/turn-any-phone-into-a-ic-card/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2021-04-13T07:07:39Z</updated>
     <published>2021-04-13T06:37:35Z</published>
-    <id>http://movier.me/blog/2021/turn-any-phone-into-a-ic-card/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently I moved to a new office which requires a IC card as access control. Wherever I go, I need to bring it, otherwise I can&#39;t enter the office. It&#39;s really inconvenient.</p>
+    <id>https://olimovier.com/blog/2021/turn-any-phone-into-a-ic-card/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Recently I moved to a new office which requires a IC card as access control. Wherever I go, I need to bring it, otherwise I can&#39;t enter the office. It&#39;s really inconvenient.</p>
 <p>So I was thinking if I could simulate the IC card using my phone. I did some search on the Internet. It turned out to be possible for some specific Android phones, such as some Xiaomi phones. But mine is iPhone, although Apple released some NFC related API, it&#39;s still not enough.</p>
 <p>Using my iPhone as a IC card seems impossible. Is there any alternative? The answer is <strong>YES</strong>. I found there is a kind of NFC tag which is small and could stick to the phone. Most importantly the data it contains could be customized. So the new solution is to copy the data from the original card to the tiny NFC sticker. You can have a distinct comparison about their sizes from the image below.</p>
 <p><img src="/images/shrink-your-ic-card.jpg" alt="Original IC card, Tiny NFC Tag and my iPhone 7"></p>
@@ -117,14 +117,14 @@
   </entry>
   <entry>
     <title><![CDATA[ Cross the GFW Using V2Ray ]]></title>
-    <link href="http://movier.me/blog/2021/cross-the-gfw-using-v2ray/"></link>
+    <link href="https://olimovier.com/blog/2021/cross-the-gfw-using-v2ray/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2021-06-03T02:42:10Z</updated>
     <published>2021-04-08T02:56:47Z</published>
-    <id>http://movier.me/blog/2021/cross-the-gfw-using-v2ray/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>After Shadowsocks died, I&#39;d been using Astrill VPN for some time. But it&#39;s not so ideal. The speed cannot be guaranteed and I always needed to try different servers to find one with fast speed. So again I decided to set up my own server to cross the GFW.</p>
+    <id>https://olimovier.com/blog/2021/cross-the-gfw-using-v2ray/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>After Shadowsocks died, I&#39;d been using Astrill VPN for some time. But it&#39;s not so ideal. The speed cannot be guaranteed and I always needed to try different servers to find one with fast speed. So again I decided to set up my own server to cross the GFW.</p>
 <p>The technology I chose is V2Ray. It turns out to be a genius decision. For the past few months it always worked reliably. Here is what needs to be done to set up V2Ray.</p>
 <p>Most importantly you need a VPS abroad and mine is from Linode JP. Most importantly you need to make sure the server is not blocked by GFW. You could use <a href="http://ping.chinaz.com/">this tool</a> to check. I also have a NAT from CloudIPLC, which is optional. I will talk more about it in later post. Now let&#39;s focus on the fundamentals. Both servers have x86-64 architecture and Ubuntu 18.04 as OS.</p>
 <p>Although V2Ray doesn&#39;t distinguish between server and client like Shadowsocks does, it still needs consistency. You&#39;d better use the same version for them. Here I&#39;m using version <strong>4.27.0</strong>.</p>
@@ -227,14 +227,14 @@ systemctl start v2ray
   </entry>
   <entry>
     <title><![CDATA[ Make Arduino a Smart Infrared Remote Control ]]></title>
-    <link href="http://movier.me/blog/2021/make-arduino-a-smart-infrared-remote-control/"></link>
+    <link href="https://olimovier.com/blog/2021/make-arduino-a-smart-infrared-remote-control/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2021-01-29T06:49:30Z</updated>
     <published>2021-01-17T05:02:20Z</published>
-    <id>http://movier.me/blog/2021/make-arduino-a-smart-infrared-remote-control/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<h2 id="background">Background</h2>
+    <id>https://olimovier.com/blog/2021/make-arduino-a-smart-infrared-remote-control/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<h2 id="background">Background</h2>
 <p>I have a heater and I hope it could be closed late in the night (after I fall asleep) and be opened early in the morning (before I get up).</p>
 <p>The heater has a IR remote control. So I&#39;m thinking if I could simulate the IR signal using Arduino. It turns out to be easy. There are only two steps involved. First is to record the IR signal and second is to send it.</p>
 <h2 id="preparation">Preparation</h2>
@@ -317,14 +317,14 @@ void loop() {
   </entry>
   <entry>
     <title><![CDATA[ Watch Netflix in China ]]></title>
-    <link href="http://movier.me/blog/2019/watch-netflix-in-china/"></link>
+    <link href="https://olimovier.com/blog/2019/watch-netflix-in-china/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2020-12-27T07:11:31Z</updated>
     <published>2019-12-22T11:15:05Z</published>
-    <id>http://movier.me/blog/2019/watch-netflix-in-china/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>For a long time, Netflix has always been my pain point. I could cross the GFW to visit most of the blocked websites, but not Netflix, because Netflix will detect your IP address, and if they think you are using a proxy, you will be blocked when you are trying to watch the video (Netflix won&#39;t block you if you just want to broswer their website).</p>
+    <id>https://olimovier.com/blog/2019/watch-netflix-in-china/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>For a long time, Netflix has always been my pain point. I could cross the GFW to visit most of the blocked websites, but not Netflix, because Netflix will detect your IP address, and if they think you are using a proxy, you will be blocked when you are trying to watch the video (Netflix won&#39;t block you if you just want to broswer their website).</p>
 <p>Thanks to <a href="https://www.expressvpn.com/">ExpressVPN</a>, people who use their service won&#39;t be blocked by Netflix, but does it mean everyone can easily watch videos on Netflix just by using the VPN. Maybe it is true to the rest of the world, but not China. Most of the time it will be a failure when you try to connect to ExpressVPN directly in China. Even if you are lucky enough to make it, the speed is very limited. I almost gave up, but later I thought maybe I could use ExpressVPN based on SS. Since I already <a href="/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/">set up SS in my router</a>, I could forward all the requests to SS. I just need to change my iptables configurations.</p>
 <pre><code class="lang-bash">#!/bin/sh
 
@@ -354,14 +354,14 @@ iptables -t nat -A OUTPUT -p tcp -j SHADOWSOCKS
   </entry>
   <entry>
     <title><![CDATA[ Install SS on My Xiaomi MiWiFi X-R1D with Tomato Firmware ]]></title>
-    <link href="http://movier.me/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/"></link>
+    <link href="https://olimovier.com/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2019-12-22T10:53:09Z</updated>
     <published>2019-06-05T05:28:27Z</published>
-    <id>http://movier.me/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<h2 id="preparation">Preparation</h2>
+    <id>https://olimovier.com/blog/2019/install-ss-on-my-xiaomi-miwifi-x-r1d-with-tomato-firmware/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<h2 id="preparation">Preparation</h2>
 <p>1.create a directory</p>
 <pre><code>mkdir -p /tmp/mnt/sda4/jffs/opt
 </code></pre><p>2.mount the directory to <code>/opt</code></p>
@@ -429,14 +429,14 @@ iptables -t nat -A OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to
   </entry>
   <entry>
     <title><![CDATA[ Linux Screen ]]></title>
-    <link href="http://movier.me/blog/2018/linux-screen/"></link>
+    <link href="https://olimovier.com/blog/2018/linux-screen/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2019-12-22T06:05:17Z</updated>
     <published>2018-04-06T15:57:56Z</published>
-    <id>http://movier.me/blog/2018/linux-screen/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
+    <id>https://olimovier.com/blog/2018/linux-screen/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Sometimes we need to execute some time-consuming even everlasting tasks on our server. If we lose connection to the server those tasks will interrupt and stop running. Screen is a perfect command to solve this problem.</p>
 <h2 id="create-a-new-screen">Create a new screen</h2>
 <p>Just type <code>screen</code> to create a new screen. It will prompt up with some words. Ignore it. Just type space or enter to continue. After that you are in a new screen where you can  run time-consuming task. </p>
 <p>Once the task is running and you want to leave it running there comes the most magic part of screen. Type <code>ctrl a + d</code> to detach from current screen. After that you will be in main screen and your task will keep running in the background.</p>
@@ -454,14 +454,14 @@ iptables -t nat -A OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to
   </entry>
   <entry>
     <title><![CDATA[ Linux Crontab ]]></title>
-    <link href="http://movier.me/blog/2018/linux-crontab/"></link>
+    <link href="https://olimovier.com/blog/2018/linux-crontab/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-03-30T14:25:25Z</updated>
     <published>2018-03-23T09:17:17Z</published>
-    <id>http://movier.me/blog/2018/linux-crontab/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Crontab could help you run a task at fixed intervals. It&#39;s so easy to use crontab because it has only three main commands: <code>crontab -l</code>, <code>crontab -r</code> and <code>crontab -e</code>.</p>
+    <id>https://olimovier.com/blog/2018/linux-crontab/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Crontab could help you run a task at fixed intervals. It&#39;s so easy to use crontab because it has only three main commands: <code>crontab -l</code>, <code>crontab -r</code> and <code>crontab -e</code>.</p>
 <p><code>crontab -l</code> will list all your tasks. <code>crontab -r</code> will delete all your tasks. Please be especially careful when using it. The most important command is <code>crontab -e</code> which allows you to edit your tasks.</p>
 <h2 id="select-an-editor">Select an editor</h2>
 <p>What <code>crontab -e</code> actually does is to open your crontab file which contains all your scheduled tasks. So for the first time you run <code>crontab -e</code> it will ask you to select an editor:</p>
@@ -493,14 +493,14 @@ Choose 1-4 [1]: 3
   </entry>
   <entry>
     <title><![CDATA[ Draw CSS Gradients ]]></title>
-    <link href="http://movier.me/blog/2018/draw-css-gradients/"></link>
+    <link href="https://olimovier.com/blog/2018/draw-css-gradients/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2021-01-17T04:56:40Z</updated>
     <published>2018-03-17T14:24:56Z</published>
-    <id>http://movier.me/blog/2018/draw-css-gradients/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently I found myself extremely interested in computer graphics. Meanwhile it&#39;s time to redesign my portfolio and I decide to make it colorful. Gradient is no doubt the easiest starting point.</p>
+    <id>https://olimovier.com/blog/2018/draw-css-gradients/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Recently I found myself extremely interested in computer graphics. Meanwhile it&#39;s time to redesign my portfolio and I decide to make it colorful. Gradient is no doubt the easiest starting point.</p>
 <p>Currently there are two types of gradients supported in CSS: linear gradient  </p>
 <p><img src="/images/gradient6.svg" alt="Linear Gradient"></p>
 <p>and radial gradient.</p>
@@ -545,14 +545,14 @@ Finally we&#39;ll get result.
   </entry>
   <entry>
     <title><![CDATA[ Train My First Machine Learning Model ]]></title>
-    <link href="http://movier.me/blog/2018/train-my-first-machine-learning-model/"></link>
+    <link href="https://olimovier.com/blog/2018/train-my-first-machine-learning-model/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-03-16T01:46:52Z</updated>
     <published>2018-03-09T08:41:57Z</published>
-    <id>http://movier.me/blog/2018/train-my-first-machine-learning-model/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>I&#39;m always interested in machine learning since I learned the concept last year. After watching a lot of videos and reading a bunch of posts, I trained my first machine learning model a few days ago. It&#39;s so exciting that I can&#39;t wait to share my experience. </p>
+    <id>https://olimovier.com/blog/2018/train-my-first-machine-learning-model/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>I&#39;m always interested in machine learning since I learned the concept last year. After watching a lot of videos and reading a bunch of posts, I trained my first machine learning model a few days ago. It&#39;s so exciting that I can&#39;t wait to share my experience. </p>
 <p>If you want to check out the codes directly please visit my GitHub <a href="https://github.com/movier/ems-captcha-recognition">repository</a>.</p>
 <h2 id="find-a-problem">Find a problem</h2>
 <p>The first also the most important thing to train a model is to find a problem which is currently handled by human but could be solved by machine. If you are one of the human it will be great because you will be willing to save yourself a lot of time.</p>
@@ -580,14 +580,14 @@ Finally we&#39;ll get result.
   </entry>
   <entry>
     <title><![CDATA[ Bitwise Operators ]]></title>
-    <link href="http://movier.me/blog/2018/bitwise-operators/"></link>
+    <link href="https://olimovier.com/blog/2018/bitwise-operators/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-03-15T10:18:07Z</updated>
     <published>2018-02-01T16:40:21Z</published>
-    <id>http://movier.me/blog/2018/bitwise-operators/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across a question from Interview Cake and it could be solved gracefully by bitwise operator XOR which arouse my interest. I will show you the question and the answer at the end of the post. Now let&#39;s learn some basic knowledge of bitwise operators.</p>
+    <id>https://olimovier.com/blog/2018/bitwise-operators/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Recently I came across a question from Interview Cake and it could be solved gracefully by bitwise operator XOR which arouse my interest. I will show you the question and the answer at the end of the post. Now let&#39;s learn some basic knowledge of bitwise operators.</p>
 <p>When you saw symbols like &amp;, |, ^, ~, &gt;&gt; or &lt;&lt; they represent bitwise operators.</p>
 <blockquote>
 <p>They operate on numbers (normally), but instead of treating that number as if it were a single value, they treat it as if it were a string of bits, written in twos-complement binary.</p>
@@ -715,39 +715,15 @@ for (let i = 0; i &lt; a.length; i++) {
 ]]></content>
   </entry>
   <entry>
-    <title><![CDATA[ Prepare for Finding a job in Australia ]]></title>
-    <link href="http://movier.me/blog/2018/prepare-for-finding-a-job-in-australia/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2018-03-30T07:30:43Z</updated>
-    <published>2018-01-15T10:46:02Z</published>
-    <id>http://movier.me/blog/2018/prepare-for-finding-a-job-in-australia/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>In July 2017 I applied a work and holiday visa of Australia. It will be expired after Sep 08 2018 which means I must land Australia before that day. So I plan to quit my job at the end of August and go to Australia in early September. Thus from now on I have about eight months to do preparations. </p>
-<p>I realize the most important thing to find a job in Australia is English. So I decide to develop an app to improve my English skill. With the ability of non-obstacle communicating in English I will be confident of finding a job. </p>
-<p>Generally finding a job is composed of two process: receiving interview invitation and attending job interview. I should prepare for each of these two process.</p>
-<h2 id="preparing-for-receiving-a-job-interview">Preparing for receiving a job interview</h2>
-<p>Facing the fact that I don&#39;t have a computer science degree or working experience of giant company how can I attract others attention?</p>
-<p>Here is something I think I can do:</p>
-<p>First of all is blogging. Actually I have been blogging for a long time. But it&#39;s not frequent enough and most of them are in Chinese. In the future I will <strong>keep blogging but in English</strong>. Hope it can also help me improve my poor writing skill.</p>
-<p>Another valuable thing to do is <strong>developing personal project</strong>. It can not only exercise my programming skill but also help people with the same need as I do. Actually there are already two projects in my mind. One is the vocabulary app I mention above and the other is the blogging platform I&#39;m using now.</p>
-<p>If my skill as a developer is recognized by a third party maybe my chance of receiving a interview invitation will increase dramatically. So in the next few months I want to earn a <a href="https://developers.google.com/training/certification/mobile-web-specialist/">Mobile Web Specialist Certification</a> from Google. At the same time I will also try my best to <strong>earn some certifications</strong> from freeCodeCamp.</p>
-<h2 id="preparing-for-attending-a-job-interview">Preparing for attending a job interview</h2>
-<p>Once I receive a job interview invitation I must maximize the chance of getting the job offer. So I need to prepare for attending a job interview.</p>
-<p>I intend to follow the step of <a href="https://www.interviewcake.com/">Interview Cake</a> to prepare for a job interview. After that I will take some mock interviews which I hope could relieve my stress when attending a genuine interview.</p>
-<p>Except all the things above I can&#39;t think what else I could do to realize my dream. If you do please let me know. I will really appreciate it.</p>
-]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[ Bye 2017 Hi 2018 ]]></title>
-    <link href="http://movier.me/blog/2018/bye-2017-hi-2018/"></link>
+    <link href="https://olimovier.com/blog/2018/bye-2017-hi-2018/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-03-16T02:27:55Z</updated>
     <published>2018-01-11T16:33:53Z</published>
-    <id>http://movier.me/blog/2018/bye-2017-hi-2018/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>One word to summarize 2017 is Ollie which is the nickname of my baby. Except working I spent almost all my time with her and she made me the happiest person in the world.</p>
+    <id>https://olimovier.com/blog/2018/bye-2017-hi-2018/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>One word to summarize 2017 is Ollie which is the nickname of my baby. Except working I spent almost all my time with her and she made me the happiest person in the world.</p>
 <h2 id="review-of-2017">Review of 2017</h2>
 <p>As planned I should have been studying computer science in US. Unfortunately it didn&#39;t come true. So I had to find a job. On Mar 1st I began to work as a front-end developer for Investarget which is a investment bank based at Shanghai. I joined a fantastic team and learned a lot every day.</p>
 <p>As Ollie grows up we began to travel with her. So far we have been to Wuxi and Taicang. Each journey left us precious memory.</p>
@@ -764,14 +740,14 @@ for (let i = 0; i &lt; a.length; i++) {
   </entry>
   <entry>
     <title><![CDATA[ Realize Half Pixel Border in Chrome ]]></title>
-    <link href="http://movier.me/blog/2017/realize-half-pixel-border-in-chrome/"></link>
+    <link href="https://olimovier.com/blog/2017/realize-half-pixel-border-in-chrome/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-02-01T17:17:39Z</updated>
     <published>2017-11-10T01:51:46Z</published>
-    <id>http://movier.me/blog/2017/realize-half-pixel-border-in-chrome/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Sometimes we need to realize half pixel border for beautiful UI and it&#39;s not as simple as you think.</p>
+    <id>https://olimovier.com/blog/2017/realize-half-pixel-border-in-chrome/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Sometimes we need to realize half pixel border for beautiful UI and it&#39;s not as simple as you think.</p>
 <h2 id="problem">Problem</h2>
 <p><code>border-width: 0.5px</code> works in Safari. But it doesn&#39;t work in Chrome. </p>
 <p><strong>HTML</strong></p>
@@ -842,14 +818,14 @@ for (let i = 0; i &lt; a.length; i++) {
   </entry>
   <entry>
     <title><![CDATA[ IIFE Immediately Invoked Function Expression ]]></title>
-    <link href="http://movier.me/blog/2017/iife-immediately-invoked-function-expression/"></link>
+    <link href="https://olimovier.com/blog/2017/iife-immediately-invoked-function-expression/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2017-11-10T01:56:31Z</updated>
     <published>2017-11-02T07:31:29Z</published>
-    <id>http://movier.me/blog/2017/iife-immediately-invoked-function-expression/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p>
+    <id>https://olimovier.com/blog/2017/iife-immediately-invoked-function-expression/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p>
 <p>Let&#39;s see an example:</p>
 <pre><code class="lang-javascript">(function demo() {
   console.log(&#39;This is a IIFE&#39;);
@@ -959,14 +935,14 @@ index: 4
   </entry>
   <entry>
     <title><![CDATA[ Git Reflog ]]></title>
-    <link href="http://movier.me/blog/2017/git-reflog/"></link>
+    <link href="https://olimovier.com/blog/2017/git-reflog/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2017-11-13T15:34:33Z</updated>
     <published>2017-10-27T15:21:02Z</published>
-    <id>http://movier.me/blog/2017/git-reflog/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>It was a ordinary day. I modified codes and did commits as usual. Later I found last commit was not necessary any more. So I decided to reset it. The change was still useful so I want to keep it.</p>
+    <id>https://olimovier.com/blog/2017/git-reflog/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>It was a ordinary day. I modified codes and did commits as usual. Later I found last commit was not necessary any more. So I decided to reset it. The change was still useful so I want to keep it.</p>
 <p>I knew related command was <code>git reset</code> but I was not sure which mode to use. At this circumstance I didn&#39;t go to look up the manual but use <code>git reset --hard</code> casually. How ridiculous I was! The result proved that. I lost all my changes.</p>
 <p>Though I felt depressed at that moment I still believed that Git had the ability to restore the changes. So I began to search on Internet. Finally I found the answer which is <code>git reflog</code>.</p>
 <p>So what is <code>git reflog</code>?</p>
@@ -985,14 +961,14 @@ b0cd221 HEAD@{2}: commit: Ready to write recursive function
   </entry>
   <entry>
     <title><![CDATA[ Git Svn ]]></title>
-    <link href="http://movier.me/blog/2017/git-svn/"></link>
+    <link href="https://olimovier.com/blog/2017/git-svn/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-03-16T14:51:09Z</updated>
     <published>2017-10-24T05:18:12Z</published>
-    <id>http://movier.me/blog/2017/git-svn/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Back to March this year when I come to the company I&#39;m working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don&#39;t want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
+    <id>https://olimovier.com/blog/2017/git-svn/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Back to March this year when I come to the company I&#39;m working for now I need to work on a project which use Svn for version control system. But I have always been using Git except for a very short time in my early programming life in 2012. I definitely don&#39;t want to use Svn again. Fortunately Git is so powerful that it can event interact with Svn repositories. </p>
 <hr>
 <p>The main command to realize this is <code>git svn</code>.</p>
 <p><strong>1. Clone</strong></p>
@@ -1011,14 +987,14 @@ b0cd221 HEAD@{2}: commit: Ready to write recursive function
   </entry>
   <entry>
     <title><![CDATA[ Wrap your Commands into a Shell Script ]]></title>
-    <link href="http://movier.me/blog/2017/wrap-your-commands-into-a-shell-script/"></link>
+    <link href="https://olimovier.com/blog/2017/wrap-your-commands-into-a-shell-script/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2017-11-02T07:25:50Z</updated>
     <published>2017-10-23T08:24:58Z</published>
-    <id>http://movier.me/blog/2017/wrap-your-commands-into-a-shell-script/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
+    <id>https://olimovier.com/blog/2017/wrap-your-commands-into-a-shell-script/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
 <pre><code>docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup:/backup mongo mongodump --host mongo --db olivia-server --out /backup
 </code></pre><p>Wouldn&#39;t it be great if you don&#39;t need to remember or look up the command when use! Fortunatelty you can! All you need to do is wrap your long commands into a shell script.</p>
 <hr>
@@ -1041,14 +1017,14 @@ docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup
   </entry>
   <entry>
     <title><![CDATA[ Timezone Matters ]]></title>
-    <link href="http://movier.me/blog/2017/timezone-matters/"></link>
+    <link href="https://olimovier.com/blog/2017/timezone-matters/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2017-11-17T04:03:57Z</updated>
     <published>2017-10-20T06:09:22Z</published>
-    <id>http://movier.me/blog/2017/timezone-matters/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date(&#39;2017-09-04T09:52:15&#39;)</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
+    <id>https://olimovier.com/blog/2017/timezone-matters/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Recently I came across an interesting problem when dealing with date. When using javascript date object, chrome and safari render different result with the same date string. If I run <code>new Date(&#39;2017-09-04T09:52:15&#39;)</code> in browser deveopler console, chrome will output <code>Mon Sep 04 2017 09:52:15 GMT+0800 (CST)</code> and safari will output <code>Mon Sep 04 2017 17:52:15 GMT+0800 (CST)</code>. </p>
 <p>The reason is obvious if you compare the result carefully. Since I lose my timezone information in the date string, the two browsers react differently to this situation. Chrome will take your computer&#39;s timezone as default timezone when parsing the date string. Meanwhile safari will take the string as UTC time.</p>
 <p>If we could add timezone information to the date string, there won&#39;t be such problem. The question is how we add timezone to the date string. Fortunately there is something called <strong>ISO date format</strong>. The format is as follows:</p>
 <pre><code>YYYY-MM-DDTHH:mm:ss.sssZ
@@ -1129,14 +1105,14 @@ print(str)
   </entry>
   <entry>
     <title><![CDATA[ Hex Code and RGB values in CSS Color ]]></title>
-    <link href="http://movier.me/blog/2017/hex-code-and-rgb-values-in-css-color-2/"></link>
+    <link href="https://olimovier.com/blog/2017/hex-code-and-rgb-values-in-css-color-2/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2018-03-16T02:43:24Z</updated>
     <published>2017-09-19T13:55:00Z</published>
-    <id>http://movier.me/blog/2017/hex-code-and-rgb-values-in-css-color-2/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
+    <id>https://olimovier.com/blog/2017/hex-code-and-rgb-values-in-css-color-2/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>In CSS we could use either RGB values or hex code to set value of a color. But have you ever thought about <em>why</em> we could do this? At least for me I have never thought about such question until doing a related <a href="https://www.freecodecamp.org/challenges/use-hex-code-for-specific-colors">challenge</a> on freeCodeCamp. </p>
 <p>For example when it comes to magenta, we can either use <code>#FF00FF</code> in hex code  or <code>rgb(255, 0, 255)</code> in RGB values. Use RGB values for color is easy to understand. But what the hell is hex code? How could it represent for the same color as RGB values do. It turns out that hex code is just another format of RGB values. </p>
 <p>Let’s see a picture.</p>
 <p><img src="/images/2017-09-19.jpg" alt="2017-09-19.jpg"></p>
@@ -1213,14 +1189,14 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
   </entry>
   <entry>
     <title><![CDATA[ Valid Palindrome ]]></title>
-    <link href="http://movier.me/blog/2017/valid-palindrome/"></link>
+    <link href="https://olimovier.com/blog/2017/valid-palindrome/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
     <updated>2017-11-16T02:18:55Z</updated>
     <published>2017-03-11T21:02:15Z</published>
-    <id>http://movier.me/blog/2017/valid-palindrome/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>Once during a technical interview, I was asked to validate whether a sentence is a palindrome or not. But what’s a palindrome? A <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as &quot;A man, a plan, a canal, Panama!&quot;, &quot;Was it a car or a cat I saw?&quot; or &quot;No &#39;x&#39; in Nixon&quot;.</p>
+    <id>https://olimovier.com/blog/2017/valid-palindrome/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p>Once during a technical interview, I was asked to validate whether a sentence is a palindrome or not. But what’s a palindrome? A <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward as forward, such as &quot;A man, a plan, a canal, Panama!&quot;, &quot;Was it a car or a cat I saw?&quot; or &quot;No &#39;x&#39; in Nixon&quot;.</p>
 <h2 id="my-solution">My Solution</h2>
 <p>During the interview I just reverse the sentence and compare with the original sentence. Even ignore case and punctuation it’s still wrong. How could “Was I tac a ro rac a ti saw?” be the same with &quot;Was it a car or a cat I saw?”. Obviously the problem is space. What if I even ignore space?</p>
 <blockquote>
@@ -1280,230 +1256,15 @@ RGBToHex(&quot;rgb(16, 69, 143)&quot;) # output &#39;#10458F&#39;
 ]]></content>
   </entry>
   <entry>
-    <title><![CDATA[ 新生儿常见问题及应对方法 ]]></title>
-    <link href="http://movier.me/blog/2017/newborn-common-problems-and-coping-methods/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:52:40Z</updated>
-    <published>2017-02-21T20:57:19Z</published>
-    <id>http://movier.me/blog/2017/newborn-common-problems-and-coping-methods/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>宝宝的出生总会让新手父母们措手不及，总会有这样那样的问题困扰着我们，如果能提前了解这些可能面对的问题，那么我们也许能从容一些。以下是小星星出生时遇到的一些问题：</p>
-<h2 id="-">黄疸</h2>
-<p>黄疸是新生儿中非常常见的一个问题，我们小星星也不可避免地发生了这个问题。小星星刚出生的时候是白白的，从出生后第三天开始，她的肤色就开始一点一点变黄，整个过程当中又夹杂着新生儿痤疮和湿疹这些皮肤问题，以至于黄疸到底什么时候好的都不太清楚，反正42天回医院复查的时候黄疸指数还没有恢复正常，但是已经很接近正常值了。</p>
-<p>在宝宝出生后，医生一般每天都会来为宝宝测一次黄疸指数，只要没有超过危险数值，医生一般不会采取什么特殊的措施。也就是说，就算有黄疸，如果医生允许宝宝回家的话，说明宝宝的黄疸并不是非常严重，回家晒晒太阳，慢慢会好的。小星星回家后，我们有机会就给她晒晒太阳，黄疸在不知不觉中就好了。</p>
-<h2 id="-">水肿</h2>
-<p>小星星刚出生时，头部明显有一个很大的肿块，摸一下的话会有软软的感觉。出生几天后，在医院做了个B超，确认了水肿是位于皮下组织，也就是说这个肿块是在出生过程中由于头部受到产道挤压而产生的。这个水肿持续了好久，直到42天回医院复查的时候还存在，当时还特地问医生什么时候能好，医生说要到半岁左右，我们不以为然。后来过了没多久，头部的水肿就自行消失了。</p>
-<p>水肿的问题虽然已经好了，但还是留有一个比较硬的包，这个包消退得就比较慢了，到现在只小了一点点，不过最终<strong>应该</strong>会完全消退的，只是需要点时间。</p>
-<h2 id="-">肚挤护理</h2>
-<p>在小星星出生之前，我们就意识到了新生儿肚脐护理的重要性。不恰当的肚脐护理容易导致肚脐感染进而发炎，而肚脐护理最重要的就是尽量避免让肚脐沾到水。其实你可以把新生儿的肚脐想象成一个伤口，伤口该怎么护理肚脐就怎么护理。在医院的时候，有专业的护士给新生儿洗澡和肚脐护理，回到家后这些就不得不自己做了。我们在给小星星洗澡的时候，特别小心，尽量避免让肚脐沾到水，万一不小心沾到水的话，赶紧用棉棒将水蘸走，然后在肚脐周围涂上一点碘伏进行消毒。</p>
-<p>回到家后没两天，小星星的脐带根部脱落了。现在我们可以深入肚脐进行消毒了，这样消毒了没两次，小星星的肚脐就结痂了。结痂之后，又只能在肚脐周围进行消毒了。本来以为等结的痂掉了之后，肚脐就好了，没想到肚脐结痂之后，时不时会渗出点血，小星星的衣服因此会染到血。我们每次给她换尿布的时候，都要仔细观察一下衣服上的血量。“哎呀。。又有血了！”“太棒了，这次没有血！”我和妈妈一直在这样的担忧与幸福中反复着。期间不断上网搜索了解相关情况，同时密切观察肚脐的变化，一旦发现什么异常，立即就医。随着时间一点一滴的流逝，肚脐终于不再渗血了，结的痂也掉了，悬在我们心里的石头终于落地了。之后，我们继续保持每天两次用碘伏对肚脐内部和周围进行消毒，持续了一段时间，直到确定肚脐已经完全好了才停下来。</p>
-<h2 id="-">新生儿痤疮</h2>
-<p>小星星出生十几天后，脸上突然冒出了许多像“痘痘”一样的小疙瘩，先是半边脸上发了一点，然后另半边脸也发了一点，三四天后整张脸都发满了“痘痘”。这时候，妈妈和奶奶坐不住了，决定带她去医院看看。于是我们又回到了小星星出生的医院，挂了新生儿科和皮肤科。先去看了皮肤科，医生诊断为湿疹，配了支药膏。然后去新生儿科，医生看了看说有黄疸，脸上么是什么脓疱疹，听了怪瘆人的，还叫我们验血。可怜的小星星就这样被针扎了下，流了两滴血。拿到验血报告给医生看后，也没说什么，就配了治黄疸的“泻药”和抑制拉肚子的药。</p>
-<p>这次去看医生其实徒劳无益，因为回到家后，我们并没有给小星星用医生配的药。我们感觉小星星脸上发的是新生儿痤疮并不是湿疹，医生配的治湿疹的药膏显然没用。至于黄疸，我们决定让它自然消退，不打算用药。就这样硬撑了几天后，小星星脸上的“痘痘”还是没有好转，于是我们决定带她去儿童医院看看。儿童医院的医生一看便说是新生儿痤疮，配了支百多邦莫匹罗星软膏，这下我们就放心了。回家涂了百多邦后，小星星脸上的痘痘开始一点一点好转起来了，过了没几天，“痘痘”就全部消失了。从这件事中，我总结出一个道理，那就是如果宝宝需要就医的话，直接去儿童医院，去那些综合医院就是浪费时间。</p>
-<h2 id="-">湿疹</h2>
-<p>新生儿痤疮快好的时候，小星星脸上又发起了湿疹。刚发湿疹的那两天，我们没采取什么措施，就这么观察了两天。眼看着湿疹不但没有好转的趋势，反而更加严重，于是老婆叫我去药店买激素药—尤卓尔，学名叫做丁酸氢化可的松乳膏，我到药店问了之后，药剂师给我拿了舒夫林，说是一样的成分。买回家后，我们在早晚给小星星洗好脸之后，就在她脸上发湿疹的部位涂上舒夫林。没想到效果立竿见影，激素药果然是激素药。也正是因为是激素药，我们不敢给小星星多涂，感觉湿疹好了差不多后就马上停药，可是药一停，湿疹马上死灰复燃，于是我们不得不再使用激素药。这次我们等湿疹全部好透了再停的药，湿疹果然没有马上复发，可是过了一段时间，湿疹又来了，我们又不得不使用激素药。</p>
-<p>这时老同学在微信公众号中发了一篇文章，里面提到了针对湿疹过敏性皮肤的宝宝的护肤品，我们决定尝试一下。我们先买了优色林，用了一段时间后感觉效果不是很好，后来又买了丝塔芙，用了一段时间后感觉还行，所以一直用到现在。现在如果脸上还发一点点湿疹的话，我们就会在丝塔芙中混合一点舒夫林，这样一来既减少了激素药的刺激，又能有效地去除湿疹。</p>
-<h2 id="-">乌青</h2>
-<p>小星星出生时，身上许多地方有乌青，特别是屁股上有一大块乌青。幸亏我们知道姐姐家的孩子出生时屁股上也有一大块乌青，到半岁左右就自然消退了，否则应该会比较担心。上网查一下，好像大部分黄人宝宝出生时身上都会有这种乌青，到了一定的时间就会自然消失了。我没有去查具体的原因什么的，反正<strong>到时候</strong>自动消失就好了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 生孩子前需要准备的东西 ]]></title>
-    <link href="http://movier.me/blog/2017/to-prepare-for-something-before-giving-birth-to-a-child/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:52:48Z</updated>
-    <published>2017-02-11T20:02:28Z</published>
-    <id>http://movier.me/blog/2017/to-prepare-for-something-before-giving-birth-to-a-child/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>最近，有老同学在微信公众号上开了一个育儿专栏，我受益颇深。本着分享精神，我打算总结一下生孩子前需要准备的物品，这些物品都是为打算顺产并且母乳喂养的妈妈和宝宝准备的，不一定适用于有其他打算的妈妈和宝宝。</p>
-<h2 id="for-baby">For Baby</h2>
-<h3 id="-">纸尿裤</h3>
-<p>老婆说宝宝生出来之后每天长一两，NB 一会儿就穿不下了，所以我们只准备了一袋 NB 装。事实证明，一袋 NB 根本就不够。我们小星星出生时七斤三两，马子算大的了吧，就算这样，面对每天消耗数十张纸尿裤，一袋 NB 一会儿就见底了，这时候 S 号对她来说还太大，于是，我们不得不在京东上买了一袋 moony 的 NB 装来应急。</p>
-<p>说得这么无奈是因为我们准备的纸尿裤是在日亚上购买的。我们准备了一袋 moony 的 <a href="https://www.amazon.co.jp/gp/product/B00MVMZWIU/ref=oh_aui_detailpage_o02_s01?ie=UTF8&amp;psc=1">NB</a> 装，一袋 moony 的 S 装，两袋花王的 <a href="https://www.amazon.co.jp/gp/product/B01IVK6ZYK/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1">S</a> 装，四袋花王的 <a href="https://www.amazon.co.jp/gp/product/B004OR2EH2/ref=oh_aui_detailpage_o00_s02?ie=UTF8&amp;psc=1">M</a> 装。除了 moony 之外，花王的都是拉拉裤，拉拉裤是没有 NB 号的，我猜原因是新生儿非常有可能在你给她换纸尿裤的时候便便尿尿，我们小星星就是这个样子，刚出生时有时候要连续使用三张纸尿裤，连续使用两张那是家常便饭。试想一下，如果你用的是拉拉裤的话，穿到一半她拉了，那基本上全在你手上了，而用搭扣式的话你可以马上给她垫好，这时候就算她拉的话，也都在纸尿裤上，换张纸尿裤就行了。等长到一个月左右的时候，小星星便便的频率明显降低，平均两三天一次，而且在给她换纸尿裤的时候，她也不太会便便尿尿了。这时候，使用拉拉裤就是一种非常好的选择，对大人来说，穿起来非常方便（用过拉拉裤之后就再也回不去了），对宝宝来说，穿起来非常舒服（我猜的）。</p>
-<p>总之，准备两袋NB装，四袋S装（其中三袋拉拉裤），四袋M装（拉拉裤）应该差不多了。</p>
-<h3 id="-">湿纸巾、隔尿垫、卷纸</h3>
-<p>宝宝刚出生时，便便频率是最高的，便完之后用湿纸巾沾点热水擦一擦屁屁非常方便。我们用过好几个牌子的湿纸巾，其中包括贝亲、维达、康贝和好孩子等。我觉得使用起来最顺手的是<a href="https://chaoshi.detail.tmall.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqsb4fc&amp;id=26056272368">好孩子</a>，因为其他几个牌子在抽取时都会有粘连的现象，也就是你想抽一张，结果出来一串，非常不方便。相对来说，好孩子这种现象就非常少见。就像我之前说的，过了一个月之后，小星星便便的频率明显降低了，湿纸巾的消耗也随之明显减少。因此，准备三提湿纸巾应该足够了。</p>
-<p>在给宝宝换纸尿裤或擦屁屁的时候，一定要在下面垫上隔尿垫，防止造成灾难。隔尿垫只是起到隔离的作用，如果宝宝尿尿的话，尿尿还是有可能通过隔尿垫流到床单上的，所以最好在隔尿垫上再垫一层卷纸，这样的话，卷纸就可以把尿尿吸收掉了，特别是给新生儿换纸尿裤的时候一定要这么做，否则隔尿垫会消耗得非常快。我们买了很多的<a href="https://chaoshi.detail.tmall.com/item.htm?spm=a1z09.2.0.0.xcAeQ8&amp;_u=6bqkaqsb7ae&amp;id=522914989738">十月结晶新生儿一次性隔尿垫婴儿护理垫</a>和<a href="https://chaoshi.detail.tmall.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqseb86&amp;id=39788807046">维达无芯卷纸</a>，目前为止没有造成过重大灾难。</p>
-<h3 id="-">奶粉和奶瓶</h3>
-<p>要不要准备奶粉也是令我们非常纠结的一个问题。我们是打算母乳喂养的，如果准备奶粉的话，一方面担心会动摇母乳喂养的决心，另一方面如果母乳喂养成功的话，那准备的奶粉就浪费了。如果没准备奶粉，担心妈妈没奶的话会饿着宝宝。最后，信心战胜了一切，我们一罐奶粉都没准备。</p>
-<p>小星星刚出生时，妈妈只有一两滴奶。孩子在一旁哭啊闹啊，月嫂又在一旁说：“孩子饿啊！这点奶吃不饱啊！”又说：“如果没准备奶粉的话，我去问别人借点！”搞得做父母的我们乱不好意思，加上做听力筛查的时间较久，需要用奶粉安抚宝宝。于是，我连夜去爱婴室买了一罐爱他美。买回来之后，小星星喝了一两次。随着妈妈的产奶量逐渐上升，加上小星星就也拒绝喝奶粉（她似乎分得清奶粉和母乳），剩下的奶粉都是我在喝。尽管如此，准备一罐奶粉以防万一也是有必要的。</p>
-<p>既然准备了奶粉，那么奶瓶也是必不可少的。我们准备了一个贝亲的<a href="https://www.amazon.co.jp/gp/product/B01CCLDK1A/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">奶瓶</a>，不仅可以冲奶粉给宝宝喝，也可以将妈妈挤出来的母乳放在奶瓶里给宝宝喝。</p>
-<h3 id="-">衣物、包被和口水巾</h3>
-<p>有了宝宝之后，想到的第一件事应该就是给她准备可爱的小衣物。可是我们并没有这么做，因为姐姐家的孩子有很多穿剩下的旧衣服，妈妈只给小星星买了一两件童泰的<a href="https://detail.tmall.com/item.htm?id=37050908501&amp;spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqs349e">和尚服</a>和<a href="https://detail.tmall.com/item.htm?id=538814898364&amp;spm=a1z09.2.0.0.xcAeQ8&amp;_u=6bqkaqs99e5">蝴蝶衣</a>，那还是在小星星出生后发现合适的衣服不太够的情况下买的。因此，一定要多准备几件小衣服，小裤子，小袜子，不要担心穿不了多久就穿不下了，把宝宝穿得漂漂亮亮，干干净净的，那也是做父母的光荣。</p>
-<p>除了足够的小衣物之外，准备两条包被也是非常有必要的。出门的时候给宝宝一包，头部的帽子还可以为宝宝挡风，非常方便。我们准备的是<a href="https://detail.tmall.com/item.htm?id=525000879924&amp;spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqs4943">班爵婴儿包被</a>，正好一蓝一粉各一条，既舒服又可爱。</p>
-<p><a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;id=529688122459&amp;_u=6bqkaqsbe2e">口水巾</a>，顾名思义可以用来给宝宝擦口水。对新生儿来说，分泌口水这个功能还没有很发达，因此不太需要用口水巾擦口水。但是口水巾可以用来给宝宝洗脸，也可以在喂奶的时候垫在宝宝颈部，防止奶漏到宝宝身上。如果妈妈有喷乳现象的话，还可以用来及时包裹乳头，防止喷的到处都是。宝宝或多或少都会有吐奶的现象，口水巾最重要的一个功能就是能够兜住宝宝吐出来的奶，当然前提是你反应够快，这样就可以避免换一整套衣服了。</p>
-<h3 id="-">洗衣液、柔顺剂和洗衣皂</h3>
-<p>由于宝宝的肌肤比较敏感，所以宝宝的衣物护理也是我们大人要关心的问题，特别是贴身衣物。这方面我没什么发言权，基本上都是母亲大人在操劳。我们准备了<a href="https://www.amazon.co.jp/gp/product/B01AJ5WK44/ref=od_aui_detailpages01?ie=UTF8&amp;psc=1">贝亲婴儿洗衣液</a>、<a href="https://chaoshi.detail.tmall.com/item.htm?spm=a1z09.2.0.0.xcAeQ8&amp;_u=6bqkaqs85ed&amp;id=41618340696">贝亲婴儿柔顺剂</a>和<a href="http://item.yhd.com/item/9405890?tp=2238.8247114.0.0.0.L^mkpK`-11-2tfOP&amp;ti=DPKSq2">康贝婴幼儿洗衣皂</a>。</p>
-<h3 id="-">婴儿床、床垫、床单、睡袋</h3>
-<p>小星星出生两个多月前，我们就已经给她<a href="https://twitter.com/olimovier/status/766997422505545730">准备</a>好了<a href="https://item.jd.com/1766152776.html">婴儿床</a>，铺上<a href="https://detail.tmall.com/item.htm?id=14778262792&amp;spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqs18fe">床垫</a>和<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;id=524135894280&amp;_u=6bqkaqs9d7f">床单</a>之后非常可爱。尽管小星星刚出生时，我们为了有爱让她睡在我和老婆之间，但是过了几天后，发现非常不方便。由于小星星的睡眠非常浅，我们在一旁也睡不安稳，生怕一发出声音就会吵醒她。我们的睡相算比较好的了，万一碰上睡相比较差的大人，睡梦中不小心打到了宝宝那可就不好了。于是，几天之后，我们就把小床并排在大床旁边，让小星星睡在了小床上。我有一个同学，他们家的宝宝就是从小和爸妈一起睡，到现在快一岁了，还是不肯一个人睡小床。一旦养成了习惯就很难改变了，所以我们应该从小就让宝宝睡在属于自己的小床上。</p>
-<p>小星星刚出生的时候，我们给她盖的被子，后来让她睡在妈妈的一件棉袄里，不久前才让她睡在睡袋里。这样其实是不对的，应该一开始就让她在睡袋里睡觉。</p>
-<h3 id="-">浴盆、水温计、浴巾</h3>
-<p>从医院回到家之后，就要面对给宝宝洗澡的问题了，所以要为宝宝准备一个专用的浴盆。如果你不会衡量水温是否合适的话，准备一个水温计会给你很大的帮助，我们买了一个<a href="https://item.jd.com/834401.html">青蛙水温计</a>，非常可爱。准备两块浴巾也是非常有必要的，最好是纱布巾，这样才不会伤害宝宝娇嫩的肌肤。洗完澡之后，用浴巾把宝宝裹住，既保暖又方便给宝宝擦干身体。</p>
-<h3 id="-">小勺子、小剪刀</h3>
-<p>小勺子可以用来给宝宝喂水喝，在宝宝不肯喝奶瓶的情况下，也可以用来喂奶。我们没用小勺子喂过奶，只用小勺子喂过一次水，那还是在医院的时候月嫂喂的，除此之外，再也没用过小勺子。不过备一个小勺子在身边还是有必要的，我们在日亚上买了一个康贝的<a href="https://www.amazon.co.jp/gp/product/B00EHAW4L2/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1">小勺子</a>。</p>
-<p>宝宝出生后，指甲长得非常快，需要三天两头的剪指甲，大人用的指甲钳显然不适合刚出生的婴儿，因此需要准备一个宝宝专用的小剪刀，我们在日亚上买了一个贝亲的<a href="https://www.amazon.co.jp/gp/product/B01KO97N3S/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">小剪刀</a>，用起来非常方便，只要小心点用，基本上不用担心会剪痛宝宝。</p>
-<h3 id="-">护肤品和洗发露</h3>
-<p>也许是因为看了太多以用婴儿的肌肤作为卖点的护肤品的广告的关系，在生小星星之前，我想当然的以为新生儿的肌肤应该是滑滑嫩嫩，水水淋淋的。事实上，宝宝的皮肤护理也是需要我们大人认真对待的一件大事。</p>
-<p>护臀膏应该是大家想到的第一个东西，我们也早早地在日亚上买了<a href="https://www.amazon.co.jp/gp/product/B00J2NS7A6/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">贝亲护臀膏</a>。在小星星刚出生便便频率比较高的时候，便完之后在小屁股上涂一点，有助于呵护宝宝屁股上娇嫩的肌肤。</p>
-<p><a href="https://www.amazon.co.jp/gp/product/B00IM3FPXY/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">贝亲桃子水</a>也是一款值得推荐的产品。小星星刚出生时，全身上下到处都有蜕皮现象，非常干燥，妈妈就用桃子水擦拭她蜕皮的地方，效果非常明显，也可以在洗澡的时候在水中加入适量桃子水，使用起来非常方便。</p>
-<p>宝宝脸部的肌肤也应该需要特别的护理，可是我们并没有给小星星准备相应的护肤产品。小星星出生后没过多久脸上就开始发湿疹，虽然使用尤卓尔可以有效除湿疹，但是尤卓尔毕竟是激素药，多用不好。因此问题的关键在于如何有效地预防湿疹，市面上有许多针对性产品，我们用过<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;id=4439348180&amp;_u=6bqkaqs280d">优色林膏</a>，效果不甚理想，现在在用<a href="https://world.tmall.com/item/528655432129.htm?id=528655432129&amp;spm=a1z09.2.0.0.qxe1hf&amp;_u=qbqkaqsb579&amp;skuId=3147013523700">丝塔芙</a>，感觉还不错，至少用到现在没再发过严重的湿疹，就算不发湿疹，也可以当做一般性的保湿霜来使用。</p>
-<p>如果宝宝出生时头发比较长的话，洗发露就必不可少了，我们准备的是<a href="http://item.yhd.com/item/20642794?tp=2238.17545921.0.0.0.L^mmChE-11-2tfOP&amp;ti=EFJRw1">哈罗闪婴儿二合一沐浴洗发露</a>。</p>
-<h3 id="-d">维生素D</h3>
-<p>除维生素D之外，母乳可以为婴儿提供其他所需的所有维生素，换句话说，喝母乳的宝宝从出生后不久就应该补充维生素D。非常遗憾的是我们并没有提前准备维生素D，而是在小星星出生之后，才在<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;id=17597813525&amp;_u=6bqkaqs5186">淘宝</a>上买了一瓶 Ddrops。对于这类服用的物品，安全是第一位的，所以还是应该提前海淘或者代购。由于维生素D要补充一段时间，最近在<a href="https://www.amazon.cn/dp/B00MRAENIQ/ref=sr_1_4?ie=UTF8&amp;qid=1486368043&amp;sr=8-4&amp;keywords=ddrops">亚马逊</a>上通过海外购购买了两瓶 Ddrops。</p>
-<h3 id="-">棉棒和碘伏</h3>
-<p>宝宝刚出生时，肚脐护理是新手爸妈们必须面对的问题，有了棉棒和碘伏就可以进行肚脐护理了。妈妈早就准备好了<a href="http://item.yhd.com/item/67634?tracker_u=1097136067&amp;union_ref=5_2&amp;cp=1">贝亲波浪纹棉棒</a>，而碘伏是在小星星出生后我去药店买的。如果去药店问碘伏的话，药剂师会给你推荐各种各样的相关产品，有液体的，也有棉球的。我买了好几种，研究下来最后选了海氏海诺的碘伏医用消毒棉球，用的时候两个手指用力捏棉球挤出碘伏溶剂蘸湿棉棒，再用蘸了碘伏的棉棒对肚脐进行消毒。</p>
-<h2 id="for-mum">For Mum</h2>
-<h3 id="-">吸奶器、储奶袋和防溢乳垫</h3>
-<p>打算母乳喂养的的妈妈一定要准备一个吸奶器，不仅可以在胀奶的时候把奶吸出来，也可以代替宝宝时不时的吸一下，保持奶水的充足。我们提前在日亚上海淘了<a href="https://www.amazon.co.jp/gp/product/B00HV66ZR8/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">贝亲电动吸奶器</a>，非常好用。吸出来的奶倒进<a href="https://www.amazon.co.jp/gp/product/B0040VINXQ/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">储奶袋</a>然后放入冰箱冷冻，等妈妈不在家的时候可以给宝宝喝。我家的冰箱里已经存了好多奶了，但是到现在为止一袋都还没喝掉，因为小星星现在还不愿意喝奶瓶，等她愿意喝了，冰箱里存的奶就可以开始拿出来给她喝了。</p>
-<p>对于奶水多的妈妈，防溢乳垫也是必不可少的，我们买了<a href="https://www.amazon.co.jp/gp/product/B00HV66ZOG/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">贝亲防溢乳垫</a>和<a href="https://item.jd.com/245531.html">三洋防溢乳垫</a>。</p>
-<h3 id="-">产妇一次性内裤、卫生巾、卫生纸和产褥垫</h3>
-<p>我们在日亚上海淘了三洋产妇卫生巾<a href="https://www.amazon.co.jp/gp/product/B00BETMO00/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">S号</a>和<a href="https://www.amazon.co.jp/gp/product/B0017LJ2WS/ref=od_aui_detailpages00?ie=UTF8&amp;psc=1">M号</a>各一袋，在淘宝上买了两盒十月结晶<a href="https://detail.tmall.com/item.htm?id=530924932567&amp;spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqs24b0&amp;sku_properties=20509:29696">产妇一次性内裤</a>、一包十月结晶<a href="https://detail.tmall.com/item.htm?id=523737314056&amp;spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqs49ab">产妇卫生纸</a>和一组十月结晶<a href="https://detail.tmall.com/item.htm?id=23446348353&amp;spm=a1z09.2.0.0.g8w6uP&amp;_u=6bqkaqs464c">产褥垫</a>，在京东上买了十月结晶<a href="https://item.jd.com/1068289190.html">产褥期卫生巾</a>，感觉十月结晶这个牌子还不错呢！</p>
-<h3 id="-">胎心监护带和羊水检测试纸</h3>
-<p>胎心监护带到孕后期做产检时会经常用到，医生应该会要求你自己去准备好。平时产检的时候只要带一根就行了，但是不知道为什么生的时候却需要带两根，由于老婆不知道这个情况，生的时候也只带了一根，另外一根不得不问医院借。可能每个医院的情况不一样，还是提前问好医生比较好。老婆是在<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;id=45846984521&amp;_u=6bqkaqs229f">淘宝</a>上买的乐知胎心监护袋。</p>
-<p>破水也是临产的征兆，当流量比较小的时候，如果不能确定到底是羊水还是尿液的时候，就需要用到羊水检测试纸。虽然我们最后没有用到，但还是在<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.g8w6uP&amp;id=42874584315&amp;_u=6bqkaqs212e">淘宝</a>上买了一盒以防万一。</p>
-<h3 id="-">吸管杯和吸管</h3>
-<p>生产的时候需要补充水分，但是你基本上没有力气自己喝水，所以需要助产士喂，这样的话有一个吸管杯就非常方便。如果要喝红牛的话，有一根吸管也会方便很多。</p>
-<h2 id="-">待产包</h2>
-<p>待产包就是准备去医院生孩子时要带的东西。如果上述东西都准备好了的话，待产包需要的东西基本上都齐了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 再见2016，你好2017 ]]></title>
-    <link href="http://movier.me/blog/2016/bye-2016-hi-2017/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:51:16Z</updated>
-    <published>2016-12-31T22:40:35Z</published>
-    <id>http://movier.me/blog/2016/bye-2016-hi-2017/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>这一年，我成为了一名父亲。她是一个女孩，我们叫她“小星星”。</p>
-<h2 id="2016">2016</h2>
-<p>去年的创业项目在年初被我和合伙人宣判了死刑，于是我不得不开始找工作。3月份的时候在一家移动互联网创业型公司工作了3个星期，后来由于无法接受一周工作6天的安排，便提出了离职。</p>
-<p>期间得知了老婆怀孕的消息，离职后也就没有继续去找工作，而是留在家中照顾处于妊娠反应中的老婆。直到老婆熬过最艰难的孕初期，我才又开始出去找工作。</p>
-<p>8月份的时候进入了一家传统行业公司，老板想要打造一款 App 作为行业工具，需要组建一支技术团队，我作为 Team Leader 加入了他们。原以为之前的老板算是苛刻、吝啬的了，没想到新老板简直是一毛不拔，人品都成问题，竟然无辜克扣我的工资，还谎话连篇。我自然不会束手就擒，提出了劳动仲裁。</p>
-<p>尽管最后我输了，没有得到应得的工资，但是这对我来说无非就是损失了点钱，可是对老板来说，虽然表面上看上去他赢了，可是自从我走后，整个技术架构全部推倒重来，可能我当初的劳动成果现在对他来说一文不值，他还要付我钱，想到这儿，我心里也就平衡了。</p>
-<p>今年的基本情况就是这个样子，接下去我将分几个方面再好好回顾一下这即将逝去的2016年。</p>
-<h2 id="app">App</h2>
-<p>这一年，我重新开始骑车了。上次骑车应该是四年前的事儿了，我曾经那么热爱骑车，热爱他带给我的风，热爱他带给我的自由。可是自从弄丢了我心爱的自行车之后，我再也没骑过车。<a href="http://mobike.com">摩拜单车</a>的出现让骑车的成本变得微乎其微，只要我想，随时都可以去骑一圈，重拾以往的感觉。</p>
-<p>这一年，我正式开始用 <a href="https://photos.google.com">Google Photos</a> 记录生活。一张照片加上简单的文字说明，足以将点滴封存以供日后回忆。十年之后，回过头来翻看这些老照片，就着一旁的文字，往事历历在目。</p>
-<h2 id="-">购物</h2>
-<p>想象着自己在天空翱翔，俯瞰着这个世界，多么自由的一种状态。趁着三月份上了几天班获得的一点工资，果断购入了 DJI Phantom 3 Standard。原本以为无人机会放飞我，实际上是我束缚了它。当初购买的时候太理想主义了，忘记思考使用场景了，导致买回来过了三天热度之后，就一直放在家里积灰。与其这样，不如还它自由，后来在咸鱼上低价卖掉了。但是我相信，我以后还是会再买一台无人机的，到时候我会带着它，带着我的老婆、孩子一起去旅行。</p>
-<p>九月份的时候，我买了台 Kindle Paperwhite。自从有了 Kindle 之后，我终于养成了每天阅读的习惯，享受阅读带来的快乐。</p>
-<p>十一月份的时候，小星星刚出生没多久，为了给她拍好看的照片，我买了台 iPhone 7。</p>
-<h2 id="-">读书</h2>
-<p>有了 Kindle 之后我读了以下几本书：</p>
-<ul>
-<li><a href="https://www.amazon.cn/gp/product/B009PG5YQU/ref=oh_aui_d_detailpage_o09_?ie=UTF8&amp;psc=1">沉默的大多数</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B00GX5GGL8/ref=oh_aui_d_detailpage_o08_?ie=UTF8&amp;psc=1">情人</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B0156205K6/ref=oh_aui_d_detailpage_o07_?ie=UTF8&amp;psc=1">政治是每个人的副业</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B003JTHWKU/ref=oh_aui_d_detailpage_o06_?ie=UTF8&amp;psc=1">1984</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B0099MUGQI/ref=oh_aui_d_detailpage_o05_?ie=UTF8&amp;psc=1">本田宗一郎传奇</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B00J7GURHY/ref=oh_aui_d_detailpage_o04_?ie=UTF8&amp;psc=1">教父</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B00T95D35G/ref=oh_aui_d_detailpage_o03_?ie=UTF8&amp;psc=1">人类简史</a></li>
-<li><a href="https://www.amazon.cn/gp/product/B01EMMYEC6/ref=oh_aui_d_detailpage_o00_?ie=UTF8&amp;psc=1">巨人的陨落</a></li>
-</ul>
-<p>其中最让我印象深刻的就是《巨人的陨落》。原本我只是知道历史上有“第一次世界大战”这么一回事，但是对于具体的前因后果，我完全不清楚。自从读了这部长篇小说之后，我对“一战”有了清晰的认识。对于渐渐喜欢上历史的我来说，这种以小说作为题材讲述历史的手法非常具有吸引力。</p>
-<p>《人类简史》也是一部不可多得的好作品。如果你对于人类从何而来，又将从何而去感兴趣，那么你一定不能错过它。</p>
-<p>2016年的最后一天，我坐在玻璃房里，贪婪地沐浴着阳光，看着怀里熟睡的孩子，我感到心满意足。2016年就这么过去了，对于接下来的2017年，我想了很多。</p>
-<h2 id="2017">2017</h2>
-<p>根据最近的求职经历，我发现现在想找一份满意的工作越来越困难。一方面由于从业人员越来越多，竞争越来越激烈，另一方面由于目前国内整体经济疲软，整个行业前景惨淡，用人需求自然越来越少。面对如此严峻的环境，我考虑了两条出路：</p>
-<ol>
-<li>开启一段全新的旅程，虽然这会是我有生以来最艰难的一段时光，但是我认为是值得的。</li>
-<li>降低自己的期望，找一份过得去的工作，能够养家糊口即可。</li>
-</ol>
-<p>尽管在2016年我没能找到一份 iOS 开发的工作，但是在2017年我还是会往 iOS 这个方向找。因为我始终梦想着能成为一名独立开发者，目前看来只有 iOS 平台才能带给我这种可能性。</p>
-<p>大致的计划就是这个样子，下面落实一下具体的事项。</p>
-<h2 id="-">游戏</h2>
-<p>新的一年里，我将开始开发游戏。我会先从 2D 开始，更具体点来说，从 SpriteKit 开始，初步想要开发的有扫雷、平衡球、一款射击类游戏还有一款赛车类游戏，上手之后应该会尝试用 SceneKit 开发一些 3D 游戏。Metal, OpenGL ES, GLSL 希望都会有所涉猎，Unity 肯定是少不了的，不知道什么时候会开始接触，也许是第一次将 iOS 的游戏移植到 Android 上去的时候吧！</p>
-<h2 id="-">视频</h2>
-<p>新的一年里，我将开始制作视频。我觉得视频才是未来，假如你刚刚经历了一段旅行，拍了很多照片，很多年之后，可能那些照片依旧封存在你的硬盘里没有动过，但是如果你把这些照片制作成一段视频，回忆的成本就会小很多，而回忆又是一件美好的事。 可以制作的视频有之前的旅行和小星星的双满月，等她一周岁，两岁、三岁、四岁直到长大成人，每年都制作一段视频记录她的成长点滴。</p>
-<h2 id="-">网站</h2>
-<p>新的一年里，我将重新设计、开发个人网站。个人网站不就是写写博客么，有这么多的博客系统，动态的、静态的都有，为什么还要重复造轮子呢？没错，我用过 WordPress，用过 Ghost，现在在用 Hexo，在这些平台上，我始终没有多大产出，而我冥冥之中认定一套优秀的博客系统是能够增加你的产能的，况且我怕荒废掉自己的 Web 开发技术，毕竟我是从 Web 开发入门的，加上现在的 Web 也是风起云涌，许多优秀的框架和理念值得学习。</p>
-<p>还有一个多小时，历史即将跨入2017年。2017年的第一天，也是我们为小星星办满月酒的日子，让我们带着这份喜庆迎接新的一年吧！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 等待 ]]></title>
-    <link href="http://movier.me/blog/2016/waiting/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:52:56Z</updated>
-    <published>2016-10-19T17:03:35Z</published>
-    <id>http://movier.me/blog/2016/waiting/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>几天以来一直想写篇文章，写写最近发生的一些事、遇到的一些人，但是苦于想不出一个比较合适的标题，迟迟没有动笔。刚才灵机一动，想到了“等待”这个标题，于是马上动起笔来。</p>
-<hr>
-<p>人的一生有许多重要的时刻需要等待。对我来说，以往的任何等待都没有现在来得重要，因为现在我正等待着成为一名父亲。老婆怀孕38周了，在上周就已经足月了，这也就意味着，小家伙随时都有可能出生。在写{% post_link some-little-things-recently 近期两三事 %}那篇文章的时候，老婆怀孕才没多久，我说对于要当爸爸一事，我还没什么感觉，但是当我第一次感受到胎动的时候，我真的激动了，那是一种生命的律动，我感受到了生命的顽强，这条生命在未来将和我息息相关。</p>
-<p>除了孩子即将出生之外，我再一次“失业”了。一年之内连续两次“失业”，看来我的职业生涯不太顺利。在{% post_link some-little-things-recently 近期两三事 %}那篇文章中，我说过“珍惜生命，远离创业、外包公司”，这次找工作我马上违反了这条准则，选择了一家创业公司，事实证明我立下的这条准则是十分准确的，千万不要轻易打破。</p>
-<p>这次“失业”最主要的原因就是薪资问题，本来和老板谈好的薪资到头来竟然被无故克扣，这是我第一次碰到这样的事，这也是第一个让我感到恶心的人。我已经决定申请劳动仲裁，虽然没什么有力的证据，但是一定要努力维护自己的基本权利。</p>
-<p>对于这次“失业”，唯一的遗憾也许就是没有机会看着陕西南路两边的梧桐树叶慢慢变黄了。最近，我疯狂地迷恋上了梧桐树，喜欢上了历史，看来我真的老了。即使有一次差点死在梧桐树下，我也照样喜欢它。有一天，我和两个同事外出觅食，走在梧桐树下，突然一个树杈从树上叉下来，离我只有不到10公分的距离。如果被叉到，轻则进医院缝针，重则一命呜呼。还有一件特别搞笑的事，上班第二天，老板说公司不允许穿短裤，就这样，我傻乎乎地穿了一个月的长裤，不过傻人有傻福，长裤替我阻挡了很多蚊子的袭击，使我少留了不少血。除此之外，遇到的几位同事还是蛮有意思的。</p>
-<h3 id="-">小易</h3>
-<p>当我第一眼见小易的时候，我惊呆了，这不就是汉加么（汉加是我之前一家公司的同事，我们关系处得很好）。除了长相之外，言行举止也几乎和汉加一摸一样，我简直错乱了。我努力地想和他处好关系，但是不管我怎么努力，我们也只能是君子之交。</p>
-<h3 id="-">潇潇</h3>
-<p>潇潇是新来的UI设计师，作为唯一一名女生，她的到来让码农们兴奋不已。忘了在什么情况下我们在办公室谈起了选举制度，潇潇发表的观点让我震惊了，转念一想，也许这就是当今年轻一代的普遍想法，真是令人感到悲哀！对于国内的“选举”制度，她认为十分不错，如果真的让她选，她也不会选或者不知道该怎么选。这让我想起了一个词——奴性。</p>
-<h3 id="-">小龙</h3>
-<p>小龙是我招聘进公司的PHP开发工程师。在众多的应聘者中，他算是比较聪明的一个，况且他的薪资要求也比较低，自然而然地就成为了我们当中的一员。他虽然聪明，但是浮躁、沉不下心。对于当码农这件事，潇潇认为英语很重要，而小龙认为英语根本无关紧要。听到这个观点，我心里哼哼一笑，他注定成为不了一名优秀的程序员。</p>
-<p>这些人注定只是我生命中的匆匆过客。如果以后有万分之一的可能在路上相遇，同时还认得对方的话，停下脚步，寒暄几句，否则擦肩而过，形同陌路，也无可厚非。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 2016年法国欧洲杯观后感 ]]></title>
-    <link href="http://movier.me/blog/2016/after-watching-euro2016/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:03Z</updated>
-    <published>2016-07-13T14:52:04Z</published>
-    <id>http://movier.me/blog/2016/after-watching-euro2016/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>2016年法国欧洲杯在北京时间前天凌晨落下了帷幕，最终葡萄牙战胜了东道主法国夺得了冠军。对于葡萄牙最终夺冠，我是万万没想到的。小组赛三场平局的葡萄牙表现平平，由于本届欧洲杯扩容，葡萄牙以小组第三的成绩照样晋级淘汰赛。幸运的是他们在淘汰赛阶段被分到了强队较少的上半区，尽管如此，葡萄牙在淘汰赛前两轮还是没能在90分钟常规比赛时间内战胜对手，分别通过加时赛和点球大战才淘汰了对手。直到半决赛与威尔士一役，葡萄牙才迎来了第一场常规比赛时间内的胜利，那也是在威尔士的中场核心拉姆塞停赛的前提下，不然的话我估计葡萄牙要晋级又要靠点球了。与法国的决赛，葡萄牙又踢出了功利足球，最终在加时赛绝杀了对手，夺得了冠军。这场决赛我估计背后有赌球公司的暗箱操作，事实是怎样我不知道，总之，我并不欣赏这届欧洲冠军葡萄牙。论实力，葡萄牙还差得远，又没有自己的技战术，踢着毫无欣赏价值的功利足球，葡萄牙最终能夺冠靠得是非凡的运气或者是背后有高人相助。</p>
-<p>说完了葡萄牙，我想说说其他的。本届欧洲杯一共51场比赛，我看了近20场的直播，其中不乏一些令人感动的场面，令人印象深刻的球队，令人拍案叫绝的进球。我想这些才是构成这届欧洲杯的重要组成部分，这些才是足球真正的魅力，吸引着我和全世界数以亿计的球迷。</p>
-<p>爱尔兰队在八分之一决赛中输给了东道主法国队。比赛结束后，没有一位爱尔兰球迷离开球场，爱尔兰球员来到他们的球迷面前，爱尔兰球迷则唱起歌鼓励着球员。就这样，球员和球迷，你望着我，我望着你，在里昂的夜晚上演了一幕深厚的鱼水情。看到这一幕，我被深深地打动了，第一次为球员和球迷之间的感情落下泪水。</p>
-<p>不得不提的还有冰岛队，他们第一次进入欧洲杯决赛圈，就以黑马的姿态闯入了八强，创造了历史。要知道冰岛的全国人口只有三十几万，能够取得这样的成绩实属不易。冰岛球员在赛场上顽强表现，冰岛球迷则以他们独有的“维京战吼”鼓舞着他们的战士。当比赛结束，球员和球迷一起做着这一令人震撼的仪式时，场面令人肃然起敬。冰岛在本届欧洲杯中能够取得这样的成绩绝非偶然，他们已经为这一刻默默耕耘了十几年甚至几十年，我想用“全民足球”这四个字最能体现冰岛这些年在足球上的投入，他们的努力最终获得了回报并且将一直持续下去，相信冰岛会在2018年俄罗斯世界杯上再次刮起那股令人震感的蓝色旋风，在我心中，蓝色只属于冰岛，我爱冰岛蓝。</p>
-<p>每届大赛都会有许多新星闪现，同时也会有巨星陨落。首当其冲的就是瑞典队的伊布，当伊布在赛前宣布本届欧洲杯之后他将退出国家队时，我多么希望瑞典队永远不被淘汰，这届欧洲杯永远不会结束，可惜瑞典队在小组赛阶段就惨遭淘汰，小组赛最后一轮与比利时一役成了伊布在国家队的绝唱。我想以后再也看不到那个梳着小辫子，穿着黄色球衣的大个子在赛场上展现他那细腻的脚法了。除了伊布之外，对意大利队的门将布冯来说，这也将是他的最后一届欧洲杯。我非常欣赏今年的意大利队，顽强的防守加上犀利的反击使得意大利队不出意外的闯入八强，在与德国的四分之一决赛中，布冯几乎凭借一己之力将比赛拖入点球大战。虽然最终意大利还是输给了德国，止步八强，但是在我心中意大利队还是那支意大利队，无可取代。赛后，布冯强忍泪水与球迷挥手告别，我想那一刻，全世界的球迷都会为之心碎。</p>
-<p>再见，伊布，再见，布冯，再见，我的青春。记得06年世界杯结束后，我写了一篇文章《足球与人生》，至今已经过去了整整十年。十年前，我还是一个青涩的少年，而今眼看着马上就要成为父亲了，十年间，除了年龄，似乎没多大成长。前几天陪老婆去医院做了大排畸，第一次见到了孩子的模样，那一刻，我觉得我该长大了，该担负起作为一为父亲的责任了。为孩子准备的 App 也开发得差不多了，就等着最后上线了，孩子成长的点点滴滴，都会被记录下来，酿成一片片美好的回忆。除此之外，还有许多东西都没准备，该一点点准备起来了。现在首要任务就是找到一份工作，有一份稳定的收入，给孩子创造一个美好的生活。</p>
-<p>希望在2018年俄罗斯世界杯上还能见到布冯的身影，让离别来得更晚一些吧！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ Google I/O 2016 观后感 ]]></title>
-    <link href="http://movier.me/blog/2016/after-watching-google-io-2016/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:11Z</updated>
-    <published>2016-05-23T10:43:57Z</published>
-    <id>http://movier.me/blog/2016/after-watching-google-io-2016/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p><a href="https://events.google.com/io2016/">Google I/O 2016</a> 在上周刚刚落下帷幕。我在第一时间花了四天时间把所有的 125 场 Session 都过了一遍，有的全部看完了，有的看了一部分，还有一些大致了解了一下内容。接下去谈谈我的感想。</p>
-<h2 id="basic">Basic</h2>
-<p>其实，Keynote看不看真的无所谓，过一遍十几分钟的 <a href="https://www.youtube.com/watch?v=f7_4QoZwH54">highlight</a> 就够了。Allo 和 Duo 这两款通讯类 App 看上去还不错，具体要等正式发布了才知道。况且到时候找不找得到人和我一起体验都是个问题，就像 Telegram 一样，我都注册一年多了，都没一个正式的联系人，真是悲哀！Google Home 为我们描绘了一个美好的<a href="https://www.youtube.com/watch?v=5bYSX2C4aWc">未来生活</a>。The Google Assistant 就像我们的私人助理一般，能够为我们处理琐碎的日常事务。<a href="https://developer.android.com/preview/index.html">Android N</a> 早在年初的时候就已经放出了开发者预览版，因此在本届大会上显得没那么耀眼。反倒是 <a href="https://developer.android.com/wear/preview/index.html">Android Wear</a> 即将迎来有史以来最大的版本更新——2.0版，App 终于能够脱离手机独立运行在手表之上了。对我来说，如果手表能够完全取代手机，即能够拨听电话，收发短信，那才算得上真正的独立，到时候也许会考虑入手一款。Android 方面最吸引我的新特性莫过于 <a href="https://developer.android.com/topic/instant-apps/index.html">Android Instant Apps</a>，它能够让用户在没有安装 App 的情况下体验并使用这款 App，这一新特性无论对用户，还是对开发者来说都非常具有吸引力。<a href="https://firebase.google.com">Firebase</a> 在被 Google 收购之后似乎收到了极大的重视，虽然在 Keynote 中的篇幅并不是很大，但是有非常多的 Session 都与 Firebase 有关，可见 Google 对其寄予厚望。</p>
-<h2 id="vr">VR</h2>
-<p>本届大会的重头戏落在了 <a href="https://vr.google.com">VR</a> 身上，这也是最吸引我的部分。Google 在本届大会上发布了自家的虚拟现实平台 <a href="https://vr.google.com/daydream/">Daydream</a>，做法和当初的 Android 如出一辙，由 Google 主导，设备厂商按照 Google 的标准生产虚拟现实设备，包括手机、头戴和控制器，当然 Google 也会打造自己的虚拟现实设备就像 Nexus 系列一样。虽然虚拟现实这一概念已经火了好久了，但是各个厂商似乎都在闭门造车，现在有了 Google 的加入，将厂商、开发者、用户紧紧的联系在一起，虚拟现实的未来更值得期待。前两天特地淘了一个 <a href="https://vr.google.com/cardboard/index.html">Cardboard</a>，在写下现在这些文字的时候，我已经小小地体验了一番，总的来说还不错，毕竟是一个才几十块钱的玩意儿，有效果就很好了，非常推荐新手入门。</p>
-<h2 id="web">Web</h2>
-<p>Web 也是本届大会的重要组成部分。<a href="http://google.github.io/physical-web/">The Physical Web</a> 将现实世界和 Web 联系在一起，进而允许人们和周围的事物产生更多的互动。除此之外，<a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps</a> 在本届大会上被反复提及，虽然说到底还是移动端网站，但是凭借最新的技术可以将其打造成具有像原生应用一样的优秀体验。</p>
-<p>无论是 The Physical Web 还是 Progressive Web Apps，他们都离原生应用越来越近。随着越来越多的浏览器厂商支持最新的特性，原生应用的价值将进一步被重新思考。</p>
-<h2 id="atap">ATAP</h2>
-<p>在所有的 125 场 Session 中，我觉得最棒最值得一看的两场 Session 都出自 <a href="https://atap.google.com">Google ATAP</a> 之手：</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=yvgPrZNp4So">What&#39;s New with Project Tango</a></li>
-<li><a href="https://www.youtube.com/watch?v=8LO59eN9om4">Bridging the physical and digital. Imagine the possibilities. ATAP.</a></li>
-</ul>
-<p><a href="https://www.google.com/atap/project-tango/">Project Tango</a> 让机器拥有像人一样的空间感知能力，<a href="https://atap.google.com/soli/">Project Soli</a> 能够通过雷达感知你的手势，<a href="https://atap.google.com/jacquard/">Project Jacquard</a> 让你的衣服变成可触摸设备。这一切，让我对 Google ATAP 有了全新的认识，我相信这是 Google 的基因，是 Google 的灵魂。</p>
-<h2 id="next">Next</h2>
-<p>总的来说，Google 在本届大会上给大家交出了一份满意的答卷，无论是新 API、新概念还是新平台，都体现了 Google 对我们这些开发者的重视。Google 的好戏上演完了，接下去就看 Apple 的了。</p>
-]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[ Develop a Hexo Theme with Gulp and Browsersync ]]></title>
-    <link href="http://movier.me/blog/2016/develop-a-hexo-theme-with-gulp-and-browsersync/"></link>
+    <link href="https://olimovier.com/blog/2016/develop-a-hexo-theme-with-gulp-and-browsersync/"></link>
     <author>
-      <name>Oliver Young</name>
+      <name>Oli Movie R</name>
     </author>
-    <updated>2017-11-02T06:53:18Z</updated>
+    <updated>2022-09-15T01:37:54Z</updated>
     <published>2016-04-14T20:48:09Z</published>
-    <id>http://movier.me/blog/2016/develop-a-hexo-theme-with-gulp-and-browsersync/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="最终效果图"></p>
+    <id>https://olimovier.com/blog/2016/develop-a-hexo-theme-with-gulp-and-browsersync/</id>
+    <content type="html" xml:base="https://olimovier.com/" xml:lang="en"><![CDATA[<p><img src="/images/develop-a-hexo-theme-with-gulp-and-browsersync.png" alt="Final Result"></p>
 <p><a href="https://hexo.io">Hexo</a> is a fast, simple&amp;powerful blog framework. I have use Hexo for my personal blog for some time and recently I decide to {% post_link some-little-things-recently develop a theme for Hexo %}.</p>
 <p><a href="https://www.browsersync.io">Browsersync</a> is a awesome testing tool for front-end developer. It will synchronize all your behavior on different browsers or devices and save us a lot of time. There is no doubt that I will use Browsersync for all front-end develop work. This time no except.</p>
 <p>The basic of developing a Hexo theme is to create some ejs templates and stylus files. Hexo will generate the content dynamically convert ejs templates to html and stylus to css. You need to modify stylus files and open browser to see the style. The question is that Browsersync need static html and css files. Yes, Hexo has a command called <code>hexo generate</code> which could generate static html and css files to <code>public</code> directory. We don&#39;t want to call <code>hexo generate</code> every time we modify the stylus files because the process will waste a lot of time. At the same time we don&#39;t want to modify the static css file in <code>public</code> directory directly because we will lose the modification afte <code>hexo generate</code> is called again. What we really want is after we modify stylus files Browsersync just works.</p>
@@ -1538,1088 +1299,6 @@ gulp.task(&#39;default&#39;, [&#39;serve&#39;]);
 </code></pre>
 <p>Last preform <code>gulp</code> directly under your theme&#39;s directory. The magic thus happened. Browsersync will open a new tab in the default browser for you. Once you modify the stylus file and save the change Browsersync will reload automatically on all devices connected to the url. By the way don&#39;t forget to perform <code>hexo generate</code> to generate static files in <code>public</code> directory before perform <code>gulp</code>.</p>
 <p>Happy coding!</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 近期两三事 ]]></title>
-    <link href="http://movier.me/blog/2016/some-little-things-recently/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:51:04Z</updated>
-    <published>2016-03-28T20:38:07Z</published>
-    <id>http://movier.me/blog/2016/some-little-things-recently/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>最近一下子发生了太多事，值得我记录一下。</p>
-<h2 id="-">求职</h2>
-<p>自从{% post_link my-first-venture-failed 创业失败 %}之后，便开始找工作。目标职位也非常明确，那就是iOS开发工程师。投了几天简历之后，便收到了第一个面试邀请，我也欣欣然地去参加了面试。这是一个创业公司，和创始人聊了一会儿，他表示非常欣赏我自学技术、自主创业的个人发展经历。之后和他们的技术主管聊了会儿技术的事儿，当时我以为他应该精通iOS，然而事实上他对iOS一窍不通，是PHP开发出生的技术leader。和他们两位聊完之后，面试就算结束了，结果自然是回去等通知。回去等通知一般意味着失败，我对此也没放在心上。没想到的是到家没多久便接到了电话通知“被录取了”，对于这一结果，我意外之余有些沾沾自喜，因此我毅然决定加入这家创业公司。</p>
-<!--more-->
-<h3 id="-">创业公司</h3>
-<p>第二天便到公司报到，正式入职。大致了解了一下公司的产品之后，创始人便告知公司产品线目前紧缺一款Android的产品，希望我能开发出来。我投得可是iOS开发工程师的职位，叫我做Android开发是几个意思，当时就有点不爽，但鉴于自己对这份工作期望得太久了（已经好久没有收入了），当然是十分珍惜，于是便答应了下来。就这样开始了我Android开发的工作，过了两天之后便是周末了。本以为可以高高兴兴地过个周末，没想到老板说周六要加班，而且是长期的，也就是说我们一周工作六天，我也没当回事儿，不就加班么。没想到老婆得知这一消息之后便炸了锅，完全无法接受，要求我立即离职，我却不想轻易放弃，就这样我们吵了一架，老婆哭了好久好久，就这样我们闹了几天变扭。现在回想起来实在是不应该，不应该不听老婆的话，更不应该在那时候惹老婆生气，害老婆哭。</p>
-<p>这样过了几天之后，我自己也有点厌烦了，厌烦的不仅是做Android开发，更是一周工作六天，最重要的是我无法不顾及老婆的感受。于是我向老板提出离职的要求，并阐述了上述理由，老板要求我将目前开发的项目做完再走，我同意了，因为不想让自己之前的工作付诸东流，也不想辜负老板对我的期望，最重要的还是能有点收入。</p>
-<p>接下去的日子，我每天从早上上班忙到晚上下班，一刻也不停，还要一直被追问啥时候完成，被质疑开发速度太慢。我心里十分不爽，但是考虑到项目结束自己就离开了，也就无所谓了。三周之后，项目完成了，我也如愿以偿地离开了那里，头也不回。</p>
-<p>这一段时间的工作经历，让我感受到的是公司对我无穷无尽地压榨，他们并不把我当成员工对待，对他们而言，我只是一个写代码的工具，工具不需要休息，可以随时更换，只要有钱可以买到更好的工具。</p>
-<h3 id="-">外包公司</h3>
-<p>除了那几千块钱，这三周似乎一无所获，但是几天后我在那家公司的一个同事（他是那家公司的iOS开发，但是其他同事觉得他难以沟通，况且他的薪资很高，老板觉得他对不起他的薪资，我来之前，就内定了送他离开。也许是我们做类似工作的原因，我能感到他的不容易，因此那段时间我们走得比较近，他告诉我自己有其他兼职和外包项目，我对此表现出了强烈的兴趣，毕竟在家办公一直是我的梦想，就拜托他有机会找我，我们在同一天离开了那家公司）找我说有个外包公司的项目，可以在家工作，问我有没有兴趣，有的话报个月薪给他，他去和外包公司老板谈，我收到这个消息，简直是高兴坏了，就报给他一个月薪然后憧憬着在家办公的美好岁月。当时以为认识他是我在创业公司获得的最大收获，因为他能帮助我实现在家办公的愿望。</p>
-<p>他把我的情况告诉了外包公司的老板，我们相约见面聊一聊。我在约定的日子到了外包公司，那是我见过的办公环境最差的公司，五六个人窝在一个十几平米的屋子里，不过对我来说无所谓，因为我在家办公。老板是一个非常健谈的东北人，经历跟我有些类似，做过技术、创过业，因此当时有种相见恨晚的错觉。我们聊得很不错，基本确定了合作意向。</p>
-<p>接下去说说项目的事，这个项目由我那个同事带头，之前他跟我说的兼职、外包之类的应该很多都来自这家外包公司。他安排了一个开发进度表，要求在四十五天内开发完成，我当时看了觉得他安排得挺合理的，就按照进度表来开发。愉快地度过了一个周末之后，我被告知四十五天的开发周期包含周末，也就意味着我必须连续工作四十五天，没有一天休息时间，当时又感到十分不爽，只怪自己和老板谈得时候没谈好，理所当然地以为四十五天的开发周期不包含周末，但是毕竟每天的工作时间可以由自己来把控，先做完这个项目再说吧！就这样开发了几天后，遇到周末，正好家里有事儿，那一天的开发任务没有完成加上之前拖欠的，晚上同事的夺命追魂call来了。他非常严肃地质疑我的开发进度，表现得对我完全不信任，并要求我如果要继续合作，就要在第二天把之前所有拖欠的任务全部完成，由于我第二天也有事儿根本不可能达到他的要求，再加上他的态度让我十分不爽，我当即向他表示退出，他也没有挽留的意思，就这样友尽。</p>
-<p>我想在家办公的初衷就是可以自由支配时间，如果继续为外包公司干活，根本就没有闲暇时间，何来自由一说。况且拿得是上班都不如的工资（当时为了在家办公就报了个低廉的月薪），干得却是外包的活儿。说了这么多，归根到底我想表达的就是:</p>
-<blockquote>
-<p>珍惜生命、远离创业、外包公司</p>
-</blockquote>
-<p>如果非要在创业公司和外包公司里选择一个的话，还是选择创业公司吧！毕竟万一创业成功了，之前所付出的一切努力都会是值得的。</p>
-<h2 id="-">转折</h2>
-<p>我知道自己说了太多的废话，但是这些废话不吐不快，吐了就好了。近期发生的最大一件事就是<a href="https://www.instagram.com/p/BCXvhcJFeD1/">老婆怀孕了，我要当爸爸了</a>。本来计划是去年有，今年生，可是突如其来的两场病破坏了我们的计划。到了今年老婆身体调养好之后，我们便开始我们的造人计划，没想到意外地顺利，没过多久老婆就怀上了。现在回想起来，我和老婆因为在创业公司周六加班闹变扭，还惹她哭的时候，已经有了，所以说十分不应该。</p>
-<p>第一个月是那么平静，没有任何怀孕反应。没想到第二个月，孕吐现象来势汹汹，早起刷个牙就会想吐，吃不下饭，闻不了油烟味，一饿就想吐，而且非常容易饿。由于吃不下饭及大多数菜，所以这段时间困扰我们最大的问题就是吃什么。这时候，家人就是我们最强大的后盾，老婆一有什么想吃的东西，我就告诉爸爸妈妈去准备。时间久了，我们渐渐摸索出了一些规律可以减轻症状，那就是少吃多餐，在感觉饿之前就吃点东西，随身携带小零食、小饼干，随时准备补充能量。在大家的共同努力下，这段时间也在一天天过去，现在我只希望孕吐现象再过一个月就正常地消失，老婆就能多补充一些营养，顺利地生下小家伙。</p>
-<p>今年我就要当爸爸了，要问我有什么感觉，还真说不上来，毕竟现在还太小，也许等到七八个月能感觉到胎动或者等小家伙真正出生之后，当爸爸的感觉会更强烈，到时候如果有些感慨，我会分享出来。</p>
-<h2 id="-">打算</h2>
-<p>最近这段时间老婆是非常需要我的，因此我没有求职的打算。至于收入的话，我会尝试成为一个freelancer，找到一条适合自己的路。目前这段时间，我还是希望能够通过项目继续提升自己，这次不为别人，只为自己。</p>
-<h3 id="-hexo-">开发一个Hexo的主题</h3>
-<p>使用<a href="https://hexo.io">Hexo</a>搭建自己的博客已经有一段时间了，一直使用着默认主题<a href="https://github.com/hexojs/hexo-theme-landscape">landscape</a>，虽说算不上难看，但总觉得不符合自己的审美。除此之外，也尝试了非常流行的<a href="https://github.com/iissnan/hexo-theme-next">NexT</a>，还是不太喜欢。博客系统我用过好几个，从<a href="https://wordpress.org">WordPress</a>到<a href="https://ghost.org">Ghost</a>然后是现在的Hexo，我最喜欢的主题还是<a href="https://wordpress.org/themes/twentytwelve/">Twenty Twelve</a>，再加上用<a href="http://www.sketchapp.com">Sketch</a>已经有一段时间了，希望打造一款设计驱动的产品。</p>
-<h3 id="-moment">继续开发Moment</h3>
-<p>对于要当爸爸这件事，虽说没有什么特别的感觉，准备还是要做的，其中最重要的就是记录下小家伙成长的点点滴滴，将不同设备上的照片、视频保存在一个地方，以便随时查看、分享，这就是Moment的初衷。其实这款产品我已经构思了很久，在去年创业前也进行过一段时间的开发，后来开始创业就停下来了，现在想如果创业做的是这款产品该有多好啊，就算没有用户，至少我自己需要用。原来服务端采用的是<a href="https://www.firebase.com">Firebase</a>加自己构建的图片服务器，这次打算全部自己开发，采用Nodejs+MongoDB的架构，一定要在小家伙出生前正式上线。</p>
-<p>以上就是最近发生的一些事，感冒了好难受，快点好起来。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 给嘻嘻圈用户的一封信 ]]></title>
-    <link href="http://movier.me/blog/2016/a-letter-for-xixiquan-user/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:24Z</updated>
-    <published>2016-03-21T20:55:22Z</published>
-    <id>http://movier.me/blog/2016/a-letter-for-xixiquan-user/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>嘻嘻圈的用户们，你们好。</p>
-<p>经过半年左右的运营，我们发现《嘻嘻圈》还是无法如预期的一样为用户提供价值，一款无法创造价值的产品没有生存下去的理由，因此我们决定停止嘻嘻圈所有相关业务。从现在起我们不再接受新用户的注册，而整个线上服务将于2016年4月1日停止，届时《嘻嘻圈》App将无法正常运行，请用户们自行删除。</p>
-<!--more-->
-<p>最初我们将嘻嘻圈定位于连接婚庆行业从业人员与普通用户的桥梁，将服务直接销售给终端用户，这样不仅可以为婚庆行业从业人员开拓业务，同时可以为终端用户摆脱婚庆公司这样一个“大中介”，享受价廉物美的服务。然而，理想是丰满的，现实是骨感的。的确有不少婚庆行业从业人员来注册《嘻嘻圈》，希望能在《嘻嘻圈》这个平台上开拓自己的业务，但是，《嘻嘻圈》迟迟未能获得终端用户的关注。这样一边倒的局面无疑让《嘻嘻圈》陷入窘境之中，我们做了很多努力，希望改变这种局面，然而事与愿违，我们没有更多的精力继续花费在这样一个没有价值的产品之中。因此我们决定放弃《嘻嘻圈》，由此给您带来的不便，我们深表歉意。</p>
-<p>最终，我们还是要感谢所有《嘻嘻圈》的用户们，感谢你们给予《嘻嘻圈》、给予我们这样一个机会，谢谢！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 第一次创业失败了 ]]></title>
-    <link href="http://movier.me/blog/2016/my-first-venture-failed/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:50:53Z</updated>
-    <published>2016-02-07T14:41:54Z</published>
-    <id>http://movier.me/blog/2016/my-first-venture-failed/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>前天下午，和合伙人见了次面，顺便探望了他刚出生的儿子，祝福他们一家。合伙人告诉我他决定放弃目前的项目，其实我早就从心底放弃这个项目了，这标志着我的第一次创业正式以失败告终。这次创业的起因我已经在《再见2015，你好2016》一文中提过，至于创业项目则是在决定创业之后才定的。现在看来，这也许就是本次创业失败最大的原因。</p>
-<!--more-->
-<h3 id="-">经历</h3>
-<p>决定创业之后，我们开始思考创业项目。一开始决定做一款洗车类App，还召集了小伙伴开会洗脑，结果没有一个小伙伴被我们说动，最后还是就我们两个自己开始创业。考虑到竞争优势等问题，这个洗车类App最后还是流产了。事到如今想想这个问题不应该成为立项的依据，因为无论做什么，我们都没有任何竞争优势。之后有一次，我提到要不做一款婚庆类App，这是缘于我自身非常不爽的婚庆经历，于是我想要是能直接把四大金刚的服务卖给新人，这样就脱离的婚庆公司的束缚，同时达到直销的效果，岂不是一举两得。这个想法得到了合伙人的肯定，于是我们开始立项，产品设计，UI设计，功能开发。一切都很顺利地进行着，整套功能实现后，我们便开始向四大金刚推广，用户数量也稳步增长。但是我们App上的订单几乎没有，因此我们打算去上海婚博会推广我们的产品。我们打算采用最传统的发传单方式进行宣传，结果却是传单发了没几张就灰溜溜地回来了。</p>
-<p>这时候，我们便发现将四大金刚直接推到新人面前面前似乎不可行，而且就算四大金刚有了，一场婚庆所需的其它人员物品如何解决，这又是一个很大的问题。因此，我们开始重新思考产品，这条路既然走不通，我们想不如我们把四大金刚推到婚庆公司吧！我们又想，还是以婚庆公司为主，将目前的App打造成婚庆公司的工具吧！我们还想，既然有相似产品在做电商，不如我们也做婚庆类电商吧！最后，我们想既然做电商，为什么不做其他类电商，毕竟婚庆行业我们一点儿也不熟悉。做其他类电商不就是从头来过么，就这样我们放弃了这个项目，我的第一个创业经历以失败告终。</p>
-<h3 id="-">反思</h3>
-<p>创业，创造的应该是一种价值，这种价值应该深深地刻在创始人的脑中。创业的过程应该围绕着这种价值展开。</p>
-<p>什么是价值？我目前能想到的通俗易懂的解释就是对人有用的东西。为避免创造出对人没用的东西，我觉得最起码创始人必须觉得自己创造的产品对自己有用，也就是说<strong>创始人应该是创业产品的忠实用户。</strong>这应该是创业的出发点，这同时会带来另外的好处，既然创始人对自己的产品抱有极大的热情，他自然会十分关心这个产品，不会产生消极怠工的情况。拿这次的创业项目嘻嘻圈来说，它本身是针对婚庆行业从业人员的，跟我自己没办毛钱关系，也就是说对我自己没丝毫价值。因此，我经常出现消极怠工的情况，我干嘛为了一个对我自己没用的东西劳心劳力，同时又没有任何好处，关键是可能带来的好处遥遥无期。这种情况下是最容易产生消极情绪的。相反，如果自己是忠实用户，就算没有收入，我也会想尽办法优化产品，因为产品的质量与自己息息相关。</p>
-<p>如何衡量价值？参考创造价值部分的数据。现在App的功能大多比较丰富，社交，IM，电商功能聚集在一款App上的情况十分常见。什么才是你的核心价值？拿嘻嘻圈来说，它的核心价值应该体现在订单数量上，尽管用户数在稳步增长，但是订单量维持不变的话，这个App还是没有创造任何价值。金刚们可能听说了在嘻嘻圈上能接单，因此他们带着美好的憧憬来注册，但注册之后嘻嘻圈并没有给他们带来任何一笔订单，你说嘻嘻圈有用吗？当然，创业者在资源有限的情况下，一般都会先开发提供核心价值的功能。<strong>创始人得密切关注提供价值功能的数据。</strong>用户数量的增长并不代表你的App 有价值，提供核心价值功能数据的增长才表示他人对你的认同。</p>
-<p>应该怎么做？如果再给我一次机会的话，我肯定不会如此盲目地创业。盲目体现在创什么业都不知道，创造什么价值更不清楚。理想中应该是这样，一切都缘于一个个人项目，你为这个项目带给你的价值自豪，你更乐于不断的完善这个项目，使之趋向于你心目中的完美。你感觉差不多了，是时候向人们介绍你的项目以及他所带来的价值了，你默默地通过自己的社交网络推广着自己的项目。渐渐的，一传十，十传百，你的项目得到越来越多的关注，甚至有点儿轰动了。这时候，开始创业吧！</p>
-<p>理想是美好的，现实是残酷的。这时的我躲在被窝里憧憬着理想，面对着现实，无比无奈。今天是年三十，准确地说现在已经是年初一了，可是爆竹声，鞭炮声寥寥无几，果然越来越没年味儿了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 使用Blocks封装Web Service API ]]></title>
-    <link href="http://movier.me/blog/2016/web-service-api-sdk-with-blocks/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:30Z</updated>
-    <published>2016-02-03T16:39:50Z</published>
-    <id>http://movier.me/blog/2016/web-service-api-sdk-with-blocks/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>《嘻嘻圈》作为一款互联网应用，涉及到许多网络操作。在开发初期，为了追求进度，简单粗暴的在需要的时候发起连接请求。这样一来，造成了很多重复代码。这个问题在我开始写相关代码的时候就意识到了。我之所以迟迟没有优化是因为网络操作都是异步的，需要等待处理结果，然后根据结果写相关代码。重复或者说需要优化的代码在外部，自定义代码在回调结果里，使用一般的代码优化办法不可行。当时我就在想我的自定义代码如果可以作为一个函数的参数就好了，这样就可以成功地优化代码了。那时候我还不知道怎么办，直到最近几天读到objective-c中block的相关内容时，我才恍然大悟，block不就是我期盼的东西吗!</p>
-<!--more-->
-<p>举个例子，我可能需要像下面这样使用<code>NSURLSession</code>发起多个Get请求，我之前的做法是在每个需要发起Get请求的地方都复制一份以下的代码，只不过将url和completionHandler的实现替换成实际的需求。</p>
-<pre><code class="lang-objc">NSURL *URL = [NSURL URLWithString:@&quot;http://movier.me&quot;]; //重复代码，只不过url不同
-NSURLRequest *request = [NSURLRequest requestWithURL:URL]; // 重复代码
-NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { // 重复代码
-    /* 以下这些代码可能会不同
-    if (error) {
-        return;
-    }
-    NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [self.webView loadHTMLString:html baseURL:URL];
-     */
-}];
-[task resume]; // 重复代码
-</code></pre>
-<p>这样做显然会造成许多重复的代码，如果能把completionHandler中的代码片段当成一个参数传人我们提炼的方法中的话，就能成功地优化代码了。而<code>Blocks</code>正是实现这个功能的完美解决方案。</p>
-<p><strong>What&#39;s Blocks?</strong></p>
-<blockquote>
-<p>Blocks are a language-level feature added to C, Objective-C and C++, which allow you to create distinct segments of code that can be passed around to methods or functions as if they were values.</p>
-</blockquote>
-<blockquote>
-<p>Blocks是加入到C、Objective-C和C++语言层面的特点，它允许你创建不同的代码片段，而这些代码片段可以作为参数传递给方法或者函数就好像他们是数值一样。</p>
-</blockquote>
-<p><strong>使用Blocks解决上述问题</strong></p>
-<p>首先，定义方法：</p>
-<pre><code class="lang-objc">- (void)methodNameUrl:(NSString *)url callback:(void (^)(NSData *, NSError *))callback;
-</code></pre>
-<p>其次，实现该方法：</p>
-<pre><code class="lang-objc">- (void)methodNameUrl:(NSString *)url callback:(void (^)(NSData *, NSError *))callback {
-  NSURL *URL = [NSURL URLWithString:url];
-  NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-  NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-    callback(data, error);
-  }];
-  [task resume];
-}
-</code></pre>
-<p>最后，只要在需要的地方调用该方法并传入相应参数即可：</p>
-<pre><code class="lang-objc">[id methodNameUrl:@&quot;http://movier.me&quot; callback:^(NSData *data, NSError *error) {
-  // Do whatever you want to do
-  if (error) {
-      return;
-  }
-  NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-  [self.webView loadHTMLString:html baseURL:URL];
-}];
-</code></pre>
-<p>这样一来，我们就成功地使用Blocks优化了代码。其实，除了Objective-C之外，其他语言也有类似特性，譬如Swift的Closures，Java 8中的Lambdas等。</p>
-<p><strong>接下去，我们尝试使用Swift的Closures实现上述需求</strong></p>
-<p>首先，还是定义方法：</p>
-<pre><code class="lang-swift">func methodNameUrl(url: String, completionClosure: (data: NSData?, error: NSError?) -&gt; ()) {
-    let url = NSURL(string: url)
-    let request = NSURLRequest(URL: url!)
-    let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-      completionClosure(data: data, error: error)
-    })
-    task.resume()
-}
-</code></pre>
-<p>然后，调用该方法并传入相应参数即可：</p>
-<pre><code>methodNameUrl(&quot;http://httpbin.org/get&quot;) { (data, error) -&gt; () in
-    // Do something with data or error
-}
-</code></pre><p>至此，我们分别使用Objective-C的Blocks和Swift的Closures封装了Web Service API。</p>
-<p><strong>参考资料</strong></p>
-<ul>
-<li><a href="https://www.gitbook.com/book/zonble/kkbox-ios-dev/details">KKBOX iOS/Mac OS X 基本開發教材</a>中关于Blocks的章节</li>
-<li>感谢<a href="http://httpbin.org">httpbin</a>提供的免费调试服务</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 再见2015，你好2016 ]]></title>
-    <link href="http://movier.me/blog/2015/bye-2015-hi-2016/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:51:29Z</updated>
-    <published>2015-12-30T16:04:48Z</published>
-    <id>http://movier.me/blog/2015/bye-2015-hi-2016/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>2015年，这是我进入技术行业的第四年。这一年对来说，可以简单地划分为上半年和下半年。上半年在去年年底入职的公司做Android开发，下半年离职和同学一起创业。</p>
-<p><strong>关于工作</strong></p>
-<p>一直以来，在原来公司中呆得就不是特别开心。项目的历史包袱沉重，代码耦合非常严重，搞得我整天在一堆丑得要死的代码中跳来跳去，再好的心情也被糟蹋得不行了。一晃就到六月份了，这时候，我同学找到我说他有一个idea，准备离职创业，问我有没有兴趣加入。这敢情好啊！创业一直以来都是心里想做而没做的事情，现在正好机会来了，举双手赞成。我们找了其他小伙伴，想拉他们一起来创业，结果没有一个小伙伴愿意。没关系，两个人，一个技术，一个市场，够了。就这样开启了我们的创业之路，一直持续到现在。</p>
-<p><strong>关于旅行</strong></p>
-<p>利用离职和创业之间的间隙带着老婆去了一趟土耳其，当初土耳其会走入我们的视线是因为《花样姐姐》的热播。事实证明，土耳其的确是一个非常值得一去的国家。我们在伊斯坦布尔领略博斯普鲁斯的胸怀，在安塔利亚欣赏地中海蓝，在费特西耶体验滑翔伞，在阿拉恰特感受爱情海的魅力...短短十五天的旅行根本不足以游遍土耳其，还有很多地方没有去，还有很多景色没有看。和老婆约定好等老了以后再去次土耳其，去卡帕多细亚坐热气球，去棉花堡泡温泉，去弥补这次旅行的遗憾。</p>
-<p>10月份的时候全家十口人一起去三亚度了一个假，那是一个轻松惬意的假期，每天游游泳，玩玩水，以致于我在三亚的最后一晚发烧了，但这并不妨碍三亚成为国内比较好的度假选择。</p>
-<p><strong>2016我的目标</strong></p>
-<ul>
-<li>学习Swift</li>
-<li>学习Reactive programming</li>
-<li>成为一名iOS程序员</li>
-<li>准备迎接新生命的诞生</li>
-<li>养成每天读书的好习惯</li>
-<li>坚持写博客</li>
-<li>研习GitHub优秀项目的源码</li>
-</ul>
-<p>此刻，我静静地、满怀期待地等待着、憧憬着——2016年的第一缕阳光洒满我们每个人的心房，给我们以温暖和希望。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 2015年我读过的那些书 ]]></title>
-    <link href="http://movier.me/blog/2015/the-book-i-read-in-2015/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:36Z</updated>
-    <published>2015-12-11T20:30:12Z</published>
-    <id>http://movier.me/blog/2015/the-book-i-read-in-2015/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>就在昨天，<a href="http://blog.zhowkev.in/2015/12/10/2015-nian-wo-du-guo-de-hao-shu/">Kevin</a>和<a href="https://luolei.org/what-i-read-in-2015/">罗磊</a>不约而同地写了一篇读书总结的文章，勾起了我写一篇类似文章的欲望。</p>
-<p>先晒一下我的书单：</p>
-<ol>
-<li><a href="http://book.douban.com/subject/25861795/">重来2 : 更为简单高效的远程工作方式</a></li>
-<li><a href="http://book.douban.com/subject/26280672/">只要在路上，全世界都会帮你</a></li>
-<li><a href="http://book.douban.com/subject/5320866/">重来 : 更为简单有效的商业思维</a></li>
-<li><a href="http://book.douban.com/subject/25930025/">只是为了好玩 : Linux之父林纳斯自传</a></li>
-<li><a href="http://book.douban.com/subject/2130054/">我是沃兹 : 一段硅谷和苹果的悲情罗曼史</a></li>
-<li><a href="http://book.douban.com/subject/11614288/">我们为什么旅行</a></li>
-<li><a href="http://book.douban.com/subject/25942191/">第一行代码 : Android</a></li>
-<li><a href="http://book.douban.com/subject/26314527/">若为自由故 : 自由软件之父理查德·斯托曼传</a></li>
-<li><a href="http://book.douban.com/subject/26384542/">坦桑尼亚，那片蓝得要碎掉的天</a></li>
-</ol>
-<p>这些书大多是在年初的三、四月份读的，其他时间并没有怎么好好读过书。这其实不太科学，科学的读法应该是保持一定的频率不断地读书。这也是我明年读书的目标，读书应该成为一种习惯，毕竟这是一件非常享受的事情。从我读的这些书的内容来看，三本旅行类书籍、三本自传类书籍、两本商业类书籍、一本技术书籍，涉猎的范围还是有些窄，希望在新的一年里能够多读一些其他领域的书籍。</p>
-<p>今年一共买了三次书，年初的时候在当当上<a href="https://www.instagram.com/p/0e_5NKleFX/">买了一次书</a>，年末用爸爸的IC卡去上海书城<a href="https://www.instagram.com/p/977-eGFeE0/">买了一次书</a>，看完《侣行》冲动地在京东上<a href="https://www.instagram.com/p/_J0ilQleKM/">买了一次书</a>。还有很多书没读过，只能等到明年了。</p>
-<p>总的来说，我是一个喜欢读书的人——从高中开始，就买一些书来读，那时候读一些散文集、诗集，到了大学，疯狂地迷恋上了哲学，读了西方哲学史等一系列哲学著作，还有一些心理鸡汤类的书籍，这些书对我的三观产生了深远的影响，工作之后，书读得少了，直到走上了技术道路，接触了一些技术类书籍，这才又开始读起书来。这一次，希望读到永远～</p>
-<p>阅读是人生的一大享受，开始读书吧！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 获取iOS设备具体型号 ]]></title>
-    <link href="http://movier.me/blog/2015/get-ios-device-model/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:50:32Z</updated>
-    <published>2015-11-11T19:05:39Z</published>
-    <id>http://movier.me/blog/2015/get-ios-device-model/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>如果我想知道用户使用的具体是哪一款iOS设备，应该怎么做呢？由于<code>UIDevice</code>类中并未提供相关方法直接获取设备具体型号，因此需要我们自己写方法。</p>
-<p>我们打算使用Objective-C中的<a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/Category.html">Category</a>语言特性为UIDevice添加一个新的方法，用于获取设备的具体型号。</p>
-<p>使用Category时像创建一个普通类一样新建.h和.m文件，类的名字使用“ClassName+CategoryName”的形式。我们这里就用<code>UIDevice+DetailModel</code>作为类名。</p>
-<p>在<code>UIDevice+DetailModel.h</code>文件中：</p>
-<pre><code class="lang-objc">#import &lt;Foundation/Foundation.h&gt;
-#import &lt;UIKit/UIKit.h&gt;
-
-@interface UIDevice (DetailModel)
-
-- (NSString *)detailModel;
-
-@end
-</code></pre>
-<p>在<code>UIDevice+DetailModel.m</code>文件中：</p>
-<pre><code class="lang-objc">#import &quot;UIDevice+DetailModel.h&quot;
-#include &lt;sys/sysctl.h&gt;
-
-@implementation UIDevice (DetailModel)
-
-- (NSString *)detailModel {
-
-    size_t size;
-
-    // Set &#39;oldp&#39; parameter to NULL to get the size of the data
-    // returned so we can allocate appropriate amount of space
-    sysctlbyname(&quot;hw.machine&quot;, NULL, &amp;size, NULL, 0);
-
-    // Allocate the space to store name
-    char *name = malloc(size);
-
-    // Get the platform name
-    sysctlbyname(&quot;hw.machine&quot;, name, &amp;size, NULL, 0);
-
-    // Place name into a string
-    NSString *machine = [NSString stringWithUTF8String:name];
-
-    // Done with this
-    free(name);
-
-    return machine;
-}
-
-@end
-</code></pre>
-<p>定义好Category之后，像普通的方法一样去使用就行了，别忘了引入头文件：</p>
-<pre><code class="lang-objc">#import &quot;UIDevice+DetailModel.h&quot;
-
-[[UIDevice currentDevice] detailModel];
-</code></pre>
-<p>使用这个方法得到的是设备的具体型号，譬如“iPhone3,1、iPhone5,1”等，通用名称可以去<a href="https://www.theiphonewiki.com/wiki/Models">the iPhone wiki</a>查询。</p>
-<p>参考链接：</p>
-<ul>
-<li><a href="http://iosdevelopertips.com/device/determine-if-iphone-is-3g-or-3gs-determine-if-ipod-is-first-or-second-generation.html">Determine iPhone and iPad Hardware Machine and Device Type</a></li>
-<li><a href="http://www.techrepublic.com/blog/software-engineer/better-code-determine-device-types-and-ios-versions/">Better Code: Determine Device Types and iOS Versions</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ iOS中使用UIScrollView实现图片滑动切页和轮播 ]]></title>
-    <link href="http://movier.me/blog/2015/realize-viewpager-and-viewflipper-with-uiscrollview-in-ios/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:44Z</updated>
-    <published>2015-11-04T00:40:29Z</published>
-    <id>http://movier.me/blog/2015/realize-viewpager-and-viewflipper-with-uiscrollview-in-ios/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>半夜被老婆“揍了一顿”，“揍”得我咳嗽得厉害，一点儿都睡不着，干脆起来写篇文章吧！又是好久好久没更新博客了，之前刚用Ghost时的激动兴奋之情早已烟消云散，在Ghost平台下总共才写下了屈指可数的几篇文章，有的还不是原创，真是悲哀啊！</p>
-<p>现在我正在用Atom写这篇文章，开启了Markdown实时预览，写作体验不比Ghost差。Atom开启Markdown实时预览时会碰到<a href="http://atom-china.org/t/soft-wrap/207">中文自动断行问题(Soft Wrap)</a>，可以使用AtomicChar插件解决。至于博客平台我也打算从Ghost迁移到Hexo，感觉Hexo还是挺炫酷的，最重要的是方便，无论是部署还是维护。</p>
-<p>这是我在Hexo平台发布的第一篇文章。</p>
-<hr>
-<p>本文中我们要讨论的是如何在iOS中使用UIScrollView实现滑动切页和轮播，我们先实现滑动切页，滑动切页实现之后，轮播自然而然就有了。先看效果图：</p>
-<p><img src="/images/view-pager-and-flipper-demo.gif" alt="最终效果图"></p>
-<h3 id="-">思路</h3>
-<p>如果我们有三张图片1、2、3，要求按照顺序实现滑动切页，那么应该为UIScrollView添加几个Subview呢？答案是五个。五个Subview的顺序应该是这样的：3，1，2，3，1。这样一来当我们从位置三滑到位置四时，显示的还是图片1，这时候我们神不知鬼不觉地把UIScrollView的偏移位置设置到位置一。当从位置一滑到位置零时同样如此，悄悄地把偏移量设置到位置三。其实思路还是非常简单的，如图所示，操作起来也不难。</p>
-<p><img src="/images/view-flipper.png" alt="图示"></p>
-<p>至于效果图下方的小圆点，我们就使用iOS自带的UIPageControl就可以了。其实在这里UIScrollView和UIPageControl并没有多大的关系，只要保证UIPageControl正确显示就可以了。</p>
-<h3 id="-">代码</h3>
-<p><em>首先</em>，你得有一个UIScrollView并设置相关属性：</p>
-<pre><code class="lang-objc">// 设置UIScrollView的内容宽度 ＝ SubView的宽度 x Subview的数量
-CGSize size = self.scrollView.contentSize;
-size.width = self.width * [self.imageArray count];
-self.scrollView.contentSize = size;
-// 开启UIScrollView的翻页属性
-self.scrollView.pagingEnabled = YES;
-// 隐藏滑动栏
-self.scrollView.showsHorizontalScrollIndicator = NO;
-// 设置delegate
-self.scrollView.delegate = self;
-// 设置初始位置
-self.scrollView.contentOffset = CGPointMake(self.width, 0);
-</code></pre>
-<p><em>其次</em>，为UIScrollView添加Subview：</p>
-<pre><code class="lang-objc">for (int a = 0; a &lt; [self.imageArray count]; a++) {
-    // 初始化每个Subview并设置其大小和位置
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.width * a, 0, self.view.bounds.size.width, 200)];
-    imageView.image = [UIImage imageNamed:self.imageArray[a]];
-    [self.scrollView addSubview:imageView];
-}
-</code></pre>
-<p>顺便初始化一个UIPageControl：</p>
-<pre><code class="lang-objc">// 设置pageControl的位置、大小、数量、默认颜色和当前页颜色
-self.pageControl = [[UIPageControl alloc] init];
-self.pageControl.center = CGPointMake(self.view.bounds.size.width * 0.5, self.scrollView.bounds.size.height - 10);
-self.pageControl.bounds = CGRectMake(0, 0, 150, 50);
-self.pageControl.numberOfPages = [self.imageArray count] - 2;
-self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
-self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
-self.pageControl.enabled = NO;
-[self.view addSubview:self.pageControl];
-</code></pre>
-<p><em>最后</em>，覆写<code>scrollViewDidEndDecelerating</code>方法：</p>
-<pre><code class="lang-objc">- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    // 计算当前位置
-    int currentPage = self.scrollView.contentOffset.x / self.view.bounds.size.width;
-
-    // 按照思路在特殊位置使用setContentOffset方法设置UIScrollView的偏移量
-    // animated参数一定要设为NO，因为是‘悄悄地’，不能引起用户注意
-    // pageControl的currentPage一起设置下
-    if (currentPage == 0) {
-        [self.scrollView setContentOffset:CGPointMake(self.width*([self.imageArray count] -2), 0) animated:NO];
-        self.pageControl.currentPage = [self.imageArray count] - 3;
-    } else if (currentPage==[self.imageArray count] - 1) {
-        [self.scrollView setContentOffset:CGPointMake(self.width, 0) animated:NO];
-        self.pageControl.currentPage = 0;
-    } else {
-        self.pageControl.currentPage = currentPage - 1;
-    }
-}
-</code></pre>
-<p>到这里，我们已经实现了滑动切页的功能，接下去我们使用定时器实现轮播效果。启动一个定时器的代码差不多长这个样子：</p>
-<pre><code class="lang-objc">[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(runTimePage) userInfo:nil repeats:YES];
-</code></pre>
-<p><code>runTimePage</code>方法自然不能少：</p>
-<pre><code class="lang-objc">- (void)runTimePage {
-    long lastPage = self.pageControl.currentPage;
-
-    // 当上次处于最后一张图片时，这次应该到第一张图片去了
-    if (lastPage == [self.imageArray count] - 3) {
-        self.pageControl.currentPage = 0;
-        [self.scrollView setContentOffset:CGPointMake(self.width, 0) animated:NO];
-    } else {
-        self.pageControl.currentPage = lastPage + 1;
-        [self.scrollView setContentOffset:CGPointMake(self.width * (self.pageControl.currentPage + 1), 0) animated:NO];
-    }
-}
-</code></pre>
-<p>这样一来，轮播的功能也实现了。</p>
-<h3 id="-">优化</h3>
-<p>现在，滑动切页和轮播功能都实现了，他们单独使用都没有问题，但是一旦把它们放在一起，你就会发现在滑动切页时会有一种凌乱的感觉，那是因为计时器一直在不停地工作。这种情况下，用户的操作体验是非常糟糕的。我们希望当用户开始滑动切页时，停止轮播，即计时器暂停工作，当切页结束后，开启轮播，即计时器开始工作。</p>
-<p>无论是暂停启动器还是启动启动器，都可以使用<code>NSTimer</code>的<code>setFireDate</code>方法，只要设置正确的参数就行了。</p>
-<p>当滑动切页开始时，暂停计时器：</p>
-<pre><code class="lang-objc">- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    // 将启动时间设置为很遥远的未来，于是计时器暂停了
-    [self.timer setFireDate:[NSDate distantFuture]];
-}
-</code></pre>
-<p>当滑动切页结束后，启动计时器：</p>
-<pre><code class="lang-objc">- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    ...
-    // 启动时间一定要设置在现在后的某一刻，这里我设置成三秒后启动
-    // 如果设置成现在的话，runTimePage会立即执行，会马上跳到下一张图片，就不对了
-    NSDate *date = [[NSDate date] dateByAddingTimeInterval:3];
-    // 启动计时器
-    [self.timer setFireDate:date];
-}
-</code></pre>
-<p>终于，整个滑动切页和轮播变得如丝般顺滑了。完整的代码可以在我的<a href="https://github.com/movier/learn-ios/blob/master/learn-ios/PagerAndFlipperViewController.m">Github</a>上找到。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 应用在运行时自动重启 ]]></title>
-    <link href="http://movier.me/blog/2015/android-restarting-my-app-runtime/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:51Z</updated>
-    <published>2015-04-07T09:23:00Z</published>
-    <id>http://movier.me/blog/2015/android-restarting-my-app-runtime/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>这两天在为公司的项目调试一个bug，这个bug十分诡异，很显然是重启导致这个bug。但是重启的原因，让我定位了好长时间，因为并非是由于应用内部错误引起的崩溃而导致的重启，于是我网上一番google，终于找到了相关线索。</p>
-<p>这是<a href="http://developer.android.com/guide/topics/resources/runtime-changes.html">Android相关开发文档</a>中的描述：Some device configurations can change during runtime (such as screen orientation, keyboard availability, and language). When such a change occurs, Android restarts the running Activity (onDestroy() is called, followed by onCreate()). The restart behavior is designed to help your application adapt to new configurations by automatically reloading your application with alternative resources that match the new device configuration.</p>
-<p>翻译成中文的意思是：一些设备的配置比如屏幕方向，键盘可得性以及语言，在运行时会发生变化。当这种变化发生时，Android会重启运行中的Activity（先调用onDestroy，然后调用onCreate）。这样设计的目的是希望通过载入相关新的资源来适应这种新的配置。</p>
-<p>冥冥之中，我已经预感到这就是导致应用重启继而造成这个bug的原因。于是，我在相关的Activity里设置了<a href="http://developer.android.com/guide/topics/manifest/activity-element.html#config">android:configChanges</a> 属性:</p>
-<pre><code>android:configChanges=&quot;mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection&quot;
-</code></pre><p>将所有可能引起的变化都忽略掉，这样一来就保证了不会受到配置变化的影响，马上测试了一下，果然应用不再重启，bug不再复现，真是喜大普奔啊！</p>
-<p>继续定位具体发生变化的配置，最后发现是mcc发生了变化。mcc全称mobile country code，我理解的意思是mcc代表了运营商所在国家的编号，这个值发生变化实在手机重启之后，由0变为了相关国家的编号。我认为0是没有任何意义的，进一步加上了判断条件，算是修复了这个bug。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 我的驾驶之路 ]]></title>
-    <link href="http://movier.me/blog/2015/my-driving-experience/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:52:33Z</updated>
-    <published>2015-02-02T13:24:00Z</published>
-    <id>http://movier.me/blog/2015/my-driving-experience/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>自从2012年拥有了人生中第一辆小轿车以来，我的驾龄也有两年多了。然而促使我写下这篇文章的原因是今天早上上班路上发生的一起事故，引起了我的反思，当头棒喝，直接在我脑门上敲响了警钟。但是让我先回顾一下这两年多来发生在我身上的事故，再回过头来看今天这起事故，可能更加有感触。</p>
-<p>第一起事故发生在提车后不久 ，地点是在老婆家门口，由于那儿在修路，有很多路障，我从老婆家门口出去转弯时，车身侧面擦到了路障，就把爱车刮花了。当时还特意在<a href="http://blog.sina.com.cn/s/blog_4da3c7bc0101611i.html">新浪博客</a>上写了几句话纪念这次事故。这起单车事故的原因很简单，新手上路，技术不行却又盲目自信。</p>
-<p>第二起事故发生在2013年下半年，具体时间记不得了，在南北高架上，由于正值高峰期，汽车们犹如蜗牛般缓慢的向前爬行，突然，“砰”一声，我被追尾了，右后侧有车辆想塞车，车是塞进来了，可是刹车没踩住。毫无疑问，对方全责。</p>
-<p>第三起事故发生在2014年6月1日，我记得非常清楚，那天是我们搬家的日子。我正开车前往饭店庆祝乔迁之喜，我被红灯停在一个路口，不一会儿红灯就转绿灯了，我踩下油门准备起步，突然，一辆左后方来车窜到我的面前，就这样发生了碰撞，这辆车是要小转弯的，可是由于红灯且只有一根道，它不想等就逆行到路口小转，没想到这时绿灯亮起，我也迅速踩下油门起步，就这样碰了。这也毫无疑问，对方全责。</p>
-<p>再接下去就是今天早上，其实这起事故和第二起事故类似，只是角色互换了，我变成那个追尾别人的人。事情是这样的，我驾车从中环外圈漕宝路出口出来，我需要在前方路口掉头，而掉头只有一根道路，因此车流比较拥挤，后方一直会有车辆不老老实实排队，直接开到路口，然后强行塞车。我当然是安分守己排队的那类，同时我也非常鄙视那些强行塞车的人。因此为了不让他们在我前面塞车，我总是会紧跟着前面的车辆，同时留意着侧后方来车，一发现有塞车意图，我就会提高警惕。今天像往常一样，快到路口时，前方侧面有一辆塞车未果的车辆，我当然是不想让他在我面前塞车的，于是我一脚油门，只听到“砰”一声，我成功得阻挡了那辆车在我面前塞车，但是付出了追尾前方车辆的代价。那时，我脑袋嗡嗡作响，那是一辆出租车，司机下车和我理论，活脱脱流氓腔调，当然我负全责也没什么好说的，经过协商，我给了他一百块钱私了。人长得像流氓，胃口一点儿也不够霸气，其实当时如果他向我索赔500，我都会给，因为不想浪费时间以及影响后面车辆，只要了一百，我暗自庆幸。</p>
-<p>看到这一幕，估计那辆成功被我阻止塞车的人在偷笑吧！后来，我回想起来，那辆被我追尾的出租车也是强塞进来的，我突然想到他们不会商量好要讹我吧!我从正义的一方堕落到邪恶的一方只在弹指间，这件事引起了我深深的反思。</p>
-<p>从原来的与世无争，恬淡变成今天这种激进的驾驶态度，我到底是怎么了？也许那辆想塞车的车真的只是错过了排队的道又或者人家真的有急事，我为什么连那么一点宽容都不愿意给人家呢？况且为了防止被塞车紧跟前车又要留意侧后方来车真的很累很累，这么累值得么？人家想塞车的也许都没这么累，他们也许会想让我塞就塞不让我塞我就等下一辆总会有让我塞车的人。我认真了，我输了。况且今天的驾驶状态真的不太好，一出门就感觉人晕晕的，总是觉得会出事，幸好只是出了这点小事。但这件小事足以在我头上敲响警钟，回归与世无争，恬淡的态度吧！记得自己曾经优雅的礼让别人，优雅地要求塞车吗？一生追求优雅的我在驾驶上同样应该追求优雅！</p>
-<p>刚在还特意翻了翻朋友们晒的交通事故，前车之鉴，足以引起警惕。现在最令我担心的是我的爱车不知道伤的怎么样？希望没什么事儿！</p>
-<blockquote>
-<p>我的驾驶态度——与世无争、恬淡、优雅。那是一种在驾驶状态最差的情况下也会是安全的态度。</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 2014这一年 ]]></title>
-    <link href="http://movier.me/blog/2014/goodbye-2014/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:52:24Z</updated>
-    <published>2014-12-31T23:59:00Z</published>
-    <id>http://movier.me/blog/2014/goodbye-2014/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>2014年对我来说注定是不平凡的一年，因为我在这一年中完成了一件人生大事，结婚。</p>
-<p>10月18日，我和恋爱四年多的小懒猪结婚了，虽然我们还是常常会吵架，就像现在她还在因为我这么晚不睡觉而不开心，好像还哭了，但是我还是要写完这篇日志。我们的生活才刚刚开始，2014年是我们婚姻的元年，等到2024年，2034年，2044年，2054年甚至2064年的时候，我们还会像现在这样在一起，加倍我们的快乐，减半我们的悲伤，生活哪有一帆风顺，只有在一起才最重要。</p>
-<p>这一年，我们去了许多地方，2月份我们去了香港，说是为结婚作准备，其实只是找个借口出去玩而已啦～4月底5月初，公司组织大家去黄山旅游，我带着小懒猪一起参加。她还和我们一起登顶了黄山最陡的天都峰，我真为你感到自豪。还有就是11月份的台湾蜜月旅行，从台北开始到花莲、垦丁、高雄、阿里山、日月潭最后回到台北，整整十三天的旅行，让我们对台湾留下了深刻的印象，说好以后还会再去。台湾回来之后，我们马不停蹄地自驾游了西塘、乌镇和杭州，杭州参天的梧桐树给我留下了美好的印象。</p>
-<p>还有一件不算大事儿的事，我从原来公司离职了并且进入了一家新的公司。这是我当码农的第三年，说好要当一辈子码农，写一辈子代码，这样看来现在还算是职业生涯的初期。并不仅仅只是换家公司这么简单，我的技术道路也改变了，从原来的WEB开发到现在的Android开发，当然这是我自己的选择，目前我是公司里最弱的，但是我很快乐，因为每天都会有进步。最近在看一本书叫做<a href="http://book.douban.com/subject/4923179/">《我编程，我快乐》</a>，里面叫我们做团队中最差的，因为这样才会有进步。我相信自己在不久之后，就会成为团队中值得信赖的一员。</p>
-<p>说完了2014，也该展望一下2015了。旅行已经是我生命中必不可少的组成部分了，在新的一年里我也希望能去一些从未去过的地方旅行，泰国成为我的下一个目的地。其他的话，想把个人网站好好搞一下，继续投身GitHub，不停息地写代码。生命不息，编码不止。</p>
-<blockquote>
-<p>Programming to the end of my life!</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 致我们终将逝去的青春（下） ]]></title>
-    <link href="http://movier.me/blog/2014/so-young-3/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:51:45Z</updated>
-    <published>2014-09-09T20:00:00Z</published>
-    <id>http://movier.me/blog/2014/so-young-3/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<h4 id="-">束河古镇</h4>
-<p>前往束河古镇的路上没有遇到什么人，进到束河古镇后，才发现那儿也是熙熙攘攘，并不比丽江古城清静多少。暂时管不了那么多了，找到今晚的落脚点才是我的当务之急。我边走边观察，一路上也向路人打听着附近是否有缝纫的地方，因为我的背包在昆明的时候就开了一个口子，随着旅程的不断深入，那口子也越开越大，再不补的话早晚得掉东西。四处打听之后，终于找到一个能补的地方，那是一个小摊头，老板娘一开始还不愿意帮我补，我好说歹说她才终于答应帮我试着补一下这个口子。</p>
-<p>正当她补着的时候，青年旅舍四个字出现在我的视线范围内，我二话没说直接进到店内询问。原来这并不是一家真正意义上的青年旅舍，只是老板给它取了一个青年旅舍的名字而已。因此，这里并没有我需要的床位，但是巧的是原来两个伙计一起住的那个双床房，现在由于其中一个伙计的女友来了他要搬出去，于是就空了一个床位出来，这样一来我就成功地入住了这家旅舍。</p>
-<p>解决了住宿问题，回到缝纫摊头那儿发现我的背包也补好了。突然发现今天一切都很顺利，与小伙伴分离的失落感瞬间一扫而光，心情逐渐晴朗了起来。</p>
-<p>在这青年旅舍门口无意间看到了求拼车游玩的海报，有去香格里拉的也有去泸沽湖的，我想着自己在丽江还要呆好多天，得到外面去玩玩儿，于是试着拨通了海报上的联系电话。去香格里拉的计划已经被取消了，去泸沽湖的计划依然有效。在昆明倾城的时候就已经听说了泸沽湖的美，因此我毫不犹豫的与对方约定了两天后一起拼车去泸沽湖的行程。</p>
-<p>束河也没有值得我留恋的地方，度过了难熬的一夜后，决定去白沙古镇，听说那儿更原始，更淳朴，应该会符合我的口味。</p>
-<h4 id="-">白沙古镇</h4>
-<p>从束河去白沙非常方便，搭乘公交不一会儿就到了。白沙古镇的确保持着一定的原始风貌，那儿的一砖一瓦都散发着历史的气息。我徒步探寻着那儿的一点一滴，同时也留意着晚上落脚的地方，路口已经有客栈在开门迎客了，但是我期待着能碰到一个老乡把我带到他们家做客。</p>
-<p>走了一个多小时，基本把白沙古镇逛遍了。没有老乡出现，我不得不投宿路口的客栈。巧的是客栈的老板也是上海人，不久前她随着男朋友来到这儿开了客栈，他们的故事引起了我的无限遐想。</p>
-<p>店里还有一个来了没几天的义工小妹。也许是由于大家是老乡的缘故，老板决定将她的电动车借给我带着小妹一起去寻找隐藏在深处的景色，她还为我们画了地图。</p>
-<p>循着老板画的地图，骑了颠簸崎岖的山路，通畅无阻的公路，探访了隐藏在深处的一所学校，听了孩子们朗朗上口的读书声，心生一股莫名的感慨。最终，我们到达了“文海”，那里的景致很不错，小妹还在那儿骑了马，可欢乐了。</p>
-<p>这是一种意外的收获，只有亲身体会了才能感受到这种意外带给人的幸福感。如果你厌倦了生活，那么去旅行吧！旅行途中充满了这样那样的意外，而这些意外让我们重新认识生活。</p>
-<h4 id="-">泸沽湖</h4>
-<p>从白沙古镇回到丽江，在青旅住了一晚后，第二天一早前往约定的地点。本来以为由于道路施工，泸沽湖去不了了，没想到正好有小伙伴拼车前往，想象着泸沽湖的美，心里异常兴奋着。</p>
-<p>眼看着约定的时间越来越接近，小伙伴们也一个个的前来报到了，这一路我们将一同走过。有一对母女，一对同学还有几个人记不得了。从丽江前往泸沽湖需要六七个小时的车程，一路上大家相谈甚欢，丝毫不拘谨，这样的时间过得特别快，不知不觉地我们就进入了泸沽湖风景区，对一百元的门票我颇为不满，然而见到泸沽湖的一刹那，我整个人都安静了，美已经不足以来形容她了，只是静静地感受着她散发出来的独特魅力。</p>
-<p>我住在了里格半岛，在青旅登记完毕之后便一个人出门探寻着她，看着人们在泸沽湖上泛舟，我兴趣却不大，只愿意坐在一旁看着她，直到晚上。第二天决定环湖骑行，上坡时特别吃力，基本只能靠推的，下坡只要控制好刹车就可以了。几乎每个角度都是那么完美，骑到中午天下起了雨，为了躲雨又赶上吃饭时间，我在泸沽湖镇找了一家小饭馆，点了个小火锅，一个人吃了起来，吃得差不多了，雨也小很多了，便又继续上路。经过了走婚桥等一系列景点，最好终于安全地回到了里格半岛，这天的环湖骑行算是圆满成功了，我也从各个方向领略了泸沽湖的与众不同。她已经深深地刻在了我的脑海里。</p>
-<h4 id="-">南宁</h4>
-<p>从泸沽湖回到丽江后，晚上就坐火车回到了昆明，第二天早上到达昆明。在昆明火车站附近的酒吧打发了好几个小时，下午五点又坐上了前往南宁的火车。第二天凌晨到的南宁，这时候，天还没亮，我在夜色中领略着这个从未来过的城市。走了好久好久，终于走到了心中的那家青旅，办理了登记入住。在南宁，我基本是靠走来丈量着这座城市，那里的米粉给我留下了深刻地印象，又便宜又好吃。我记忆中的南宁有邕江和好吃的米粉。</p>
-<h4 id="-">厦门</h4>
-<p>在南宁呆了两晚之后，从吴圩机场坐飞机来到了厦门和老婆会合。到这里其实一个人的旅行已经结束了，剩下的只是两个人的浪漫。鼓浪屿、厦门大学这些点我们都去了，人实在太多，丝毫感受不到原本的气息，然而厦门的街道还是挺有特色的，给我留下了好印象，还有绵绵冰也很好吃。在厦门玩儿几天后，便回到了上海。</p>
-<hr>
-<p>谨以此文纪念我那逝去的青春。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 致我们终将逝去的青春（中） ]]></title>
-    <link href="http://movier.me/blog/2014/so-young-2/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:52:10Z</updated>
-    <published>2014-08-08T20:00:00Z</published>
-    <id>http://movier.me/blog/2014/so-young-2/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>下午三四点的时候我来到集结地点——昆明春城之星拿铁店。店里有几个背着大包小包行李的青年人，我预感到他们极有可能就是我未来几天的小伙伴，果然不出所料，在报完稻草人的名字之后发现他们同样是稻草人的队员，我暗自窃喜。没想到的是酒店以一种特殊的方式迎接我们——故障的电梯，意味着我们必须扛着自己的行李爬楼梯到十几楼的房间。由于我随身只有一个大背包，身轻如燕地就跑到了十二楼的房间。看到那些还在苦苦挣扎的小伙伴，我又发扬了助人为乐的精神，下楼帮着其他两个女生把行李搬到了各自的房间，搬完行李后我也有点累了，躺在房间的床上，心里想着这注定是一段不平凡的旅程。</p>
-<p>到了该吃晚饭的时间，我也得为接下去的旅行准备一些粮食。于是我从十二楼爬楼梯到了一楼，在附近逛了一圈，到超市买了些面包，在一家兰州拉面馆坐下，点了碗面。正当我吃着不怎么好吃的面时，有一对母女出现在我的视线范围内，女孩穿着一件绿色的连衣裙和小披肩，头上戴着一顶很潮的帽子，她妈妈打扮的也十分时髦。她们在面馆门口向里张望了一会儿，最终还是犹犹豫豫地进来了。我吃完面回到酒店，又爬了十二楼回到自己的房间，洗完澡后躺在床上看电视，就等着晚上八点的集结会议了。</p>
-<p>八点还没到，我就来到领队吵吵的房间等着开会了，队员们也都陆陆续续地来了。这时有一对母女进来了，没错，正是我在兰州拉面看到的那对母女，我暗自感慨世界真的好小！不一会儿所有的队员都到齐了，大家把吵吵的床坐满了，沙发也坐满了，十几平米的房间装了十七个人，好不热闹。虽然大家是第一次正式见面，相互之间可能连姓名都不知道，但是丝毫没有拘谨，你一句我一句地像多年不见的好友。吵吵介绍了行程安排，与稻草人签订了旅行协议之后，见面会算是结束了，大家各自回到房间休息，准备第二天一早出发前往大理。</p>
-<h4 id="-">大理</h4>
-<blockquote>
-<p>听说那儿是个世外桃源，家家有水，户户有花...</p>
-</blockquote>
-<p>这是《还珠格格》中对大理的描述，也是我关于大理最深刻的印象，能够亲身来到这样一个地方是多么地让人期待啊！而此刻我们正驱车赶往这理想中的世外桃源，一路上，我们进行了自我介绍，我也牢牢地把大家都记在了心里，在未来六天的旅途，我们将吃在一起、住在一起、生活在一起。飞驰着的汽车正一点一滴地拉近着我们与大理的距离，接近中午的时候，我们到了。下车的一刹那，我知道自己终于踩在了这片理想的土地上，大理——我来了。</p>
-<p><img src="/images/so-young-2-1.jpg" alt="水云驿站"></p>
-<p>水云驿站——这是我们在大理的住宿点，客栈虽然不大但布置得很精致，到处都是花花草草，有一番味道。大家把行李放到房间后，便开始游览大理古城，虽说是自由活动时间，大家还是不约而同地走在了一起，十分默契。也许是由于久负盛名，古城的街头到处都是游客，小商小贩们也都占据着自己的一席之地，整个大理古城人头攒动，商业气息太过浓郁，我的心里难免感到失落，这与我理想中的世外桃源大相径庭。</p>
-<p>幸好有大家的陪伴，才让我原本沮丧的心情有了起色。我们一起在苍洱春饭店吃了饭，一起对陌生植物评头论足，一起尝试了一种叫红毛丹的水果，一起在88号西点店喝下午茶，一起做游戏，一起搞怪，一起拍照，大理的街头留下了许多我们的欢身笑语。</p>
-<p>吃过晚饭之后，我们又走上大理的街头，夜色中的大理没有白天那么热闹，兴致盎然的人们会选择泡吧来度过漫漫长夜，而我们在一阵漫无目的的闲逛之后回到了客栈。大家聚在客栈的亭子里喝茶聊天，把玩着客栈老板的吉他。这时老板出现了，他非常热情地请我们喝大理啤酒，向我们述说他和稻草人的故事以及他自己的旅行经历，这是一个性情中人，我喜欢这样的人儿。聊到深夜，大伙儿仍然依依不舍，但考虑到第二天还要去爬苍山，需要消耗大量的体力，大家还是乖乖地回房休息了。而我心里想着第二天凌晨起床，重新走上古城的街头体会一番，也许那才是最真实的大理。</p>
-<p>第二天天还没亮我就醒了，想要出门却发现客栈大门紧闭，还没到开门时间，于是我只得在庭院里抽烟，等待开门人的出现。眼看着天空一点一点的变亮，我心里十分着急，担心出门晚了，错过真实的大理。等了好一会儿，终于有人来开门了，出去之后才发现，我的担心是多余的，那个时间对大理来说还很早。走在街上，难得看到一两个人，还是当地的居民，他们正为自己的生活而忙碌着。两边的店铺大都关着门，偶尔有一两家开着，也是做早餐生意的，这时的大理是宁静的，真实的，生活着的。苍山之麓，洱海之滨，四季如春，物产丰富，有花有草，有山有水，这才是真正的大理，传说中的世外桃源。</p>
-<p>随意在一家早餐店坐下，点了粥和豆浆，没想到豆浆却格外的自然香甜，毫不犹豫地我就打包了十几杯豆浆，准备回去和小伙伴们分享。吃过早饭之后，手里捧着暖暖的豆浆，我便心满意足地回到客栈。在回去的路上看到有卖包子的，我兴奋地去买了两个小包子，准备送给“包子”，因为“包子”说她喜欢吃包子。“包子”其实是我们当中一名队员的昵称，才一天工夫，我和她就混得很熟了，互相斗嘴，互相嬉闹，互相分享，我很享受这种感觉。</p>
-<h4 id="-">苍山</h4>
-<p>在大家吃完早餐之后，我们便出发前往苍山，苍山就在大理边上，不到半小时的车程，我们就到达了苍山脚下。苍山其实是一座山脉，由许多山峰连接而成，按照难易程度划分，苍山徒步的线路也是多种多样。原本打算挑选一条难度适中的线路登山，然后坐缆车下山，但是我们去的那天缆车正在维修，意味着我们必须徒步下山，因此领队吵吵最终挑选了一条相对容易的登山线路，加上下山，总路程有十几公里。</p>
-<p>出发时大家兴致勃勃，一个个都精力旺盛，生龙活虎，颇有一种誓把苍山睬脚下的气势。但随着徒步的逐渐深入，体力不支的情况在许多队员身上出现了。对我们这些常年生活在城市中的人来说，爬山的确是一件不容易的事儿。况且我们十七人当中有十三名女生，她们的体力消耗更快，更需要照顾，这时作为稀有物种的我义不容辞地站了出来，为大家背包，减轻大家的负重，让大家可以轻装上阵。女生们纷纷把包包挂在我的身上，不一会儿五颜六色的包包挂满了我的全身，感觉自己变成了一个卖包包的小贩，我心里倒也乐此不疲，帮助别人成了我最大的快乐。</p>
-<p>身体是疲惫的，但是大家的热情依旧非常高涨。一路上我们高歌凯进，歌声回荡在整个山谷中，整座山似乎都成了我们的。你搀着我，我扶着你，一步一步向上爬，大家齐心协力，互相帮助，终于，我们登上了顶峰。在苍山上俯瞰整个大理，顿时感觉自己渺小了。我们在这儿停留了很久，拍了许多照，整个大理被记在了相机中，也刻在了脑海里。</p>
-<p>上山容易下山难。一路下来，我们小心翼翼。从上午开始爬山，到下午下山，已经过去了好几个小时，大家都有如厕的需求，男人们自然的找个角落随地解决了，女人们则分成了两派，奔放派们在大家的掩护下也解决了燃眉之急，保守派们选择坚持到山下找厕所。两个小时左右之后，我们安全地到达了山脚。保守派们坚持到了最后，正当她们以为终于可以上厕所了时，现实无情地打击了她们，附近根本没有一个厕所。这时她们再也矜持不下去了，抱团前往小树林，一旁看着的我们笑得合不拢嘴。</p>
-<p>我们以一种特殊的方式述说着与苍山的故事，这种经历对我们来说终身难忘。徒步了一天，所有的人都累了，一沾上座椅就昏昏沉沉地进入了梦乡......</p>
-<h4 id="-">双廊</h4>
-<p>不知道过了多久，我们抵达了双廊，我们将在这儿过一夜。由于当地民宿的接待能力有限，我们一伙儿十七个人被安排在了两家民宿，有的小伙伴儿累了就选择了较近的第一家民宿住下，剩下的人则拖着沉重的行李和疲惫的身躯前往第二家民宿。</p>
-<p>磕磕绊绊地，我们终于到达了第二家民宿。踏进民宿的那一刻，大伙儿震惊了，整个洱海顿时映入眼帘，湖面微波粼粼，与远处的苍山交相辉映，那画面实在是太美了。那一刻，时间仿佛都静止了，一切疲惫都烟消云散，随之而来的是一阵尖叫，大伙儿仿佛充满电般地恢复了无限的精力。</p>
-<p>坐在藤椅上，面对着整个洱海，一切都变成了享受。我点起一根烟，暂停了自己所有的思绪，静静地享受着那美好的时光。我在那儿坐了很久很久，直到吃饭时间，大家一起去附近的餐馆吃了饭。晚饭过后，我又坐到洱海面前，欣赏着夜色中的洱海，直到深夜，人们渐渐散去，海边的灯火也渐渐熄灭，我才恋恋不舍地回到房间。</p>
-<p>第二天临走前，我依然对着洱海发着呆，洱海就这样装满了我关于双廊的全部记忆。</p>
-<h4 id="-">沙溪</h4>
-<p>同样是洱海边上的一个小镇，和双廊相比，沙溪比较原始淳朴，似乎等待着人们去探索。而沙溪一来就给我们留下了深刻的映像，可口的农家菜引得大家争先恐后，狼吞虎咽，一路走来，好久没吃到这么美味的饭菜了。</p>
-<p>一个下午，我们都沉浸在沙溪的田园风光中，好像回到小时候一样，天真烂漫地玩耍。我在那儿买了两串手工编织的手链，它们陪伴我走完了剩下的旅程。晚上我们围坐在一起，做游戏喝啤酒，吃着“歪妈”做的炒饭，感觉特别幸福，时光因此也特别容易流逝。玩到很晚很晚，大伙儿才散场，各自回去休息。</p>
-<h4 id="-">虎跳峡</h4>
-<p>第二天一早，我们便出发前往虎跳峡，我们这次要征服的是相对容易的中虎跳。汽车开了很久很久，到达虎跳峡景区的时候已经接近中午，我们在那儿吃了午饭。补充完能量之后，便展开了我们的征程。今天的目标是纳西雅阁，海拔两千多米，我们将在那儿住宿一晚，第二天再徒步下山。身边只留下一些水和食物，其他行李会有专车送到纳西雅阁。</p>
-<p>经历过苍山徒步之后，大家掌握了一些经验心得，稳稳地前进着。但是和苍山徒步不同，这次虎跳峡徒步我们长时间暴露在太阳下，炙热的紫外线照射得人受不了，加上整条路线都崎岖坎坷，似乎是硬生生被人走出来的，这更增加了我们徒步的难度。终于还是有小伙伴无法坚持，幸好路上有马夫，他们的马能够驼人上山。在那曲折蜿蜒的山路面前，马都显得有些吃力，一边是万丈深渊，一边是悬崖峭壁，骑在马上让人不寒而栗。</p>
-<p>上山之路虽然艰辛，伴随着的却是一路风景。金沙江在峡谷间奔腾怒吼，波涛汹涌。总有更美的风景出现在眼前，整个徒步总给人不断的惊喜，在一阵又一阵的欢呼声中，我们终于登上了纳西雅阁。</p>
-<p>大家都累了，坐在椅子上迟迟不肯起来，纳西雅阁正以独特的风景迎接着我们。登上观景台，矗立着的玉龙雪山似乎尽在眼前，山已经高耸得穿透了云层，山顶的千年冰雪清晰可见，与云朵交错在一起，烟雾缭绕，仿佛深处人间仙境。</p>
-<p>无法抗拒洱海的我对着玉龙雪山同样如痴如醉。这一次面对着玉龙雪山，我又坐了许久，纳西雅阁就像是人间仙境，让我抛下世俗的一切，做了一回神仙。</p>
-<p>由于走得是水泥路，第二天下山的路轻松了许多，大家一路玩闹嬉戏，一路欣赏着一座座小屋，深处崇山峻岭之中，周围烟雾缭绕，这就是人间仙境。</p>
-<h4 id="-">拉市海</h4>
-<p>汽车驶出虎跳峡景区，前往拉市海。我们将在那儿骑马、划船，想想都激动呢！没想到，前往拉市海的路上也是困难重重。由于那儿有许多马场，有很多游客前往骑马，造成了堵车，好不容易从堵车的困境中摆脱出来，又碰到了指不清路的客栈老板，原本很近的路在他的指引下硬是绕了一大圈，引来了我们的阵阵不满。</p>
-<p>好不容易才找到客栈，正值午饭时间，老板已经为我们准备好了午餐。烧烤火锅，大家爆发出了一阵阵惊叹声，愤愤不平的心情也因此得到了慰藉。吃着美味的烤玉米，喝着暖暖的豆浆，大家都心满意足。</p>
-<p>午饭过后，大家简单休息了一下，准备骑马。这时，天上开始下起了小雨，大家依然选择了各自的马匹，开始骑行。雨越下越大，幸好马夫随身带着雨披，我们穿着雨披，骑着马，穿梭在拉市海的大街小巷之中，别有一番趣味。骑完马回到客栈，老板贴心的为我们准备了姜汤，温热的姜汤驱散了我们身上的寒意，温暖着我们每个人的心。</p>
-<p>骑完马，接下去该划船了，天上依然飘着零星小雨，大家换上救生衣就准备出发了。踏过泥泞的田地，就到了码头，已经有两个船夫撑着船在那儿等着我们了。大伙儿先后上了船，小船儿摇摇曳曳地驶离了码头，远方飘来一阵阵香味，有一艘小船渐渐靠近我们，那香味也愈发明显，近看才发现船上正烤着小鱼儿，大伙儿被烤鱼的香味馋得留下了口水，毫不犹豫地买来尝尝，味道确实香。在拉市海，天上下着小雨，我们划着小船，吃着烤鱼，十分惬意。真想就这样随着小船飘向世界的尽头。随着小船靠了岸，我们也该下船了。</p>
-<p>我们在拉市海留下了许多美好的回忆，带着这些珍贵的财富，我们向着这次旅程的终点出发了。</p>
-<h4 id="-">丽江</h4>
-<p>不知道从何时开始，丽江已经成为了我心驰神往的一个地方。丽江的蓝天、白云和阳光令我魂牵梦萦。傍晚时分，我们抵达了丽江古城，高低起伏的石板路散发着古城特有的韵味。</p>
-<p>一路走来，我的体力消耗已经超越了极限，加上在拉市海淋了一身雨，我的身体终于坚持不下去了，有点儿晕头转向。无力欣赏丽江的夜色，一到酒店，就钻进了被窝。此时大伙儿正吆喝着组织晚上的聚餐，明天我们将就地解散，结束本次的滇西北之行。这一次是我们十七人一起吃的最后一餐，这辈子我们十七个人也许再也没有机会相聚了，因此大家都格外珍惜这最后一餐，而我则以生病为由拒绝了与大家的最后聚餐，小伙伴们都很遗憾。其实这一点低烧对我来说，根本算不上什么，之所以不去参加这最后的聚餐是因为我实在害怕分离，怕在餐桌上哭得稀里哗啦。虽然只有短短的七天六夜，但是我们彼此已经建立起了深厚的情感，这种感情是脆弱的，经不起离别的感伤。于是我选择了逃避这一切，天真的以为不参加散伙饭，就可以永远在一起。</p>
-<p>在床上躺了很久，小伙伴们都回来了，还特地为我打包了饭菜。其中一个队员的生日快到了，领队吵吵决定晚上为她庆生，蛋糕是吵吵跑了几条街买回来了，真是用心良苦。吵吵找了个借口把大家聚集在自己的房间，寿星被蒙在了鼓里，全然不知情。直到吵吵捧着点上蜡烛的蛋糕进屋，她这才恍然大悟，大家一起唱着生日快乐，场面十分温馨感人，大雁也被感动得泛起了泪光。</p>
-<p>错过了大理的酒吧，未免有些遗憾。到了丽江后，大家终于有机会一起去泡吧了。我也休息得差不多了，便随大家一起去了客栈附近的一家酒吧——芒果。这应该算一个清吧，人并不多，有一个歌手拿着吉他在弹唱，感觉不错。我们喝着啤酒，划着拳，唱着歌，任凭时光流逝...直到客人全部走完，大家才意犹未尽地回到了客栈。</p>
-<p>第二天起来，还没来得急一一道别，大家就已经各奔东西了。有的去了束河古镇，有的去了玉龙雪山，有的留在了丽江古城，我们真的散伙儿了。幸好还有包子和小嘎，我们相伴走在古城街头，感受着这座古城。那时候丽江的大街小巷，到处都在放着《一瞬间》，令我印象深刻。古城本身还是具有一定的历史沧桑感，只是浓重的商业氛围掩盖了她原本应有气质，丝毫感受不到一点儿浪漫气息。但是丽江的天还是这么蓝，云还是这么白，阳光还是这么灿烂，总有人慕名而来，也有人失望而归。人们说没到丽江是一种遗憾，到了丽江还是一种遗憾，我总算是领悟了，也许这才是丽江独特的魅力。</p>
-<p>随着最后一匹小伙伴的离开，我们十七人就剩下我一个人留在丽江了，我的心情糟糕透顶，加上对丽江有点儿失望，我决定离开丽江古城，前往束河古镇。在在路上青年旅舍度过一晚后，第二天一早我便搭上了前往束河古镇的公交。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 致我们终将逝去的青春（上） ]]></title>
-    <link href="http://movier.me/blog/2014/so-young-1/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:51:56Z</updated>
-    <published>2014-07-16T20:10:00Z</published>
-    <id>http://movier.me/blog/2014/so-young-1/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>今天是2014年7月16日，去年的今天，我踏上了开往昆明的火车，开始了1个多月的重走青春之路。</p>
-<p>上海——昆明——大理——苍山——双廊——沙溪——虎跳峡——拉市海——丽江——束河——白沙——泸沽湖——丽江——昆明——南宁——厦门——上海</p>
-<p>谨以此文纪念我终将逝去的青春。</p>
-<hr>
-<blockquote>
-<p>人的一生中至少要有两次冲动，一次为奋不顾身的爱情，一次为说走就走的旅行。</p>
-</blockquote>
-<p>或许是被这句话深深地打动了，或许是受到了<a href="http://movie.douban.com/subject/6989755/">《北京青年》</a>的影响，又或许是我骨子里散发出来的文艺青年的气质，我感觉自己再也不能浑浑噩噩地生活下去了，是时候来一场说走就走的旅行了。不走的理由有千千万万，走的理由却只有一个。当我下定决心要出发的时候，一切的阻碍都不再是问题，它们反而成为了我前进的动力。我甚至学起了《北京青年》里的何东，剃了一头板寸，带着全新的自己上路。</p>
-<h4 id="-">昆明</h4>
-<blockquote>
-<p>没有什么能够阻挡，我对自由的向往。</p>
-</blockquote>
-<p>听着许巍的《蓝莲花》，踏上前往自由的列车，心中的感觉无比畅快。经过36个小时的颠簸，终于到达了昆明。昆明不愧为“春城”，与东部沿海地区三十五六摄氏度高温形成鲜明的对比，这儿的人们依然是长衣长袖，初来乍到的我真心有点不适应。那时候的昆明由于在建设轨道交通，到处都在施工，尘土飞扬，环境比较差，除了天气之外，昆明并没有给我多大的惊喜。</p>
-<p>我特地为这次重走青春办了一张国际青年旅舍的会员卡。国际青年旅舍解决的是这样一个问题——当你想要出去旅行却又囊中羞涩的时候，你必须考虑如何最大程度地节省开支，而这其中住宿无疑在总支出中占有较大比重，有时候你并不需要一个房间，你只是需要一个可以休息的地方，也许一张床就够了。因此青年旅舍通过出租床位为你节省下很大的一笔开销，同时又提供给你与其他年轻人交流的机会，实在是非常符合我的需求。可以通过<a href="http://www.yhachina.com/">中国青年旅舍官方网站</a>在线预订全国各地的青年旅舍，还可以在线办理会员卡，那样的话住宿可以打折并且全球通用！</p>
-<p><img src="/images/so-young-1-1.jpg" alt="昆明倾城青年旅舍"></p>
-<p>昆明倾城，这是我入住的第一家青年旅社，里面的布局也的确文艺小清新，我比较喜欢。在这儿，我认识了许多有意思的人儿，有个特别喜欢泡吧的家伙，非要带着我们去寻找昆明的夜生活，于是我生平第一次进了酒吧，硬被他拉去搭讪女孩儿，我却腼腆地不知道该说什么，玩儿到半夜三更，出来时却发现外面下着暴雨，我们在暴雨中寻找回家的路，回到倾城的时候，早已成为了“落汤鸡”。还有一个刚从马来西亚回来的家伙，跟我们分享着他在大马的旅行经历，引来了大家艳羡的目光。第二天去滇池游玩时，又遇到了两个同道中人，我们一起吃了晚饭，一起吐槽着坑爹的滇池。晚上在倾城，闲来无事，发现有个抽着烟的女孩儿，我以借火为由和她聊了起来，我们抽了许多烟，喝了许多酒，分享着各自的经历，这一切都是那么自然而然。更加巧合的是，在倾城我竟然遇到了稻草人的领队——吵吵，我会在下文中详细说明。在倾城的最后一天，一对来自上海的母女恰巧住在我们隔壁房间，她们结束了丽江的旅行，准备在昆明转机回上海，那天下着犀利的小雨，我非常热情的帮助他们扛行李，目送她们踏上回家的旅行，心里期盼着她们一路顺风。</p>
-<p>有许多地方，在人们的旅行线路中只是一个中转站，譬如昆明。在这儿，人们不断地相互问着，你们从哪儿来，要到哪儿去。人与人之间也许只是见过一次面，说过几句话，也许从不曾知道对方的姓名，只是相互述说，相互聆听，相互帮助，相互祝福，简单而又美好。</p>
-<p>结束了一个人在昆明的漂泊，我马上就要开启一段全新的旅程。我提前在<a href="http://www.54traveler.com/">稻草人官网</a>上预订了从昆明到丽江的旅行线路，那天就是我们的集结日。上文提到过稻草人，这是一家专注于为年轻人带来非凡体验的旅行社。第一次接触稻草人是在毕业旅行中，那次稻草人给我留下了非常深刻地映像，一直想着再参加一次他们的活动，这次终于得偿所愿。他们所提供的旅行体验是最棒的，我想以后如果要报团旅行，我只会考虑稻草人。吵吵正是这次滇西北之行的领队，所以说在倾城偶遇吵吵是一件多么令我惊喜的事儿。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 小米路由器 ]]></title>
-    <link href="http://movier.me/blog/2014/miwifi/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:53:58Z</updated>
-    <published>2014-05-26T11:42:00Z</published>
-    <id>http://movier.me/blog/2014/miwifi/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>写这篇文章的时候，我已经忘记了我是怎么知道<a href="http://www.mi.com/miwifi">小米路由器</a>的。那并不重要的，重要的是小米路由器深深地吸引了我。1TB硬盘、家庭服务器、智能家居，其中每一项都值得我为他买单，更何况全部集成在一台路由器上。毫不犹豫地我就投入了预约购买小米路由器的大军之中。</p>
-<hr>
-<p>以下是我的购买小米路由器的心路历程，大可以跳过。</p>
-<p>都说小米的产品难抢，之前我还不以为然，等到这次抢小米路由器时，我才真正感受到了米粉们的疯狂。首轮开放购买是在某个星期二（其实每轮购买日都在星期二，不知道为什么），那天由于要陪我的夫人去参加面试，我正好在家，面试时间是在上午，中午12点准时开始抢购。等到11点了面试还没结束，我心里有些焦急，没想到过了一会儿，夫人出来了，她对我说没面完就走了，我问她为什么，她说还要笔试，太烦了，我擦...她说你不是还要回去抢小米路由器了吗，我一想是啊！赶紧的，开着我的小红就飞奔回去。总算12点之前赶到了家，就等正点开抢了。12点一到，我马上点击立即购买，结果立即跳出页面提示人数太多正在排队，很明显这是个js事件，我已经感觉不妙了，果然过了一会儿提示已售罄。我擦...第一次抢购就这么夭折了。</p>
-<p>正所谓，屡败屡战，第一次的失败并没有影响我的士气，我立刻预约了第二轮购买。那又是一个星期二，我在公司，快到12点的时候，同事们都准备去吃饭了，他们叫我一起去，我说我要抢小米路由器，你们去吧！就这样办公室留下了我一个人，孤独地等待着12点的钟声敲响。12点一到，还是点击立即购买，还是弹出页面提示等待，等了一会儿又提示售罄，当时我的心已经有点凉了，但鉴于实在对小米路由器太感兴趣了，还是预约了第三轮购买。</p>
-<p>那还是一个星期二，我还是在公司，快到12点了，同事们还是去吃饭了，我还是留下来抢我的小米路由器，还是12点，还是点击立即购买，还是弹出页面提示等待，当时我就火大了，我想小米不是坑爹么，明显的一个js事件，背后肯定没有排队，正当我对这套排队系统表达强烈不满的时候，系统提示我已加入购物车，这不就是抢到了的意思么，赶紧下单付钱，生怕到手的路由器又被抢走。第二天就到了，物流还是很给力的。</p>
-<p>纵观这次抢购时间，我不得不说雷布斯你太牛了。本来在第三次抢的时候，我已经想好，如果再抢不到，就再也不抢了，我是不允许别人欺骗我的感情的，但是这次竟然抢到了。就好比人在绝望的时候，突然被点燃了一丝希望，那种感觉不能用语言来形容。</p>
-<hr>
-<p>言归正传，写这篇文章的主要目的还是想对小米路由器进行一番评头论足的，那就让我们开始吧！</p>
-<h3 id="-">一、开箱篇</h3>
-<p>先看看包装吧
-<img src="/images/miwifi_appearance.jpg" alt="miwifi appearance">
-再看看具体参数
-<img src="/images/miwifi_parameters.jpg" alt="miwifi parameters">
-开箱啦
-<img src="/images/miwifi_kaixiang.jpg" alt="miwifi kaixiang">
-再来些图片吧
-<img src="/images/miwifi_inhand.jpg" alt="miwifi inhand">
-工作中的小米路由器——蓝色的灯点亮表示正在工作状态，黄色的灯一般是在切换工作状态的时候才会点亮，从停止到工作或者从工作到停止
-<img src="/images/miwifi_working.jpg" alt="miwifi working">
-至此仅仅体验了小米路由器的冰山一角，还有更多<a href="http://miwifi.com/">好玩儿的东西</a>在等着我们呢！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ Samsung GALAXY S5 ]]></title>
-    <link href="http://movier.me/blog/2014/samaung-galaxy-s5/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:04Z</updated>
-    <published>2014-05-14T10:17:00Z</published>
-    <id>http://movier.me/blog/2014/samaung-galaxy-s5/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>也许是由于从事了IT这一行的缘故，我对最新数码产品的关注度也越来越高，这不三星不久前发布的S5，我已经收入囊中了。</p>
-<p>我是一个相信缘分的人，原本并没有换手机的计划，无意间看到一个从事电信行业的好友在朋友圈中分享了电信的最新活动——以389元两年期的合约价格购买S5或者5S送百兆宽带。当时就吸引了我的眼球，最主要的原因是家中正需要安装宽带，其次这一套餐优惠力度确实很大，于是向我的好友三番四次咨询之后，最终确定下这个套餐。在这里，我要非常感谢他<a href="http://weibo.com/u/2284613142">@妞妞DE榴榴</a>。</p>
-<p>当被问及是要S5还是5S的时候，我毫不犹豫选择了S5，一方面对苹果的界面产生了审美疲劳，另一方面主要想深入体验一下Android系统，为我以后成为Google的开发者做准备。我的目标是用Apple的产品开发Google的应用。</p>
-<p>废话不多说，马上开启S5的体验之旅：</p>
-<h3 id="-">一、开箱篇</h3>
-<p>包装还是很精致的，有图有真相！
-<img src="/images/samsung-galaxy-s5-box.PNG" alt="包装">
-激动人心的时刻马上就要到了，开箱啦！
-<img src="/images/samsung-galaxy-s5-open-box.PNG" alt="开箱">
-最后上一些美图吧！
-<img src="/images/samsung-galaxy-s5-appearance.PNG" alt="美图"></p>
-<h3 id="-">二、初体验</h3>
-<h4 id="1-imusic">1.iMusic</h4>
-<p>真没想到S5竟然自带了这么炫的应用，而且这款应用还是电信自己开发的，实在值得赞一个。乍看下来，iMusic和普通音乐应用没什么差别，而且内容还不是很全，但是让她脱颖而出的是<strong>哼唱搜歌</strong>功能。如果没有我这种<a href="https://github.com/movier/songs">体会</a>是很难理解的，总之以后再也不用担心歌名歌词了，只要知道旋律就行，太棒了！看一下截图吧！
-{<4>}<img src="/images/samsung-galaxy-s5-imusic.jpg" alt="Galaxy S5 iMusic">
-TO BE CONTINUED...</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 如何开始你的SOHO之旅 ]]></title>
-    <link href="http://movier.me/blog/2014/how-to-begin-your-soho-life/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:11Z</updated>
-    <published>2014-04-22T15:48:00Z</published>
-    <id>http://movier.me/blog/2014/how-to-begin-your-soho-life/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>感谢<a href="http://terrytai.com/">Terry Tai</a>将自己宝贵的SOHO经验分享给大家:</p>
-<ul>
-<li><a href="http://terrytai.com/how-to-begin-soho-1/">如何开始你的 SOHO 之旅 (1)</a></li>
-<li><a href="http://terrytai.com/how-to-begin-soho-2/">如何开始你的 SOHO 之旅 (2)</a></li>
-</ul>
-<h2 id="-soho-1-">如何开始你的 SOHO 之旅 (1)</h2>
-<p>仔细算算自己在家上班已经有差不多4年了，所以回想起整个过程，只有一种感受，那就是再也回不去了。我相信很多在家工作多年的朋友也会有同样的感受，“自由”这东西一旦拥有就太难再放弃掉。</p>
-<p>我现在无法想象我每天要在上下班的路上耽搁1-2个小时，每天要准时一大早起床，每周无论有事没事都必须工作5天，不能每天坐在我最舒适的椅子和桌子面前工作... 最关键的是，我不能放弃这一份已经拥有的 “自由” --- 嗯？问题搞深沉了.. 这篇文章我并不是想介绍在家 SOHO如何如何好，我想谈的是如果你也想成为一名在家 SOHO 的程序员你应该怎么做。</p>
-<h3 id="-">程序员在家工作的几种选择：</h3>
-<ol>
-<li><p>做一名 freelancer, 自己接项目</p>
-</li>
-<li><p>加入一个允许在家工作的公司</p>
-</li>
-<li><p>争取成为你现在公司第一个在家工作的员工</p>
-</li>
-<li><p>创业，并让你的公司允许远程办公</p>
-</li>
-<li><p>成为一名独立开发者(开发应用, 或者是独立咨询)</p>
-</li>
-</ol>
-<p>如果在家办公是一个你很重要的诉求，那么你不妨考虑一下上面 5 种选择，看看哪种更加适合你。然后制定一个清晰的计划并为此努力。 当然，其中 1, 2, 3 相对要容易一些（要做好其实也不容易，更合适的说法或许是风险要低一些吧。），4, 5相对要难一些。如果 4, 5是你想要做的，不妨从 1, 2, 3里选一个作为过度，有一定积累后再完成你的最终目标。</p>
-<p>本文将介绍第一点，后续文章会逐步介绍其他几点。</p>
-<h4 id="-freelancer-">做一名 Freelancer, 自己接项目</h4>
-<blockquote>
-<p>Freelance这个词最早出现时是用来指称“中世纪的雇佣军骑士”，即“free-lance”; 随着时间推移，它慢慢被用于指称自由撰稿人(应该算自由职业中非常流行的行当，特别是在西方国家)，进而扩大至指称所有自由职业者们。</p>
-</blockquote>
-<blockquote>
-<p>因为自由职业者们通常是脑力劳动者或服务提供者，并且大多是自己所在领域的专家或资历丰富者，加上又不要求签订长期的工作协议或合同，许多企业或个人愿意将自己的项目外包(Outsourcing)给他们。</p>
-</blockquote>
-<blockquote>
-<p>-- Freelancer专属™ 博客</p>
-</blockquote>
-<p>做 Freelancer 最需要解决的是项目来源问题，而项目来源最主要的途径通常是有四种：</p>
-<h4 id="-freelance-">通过在线 Freelance 平台接项目</h4>
-<p>类似的平台有很多，相对传统且做的较大的有：</p>
-<ul>
-<li><a href="http://www.freelancer.com/">freelancer.com</a></li>
-</ul>
-<p>freelancer.com 可以算是资格最老的 freelance 平台了，以前也曾是那么的辉煌。但是，现在这里已经慢慢变成了一个几乎所有项目都会有一堆印度人以极低的价格和你血拼的地方。我个人认为要想做 Freelancer， 一定不能拼价格，特别是和印度人拼价格。 最主要还是能提供更好的服务，更好的完成任务，写出更易维护的代码... 但是如果你是初出茅庐，最难的或许是如何证明你有这样的实力，为什么要收比那些印度人更高的价格。是的，你必须收比他们更高的价格，因为经过我的计算，大多情况下如果你和他们收一样的价格，你几乎不太可能养活你自己。毕竟，你夏天还得吹吹空调吧... :p</p>
-<p>所以， 如果你有一些开源的项目或者在线运行的项目能证明你的实力的，千万不要羞于拿出来，否则你或许前几单真要和他们拼价格了。</p>
-<p>freelancer.com 里的优质项目的比例真的已经比以前低很多，或许花时间在里面找到优质项目就够你麻烦的了。所以我个人现在并不推荐你来这里接货儿。</p>
-<ul>
-<li><a href="https://www.odesk.com/">oDesk</a></li>
-</ul>
-<p>oDesk 相对于 freelancer.com 最大的特点是。它更支持客户给 freelancers 按小时结算。在我看来在此类似平台接项目，按小时计费是很重要的。因为这类平台客户要把需求写得十分精准几乎是很难的，你的程序需要来回修改几乎是家常便饭。如果按小时收费，那么这个来回修改的费用将由客户来承担，这也从另一方面促使他们把问题想清楚，把需求写得更加清楚。</p>
-<p>另外 oDesk 要通过视频来和屏幕截图来监视你是不是认真的工作了你说的那么多小时... WTF... 我们干 freelancer 不是为了自由吗？ 这么搞是要闹哪样？</p>
-<p>就因为这一点，我真的不推荐这个平台。不过这个平台的 rate 相对 freelancer.com 高一些。你是不是要暂时放下你的自由？还是你自己决定吧!! &gt;.&lt;</p>
-<ul>
-<li><a href="https://www.elance.com/">Elance</a></li>
-</ul>
-<p>Elance 在我看来相对于上两个要好一些。一方面它项目的平均 rate 要高一些。另一方面他也没有恶心的视频监控之类的东西。但是你需要填写你每天工作花了多少时间，具体做了什么事情。相信我，这要求真不过分。即使客户不做这种要求，我自己也会写的。</p>
-<ul>
-<li><a href="http://www.topcoder.com/">TopCoder</a></li>
-</ul>
-<p>TopCoder 看似是比赛，实际上他是通过比赛的形式来做外包，这个平台和其它平台比起来非常特别。要注意的是，你做好的东西，会有人 review, 选出前三名。而只有前三名有钱拿（相对较高），后面的名次是没有钱拿的。所以有可能你会白劳动。如果你做出一些成绩后，你可以做那些 review 别人代码的人，而 review 本身也是收费的。</p>
-<p>这里要特别注意，这个平台 .NET 和 Java 的人特别多，竞争非常激烈。反儿，做前端的人特别少，相对没什么竞争。所以如果你是个不错的前端，别忘了考虑考虑哦。:)</p>
-<p><strong>Job Board</strong></p>
-<p>除了传统的接项目平台，去一些不错的 Job Board 找项目是非常不错的选择。虽然大多可能是全职的工作居多，但是招募 freelancer 的其实也不少，需要自己细心去挖掘。在这里推荐一些不错的：</p>
-<p><a href="https://jobs.github.com/">jobs.github.com</a></p>
-<p><a href="http://careers.stackoverflow.com/jobs">stackoverflow jobs</a></p>
-<p><a href="https://news.ycombinator.com/jobs">ycombinator jobs</a></p>
-<p><a href="https://weworkremotely.com/">37signals jobs</a></p>
-<p><a href="https://gun.io/">gun.io</a></p>
-<p>这种方式拿到的项目，普遍 rate 要高一些并且靠谱率也要高一些（靠谱率 lol...）。 如果你初来乍到，这种途径对于你自己的实力以及和客户的沟通能力都是非常大的挑战...</p>
-<p><strong>通过朋友介绍</strong></p>
-<p>其实最好的接活儿的方式还是通过朋友介绍，可以是你的前同事，前客户，你同行的朋友。朋友介绍通常的好处是，客户相对更加容易信任你，而且你朋友通常会做一些筛选，那么项目也相对更靠谱一些。所以和你以前的同事保持良好的关系，经常的沟通是非常重要的。</p>
-<p>如果没有相关资源怎么办？ 去认识那些你优秀的同行朋友。相信我，勇敢的走出这一步，参加各种活动，想办法去认识那些靠谱的人，并想办法证明你自己也非常靠谱。这样当他们有了项目需要找人，或许脑海里你就在那个“靠谱开发人员”的list里。</p>
-<p><strong>让客户自己找上门来</strong></p>
-<p>这一点真的很难，但是绝不是做不到。要想让客户找上门来，你必须要有一定知名度。而积累知名度不外乎以下几种方法：</p>
-<ol>
-<li><p>写优秀技术博客，并且坚持 ( 比如 XDite 同学的 <a href="http://blog.xdite.net/">Blog</a>)</p>
-</li>
-<li><p>做客户能访问甚至正在使用的优秀的项目 (比如咱们的 <a href="https://fengcheco.com/">风车</a> :D )</p>
-</li>
-<li><p>参与或创建一些优秀的开源项目 (比如 <a href="http://blog.huangzhimin.com/">Richard</a> 同学的 <a href="https://github.com/railsbp/rails_best_practices">rails best practices</a>)</p>
-</li>
-<li><p>去技术会议上演讲 (比如赶快报名 <a href="http://rubyconfchina.org/">Rubyconf China 2013</a>)</p>
-</li>
-</ol>
-<p>做好这几点都不是那么容易的事情，而且效果也绝不是立竿见影，且需要你坚持不懈的努力。但是一旦成功那么效果也将是极好的，rate 也将是极高的. 你懂的... :D</p>
-<h3 id="-freelancer-">总结一下，我觉得做 freelancer 几个重要的点</h3>
-<ol>
-<li><p>以上四种途径并不矛盾，而最终一定要向第四种努力</p>
-</li>
-<li><p>不要打价格战，一定要提供更好的服务</p>
-</li>
-<li><p>尽量接欧美的项目，相信我，相比而言 rate 比国内要高不少</p>
-</li>
-<li><p>英语对于一个 freelancer 来讲真的非常重要，特别是读和写</p>
-</li>
-<li><p>做事情一定要专业，避免情绪化</p>
-</li>
-<li><p>学会对客户 Say no!!</p>
-</li>
-<li><p>建立 reputation 极为重要，且一定要坚持不懈</p>
-</li>
-</ol>
-<p>这个系列的第一篇就结束了，希望对你有所帮助，以后还会继续介绍 SOHO 相关的话题。</p>
-<p>你可以 <a href="http://weibo.com/poshboytl">加我微博</a> 或 <a href="https://twitter.com/poshboytl">加我推特</a>，里面会有更多我 SOHO 相关的经验和心得。希望能和你多多交流和互动。</p>
-<h2 id="-soho-2-">如何开始你的 SOHO 之旅 (2)</h2>
-<p>没想到这个系列的上一篇文章受到了如此大的关注，很多朋友也提出了不少问题和疑惑，我也将尽可能的在这一篇或这个系列的未来几篇文章中给大家做出回答。这一篇blog还是让我们先按照主线来继续，来谈谈程序员开始SOHO的另外一条路：</p>
-<h3 id="-">加入一个允许在家工作的公司</h3>
-<h4 id="-">需要考虑什么？</h4>
-<p>上一篇文章一出，就有人问道：“在中国能找到允许在家上班工作？”-- 那是当然，因为我就曾在一家名叫 <a href="http://www.intridea.com/">Intridea</a> 的软件公司工作过两年多。并在这里结识到非常多的优秀的程序员，我的两位创业伙伴 <a href="http://yedingding.com/">Dingding</a>, Ben 也都是在这里认识的。并且现在还有很多非常优秀的老朋友依然在这里工作得非常happy。你也许会说，Intridea不是一家美国公司吗？是的，有什么影响呢？作为一个打算 SOHO 的程序员你真的在乎你的公司是 based on 哪个国家的吗？当选择 SOHO 公司时，我个人认为你只需要考虑以下四个问题：</p>
-<ol>
-<li><p>工作的内容是否是你感兴趣的</p>
-</li>
-<li><p>待遇是否让你觉得满意（不是我俗， 这个很重要。早日实现财务自由就靠它了 :p）</p>
-</li>
-<li><p>是否能结识有意思的，优秀的人</p>
-</li>
-<li><p>是否对你未来的职业发展有帮助</p>
-</li>
-</ol>
-<p>是的，如你看到的，没什么特别。你即使选择一家不允许在家上班的公司，你也仍然需要考虑这四个问题。但是区别在于你不用考虑如下问题了：</p>
-<ol>
-<li><p>不用考虑这个公司在哪个国家，哪个城市，哪个位置，离你家有多远。 （依稀记得，流川枫当年就因为这个选择了湘北）</p>
-</li>
-<li><p>不用考虑是否会因为公司在外地而被迫离开你的爱人或家人</p>
-</li>
-<li><p>不用考虑到公司的交通是否方便</p>
-</li>
-<li><p>不用考虑公司是否需要打卡</p>
-</li>
-<li><p>不用考虑公司是否提供免费且健康的午餐</p>
-</li>
-<li><p>不用考虑公司是不是发是不是 Apple 或 Thinkpad 的电脑</p>
-</li>
-<li><p>不用考虑公司的转椅是不是200元一把在批发市场统一进货的（不但对你脊椎和腰不好，甚至有爆X花的风险哦！&gt;.&lt; ）</p>
-</li>
-<li><p>当你挑选远程工作的公司时，你考虑的问题往往是更接近你工作的本质。不会被一些客观条件所束缚。换言之，你更容易找到你真正喜欢的工作。</p>
-</li>
-</ol>
-<h4 id="-">怎么找到这样的公司？</h4>
-<p>不得不说，让员工在家里上班的公司仍然是属于小众的，你也可以说他们是超前的。但是找到他们并没有你想像的那么难。我们要怎么找到他们？在回答这个问题之前我们必须要了解一下通常这样的公司有什么样的特点和价值观：</p>
-<p>认为人才不一定就在你家附近，他很有可能在大洋彼岸的某个地方
-不喜欢通过招聘网站招人，不喜欢看简历（或者说简历通常只起到参考作用）
-懂得如何宣扬自己的价值观，通过自己的博客，Podcast， 写书，走出去到各种conf 或聚会做演讲或做交流
-不喜欢繁重的流程，崇尚简单。敏捷对他们来讲更多是流在血液里而不是嘴巴里
-他们大多是 Github 的用户 和 37 Signals blog 或 书的读者
-崇尚开源
-...
-足够了，虽然共性或许还有很多。但是已经足够我们找到他们了。如 1，2 所说，参加当地的什么人才交流市场以及到什么联招聘网站投简历这种路数基本是没戏了。我知道或许大部分人是这么找工作的，但是很明显你是在找一个小众的东西，怎么能用一个大众的方法呢？来来来，让我来为你指出几条明路 :D</p>
-<p><strong>通过 Github 或 37 Signals 的Job board</strong></p>
-<p>如我上面第五点所说，这些支持 remote的公司或其员工，多多少少受到了 Github, 37 Signals 两家公司的影响。这一方面是因为 Github, 37 Singals 是两家价值观输出做得很好的公司，从而成为了意见领袖。另一方面就是他们本来就一直推动远程工作的发展，无论是工具上，流程上，方法学上他们都在做出很多的尝试和贡献。这不，<a href="http://37signals.com/remote/">37 Singals 马上上架的新书</a>不就是讲 Remote working 的吗？可千万不要错过哟。</p>
-<p>话说回来，当这些公司需要发招聘信息时，他们通常很乐意选择他们十分认同的公司的 Job Board，也就是：</p>
-<p><a href="https://weworkremotely.com/">jobs.37signals.com</a></p>
-<p><a href="https://jobs.github.com/">jobs.github.com</a></p>
-<p>是的，你可以说他们是这两家公司的“脑残粉”。但他们更重要的考虑是，他们认为在这两个地方发招聘信息更容易找到和他们价值观接近的人。你可能无法想象价值观接近对于一个远程工作的公司有多么重要。它意味着你可以节省大量的时间讨论什么是对的，什么是错的，它意味着你不知道为什么但是工作起来就是很合拍...</p>
-<p>你可能会觉得这些 Board 中，很多并没有说明自己是支持远程工作的。是的，的确如此。但是很多没有提到，并不代表他们是不允许的。大胆问一下，他们是否支持远程工作。其实有很多是允许的，即使不允许你不也没什么损失吗？:)</p>
-<p>BTW, 有空的时候看看这两家公司的东西，开源项目也好，blog也好，书也好。也让自己“洗洗脑”，这样和你未来的同事相处一定会顺畅很多...</p>
-<p><strong>通过社交网络</strong></p>
-<p>如第3点所讲，这些公司中大多喜欢表达自己的想法。他们的 blog，他们的 twitter... 你可以从这些地方入手找到他们。其实从他们发布的东西的内容和方式你就多多少少能判断这个公司是不是你想要的。并且不要羞于通过评论，@ 等方式和他们互动，进一步的了解他们。</p>
-<p>也可以从 Github, 37 Signals 等一些著名Blog的评论中去寻找这些人的足迹，他们是不会错过评论一篇优质文章，并发表一些自己的观点的。和他们互动，认识他们。这就是一个好的开始。</p>
-<p><strong>通过参加conf</strong></p>
-<p>当一个公司意识到人才可能并不在你周围的时候，他们是非常乐意走出去的。Joel 在他的 blog 也提到。你要找到优秀的人才，那么你必须走出去。去那些技术的 conf, 去那些技术的 meetup。</p>
-<p>而作为想要找到这些工作机会的人们，特别是远程工作机会的人。你也应该顺应这个趋势，去各种 conf 和 meetup 和他们搞个“邂逅”。（比如即将到来的 Rubyconf China 2013）相信我这些你平时认为的意见领袖和牛人比你想的要随和多了，勇敢的去和他们聊聊天，你一定收获会颇丰。说不定一个完美的工作机会就因为这个谈话而诞生了。还是那句话，如果失败你真有什么损失吗？</p>
-<p>另外如果你能提交一个演讲，那将是一个更完美事情。在场所有的人将听到你的观点，你的演讲。你知道这意味着什么吗？这将意味着，他们或许会来找你聊天。而你，只要当他们来时表现得随和一点就行了，那么接下来很多问题都好办了 :p</p>
-<p><strong>通过开源贡献</strong></p>
-<p>还有什么比代码更能说明一个程序员的水平？如果你瞄准了一家公司，那么去 Github 翻翻他们家的箱底。如果找到一些你略微熟悉的开源项目，立即fork。试用，并想想有没有什么改进的空间。（比如你就可以拿<a href="https://github.com/pragmaticly">我们的箱底</a>开刀）</p>
-<p>接下来的日子或许会过得有些辛苦。熟悉这个项目的代码，搞清楚它的工作原理，最重要的是摸清他们的开发风格。然后提交 PR，参与到这个项目的开发中。</p>
-<p>只要有几个不错的 PR 被接受，并和维护者熟悉了。然后你可以投放简历到这家公司了。相信我你中标率将高于其他所有人。因为你已经证明了你自己，甚至你连编码风格都和他们公司差不多。他还有什么理由可以拒绝你呢？</p>
-<p>其实通过开源项目方式来招收新员工的方式，已经大量的被很多公司所接受。因为它确实太好了，他可以保证你招收的人已经是你想要的，并且你已经具备了远程工作的能力。</p>
-<p>仔细想想，众多的优秀开源项目不都是远程工作的产物吗？:)</p>
-<p><strong>订阅我的社交媒体</strong></p>
-<p><a href="http://terrytai.com/">我的Blog</a> 和 <a href="http://weibo.com/poshboytl">我的weibo</a> 以及 <a href="https://twitter.com/poshboytl">我的twitter</a>都会公布一些我所知道的远程工作机会。如果你有兴趣的话可以订阅哟 :D</p>
-<p>今天就在此公布一个：</p>
-<p><a href="http://teahour.fm/2013/08/21/strikingly-yc-and-startup.html">上一期 Teahour.fm</a> 我们采访的 <a href="https://www.strikingly.com/">Striking.ly</a> 团队正在招收 Rails 后端程序员。他们要求前两个月去公司上班，以后都可以在家SOHO。此团队极其靠谱是第一个获得<a href="http://ycombinator.com/">Y-Combinator</a>投资的中国团队。如果你也是个靠谱的家伙，你可以和我取得联系，我可以帮你做推荐。当然，你也可以直接上 :)</p>
-<p>最后无耻小广告一枚: 远程工作一定要用好的项目协作工具，看看我们家的 <a href="https://fengcheco.com/">风车</a> 吧。你一定会喜欢的 ;)</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ OpenSSL Heartbleed 漏洞深入分析 ]]></title>
-    <link href="http://movier.me/blog/2014/openssl-heartbleed-analysis/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:20Z</updated>
-    <published>2014-04-11T17:45:00Z</published>
-    <id>http://movier.me/blog/2014/openssl-heartbleed-analysis/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>自从进入了新的阶段以来，我越来越关注互联网的<strong>安全性</strong>。这不，OpenSSL前几天又爆出了惊天大漏洞<a href="http://heartbleed.com/"><strong>Heartbleed</strong></a>，就把它作为我学习互联网安全的第一个实例吧！</p>
-<p><img src="/images/heartbleed.png" alt="Heartbleed Bug"></p>
-<p><strong>以下是一些关于HeartBleed漏洞的资讯：</strong></p>
-<ul>
-<li><a href="http://www.36kr.com/p/211028.html">“Heartbleed”漏洞恐令数十万服务器泄密</a></li>
-<li><a href="http://www.36kr.com/p/211033.html">OpenSSL “Heartbleed” 漏洞意味着什么？要如何应对？</a></li>
-<li><a href="http://www.freebuf.com/vuls/31339.html">[附POC]OpenSSL曝严重安全漏洞，国内大量网站中招</a></li>
-</ul>
-<p><strong>以下是一些关于Heartbleed漏洞分析的文章：</strong></p>
-<ul>
-<li><a href="http://netsecurity.51cto.com/art/201404/435222.htm">Heartbleed: OpenSSL密码与加密密钥泄露漏洞剖析</a></li>
-<li><a href="http://blog.wangzhan.360.cn/">比想象中更恐怖！OpenSSL“心血”漏洞深入分析</a></li>
-<li><a href="http://drops.wooyun.org/papers/1381">关于OpenSSL“心脏出血”漏洞的分析</a></li>
-</ul>
-<p><strong>以下是一些针对Heartbleed漏洞的测试脚本：</strong></p>
-<ul>
-<li><a href="https://gist.github.com/RixTox/10222402">python版</a></li>
-<li><a href="https://github.com/emboss/heartbeat">ruby版</a></li>
-</ul>
-<p>看了OpenSSL官方为该漏洞打的<a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=96db902">补丁</a>，只是简单地增加了一些if的判断语句，从中可以看出这个漏洞本质上就是边界检查问题，归根结底还是代码质量的问题——代码的严谨性不够，测试工作不到位导致了这样一个非常低级但是危害却十分严重的漏洞。</p>
-<p>TO BE UPDATED...</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 在Ubuntu下使用PHP连接SQL Server ]]></title>
-    <link href="http://movier.me/blog/2014/connecting-to-a-mssql-serverdatabase-with-php-on-ubuntudebian/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:26Z</updated>
-    <published>2014-04-10T16:24:00Z</published>
-    <id>http://movier.me/blog/2014/connecting-to-a-mssql-serverdatabase-with-php-on-ubuntudebian/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>最近我需要实现在Ubuntu系统下使用PHP连接SQL Server数据库。查看了PHP的官方文档并google了关键字之后，找到了一些相关资料，最终实现了目标！</p>
-<hr>
-<p><strong>系统配置：</strong></p>
-<ul>
-<li>Ubuntu 13.10</li>
-<li>Microsoft SQL Server 2008 R2</li>
-</ul>
-<hr>
-<p><strong>实现过程：</strong>
-<strong>第一步、安装Apache和PHP</strong>
-在终端下分别使用命令<code>sudo apt-get install apache2</code>和<code>sudo apt-get install php5</code>安装Apache和PHP，使用<code>phpinfo()</code>检查是否安装成功。</p>
-<p><strong>第二步、安装FreeTDS及相关组件</strong>
-使用以下命令安装FreeTDS及相关组件<code>sudo apt-get install freetds-common freetds-bin unixodbc php5-sybase</code>，安装成功之后，使用命令<code>sudo service apache2 restart</code>重启Apache。</p>
-<p>现在你可以使用tsql命令测试连接SQL Server数据库了，在终端下输入：</p>
-<pre><code class="lang-bash">    tsql -H &lt;hostname/ip_address&gt; -p &lt;port&gt; -U &lt;username&gt; -P &lt;password&gt; -D &lt;chosen_database&gt;
-</code></pre>
-<p>你应该会得下类似下面的信息：</p>
-<pre><code class="lang-bash">    locale is &quot;en_US.UTF-8&quot;
-    locale charset is &quot;UTF-8&quot;
-    using default charset &quot;UTF-8&quot;
-    Default database being set to &lt;chosen_database&gt;
-    1&gt; quit
-</code></pre>
-<p>如果你看到了类似上面的东西，那就说明连接成功了。接下去该修改<code>/etc/freetds/freetds.conf</code>文件了，这是FreeTDS的配置文件，使用编辑器打开这个文件，你会看到一些默认的内容，在文件末尾加上类似下面的内容：</p>
-<pre><code>    [YOUR_SERVER_FRIENDLY_NAME]
-        host = &lt;hostname/ip_address&gt;
-        port = &lt;port&gt;
-        tds version = 8.0
-</code></pre><p>现在你应该无需提供主机名和端口号就可以连接了，使用下面的命令测试：</p>
-<pre><code>    tsql -S &lt;YOUR_SERVER_FRIENDLY_NAME&gt; -U &lt;username&gt; -P &lt;password&gt; -D &lt;chosen_database&gt;
-</code></pre><p>应该会得到类似下面的信息：</p>
-<pre><code>    locale is &quot;en_US.UTF-8&quot;
-    locale charset is &quot;UTF-8&quot;
-    using default charset &quot;UTF-8&quot;
-    Default database being set to &lt;chosen_database&gt;
-    1&gt; quit
-</code></pre><p>如果你得到了上面的信息，说明成功了，开始准备编写PHP代码吧！可以参考以下代码进行测试：</p>
-<pre><code class="lang-php">    $connection = mssql_connect(&#39;&lt;YOUR_SERVER_FRIENDLY_NAME&gt;&#39;, &#39;&lt;username&gt;&#39;, &#39;&lt;password&gt;&#39;);
-    if (!$connection) {
-      die(&#39;Unable to connect!&#39;);
-    }
-    if (!mssql_select_db(&#39;&lt;chosen_database&gt;&#39;, $connection)) {
-      die(&#39;Unable to select database!&#39;);
-    }
-    $result = mssql_query(&#39;SELECT * FROM &lt;some_table&gt;&#39;);
-    while ($row = mssql_fetch_array($result)) {
-      var_dump($row);
-    }
-    mssql_free_result($result);
-</code></pre>
-<p>在浏览器中运行这些代码后，应该会打印出<code>some_table</code>表中的全部数据。</p>
-<hr>
-<p>希望这对你有帮助！ :)</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 我们在桔子拍摄了婚纱照 ]]></title>
-    <link href="http://movier.me/blog/2014/wo-men-zai-jie-zi-pai-she-liao-hun-sha-zhao/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:32Z</updated>
-    <published>2014-04-08T16:01:00Z</published>
-    <id>http://movier.me/blog/2014/wo-men-zai-jie-zi-pai-she-liao-hun-sha-zhao/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>前天，我和小懒猪在<a href="http://www.juzisy.com/"><em>桔子</em></a>拍摄了婚纱照。早上7点出门，晚上回到家已经12点了，忙碌了整整一天时间，但是我并不感到十分疲惫，小懒猪是真的累了，回家的路上就睡着了。总的来说，桔子的服务还是可以的，无论是化妆师、摄影师还是助理小弟态度都非常好。尽管没体验过其他一些婚纱摄影公司，但是我仍然感觉自己的选择没有错。这些其实都是次要的，拍摄出来的照片才是关键，我对我们的照片还是比较满意的。
-<img src="/images/hunsha.png" alt="优雅"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 为开源事业做的第一个贡献 ]]></title>
-    <link href="http://movier.me/blog/2014/wei-kai-yuan-shi-ye-zuo-de-di-ge-gong-xian/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:39Z</updated>
-    <published>2014-04-01T13:27:00Z</published>
-    <id>http://movier.me/blog/2014/wei-kai-yuan-shi-ye-zuo-de-di-ge-gong-xian/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>今天早上，我像平常一样地打开我的Github，看到有未读地Notification，自然而然地就点了进去。令我十分惊喜地是，我为Ghost文档的中文翻译做的一些工作得到了Ghost项目带头人的肯定并将我的pull request合并了进去，点击以下链接查看这个pull:</p>
-<p><a href="https://github.com/TryGhost/Ghost/pull/2445">https://github.com/TryGhost/Ghost/pull/2445</a></p>
-<p>其实很早以前我就完成了这些工作并且提交了pull request，等了很久，一直没有回音，就在我逐渐失去信心的时候，我的pull request终于被采纳了。我实在是难以抑制内心的激动与喜悦，Ghost上终于有了我的脚印，<a href="http://docs.ghost.org/zh/themes/">http://docs.ghost.org/zh/themes/</a> 上大部分的内容就是这次的成果。有了这次地成功经验，我会继续努力的为开源事业作出自己的贡献！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 关于Drupal7模板的那些事儿 ]]></title>
-    <link href="http://movier.me/blog/2014/something-about-drupal7-template/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:45Z</updated>
-    <published>2014-03-20T13:24:00Z</published>
-    <id>http://movier.me/blog/2014/something-about-drupal7-template/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>这篇文章最初发布于2013年4月20日。由于一些原因，图片和代码部分存在缺失，请谅解！待博客平台稳定后会逐步添加进去。</p>
-<hr>
-<p>最早接触drupal是在2012年的8月份。那时候，我刚从创恩IT教育毕业，没过多久我就以php软件工程师的身份进入博科资讯股份有限公司，面对的就是基于drupal7的主题开发。不知不觉接触drupal已经快一年了，我实在非常热爱drupal，所以想把自己对drupal开发的一些心得拿出来与大家分享。</p>
-<p>###一、一个小例子
-首先，我将通过一个小例子向大家引入Drupal7中模板的概念。假设你已经搭建了本地环境，并且可以自由地在本地机器上测试drupal。如果有朋友不会搭建环境，请去网上搜一下教程，花费一点儿时间应该就能够完成了。</p>
-<p>####1.实际需求
-drupal7.22安装完成后，我们能够看到drupal7.22的庐山真面目 了，大致的样式见下图：</p>
-<p>这时候如果我想把drupal的图标drupal_logo和站点名称（即上图中的localhost）位置对掉一下该怎么办呢?</p>
-<p>####2.需求分析
-也许你觉得drupal既然如此强大，它肯定能通过后台进行设置，从而控制相关内容的排列方式，于是你会花上好一番力气进行寻找。但是根据我的经验，这一需求想要通过drupal的后台配置是无法实现的。通过配置最多只能控制是否显示图标或站点名称，对于他们的排列顺序则无能为例。那么到底是什么控制了他们的顺序了呢？其实有点经验的前端开发人员肯定知道，答案是html结构。那drupal的html结构又是怎么一回事呢？我在哪儿可以找到这个页面对应的html文件？难道我要对每一张页面的html文件都进行修改吗？如果你能够提出这些问题，那么我会感到非常开心。</p>
-<p>####3.解决方案
-打开/themes/bartik/templates/page.tpl.php文件。首先忽略掉那些开头是*的行，都是注释，不起什么实际作用。直接跳到92行左右，往下看到122行左右，可以看到差不多类似这样的一些代码:</p>
-<p>将黄色部分代码与红色部分代码位置对换，然后保存文件。回到刚才的页面刷新一下吧！看到变化了吗？</p>
-<p>我们的需求实现了，为自己鼓一下掌吧！</p>
-<p>###二、Drupal7模板介绍</p>
-<p>####1.什么是模板？
-在第一部分的例子中，我们修改的文件就是Drupal7中的模板文件。通俗一点来说，凡是以.tpl.php结尾的都是Drupal7中的模板文件。</p>
-<p>####2.模板有什么作用？
-在讨论模板的作用之前，我不得不提一下另外一个概念——主题（theme）。</p>
-<p>在drupal7中，模板一般是基于主题这个概念下的。什么是主题呢？打开根目录下的themes目录，看到的一个个文件夹就是Drupal7默认的主题，主题又分为前台主题和后台主题。一般我们说的主题都是指前台主题。抽象一点来说，主题就是一个Drupal网站的风格，而模板就是实现网站风格的一种手段。模板的具体功能是修改一个页面的结构或者修改一类页面的结构。</p>
-<p>####3.都有哪些模板？
-Drupal7本身有许多默认的模板文件，而这些模板文件都在各自的领域起作用，下面介绍几个常用的模板文件：
-html.tpl.php</p>
-<p>打开modules/system/，你就能找到html.tpl.php文件，文件本身带了大量的注释，通过阅读注释，你对这个模板文件的了解就差不多了。这是一个关于html结构的模板文件，当我们需要在特定页面中修改头部()内容时，譬如：加一个meta标签，引入一个js文件，引入一个css文件，就需要覆写这个模板文件。</p>
-<p>page.tpl.php</p>
-<p>同样在modules/system/目录下可以找到page.tpl.php模板文件，同样地阅读注释吧！对这个模板文件有一个大致的了解。修该页面布局时，经常会使用到这个文件，这个模板文件就像是一个大的框架，把一个页面的各个部分组合起来，站点信息、导航、内容、区域等他们之间的结构关系都可以通过覆写这个模板文件来实现。请记住，它只是一个大框架，更具体的内容结构它是无能为力的。想要修改更具体的内容结构需要覆写特定的模板文件。</p>
-<p>node.tpl.php</p>
-<p>在modules/node/下可以找到node.tpl.php模板文件，打开文件阅读注释吧！还记得我在介绍page.tpl.php中说过，page.tpl.php是无法修改具体内容的结构的，如果要修改具体内容的结构需要特定的模板文件。而这个node.tpl.php就是其中之一，先说一下node的概念吧！一篇文章、一个页面就是一个node，node中有标题、摘要、正文等信息，当我们需要修改这些信息之间的结构关系时，可以覆写这个模板文件。</p>
-<p>####4.什么是覆写（override）？
-当你有一个实际需求，并且知道需要修改模板文件来实现这个需求时，你会感到迷茫，不知道该修改哪个模板文件！其实使用“修改”这个动词是不太恰当的，当你需要修改的模板文件存在时才称得上修改。如果不存在，通常我们的做法是通过主题的钩子(hook)机制覆写(override)默认模板文件。这里又有一个新概念——钩子(hook)，钩子是Drupal的核心思想，也是其精华所在。由于我对Drupal7核心的掌握程度有限，不敢在这里对这个概念妄加评论。我们暂时把钩子(hook)理解为一种规则吧！通俗一点来说，Drupal对模板的调用是有一套规则的，而这套规则是建立在模板文件的名称之上的，也就是说Drupal通过模板文件的名称来调用特定模板，我们也可以通过给模板文件一个特定的命令让Drupal来调用。</p>
-<p>Drupal7中的模板设计得非常精细以及巧妙，接下去对几个常用模板的hook机制进行介绍：</p>
-<p>page--[front|internal/path].tpl.php</p>
-<p>这里的internal path必须是内部路径，并非url别名，这里大家必须注意一下。page模板主要根据页面的路径来调用相应的模板。比如，如果我想覆写主页page层次的模板，只要page.tpl.php这个基础模板拷贝到你的主题中，并重命名为page--front.tpl.php，修改其中的内容，并清空缓存就可以了</p>
-<p>所以，对于page.tpl.php模板的覆写，我们必须注意页面的内部路径。比如我们想要覆写page.tpl.php模板的一个页面的内部路径是node/1/edit, 那么Drupal7会在你的主题中按照以下顺序检查模板文件，如果存在就调用:</p>
-<p>1.page--front.tpl.php（当且仅当该页面被设置为首页时）</p>
-<p>2.page--node--edit.tpl.php</p>
-<p>3.page--node--1.tpl.php</p>
-<p>4.page--node--%.tpl.php</p>
-<p>5.page--node.tpl.php</p>
-<p>6.page.tpl.php</p>
-<p>如果一个都找不到，Drupal7就会调用默认的模板文件page.tpl.php</p>
-<p>html层次的模板文件调用规则其实和page层次的调用规则是类似的，在这里就不作赘述了，读者可以自己进行测试。</p>
-<p>node--[type|nodeid].tpl.php</p>
-<p>node层次的模板文件的调用规则相对就比较简单了，主要是依据内容类型来调用模板。举例来说，我创建了一个内容类型叫做产品，机读名称是product，那么如果我想让所有属于产品这一内容类型的内容都调用同一个模板，我只要基础模板node.tpl.php拷贝到我的主题目录下并重命名为node--product.tpl.php，再修改里面的内容，最后清空缓存就可以了。只是针对一个内容类型来创建模板，也可以根据node的id来创建模板，例如node--231.tpl.php就只针对nodeid是231的内容起作用。</p>
-<p>以上主要介绍了三种常用的模板文件及其在drupal内部的调用规则，其实这里的调用规则也是可以自己定制的，不过这已经不在本文的讨论范围之内了，有兴趣的朋友可以自己去研究。了解了这三个模板之后，对于其他的模板文件，也就是举一反三了，首先了解这个模板在drupal中的层次，然后了解drupal对它的调用规则，大多数的的调用规则都可以在官方文档中找到。</p>
-<p>###三、Drupal7模板高级应用</p>
-<p>文档刚开始的时候举的例子只是为了引入drupal模板的概念，这里我将举一个稍微复杂一点的例子，从实际应用出发，加深大家对模板的理解。</p>
-<p>####1.实际需求
-未登陆状态下，默认主题的登陆界面实在太突兀了，到哪儿都有它，简直有点让人受不了，必须改变他才行。</p>
-<p>已登陆状态下，明明管理菜单上已经有了查看账户和注销按钮，可是页面上也有这两个按钮，不是多此一举吗！</p>
-<p>所以理想中的未登陆和已登陆的页面应该是这样的。</p>
-<p>登录按钮只在首页显示</p>
-<p>####2.需求分析
-实际需求明确了，效果图都出来了，我们就该思考一下怎么实现效果图了。去掉登录界面是一件很容易的事，有点drupal后台操作经验的人应该都会，在结构——区块中把已经放置到相关区域的登录区块去掉就行了。可是这个登录区块去除后，该怎么登录呢？不用担心，有一个地址，类似于localhost/?q=user，这个路径对应的就是登陆页面，当然localhost/?q=user/register这个地址对应的是注册页面。已登录状态下，这两个路径则分别对应我的账户和编辑我的账户页面。至于为什么这两个路径对应的是登录和注册页面，就不是我们要关心的问题了，大家有兴趣的话可以自己去研究。既然两个登录和注册页面的路径知道了，接下去只要把这两个超链接添加到各自的按钮或者文字上就行了。但是通过一种什么方式把这两个带着超链接的文字添加到页面上去呢？并且，最重要的一点是这两个按钮只在未登录状态下显示，在已登录状态下隐藏。还有一个需求就是页面上不要显示我的账户及注销按钮，只在管理栏上显示。对于这两个需求，实现方式可能有许多，可是我认为最合理的方式就是通过模板来实现。</p>
-<p>####3.解决方案
-既然确定通过模板来实现需求，接下来就要明确这些需求关哪些模板的事了，从而对这些模板进行覆写或修改。从页面的结构来看，我们需要修改的部分在整张页面的头部。之前我们讨论过的模板层次问题在这儿就要派上用场了，头部显然不归node模板关，也不关html模板什么事，那就只剩下page模板了，错了，大错特错，虽然答案是对的，但是论证过程是极其错误的。虽然我只谈论了三种模板，但是drupal中的模板是非常多的，也有可能是block模板或者region模板控制了我们要修改的内容。之所以能确定是page模板在起作用，依靠的应该是对每一种模板的熟悉，而非逻辑判断。知道了该覆写或修改哪个模板之后，接下去的工作就简单了，在该模板的适当位置加入一些内容，删除一些内容。对于只在首页现实自制的登录文字链接，就要用到主题的hook机制了，还记得关于page模板的hook机制吗？如何表示首页的，没错就是page—front.tpl.php。也就是说，在page—ront.tpl.php模板中加入判断是否登录，未登录的话显示登录按钮；而在page.tpl.php中删除页面上的My account和Log out按钮。具体的实现方法在这儿就不多说了，相信大家都有能力去实现。</p>
-<p>关于Drupal7的模板我想说的就这么多。大家有任何的意见或建议，都可以给我留言。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 全新的博客——全新的开始 ]]></title>
-    <link href="http://movier.me/blog/2014/new-blog-new-start/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:54:51Z</updated>
-    <published>2014-03-19T18:09:00Z</published>
-    <id>http://movier.me/blog/2014/new-blog-new-start/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>在为我的一个项目寻找主机的过程中，无意间进入了BAE(Baidu App Engine)即百度网络应用开发平台。在浏览BAE的文档时，<a href="https://ghost.org">Ghost</a>出现在了我的眼前。大致了解了这个项目后，我就被她深深地吸引了，她开源、小巧、专注、漂亮，这不正是我所追求的吗?</p>
-<p>和我原来使用的WordPress相比，Ghost无疑更符合我的审美，还有一点非常吸引我的是Ghost更年轻。自然而然的，我就决定将我的个人博客平台从WordPress迁移到Ghost。在过去的一年里我曾在WordPress平台下写过26篇文章，我会在这其中挑选出自认为有一定价值的文章迁移到Ghost平台。</p>
-<p>除了博客平台之外，还有一些也将迎来全新的改变。</p>
-<p>其中一点就是主机供应商，原来的WordPress平台构建于阿里云服务器。虽然是入门级的云服务器，但是和现在Ghost所架构于的BAE相比，实在是耗费了我太多的精力及财力。在此，我要向<a href="http://developer.baidu.com/bae/">BAE</a>表示由衷的感谢，是BAE让我的博客有了家，谢谢你们！</p>
-<p>还有一点就是我的博客即将迎来全新的域名yangxiaoming.me，以中文姓名的拼音加上.me后缀，没有什么比它更适合作为个人博客的域名了。新域名的注册工作已经完成，接下去就是备案了。备案成功之后，全新的域名即将被启用，而原来的域名aug8th.com将做一次redirect到我的新域名，到期后将不会续费。</p>
-<p>就在我写这篇文章的时候，我已经感受到了Ghost所带来的非凡写作体验，那种轻松、专注、愉悦是WordPress所从未带给过我的。我相信，Ghost会让你更喜欢写博客。大家有机会的话一定要尝试一下。</p>
-<p>还等什么呢？马上开始我们崭新的旅程吧！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 之前发现的一些有意思的站点儿 ]]></title>
-    <link href="http://movier.me/blog/2014/several-interesting-sites/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T07:25:09Z</updated>
-    <published>2014-03-19T18:09:00Z</published>
-    <id>http://movier.me/blog/2014/several-interesting-sites/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>这篇文章是我原来WordPress博客平台中所有关于站点推荐的文章的集合。其中关于gravatar的部分最初发布于2013年3月20日，关于simplytest.me的部分最初发布于2013年4月18日，关于msdn的部分最初发布于2014年1月14日，关于webcamtoy的部分最初发布于2014年1月17日。</p>
-<h3 id="1-gravatar">1.全球通用头像Gravatar</h3>
-<p>感谢WordPress，让我接触到<a href="https://cn.gravatar.com/">Gravatar</a>这么好的一项服务。只要在Gravatar上注册过的用户，邮箱会和头像进行绑定，在任何支持Gravatar的网站上，用户无需再次上传头像，可以直接使用Gravatar上的头像，是一款非常棒的产品，笔者个人非常喜欢！</p>
-<p>还没有Gravatar吗？OUT啦！赶紧去体验一下它的神奇吧！</p>
-<h3 id="2-drupal-simplytest-me">2.测试Drupal的网站simplytest.me</h3>
-<p>作为一个drupal开发人员，你是否曾经为了测试一个个drupal模块而苦不堪言，一次次地下载、安装、启用让我们不厌其烦，到头来，真正为我们所用的就那么几个而已。有时候为了实现一个功能需要测试多个模块，最终被采纳的也就那么一个或者没有，实在是感觉浪费了大量的青春啊！如果你有和我一样的困惑，那么<a href="http://simplytest.me/">simplytest.me</a>绝对应当是你的不二之选。</p>
-<p>simplytest.me允许我们在线测试drupal的模块、主题以及版本。当然一个虚拟站点的使用时间只有三十分钟，你必须在三十分钟内得到你想要的结果，否则就必须重新开始测试。三十分钟时间，测试一个模块应该是足够了。drupal developer们，还不知道这个站点的话赶快去体验一下吧！</p>
-<h3 id="3-msdn-">3.MSDN,我告诉你</h3>
-<p>还在为去何处下载microsoft资源而烦恼吗？windows操作系统？office办公软件？这一切到底去哪里下载又快又有保证？答案就是<a href="http://msdn.itellyou.cn/">MSDN</a>,我告诉你。</p>
-<p>有了MSDN,我告诉你。一切微软的资源都不在话下。</p>
-<h3 id="4-webcam-toy-">4.Webcam Toy——一款神奇的在线头像拍摄应用</h3>
-<p><a href="http://webcamtoy.com/">Webcam Toy</a>可以在线拍摄头像并提供非常多的滤镜效果供你选择，当然具备一个摄像头是必须的。强烈推荐有条件的用户去体验一下，配合之前我们推荐过的全球通用头像Gravatar，简直是黄金搭档！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 上天真的是公平的吗？ ]]></title>
-    <link href="http://movier.me/blog/2006/is-god-fair/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-29T01:52:19Z</updated>
-    <published>2006-07-27T20:30:12Z</published>
-    <id>http://movier.me/blog/2006/is-god-fair/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>一直以来，我总觉得上天是公平的。他给了你这样就不会给你那样，他真的是严格遵守了“按劳分配”的原则，值得提倡。但最近我发现他变了，变的不再那么公平，变的有点像足球场上的黑哨了，让我厌恶，不让我喜欢。</p>
-<p>In my opinion,上天的难能可贵正在于雪中送炭，并非锦上添花。有那么一个人，她刚开始像常人一样拥有一切常人有的东西，虽然日子很是艰苦，生活的压力就如巨浪一般不时的拍打着她，但她仍感到欣慰，毕竟上天没剥夺她的行动自由，言论自由。渐渐的日子好转了，她的孩子也长大成人了，开始工作了。对她而言，幸福快乐的日子正要开始，就在这时候，一样陌生的东西降临到了她身上，她万万也没想到自己会遇到它，它的名字叫肿瘤。一开始，它就像一个陌生人来到她身边，没人知道它的来意，后来经过测定，证实这是恶性肿瘤，也就是癌症。从此，生活对她来说发生了翻天覆地的变化，频繁的去医院检查复诊搞的她心烦意乱，心力交瘁，她开始变的沉默了，整日不说话。后来她的丈夫做出了决定，决定把她推上手术台，接受命运的考验。倾尽家中所有的积蓄以及亲戚们的慷慨解囊，终于凑齐了手术费 ……</p>
-<p>在六个多小时的手术时间后，她出来了，还在沉睡着。急切的丈夫赶忙上去问医生手术情况，医生告诉他手术还算成功，他这才放下心来……手术后已经一年了，正当每个人都认为病情稳定的时候，那可怕的东西又回来了，它似乎特别眷恋她。病情的再次恶化使得家里的人手足无措，他们唯一能做的就是守候在她的身旁，希望她不感到孤单。日子还是一天天的过，它并不会为谁而停止，而她的病情也一天比一天严重，这时候死亡对她来说是如此接近而又如此遥远。一方面是病痛的折磨，另一方面是家人无限的关怀，现在唯一支撑着她的也许就是后者了。她已不能说话了，更不能走路了，但她还有思维，她清楚的知道你在说什么，而表达她的感情的就只剩下她的双手，当她紧紧的用她的手握住你的手时，语言在这一刻变得不再重要了，流淌在两人之间的是眼神的交流，是心灵的慰问，更是无尽的期待……</p>
-<p>在这里，我想说的还有两个人，一个是丈夫，另一个则是她的母亲。她的丈夫是个普通的工人，话虽不多，但从他的神情言语之间，我可以感受到他的担心焦虑。在妻子患病的这段日子里，他放下了手上的工作，天天陪在妻子的身旁。在这物欲横流的社会里，我不知道还有多少人能像他这么做，对自己的妻子始终不离不齐。我不相信轰轰烈烈的爱情，不相信海誓山盟的蜜语，更不相信爱的死去活来，我相信的只是像他们那样平平淡淡，却能够长长久久。</p>
-<p>她的母亲是一个普通的农民，但在我看来却是世界上最伟大的母亲。人们都说母爱是世上最伟大的爱，而那母亲的爱已超越了伟大，超越了一切。虽然她没什么文化，没读过什么书，每每遇到人们谈起她的女儿，她只是在一旁落着泪，但我所感受到的是她的心酸，一种痛，我真的不知道该怎么用语言来表达。谁愿意见到白发人送黑发人，但这将会发生在这母亲的身上，我不知道到时该怎么办，第一次发现原来我是那么的没用。</p>
-<p>（截止到发稿为止，她还徘徊在死亡的边缘，上天真的是公平的吗？如果是的话，你就出来拯救她吧！不然我会讨厌你，不把你放在眼里的）</p>
-]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[ 足球与人生 ]]></title>
-    <link href="http://movier.me/blog/2006/soccer-and-life/"></link>
-    <author>
-      <name>Oliver Young</name>
-    </author>
-    <updated>2017-11-02T06:55:10Z</updated>
-    <published>2006-07-25T20:30:12Z</published>
-    <id>http://movier.me/blog/2006/soccer-and-life/</id>
-    <content type="html" xml:base="http://movier.me/" xml:lang="en"><![CDATA[<p>（一直就想写一篇有关足球与人生的文章，但从未付诸行动，今天终于定下心来，开始我的随想。）</p>
-<p><img src="/images/soccer-and-life-image-1.jpeg" alt=""></p>
-<p>There is no doubt that foot足球与人生ball is the most popular thing all over the world this year，原因众所周知。本人也许算不上是一个真正的球迷，at best只算个“伪球迷”。但看了今年的世界杯后，感想也颇多。</p>
-<p>世界杯的舞台从未缺乏过英雄，然而英雄往往有失意的时候。纵使内德维德如铁人一般满场飞奔，捷克也难逃被淘汰的命运；小贝哭了，在数以亿计热爱他的球迷面前流下了泪水，但他的泪水换来的却是英格兰的失利；西班牙输了，劳尔走了，真不知等待他的将会是什么；被视为马拉多纳接班人的里克儿梅最终还是没能带领阿根廷杀入四强，他的十号也由此引起了质疑；最令我惋惜的还是罗纳尔迪尼奥，本被寄予厚望的他在本届世界杯中一粒球也没打进，唯一得到的只是球迷的冷嘲热讽。“想当年，金戈铁马，气吞万里如虎”也许是这些球星们最好的写照。当然，俗语有云：“有人欢喜有人愁。”本届世界杯既然创造了这么多悲情人物，必然也会有英雄出现。毫无疑问，菲戈算一个，在他的带领下，葡萄牙打进了四强；无独有偶，和他年龄想仿的齐丹在本届世界杯中也有出彩的表演，他的出色状态也使法国杀入决赛，齐本人也获得了新一代“king of football”美称。</p>
-<p>看着这一位位悲情人物的黯然神伤和英雄人物的功臣名就，不禁使我联想起了人生。人生不就像足球一样吗？</p>
-<p>人生如足球，full of difficulties and frustrations。也许正是由于足球的未知性才使她布上了神秘的色彩，而足球的未知性也就在于她充满了戏剧性，这样的比赛也比比皆是，前年的欧洲冠军杯就是一个最好的例子，在上半场利物浦0：3落后，人们都认为这场欧冠决赛已提前结束了，然而“天有不测风云”利队在下半场连扳三球，将比赛拖入了点球大战，并且在点球大战中夺得了胜利；99年的欧冠也是一个典型，直到补时前一分钟，曼联还一球落后，就在补时阶段，入两球，戏剧性的反败为胜；就在本届世界杯中这样的例子也存在，半决赛德国对意大利，前90分钟双方一比一战平，不得不进入加时赛。意大利素来有“加时赛之王”的美称，而德国也以“点球之王”闻名于世，当人们都以为比赛将进入点球并以德国的胜利而告终时，他英雄出现了他在加时赛最后一分钟连入两球帮助意大利战胜了德国。足球比赛里像这样的战例数不胜数，在人生的大舞台上也何曾少过。曾经有个少年他由于没钱上大学不得不出外打工来挣学费，在一次工作中他严谨的工作态度给老板留下深刻的印象并帮他读完了大学，最终成为世界著名的企业家。谁又曾想到原本一个连大学都上不起的人，最终会成为富翁。其他诸如此类的例子也不少，which tell us not to give up forever.</p>
-<p>人生如足球，尽管结果可能是一无所获，但你还是得拼搏到底。谁能保证你强攻对方90分钟就一定会进球，然后战胜对手。这样的例子在我们的老朋友上海申花身上是屡见不鲜了情况往往是这样的，整场比赛压着的对手打，但就是没进球，To make things worse, 会在最后时刻，被对手进球而失败。我们暂且不说申花战术上有什么问题，就结果和过程而言，无疑申花是不幸的。而在人身舞台上也是这样，你有可能在平凡的岗位上坐一辈子，默默无闻，但你留给人们的是尊重，社会的分工是不同的，不可能每个人都做国家元首，明星要人，其余的位子总是要有人做的。在我看来，人在社会上的地位只是分工的不同，没什么特别的含义，仅此而已。</p>
-<p>人生如足球，存在着许多虚伪和黑暗。近期被抄的沸沸扬扬的“电话门”事件就是一个最好的例子，也许这是对意大利夺冠的最大的讽刺吧！世界上有名的假摔事件不胜枚举，为了骗得点球球星们真是动足了脑筋啊（真有点苦了他们啊），有的人演技真的不错，我估计他们退役了之后可以去当演员，但有的人实在太烂了，你稍微装得像点，那才叫骗人啊！不然那叫“搞笑”兄弟们诶。这些也许仅仅是最表面的，深层次的我也不想提了，太恶心了，你听了之后，我相信能把隔夜饭都吐出来，为了您和您家人的身体健康我就不说了。再看看我们的人生吧，有许许多多的冤枉和错怪，老师会冤枉你，家长会冤枉你，老板也会冤枉你，就连你最亲近的朋友都免不了怀疑你一下，这些是算轻的了，要是碰到真正的坏人那你就倒霉了，因此我奉劝大家，“忍一时，风平浪静；退一步，海阔天空。”虽然这些道理我都懂，但我自己也很难保证这样做啊！</p>
-<p>但是人生和足球也有最大的不同，足球比赛输了不要紧，最多再来一场，而人生却只有一次，脚踏实地走好每一步，让你的人生焕发光彩！</p>
 ]]></content>
   </entry>
 </feed>

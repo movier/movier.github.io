@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Oliver Young</title>
+  <title>Oli Movie R</title>
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
   <link rel="stylesheet" href="/markdown.css">
 <style type="text/css">
@@ -31,7 +31,8 @@ body {
   font-weight: bold;
   letter-spacing: normal;
 }
-#header p {
+#header div {
+  margin-top: 20px;
   font-size: 22px;
   color: #A9A9A9;
   -webkit-font-smoothing: antialiased;
@@ -377,7 +378,7 @@ a[data-v-8fb1d0ca] {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div></div> <div class="post-container view"><h1 class="entry-title">Wrap your Commands into a Shell Script</h1> <div class="entry-meta">Oct 23, 2017 #shell #bash #sh</div> <div class="content"><p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
+    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="32" id="logo" src="/avatar.jpg" style="border-radius: 50%;"></a></div></div> <div class="post-container view"><h1 class="entry-title">Wrap your Commands into a Shell Script</h1> <div class="entry-meta">Oct 23, 2017 #shell #bash #sh</div> <div class="content"><p>Recently when I try to backup a MongoDB database running in a docker container with command line, I find the command is too long to remember.</p>
 <pre><code>docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup:/backup mongo mongodump --host mongo --db olivia-server --out /backup
 </code></pre><p>Wouldn't it be great if you don't need to remember or look up the command when use! Fortunatelty you can! All you need to do is wrap your long commands into a shell script.</p>
 <hr>
@@ -396,7 +397,7 @@ docker run --rm -it --net server_default --link server_mongo_1:mongo -v ~/backup
 <pre><code class="lang-sh">export PATH="$HOME/bin:$PATH"
 </code></pre>
 <p>Save and restart your shell. Now you can just type <code>dockerdump</code> to run the shell.</p>
-</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
+</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2022 olimovier.com - All Rights Reserved.</p></div>
   
 
 

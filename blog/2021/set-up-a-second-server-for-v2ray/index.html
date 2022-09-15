@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Oliver Young</title>
+  <title>Oli Movie R</title>
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
   <link rel="stylesheet" href="/markdown.css">
 <style type="text/css">
@@ -31,7 +31,8 @@ body {
   font-weight: bold;
   letter-spacing: normal;
 }
-#header p {
+#header div {
+  margin-top: 20px;
   font-size: 22px;
   color: #A9A9A9;
   -webkit-font-smoothing: antialiased;
@@ -377,7 +378,7 @@ a[data-v-8fb1d0ca] {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div></div> <div class="post-container view"><h1 class="entry-title">Set up a Second Server for V2Ray</h1> <div class="entry-meta">Jun 06, 2021 #V2Ray #GFW #Linux</div> <div class="content"><p>Even you set up the V2Ray correctly and cross GFW successfully, you will probably suffer low speed and high legacy. If you try to <code>ping</code> your server abroad, you will find the packet loss rate is high.</p>
+    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="32" id="logo" src="/avatar.jpg" style="border-radius: 50%;"></a></div></div> <div class="post-container view"><h1 class="entry-title">Set up a Second Server for V2Ray</h1> <div class="entry-meta">Jun 07, 2021 #V2Ray #GFW #Linux</div> <div class="content"><p>Even you set up the V2Ray correctly and cross GFW successfully, you will probably suffer low speed and high legacy. If you try to <code>ping</code> your server abroad, you will find the packet loss rate is high.</p>
 <p>In order to explain the reason for that, I need to clarify one thing which is about network bandwidth in China. Let's say the bandwidth at your home is 1Gbps which seems super fast, but it's domestic only. All the data crossing the GFW uses the international bandwidth which is very limited in China. So 1Gbps domestic bandwidth doesn't mean anything to your experience of crossing the GFW. What we really need is a reliable network connection between your ISP and server abroad.</p>
 <p>Here I choose the NAT from <a href="https://www.cloudiplc.com/">CloudIPLC</a>. To be specific, the network it uses connects directly from Shanghai with Japan, and my server abroad is exactly in Japan. That's exactly what I need. Although the price is not cheap, but in order to get the reliable network connection, I think it's worth the price.</p>
 <p>The process of setting up V2Ray on the NAT server is almost the same as that on the server abroad. You just need to modify the configuration file. Here is the configuration file I use on the NAT server.</p>
@@ -435,7 +436,7 @@ a[data-v-8fb1d0ca] {
 <p>Replace the value of port and client id in inbounds (will be used by client devices), address, port and client id in outbounds (from your server abroad). That's all. Restart V2Ray to make the new configuration file work.</p>
 <p>In terms of configuration of client devices, just replace the value of address, port and client id with the value from inbounds above.</p>
 <p>Detailed information could be found on <a href="https://gist.github.com/movier/b702f598dc52fce7dfc93d39d5fd0191">my gist</a>. Hopefull it will improve your experience of crossing GFW.</p>
-</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
+</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2022 olimovier.com - All Rights Reserved.</p></div>
   
 
 

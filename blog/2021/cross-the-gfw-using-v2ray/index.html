@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Oliver Young</title>
+  <title>Oli Movie R</title>
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
   <link rel="stylesheet" href="/markdown.css">
 <style type="text/css">
@@ -31,7 +31,8 @@ body {
   font-weight: bold;
   letter-spacing: normal;
 }
-#header p {
+#header div {
+  margin-top: 20px;
   font-size: 22px;
   color: #A9A9A9;
   -webkit-font-smoothing: antialiased;
@@ -377,7 +378,7 @@ a[data-v-8fb1d0ca] {
 }
 </style></head>
 <body>
-    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="26" id="logo" src="/logo.svg"></a></div></div> <div class="post-container view"><h1 class="entry-title">Cross the GFW Using V2Ray</h1> <div class="entry-meta">Apr 07, 2021 #V2Ray #GFW</div> <div class="content"><p>After Shadowsocks died, I'd been using Astrill VPN for some time. But it's not so ideal. The speed cannot be guaranteed and I always needed to try different servers to find one with fast speed. So again I decided to set up my own server to cross the GFW.</p>
+    <div id="app"><div id="nav"><div style="margin: auto;"><a href="/" class="router-link-active"><img height="32" id="logo" src="/avatar.jpg" style="border-radius: 50%;"></a></div></div> <div class="post-container view fade-enter fade-enter-active"><h1 class="entry-title">Cross the GFW Using V2Ray</h1> <div class="entry-meta">Apr 08, 2021 #V2Ray #GFW</div> <div class="content"><p>After Shadowsocks died, I'd been using Astrill VPN for some time. But it's not so ideal. The speed cannot be guaranteed and I always needed to try different servers to find one with fast speed. So again I decided to set up my own server to cross the GFW.</p>
 <p>The technology I chose is V2Ray. It turns out to be a genius decision. For the past few months it always worked reliably. Here is what needs to be done to set up V2Ray.</p>
 <p>Most importantly you need a VPS abroad and mine is from Linode JP. Most importantly you need to make sure the server is not blocked by GFW. You could use <a href="http://ping.chinaz.com/">this tool</a> to check. I also have a NAT from CloudIPLC, which is optional. I will talk more about it in later post. Now let's focus on the fundamentals. Both servers have x86-64 architecture and Ubuntu 18.04 as OS.</p>
 <p>Although V2Ray doesn't distinguish between server and client like Shadowsocks does, it still needs consistency. You'd better use the same version for them. Here I'm using version <strong>4.27.0</strong>.</p>
@@ -476,7 +477,7 @@ systemctl start v2ray
 </code></pre>
 <p>Three values need to be set accordingly, which are address, port and user id. After that you can open v2ray executable file to start V2Ray. To test it, you can either set system proxy or use Proxy SwitchyOmega in Chrome.</p>
 <p>If you are lucky enough, you can cross the GFW now.</p>
-</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2017 MOVIER.ME - All Rights Reserved.</p></div>
+</div> <input type="hidden" id="loaded-signal"></div> <p class="copyright">Copyright © 2022 olimovier.com - All Rights Reserved.</p></div>
   
 
 
