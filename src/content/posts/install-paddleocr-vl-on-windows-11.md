@@ -1,7 +1,7 @@
 ---
 author: 小明
-pubDatetime: "2026-10-12 20:10:00"
-title: 在 Windows 11 上安装 PaddleOCR-VL 完整指南
+pubDatetime: 2026-10-12 20:10:00
+title: 在 Windows 11 上安装 PaddleOCR-VL
 featured: true
 draft: true
 tags:
